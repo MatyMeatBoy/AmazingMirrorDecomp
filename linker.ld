@@ -253,8 +253,7 @@ SECTIONS {
         src/special_doors.o(.text);
         src/code_0802B4A8.o(.text);
         src/code_0802E16C.o(.text);
-        asm/code_0802E57C.o(.text);
-        src/code_0802F8D8.o(.text);
+        src/code_0802E57C.o(.text);
         src/multi_boot_util.o(.text);
         src/multi_08030C94.o(.text);
         src/multi_08032E98.o(.text);
@@ -444,9 +443,7 @@ SECTIONS {
         src/special_doors.o(.rodata);
         src/code_0802B4A8.o(.rodata);
         src/code_0802E16C.o(.rodata);
-        data/data_17.o(.rodata);
-        src/code_0802F8D8.o(.rodata);
-        data/data_24.o(.rodata);
+        src/code_0802E57C.o(.rodata);
         src/warp_star_data.o(.rodata);
         src/multi_08032E98.o(.rodata);
         data/data_6.o(.rodata);
