@@ -110,5 +110,3 @@ def badge_svg(label, value, color):
             '<text x="%.1f" y="14">%s</text></g></svg>') % (
         w, escape(label), escape(value), w, lw, lw, vw, color, w,
         lw / 2, escape(label), lw / 2, escape(label), lw + vw / 2, escape(value), lw + vw / 2, escape(value))
-
-
