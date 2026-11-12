@@ -1,0 +1,70 @@
+name: ROM-free progress
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/progress/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: progress-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  progress:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install metadata dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev zlib1g-dev pkg-config
+      - name: Build pinned matching compiler and preprocessor
+        env:
+          AGBCC_COMMIT: 59b966ed1b8f371856dcf99f1546c2fe89c678ca
+        run: |
+          git clone --branch new_newlib_pret https://github.com/jiangzhengwenjz/agbcc.git tools/agbcc
+          git -C tools/agbcc checkout --detach "$AGBCC_COMMIT"
+          make -C tools/agbcc/gcc old -j1
+          cp tools/agbcc/gcc/old_agbcc tools/agbcc/old_agbcc
+          make -C tools/agbcc/gcc clean
+          make -C tools/agbcc/gcc -j1
+          mkdir -p tools/agbcc/bin tools/agbcc/include
+          cp tools/agbcc/gcc/agbcc tools/agbcc/bin/agbcc
+          cp tools/agbcc/old_agbcc tools/agbcc/bin/old_agbcc
+          cp -R tools/agbcc/libc/include/. tools/agbcc/include/
+          cp tools/agbcc/ginclude/* tools/agbcc/include/
+          make -C tools/preproc
+      - name: Run reporting guard tests
+        run: python -m unittest discover -s tests
+      - name: Generate isolated object inventory and reports
+        run: |
+          python tools/progress/metadata_build.py --jobs 4
+          python tools/progress/report.py --metadata-dir build/metadata --out docs/progress
+      - name: Upload reports only
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazing-mirror-progress
+          path: docs/progress/
+          if-no-files-found: error
+      - name: Publish from fresh main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.repository == 'MatyMeatBoy/AmazingMirrorDecomp'
+        run: |
+          git config user.name MatyMeatBoy
+          git config user.email 108221324+MatyMeatBoy@users.noreply.github.com
+          git restore --worktree --staged -- docs/progress
+          git clean -fd -- docs/progress
+          python tools/progress/publish.py
