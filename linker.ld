@@ -251,10 +251,9 @@ SECTIONS {
         src/demo.o(.text);
         src/code_08026044.o(.text);
         src/special_doors.o(.text);
-        asm/code_0802B4A8.o(.text);
+        src/code_0802B4A8.o(.text);
         src/code_0802E16C.o(.text);
-        asm/code_0802E57C.o(.text);
-        src/code_0802F8D8.o(.text);
+        src/code_0802E57C.o(.text);
         src/multi_boot_util.o(.text);
         src/multi_08030C94.o(.text);
         src/multi_08032E98.o(.text);
@@ -265,13 +264,11 @@ SECTIONS {
         src/palette_effects.o(.text);
         src/kirby.o(.text);
         src/code_0806F780.o(.text);
-        asm/code_0806F734.o(.text);
         src/object.o(.text);
         src/gordo.o(.text);
         src/droppy.o(.text);
         src/haley.o(.text);
         src/prank.o(.text);
-        asm/prank.o(.text);
         src/cupie.o(.text);
         src/waddle_dee.o(.text);
         src/blockin.o(.text);
@@ -298,7 +295,6 @@ SECTIONS {
         src/cookin.o(.text);
         src/waddle_doo.o(.text);
         src/flamer.o(.text);
-        asm/flamer.o(.text);
         src/pengy.o(.text);
         src/twister.o(.text);
         src/wheelie.o(.text);
@@ -338,7 +334,7 @@ SECTIONS {
         src/big_small_switch.o(.text);
         src/fire.o(.text);
         src/mirror_door.o(.text);
-        asm/shotzo.o(.text);
+        src/shotzo.o(.text);
         src/vert_sliding_door.o(.text);
         src/object_spawner.o(.text);
         src/destroyable_rock_block.o(.text);
@@ -445,9 +441,9 @@ SECTIONS {
         src/demo.o(.rodata);
         src/code_08026044.o(.rodata);
         src/special_doors.o(.rodata);
-        data/data_17.o(.rodata);
-        src/code_0802F8D8.o(.rodata);
-        data/data_24.o(.rodata);
+        src/code_0802B4A8.o(.rodata);
+        src/code_0802E16C.o(.rodata);
+        src/code_0802E57C.o(.rodata);
         src/warp_star_data.o(.rodata);
         src/multi_08032E98.o(.rodata);
         data/data_6.o(.rodata);

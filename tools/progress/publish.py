@@ -26,8 +26,7 @@ def publish(root, remote="origin", branch=MAIN, attempts=4, generate=None):
         base = git("rev-parse", "FETCH_HEAD").stdout.strip()
         git("checkout", "--detach", base)
         commands = [generate] if generate is not None else [
-            [sys.executable, "tools/progress/metadata_build.py", "--jobs", "4"],
-            [sys.executable, "tools/progress/report.py", "--metadata-dir", "build/metadata", "--out", "docs/progress"],
+            [sys.executable, "tools/progress/update_progress.py"],
         ]
         for command in commands:
             subprocess.run(command, cwd=root, check=True)

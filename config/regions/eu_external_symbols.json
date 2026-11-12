@@ -1,0 +1,2868 @@
+{
+  "schema_version": 1,
+  "region": "Europe",
+  "game_code": "B8KP",
+  "owned_rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "source_repository": "https://github.com/Unovamata/KatAM-Randomizer",
+  "source_commit": "f7c813da659c80f0c06a474e2ea8e0a19f2d79bc",
+  "source_path": "ROM Expansion/versions/europe.txt",
+  "source_blob_sha1": "3214a0ab87273b57174bca7a3ab3dfd72963d543",
+  "license": "MIT",
+  "copyright_notice": "Copyright (c) 2024 Bryan",
+  "validation_status": "reference_hints_only_not_independently_verified",
+  "notes": [
+    "These external labels are matching and relocation hints, not verified local symbol bindings or a matching European rebuild.",
+    "Original matcher uses masked instruction anchors, literal references, and nearest-symbol shift fallback; every hint requires local byte/relocation validation.",
+    "AnimCount is a count (939 / 0x3AB), not a memory address.",
+    "The original European table has404records/400unique names; four identical-value duplicate names were collapsed only in this parsed view. No conflicting duplicate found.",
+    "No game data or ROM bytes are included."
+  ],
+  "identical_duplicate_names": [
+    "GetCollisionTile",
+    "gUnk_03002EC0",
+    "gUnk_030039A4",
+    "sub_0804E09C"
+  ],
+  "symbol_count": 400,
+  "address_count": 399,
+  "symbols": [
+    {
+      "name": "AnimCount",
+      "value": "0x000003AB",
+      "kind": "count",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ArcTan2",
+      "value": "0x08159C28",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "AreaPlates",
+      "value": "0x08D6B344",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "BonusCreateTomatoAt",
+      "value": "0x0812351C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ClearEffectObject",
+      "value": "0x0803E3EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ClearObjectBase",
+      "value": "0x0803E3BC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CollectShard",
+      "value": "0x08019DB8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CpuSet",
+      "value": "0x08159C30",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CreateEffectObject",
+      "value": "0x0808AE78",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CreateObject",
+      "value": "0x0800A888",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CreateSpecialHubMirror",
+      "value": "0x0801E308",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CreateTitleScreen",
+      "value": "0x08149DCD",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "CreateWorldMap",
+      "value": "0x08125AF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "DisplaySprite",
+      "value": "0x08156988",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "EffectObjectDisplaySprite",
+      "value": "0x0803DC04",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "EffectObjectInitSprite",
+      "value": "0x08070A40",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "EffectObjectPostUpdate",
+      "value": "0x0806FB10",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "EwramInitHeap",
+      "value": "0x081599B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "FillLevelInfo",
+      "value": "0x08000A90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "FindTargetKirby",
+      "value": "0x0803D3A4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "GetCollisionTile",
+      "value": "0x08002404",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "GetKirbyRoomFlagIndex",
+      "value": "0x081287A4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "GetRoomMusicId",
+      "value": "0x08002A2C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "GetStateSlot",
+      "value": "0x080028A8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "HasShard",
+      "value": "0x08019DD0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "HitFlashBranch",
+      "value": "0x08085836",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "InitObject",
+      "value": "0x0809F078",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "KirbyEnterWater",
+      "value": "0x0805BAA0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "KirbyStartWaterMovement",
+      "value": "0x08059858",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "LZ77UnCompVram",
+      "value": "0x08159C40",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "LZ77UnCompWram",
+      "value": "0x08159C44",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "LoadLevelGfx",
+      "value": "0x080008CC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "LoadObjPaletteWithTransformation",
+      "value": "0x08158BC8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "NameSite1",
+      "value": "0x08034F0E",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "NameSite2",
+      "value": "0x08035B70",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "NumChestsCollected",
+      "value": "0x08019D04",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectBaseDestroy",
+      "value": "0x0803DD08",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectBaseInitSprite",
+      "value": "0x08070924",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectDestroy",
+      "value": "0x0809A20D",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectInitSprite",
+      "value": "0x0809F428",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectMain",
+      "value": "0x08099BC8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectParameters2",
+      "value": "0x083545B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectPreUpdate",
+      "value": "0x0806F7C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectSetBounds",
+      "value": "0x0803E344",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ObjectSetFunc",
+      "value": "0x0809F820",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "RLUnCompWram",
+      "value": "0x08159C54",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "ReadSram",
+      "value": "0x08159AB8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "RequestScreenShake",
+      "value": "0x0806FEAC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "SetRoomMusicId",
+      "value": "0x08002A3C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "SpawnTable",
+      "value": "0x08352B5C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "SpecialHubMirrorInit",
+      "value": "0x0801E5CC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "SpriteTables",
+      "value": "0x083C3064",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "SwallowSpecialSite",
+      "value": "0x0809C6BA",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "TaskCreate",
+      "value": "0x0815343C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "TaskDestroy",
+      "value": "0x08153578",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "TitleScreenMain",
+      "value": "0x08149F6D",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "UpdateSaveBufferByOffset",
+      "value": "0x0800ACFC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "UpdateScreenCpuSet",
+      "value": "0x08152AB4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "UpdateScreenDma",
+      "value": "0x08152700",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "VerifySaveByOffset",
+      "value": "0x0800AB08",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "VramFree",
+      "value": "0x08157ACC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "VramGetTotalAllocatedTiles",
+      "value": "0x08157AFC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "VramMalloc",
+      "value": "0x081579EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "WorldMapDrawKirbys",
+      "value": "0x08125A00",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "WorldMapGetCoorFromRoom",
+      "value": "0x0812502C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "WorldMapUnlockSave",
+      "value": "0x08126124",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "WriteSaveSectionByOffset",
+      "value": "0x0800AA1C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "WriteSramEx",
+      "value": "0x08159BF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "__divsi3",
+      "value": "0x0815AC10",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "__modsi3",
+      "value": "0x0815ACA8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "__udivsi3",
+      "value": "0x0815AD78",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "__umodsi3",
+      "value": "0x0815ADF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r0",
+      "value": "0x0815ABD4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r1",
+      "value": "0x0815ABD8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r2",
+      "value": "0x0815ABDC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r3",
+      "value": "0x0815ABE0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r4",
+      "value": "0x0815ABE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r5",
+      "value": "0x0815ABE8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r6",
+      "value": "0x0815ABEC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "_call_via_r7",
+      "value": "0x0815ABF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gAIKirbyState",
+      "value": "0x0203AD2C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gBgCntRegs",
+      "value": "0x03002EB0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gBgPalette",
+      "value": "0x030037A0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gBgScrollRegs",
+      "value": "0x03003680",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gBldRegs",
+      "value": "0x030024E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gCollisionAttributes",
+      "value": "0x082DA758",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gCurLevelInfo",
+      "value": "0x02023530",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gCurTask",
+      "value": "0x030035D0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gDispCnt",
+      "value": "0x03003690",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gEmptyTask",
+      "value": "0x03002500",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gEwramHeap",
+      "value": "0x02000000",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gForegroundInfo",
+      "value": "0x08D6EF78",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gForegroundPalettes",
+      "value": "0x08D6D864",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gForegroundTilemaps",
+      "value": "0x08D6EAFC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gFrameCount",
+      "value": "0x03002E64",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gHeldKeys",
+      "value": "0x03002E90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gKirbys",
+      "value": "0x02020EE0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gLanguage",
+      "value": "0x03000468",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gLevelObjLists",
+      "value": "0x08D6DD88",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gLocalPlayerId",
+      "value": "0x0203AD3C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gMPlayInfo_0",
+      "value": "0x030016A0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gMainFlags",
+      "value": "0x03002440",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gMirraEncounters",
+      "value": "0x020229D8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gNumHumanPlayers",
+      "value": "0x0203AD30",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gNumKirbys",
+      "value": "0x0203AD44",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gOamBuffer",
+      "value": "0x030060B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gObjPalette",
+      "value": "0x03002C60",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gPressedKeys",
+      "value": "0x030039FC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gRepeatedKeys",
+      "value": "0x03002EB8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gRngVal",
+      "value": "0x030068D8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gRoomProps",
+      "value": "0x0893D610",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gRoomTiledBGs",
+      "value": "0x08D6F000",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gSaveID",
+      "value": "0x0203AD48",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gSineTable",
+      "value": "0x08D6A278",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gSolidityMaps",
+      "value": "0x08D6D90C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gSongTable",
+      "value": "0x08B64334",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gSpriteTables",
+      "value": "0x03003674",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gTasks",
+      "value": "0x030019F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gTreasures",
+      "value": "0x02038960",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02021580",
+      "value": "0x02021580",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02021590",
+      "value": "0x02021590",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022120",
+      "value": "0x02022120",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022320",
+      "value": "0x02022320",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022930",
+      "value": "0x02022930",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_020229D4",
+      "value": "0x020229D4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_020229E0",
+      "value": "0x020229E0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022E60",
+      "value": "0x02022E60",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022EA0",
+      "value": "0x02022EA0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022EB0",
+      "value": "0x02022EB0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02022F50",
+      "value": "0x02022F50",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023354",
+      "value": "0x02023354",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023358",
+      "value": "0x02023358",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023368",
+      "value": "0x02023368",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023388",
+      "value": "0x02023388",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023488",
+      "value": "0x02023488",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023508",
+      "value": "0x02023508",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023510",
+      "value": "0x02023510",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023518",
+      "value": "0x02023518",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02023520",
+      "value": "0x02023520",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02024ED0",
+      "value": "0x02024ED0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02026D50",
+      "value": "0x02026D50",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02026D60",
+      "value": "0x02026D60",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02028BF0",
+      "value": "0x02028BF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02028C10",
+      "value": "0x02028C10",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02028EE0",
+      "value": "0x02028EE0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_02038590",
+      "value": "0x02038590",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD10",
+      "value": "0x0203AD10",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD18",
+      "value": "0x0203AD18",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD20",
+      "value": "0x0203AD20",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD24",
+      "value": "0x0203AD24",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD34",
+      "value": "0x0203AD34",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0203AD40",
+      "value": "0x0203AD40",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03000010",
+      "value": "0x03000010",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03000510",
+      "value": "0x03000510",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03002450",
+      "value": "0x03002450",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03002484",
+      "value": "0x03002484",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_030024F0",
+      "value": "0x030024F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03002EC0",
+      "value": "0x03002EC0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_030031C0",
+      "value": "0x030031C0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_030036C8",
+      "value": "0x030036C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_030039A0",
+      "value": "0x030039A0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_030039A4",
+      "value": "0x030039A4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03006078",
+      "value": "0x03006078",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_03006080",
+      "value": "0x03006080",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_082D7850",
+      "value": "0x082D96F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_082DDE84",
+      "value": "0x082DFD24",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_082DDEF0",
+      "value": "0x082DFD90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_082DDF5C",
+      "value": "0x082DFDFC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_082EB4B4",
+      "value": "0x082ED354",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834BB20",
+      "value": "0x0834D600",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834BD94",
+      "value": "0x0834D874",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834C2AC",
+      "value": "0x0834DD8C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834C318",
+      "value": "0x0834DDF8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834C4B0",
+      "value": "0x0834DF90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0834C5D4",
+      "value": "0x0834E0B4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_083509D0",
+      "value": "0x083524B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08350A3C",
+      "value": "0x0835251C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08350AAC",
+      "value": "0x0835258C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08350B30",
+      "value": "0x08352610",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08350E34",
+      "value": "0x08352914",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08350E58",
+      "value": "0x08352938",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0835105C",
+      "value": "0x08352B3C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_083513E8",
+      "value": "0x08352EC8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08351458",
+      "value": "0x08352F38",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08351628",
+      "value": "0x08353108",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08351648",
+      "value": "0x08353128",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08352D80",
+      "value": "0x08354860",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08357B8C",
+      "value": "0x0835966C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08386664",
+      "value": "0x08390610",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08386A50",
+      "value": "0x083909FC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08386AF0",
+      "value": "0x08390A9C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_0893CB44",
+      "value": "0x08946FA8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60A84",
+      "value": "0x08D6AEE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60B64",
+      "value": "0x08D6AFC4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60BE4",
+      "value": "0x08D6B044",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60EE4",
+      "value": "0x08D6B344",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60FA4",
+      "value": "0x08D6B404",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D60FDC",
+      "value": "0x08D6B43C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D610B4",
+      "value": "0x08D6B514",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D63C28",
+      "value": "0x08D6E204",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D640A4",
+      "value": "0x08D6E680",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D6CD0C",
+      "value": "0x08D772E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gUnk_08D6DCAC",
+      "value": "0x08D78288",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gVisitedDoors",
+      "value": "0x02028CA0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gVramHeapMaxTileSlots",
+      "value": "0x03002488",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gVramHeapStartAddr",
+      "value": "0x03002540",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gVramHeapState",
+      "value": "0x030064B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gWinRegs",
+      "value": "0x03002E70",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gWorldMapDotCoors",
+      "value": "0x08D6B668",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "gWorldMapKirbysCoorsByArea",
+      "value": "0x08D6B63C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "iwram_end",
+      "value": "0x03006CC4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "m4aMPlayFadeOut",
+      "value": "0x08150BF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "m4aSongNumStart",
+      "value": "0x08150A58",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "m4aSongNumStartOrChange",
+      "value": "0x08150A84",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "m4aSongNumStop",
+      "value": "0x08150B24",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sWorldMapLineCoors",
+      "value": "0x0835E728",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sbClearFunctions",
+      "value": "0x082DB0DC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08001408",
+      "value": "0x08001428",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080015A8",
+      "value": "0x080015C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08001678",
+      "value": "0x08001698",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08001D18",
+      "value": "0x08001D38",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002434",
+      "value": "0x08002454",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002470",
+      "value": "0x08002490",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080024F0",
+      "value": "0x08002510",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800255C",
+      "value": "0x0800257C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080025AC",
+      "value": "0x080025CC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002624",
+      "value": "0x08002644",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080026A8",
+      "value": "0x080026C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080027A8",
+      "value": "0x080027C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080027E8",
+      "value": "0x08002808",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080028CC",
+      "value": "0x080028EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002918",
+      "value": "0x08002938",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002958",
+      "value": "0x08002978",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002A2C",
+      "value": "0x08002A4C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002A44",
+      "value": "0x08002A64",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002A5C",
+      "value": "0x08002A7C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002A80",
+      "value": "0x08002AA0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002AD0",
+      "value": "0x08002AF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002B30",
+      "value": "0x08002B50",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002BA8",
+      "value": "0x08002BC8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002C18",
+      "value": "0x08002C38",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002D40",
+      "value": "0x08002D60",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08002EC4",
+      "value": "0x08002EE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08003028",
+      "value": "0x08003048",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800AFC8",
+      "value": "0x0800AFF0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800B7A4",
+      "value": "0x0800B7CC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800B97C",
+      "value": "0x0800B9A4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800C270",
+      "value": "0x0800C298",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800E0E4",
+      "value": "0x0800E10C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0800EE04",
+      "value": "0x0800EE2C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08010590",
+      "value": "0x080105B8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0801519C",
+      "value": "0x080151C4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0801BD68",
+      "value": "0x0801BDA4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0801C558",
+      "value": "0x0801C594",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08031CE4",
+      "value": "0x08031D20",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08033540",
+      "value": "0x0803357C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080335B4",
+      "value": "0x080335F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08034C9C",
+      "value": "0x08034CD8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08034E14",
+      "value": "0x08034E50",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08034FA8",
+      "value": "0x08034FE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803533C",
+      "value": "0x08035378",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080356AC",
+      "value": "0x080356E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08035E28",
+      "value": "0x08035E64",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08035E9C",
+      "value": "0x08035ED8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08038B34",
+      "value": "0x08038B70",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08039430",
+      "value": "0x0803946C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08039600",
+      "value": "0x0803963C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803D21C",
+      "value": "0x0803D258",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803D280",
+      "value": "0x0803D2BC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803D6B4",
+      "value": "0x0803D6F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803DE54",
+      "value": "0x0803DE90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803DF24",
+      "value": "0x0803DF60",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803DFAC",
+      "value": "0x0803DFE8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803E2B0",
+      "value": "0x0803E2EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803EA90",
+      "value": "0x0803EACC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803F324",
+      "value": "0x0803F360",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803F46C",
+      "value": "0x0803F4A8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803F790",
+      "value": "0x0803F7CC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0803FE74",
+      "value": "0x0803FEB0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080411E8",
+      "value": "0x08041224",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08041B08",
+      "value": "0x08041B44",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080424BC",
+      "value": "0x080424F8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08043360",
+      "value": "0x0804339C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804464C",
+      "value": "0x08044688",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08044EA8",
+      "value": "0x08044EE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08044FD4",
+      "value": "0x08045010",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08045A34",
+      "value": "0x08045A70",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804A728",
+      "value": "0x0804A764",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804BD98",
+      "value": "0x0804BDD4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804C614",
+      "value": "0x0804C650",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804E09C",
+      "value": "0x0804E0D8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0804FBFC",
+      "value": "0x0804FC38",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080506A8",
+      "value": "0x080506E4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08051874",
+      "value": "0x080518B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08051C40",
+      "value": "0x08051C7C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08052140",
+      "value": "0x0805217C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080531B4",
+      "value": "0x080531F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080534D0",
+      "value": "0x0805350C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080547C4",
+      "value": "0x08054800",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08054950",
+      "value": "0x08054998",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08054C0C",
+      "value": "0x08054C54",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08055920",
+      "value": "0x08055968",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08055D9C",
+      "value": "0x08055DE4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08056C2C",
+      "value": "0x08056C74",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805B1B8",
+      "value": "0x0805B200",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805B2FC",
+      "value": "0x0805B344",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805B3A0",
+      "value": "0x0805B3E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805B450",
+      "value": "0x0805B498",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805C024",
+      "value": "0x0805C06C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805C11C",
+      "value": "0x0805C164",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805D268",
+      "value": "0x0805D2B0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0805D630",
+      "value": "0x0805D678",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080618C0",
+      "value": "0x08061908",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080622A0",
+      "value": "0x080622E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08063F74",
+      "value": "0x08063FBC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08064094",
+      "value": "0x080640DC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080642B4",
+      "value": "0x080642FC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08064370",
+      "value": "0x080643B8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08065900",
+      "value": "0x08065948",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08065A0C",
+      "value": "0x08065A54",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080680C0",
+      "value": "0x08068108",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0806898C",
+      "value": "0x080689D4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0806EFF8",
+      "value": "0x0806F040",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0806F260",
+      "value": "0x0806F2A8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0806F8BC",
+      "value": "0x0806F904",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080700D8",
+      "value": "0x08070120",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08070580",
+      "value": "0x080705C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080714A0",
+      "value": "0x080714E8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08073D2C",
+      "value": "0x08073D74",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08074240",
+      "value": "0x08074288",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08074674",
+      "value": "0x080746BC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08074AB0",
+      "value": "0x08074AF8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080753CC",
+      "value": "0x08075414",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08078EFC",
+      "value": "0x08078F44",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807A10C",
+      "value": "0x0807A154",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807A280",
+      "value": "0x0807A2C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807A4F4",
+      "value": "0x0807A53C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807A7E8",
+      "value": "0x0807A830",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807BCE0",
+      "value": "0x0807BD28",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807CFE4",
+      "value": "0x0807D02C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807D2D0",
+      "value": "0x0807D318",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0807D4B0",
+      "value": "0x0807D4F8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08080130",
+      "value": "0x08080178",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08080FBC",
+      "value": "0x08081004",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08081864",
+      "value": "0x080818AC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08081EB0",
+      "value": "0x08081EF8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08082380",
+      "value": "0x080823C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0808269C",
+      "value": "0x080826E4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08082748",
+      "value": "0x08082790",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08082950",
+      "value": "0x08082998",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0808324C",
+      "value": "0x08083294",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08083B04",
+      "value": "0x08083B4C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08084188",
+      "value": "0x080841D0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08084280",
+      "value": "0x080842C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080860A8",
+      "value": "0x080860F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08086C48",
+      "value": "0x08086C90",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080880AC",
+      "value": "0x080880F4",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08088528",
+      "value": "0x08088570",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08088640",
+      "value": "0x08088688",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0808A3E0",
+      "value": "0x0808A428",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0808EDB8",
+      "value": "0x0808EE00",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0808EEF4",
+      "value": "0x0808EF3C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809104C",
+      "value": "0x08091094",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08094540",
+      "value": "0x08094588",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809513C",
+      "value": "0x08095184",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080988B0",
+      "value": "0x080988F8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809A7A4",
+      "value": "0x0809A7EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809B6A8",
+      "value": "0x0809B6F0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809C380",
+      "value": "0x0809C3C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809D060",
+      "value": "0x0809D0A8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809D8C8",
+      "value": "0x0809D910",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809DA30",
+      "value": "0x0809DA78",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809F840",
+      "value": "0x0809F888",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0809F974",
+      "value": "0x0809F9BC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080AA618",
+      "value": "0x080AA660",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080AAA64",
+      "value": "0x080AAAAC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080ACBEC",
+      "value": "0x080ACC34",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080AEF14",
+      "value": "0x080AEF5C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080AF204",
+      "value": "0x080AF24C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_080B11C0",
+      "value": "0x080B1208",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08123780",
+      "value": "0x081237C8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08123FD4",
+      "value": "0x0812401C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_081428A0",
+      "value": "0x08142988",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_081434F8",
+      "value": "0x081435E0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08143664",
+      "value": "0x0814374C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08143730",
+      "value": "0x08143818",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0814389C",
+      "value": "0x08143984",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08143A38",
+      "value": "0x08143B20",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08143E6C",
+      "value": "0x08143F54",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08143EF4",
+      "value": "0x08143FDC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0814405C",
+      "value": "0x08144144",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08144304",
+      "value": "0x081443EC",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_081443D8",
+      "value": "0x081444C0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08144438",
+      "value": "0x08144520",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08145B64",
+      "value": "0x08145C4C",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08153E6C",
+      "value": "0x081547A8",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08155128",
+      "value": "0x08155A64",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_0815521C",
+      "value": "0x08155B58",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_081564D8",
+      "value": "0x08156E14",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    },
+    {
+      "name": "sub_08156D84",
+      "value": "0x081576C0",
+      "kind": "address",
+      "status": "reference_hint_not_verified",
+      "verified": false
+    }
+  ],
+  "import_provenance": [
+    {
+      "local_path": "config/reference/katam-randomizer/europe.txt",
+      "source_path": "ROM Expansion/versions/europe.txt",
+      "source_url": "https://github.com/Unovamata/KatAM-Randomizer/blob/f7c813da659c80f0c06a474e2ea8e0a19f2d79bc/ROM%20Expansion/versions/europe.txt",
+      "commit": "f7c813da659c80f0c06a474e2ea8e0a19f2d79bc",
+      "git_blob_sha1": "3214a0ab87273b57174bca7a3ab3dfd72963d543",
+      "sha256": "bc37346dd61995c5c16350907acd0fea16e4a36538a40b8037040491c6c24623",
+      "bytes": 10211
+    },
+    {
+      "local_path": "config/reference/katam-randomizer/usa.txt",
+      "source_path": "ROM Expansion/versions/usa.txt",
+      "source_url": "https://github.com/Unovamata/KatAM-Randomizer/blob/f7c813da659c80f0c06a474e2ea8e0a19f2d79bc/ROM%20Expansion/versions/usa.txt",
+      "commit": "f7c813da659c80f0c06a474e2ea8e0a19f2d79bc",
+      "git_blob_sha1": "06e02e23a632db823e786b4b3eff184c6582b441",
+      "sha256": "50f4c06a95a24715ba5801f980ab5114994f24e9d524126f9a09aa4f79897da6",
+      "bytes": 6314
+    },
+    {
+      "local_path": "config/reference/katam-randomizer/japan.txt",
+      "source_path": "ROM Expansion/versions/japan.txt",
+      "source_url": "https://github.com/Unovamata/KatAM-Randomizer/blob/f7c813da659c80f0c06a474e2ea8e0a19f2d79bc/ROM%20Expansion/versions/japan.txt",
+      "commit": "f7c813da659c80f0c06a474e2ea8e0a19f2d79bc",
+      "git_blob_sha1": "31c3f018be76687c6644767771016b6692970502",
+      "sha256": "221cf153e69eda4b0df344219301c687a14416c77e71b5db848170af27ccceee",
+      "bytes": 10230
+    },
+    {
+      "local_path": "config/reference/katam-randomizer/LICENSE",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/Unovamata/KatAM-Randomizer/blob/f7c813da659c80f0c06a474e2ea8e0a19f2d79bc/LICENSE",
+      "commit": "f7c813da659c80f0c06a474e2ea8e0a19f2d79bc",
+      "git_blob_sha1": "554d6825907fb0b4b717801040fce69a451bfe79",
+      "sha256": "bb17d4f1282d81f58594426ad664ccc78dd025a8b4bc4dfcf9b5c1f671e50462",
+      "bytes": 1062
+    }
+  ]
+}

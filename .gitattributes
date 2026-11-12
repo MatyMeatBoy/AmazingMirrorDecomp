@@ -3,6 +3,7 @@
 *.s text eol=lf
 *.txt text eol=lf
 Makefile text eol=lf
+GNUmakefile text eol=lf
 *.mk text eol=lf
 *.c text eol=lf
 *.cpp text eol=lf
@@ -17,6 +18,9 @@ Makefile text eol=lf
 *.png binary
 *.bin binary
 *.pcm binary
+
+# Preserve attributed third-party reference tables and notices byte-for-byte.
+config/reference/katam-randomizer/* -text
 
 *.h linguist-language=C
 *.inc linguist-language=Assembly

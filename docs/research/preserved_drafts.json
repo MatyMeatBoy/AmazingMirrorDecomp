@@ -1,0 +1,4651 @@
+{
+  "naming": {
+    "ref": "refs/remotes/candidates/reference-pr371",
+    "head": "78d5a544ce1e12aa04c00d080641ef9586078c96",
+    "new_reachable_commits": 1,
+    "tree_entries": 1489,
+    "changed_tree_paths": [
+      {
+        "path": "asm/big_small_switch.s",
+        "sha": "68d97683d11a6def0865d118aab167fe3e2cadfe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/boss_challenge_door.s",
+        "sha": "998ca2f8ddd1f7a4193085a21b65aff4f3304833",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code.s",
+        "sha": "2bd445fc8682eb606a69a2b89f8a8ab5b643e156",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_08020220.s",
+        "sha": "fd928a206d76abfe079c521fa084e0a1af1c8efb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_08025650.s",
+        "sha": "9844f4efceffde403e4d1882c4cf8226f0e13ee6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_0802B4A8.s",
+        "sha": "50d50d6921f2daf4042049750fe798097f0ed0d7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/code_0802E57C.s",
+        "sha": "35facda08f6ed87a6b7125e213a917c53eb5d09d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/code_0802F8D8.s",
+        "sha": "798a48f54ee954efbb85856cdb3926632fbc8c70",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_08032E98.s",
+        "sha": "33d1d7038c4cda8339813486201a25ca0cde7687",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_0806F734.s",
+        "sha": "dff92ee8528690dec989d8743712f03e4bed75a0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/cookin.s",
+        "sha": "50811b8b20e8608428daf9fda0955991bb7fc723",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/cutscene_trigger.s",
+        "sha": "049a8d12ffe2a08cbd149d14bc26066e8800774a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/eight_dir_cannon.s",
+        "sha": "d528bc71627c606e9c57b526369aa8abc678b049",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/flamer.s",
+        "sha": "68130020b95368f4f677224c9aa0a098bab6d915",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/hot_head.s",
+        "sha": "07d7f736d81c8f48d67058b3a5e92cc084697978",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/kirby_cannon.s",
+        "sha": "56386a06faf2a021839c2dbba1c99f689a3785fe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/large_star_stone_block.s",
+        "sha": "a3deee3177d452e119b07a0944f243efe75f66b7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/leap.s",
+        "sha": "234e40a4629da9c1ed5970baffec456061a1ca65",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/multi_sio_08158934.s",
+        "sha": "c8f58eb5f20e97f4a45f2f7cb11f879e45f87e4c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08153184.inc",
+        "sha": "3e01e140f5d25379058068486ae82ef4dfcbbe4f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/object_spawner.s",
+        "sha": "85ac963b0b34fbac6892f6a33016318f9b22015a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/prank.s",
+        "sha": "f1e058a63edaec882900f328dc721b95a0558659",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/shotzo.s",
+        "sha": "5544d4e9f915bfa538ed48797c9261290054570b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/sprite.s",
+        "sha": "3363622e0156c5b407a6ad8e989aaa5908baa6e2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/star_stone_block.s",
+        "sha": "c22bbb8ee80cb3d11fb59f2d22de15ab367d83aa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/sub_0800F044.s",
+        "sha": "57ea295d469c8cc65db5dd67777288722c27e96e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/sword_knight.s",
+        "sha": "74bd026f106bca2fcaadad629b3e7e4ec7e02657",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/vert_sliding_door.s",
+        "sha": "937a83493fabdeab6c527c7094437af06f0c3d57",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "calcrom.pl",
+        "sha": "97ce728ca85bd7d87fb3f06e95ec84498590c8d3",
+        "kind": "blob",
+        "mode": "100755",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_11.s",
+        "sha": "355af8658a26210ed39084d8366ee069d0bd668e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_12.s",
+        "sha": "ed44f50ac696c4485c99b1daa4cf179a86c62e79",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_13.s",
+        "sha": "a999b2996496454c50970612325a9c2dc2c23201",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_14.s",
+        "sha": "75a1f4589298f08aabbf88f7fd85996c278509c2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_17.s",
+        "sha": "baa61d88fa5edb101d11aa12f02df52911cc9217",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_19.s",
+        "sha": "2f2d78e5f3eeba72e31c359f046da6e362419d7a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_2.s",
+        "sha": "aab9a318b2b0a31e6004c73c72cf3e607a675fbd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_22.s",
+        "sha": "593159d3ffe0b0da15f7d5fc3ff3c7c5ffd31822",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_5.s",
+        "sha": "e49318495ae36978a686ac3ba96c7b27619f0aab",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_6.s",
+        "sha": "a3dc15e4b7ae238d1b6bb64c4d05ddda851fe87d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/object.s",
+        "sha": "46e2ee0ea1fd08c0ed18e05bea9c058cdc42ab72",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/prank.s",
+        "sha": "d68c14f4e6d25163fe55eadf9bf179cd1ea41a46",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/sword_knight.s",
+        "sha": "cbc6a2388d42667787d9c8db8c47438cd791a9ec",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "include/ability_objects.h",
+        "sha": "921b32e0e51b27f1119a07dc1b74738ba98fcb38",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bang_bang.h",
+        "sha": "2d340efc63729513a343ff848b6660ace7c0b0cc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/batafire.h",
+        "sha": "5b5c901626183689a587d2c2dd49fadcfb597ce4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/batty.h",
+        "sha": "939998e5153e80b20fc55f5d136dc005925d2b2c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bg.h",
+        "sha": "5daacfbb424edfd82a47b06dd964485491c81f0a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/big_waddle_dee.h",
+        "sha": "06fb46200820771bebbcf354516b3e59a916f595",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/blipper.h",
+        "sha": "69ccd0e7196875cfc181818428544d336c9e9bab",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/blockin.h",
+        "sha": "a9106eb47a9427d769618d7ea873287a4e7231fc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bombar.h",
+        "sha": "2ad1c35c05b179f0360c913d61e8e59caf4cdee3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bomber.h",
+        "sha": "9b264558ef7cd1e8d30415b4b0494283afb0fca5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bonkers.h",
+        "sha": "bb052539a1b2ae5d3883284dd3efa7deb43be001",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bonus.h",
+        "sha": "14672746d078fa680f171440cf3f5bf0a4c3f098",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/box_boxer.h",
+        "sha": "ca54fcc3c9166a7b506b604184c3d183e8a24992",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/boxin.h",
+        "sha": "b450616261ab9b937a2ebcab1aaf23be819dab7a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/boxy.h",
+        "sha": "5897f2ee4c153388307088459754767af25731aa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bronto_burt.h",
+        "sha": "ae446dfd2e89fdfd8b796a84cf5e192d3c0d8819",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/cannon_fuse.h",
+        "sha": "d0183ae85cfb69c76235e323d11020219519c5d3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/chest.h",
+        "sha": "e4694631f93993364cebb837211122f850eda0f9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/chip.h",
+        "sha": "f7bedab347238df9c82650be01ef44cdf5dae93f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0800E0E4.h",
+        "sha": "1f2046e8a8d5c5326f980fbdbd50d61400d866a5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0800ECAC.h",
+        "sha": "184c6fc8484806585fb61fe93c4a87bd822f135a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0801DA58.h",
+        "sha": "8202a287148a79756b4e06f8af2e34aaa68e1deb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_08026044.h",
+        "sha": "5beeb30aa8f2e4c74f14eddd40d24e77ef426893",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0802E57C.h",
+        "sha": "e6b67e296aadf4db700b0f2ffc952731d9936bcc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0806F780.h",
+        "sha": "5da00081745fd116bc7f03ee941bb26e7150e095",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_08138D64.h",
+        "sha": "d7dddd4890d44f3f23eabda3054b028b9b6f5dae",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/constants/object_types.h",
+        "sha": "bca958fa20b274071b93615316dd95b2d3bb271b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/constants/songs.h",
+        "sha": "7829a358567b415472d44b1d977552eb822484be",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/crazy_hand.h",
+        "sha": "303070efa0db6ced92897c624f994e552410df2e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/cupie.h",
+        "sha": "8a3d433235ce253a591723293893e3625c2b9de8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/dark_meta_knight.h",
+        "sha": "01e035c5ba7f4d69fabb3ce94874699a2f1a4457",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/dark_mind.h",
+        "sha": "a7081a5b991b38f85fdd4147847c6967e8b3711d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/data.h",
+        "sha": "689b502f4bce6130b21850dd3cc690669ff0a973",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/demo.h",
+        "sha": "2f363a62931d595e3f88cec1b1d1e211c100de2d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/destroyable_rock_block.h",
+        "sha": "421527d491691363f597ddf591ec38ddb02695d9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/droppy.h",
+        "sha": "55443ab6f25e21f03764cbc538842a4761bf9ebb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/fire.h",
+        "sha": "e4c83c369a7b4c2b063fef88a67d245a286cb8db",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/flame_column.h",
+        "sha": "e643c57b72ab16cba12404b689d6615f51d8b092",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/flamer.h",
+        "sha": "548f4d784bae8585ccf4ce67407ffdf79d2a559a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/foley.h",
+        "sha": "d2a32935afd461f24b3a3d557be51d9962ba12c5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/functions.h",
+        "sha": "be64ab74e39b897c097f6adbfb98ac7bbf1f0f06",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gba/m4a.h",
+        "sha": "7e16a635531685da558eb78e3c38a72f2b760f5a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/giant_rocky.h",
+        "sha": "9f64bf680267c63ec9ae3ab93de8b7bd3281afd8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/glunk.h",
+        "sha": "3ad2b754be718c197760f4f601d79b86a7862919",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/goal_game_bonus.h",
+        "sha": "b03bd5b1084e144ef3655fbe216e89e647c2df18",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gobbler.h",
+        "sha": "96c7badf596213fdaca8601ad5b2d73330357d34",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/golem.h",
+        "sha": "47c513672f6569982cf53cb4592eb1cc632f35e1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gordo.h",
+        "sha": "68af8e4171d741b6069902f72048c84fd1102887",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/haley.h",
+        "sha": "a1e4bcd6e68ee1ce7b974965a47295f0224c948a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/hammer_peg.h",
+        "sha": "dd8cd647c442e9bb9ee1741cee8365eb40182d35",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/heavy_knight.h",
+        "sha": "4eaecc9cfb5ebf10b5c4484f5c3bd858c2d09d78",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/inhalable_star.h",
+        "sha": "22dd2c8f7dfbcaa41e9f4ac42f061cc80fd29786",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/jack.h",
+        "sha": "625e0b7035b75c266a6f7ae0f3c44d95c910a14e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/king_golem.h",
+        "sha": "93f8c5154f58b4d95885b3b66ee5e156f511848a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/kirby.h",
+        "sha": "ace3cd2b18900c113f2704f53bdcef20c1ce0287",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/kracko.h",
+        "sha": "94e4c3218048fa5540407082273e07e322a9bd85",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/large_stone_block_7D.h",
+        "sha": "d3a7f27cec5189dae681778d5e79af018d2c9044",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/laser_ball.h",
+        "sha": "5e1fc73661b377738c92144cc1beba8264bd3e41",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/lava_wall.h",
+        "sha": "d547aa5cec41fa603c4c951b20b96aa7059d08ac",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/lever_wall.h",
+        "sha": "6f86eb84af5c497e7c541cb2c80512522b3cfed9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/main.h",
+        "sha": "9c8a33d2bf25705c74e82a4604b84b863b696568",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/master_hand.h",
+        "sha": "3a22b5b5caf32597c2c327bb12672b6d810c22a1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/master_sword.h",
+        "sha": "c78a182a1d47aa53593d992db391231b6440ff42",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mega_titan.h",
+        "sha": "e532107bc98c10b8c519e37896ac82e985baa827",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/metal_guardian.h",
+        "sha": "64252a37954da0feaadab6d9f68d7424974f5967",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/minny.h",
+        "sha": "d1610995fdd0c9d891c3eccebce99ab4f6677ef8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mirra.h",
+        "sha": "4c0b7716dc48b5402949c573802bf753f88300dc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mirror_door.h",
+        "sha": "02e4f6a266b70b26025f68b8667623509cc32f50",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/moley.h",
+        "sha": "d07ff911a810395b36ffcac7a2f7fe6b45aa4ae3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mr_frosty.h",
+        "sha": "4e5a4828ee51badf181dbc4bf98ebfd21f54be29",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/noddy.h",
+        "sha": "66a54b3c9046a3c6e12999698b74d3e0f43a3c6a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/object.h",
+        "sha": "41902086e9c1ffecc4805e34a526018f42cb2b77",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/parasol.h",
+        "sha": "aaa5be610055e68a682820395cb69441ec667c52",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/pause_world_map.h",
+        "sha": "868d23b8e27fea02a0a09641990f8161ab39cca2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/pengy.h",
+        "sha": "0ce53958fb6050a7b0ca62dba4234d9cec9e6490",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/phan_phan.h",
+        "sha": "64d28a259dc66a3c1e7943c5f51e13679f12137d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/prank.h",
+        "sha": "aa2168d46432a59c9e73b812165d30e1a7cc04ac",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/rocky.h",
+        "sha": "91c8dfbe3fa8e06f0c84dbf93def63e4a33b5019",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/roly_poly.h",
+        "sha": "2fbd5ccad64e849bbff2d8d01333ed40e0e423b6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/scarfy.h",
+        "sha": "882159c1e40d80e3d554c56d01f16c551b05ac8e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/scroll_lock.h",
+        "sha": "fc2149a2da23790c15d37a6e7f53d6a77f86be5c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shadow_kirby.h",
+        "sha": "8ab69874230d1985bba9b064d7ccda9d47fdf1b1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shard.h",
+        "sha": "52970ecc9c125bf36adb1ff543ab6c7c63910bba",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shooty.h",
+        "sha": "aef656b75c4d15009b55174a15e7ee6182b430db",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sir_kibble.h",
+        "sha": "6c012e158ee72c5c66f0fbeaf22a1ca072475870",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/snooter.h",
+        "sha": "8a04ab3896246f30dfd254cab759c5a7ed8fa6d3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/soarar.h",
+        "sha": "9985c5591330cafc46dcb33b346f5600ea58b83d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sparky.h",
+        "sha": "f126b23a5c794d84120f699412c2d73325fd5b87",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/special_doors.h",
+        "sha": "dfd08012bc8c3047f933df1909e3eb27ec160719",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/special_hub_mirror.h",
+        "sha": "c19a3677b8546abcf6f250e163f1a4f456ddf794",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sprite.h",
+        "sha": "5342bf3db7add09becf2fa166fe68838f4f733df",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/squishy.h",
+        "sha": "a47cd81b218667f4b4529cf1ba6c32b6c6e54667",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/star_platform.h",
+        "sha": "bb89384de723d40975671d2a122e1c7fc3ccf3d4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/subgame_menu.h",
+        "sha": "5b92a7a2faded57320705ca3e24748739ad8d14e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/subgames.h",
+        "sha": "74df3a067d2f7fe2405d1607418f93c1fa29d76c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/twister.h",
+        "sha": "527b297569893f5d08c1bc5d20903fa393e705e7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/ufo.h",
+        "sha": "dd80653ca57f802febe299c5b32f8070fdd29e7b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/unknown_75.h",
+        "sha": "f1b786c0ad9dec71a516a76cec6aaa32d35aa229",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/waddle_dee.h",
+        "sha": "c041203b6cbc8b89677fdcd831c72ca8f60e842e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/waddle_doo.h",
+        "sha": "8db356457ef216aa309b88cab0c0fff51f71b56d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/warp_star.h",
+        "sha": "b00b254c109d93afa88c2f56e7f707813748f5d8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/wheelie.h",
+        "sha": "508fbd77a56345cf0b8e7569ef6510b4db7e5ae3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/wiz.h",
+        "sha": "4884c922b84fd62b8bb361542f3cc659999d8032",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "linker.ld",
+        "sha": "b7e4220255ff50bdeb5b04996db9c3af795d8561",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "sound/songs/midi/midi.cfg",
+        "sha": "91d077c6b078b15632927ca53caa9a4ca7ae32e0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/NOTES.md",
+        "sha": "b991ad330396343aa4d225be472845672a57156c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_boss.mid",
+        "sha": "1699d0fc711087991a38d6c83c462cc92f1136ca",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_boss_brass_unused.mid",
+        "sha": "533d10f25747b37dbdb872cf51dd11492686b291",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_candy_constellation.mid",
+        "sha": "2b5e45716a2aa99441873401857022304c0c7c99",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_crackity_hack.mid",
+        "sha": "b2ff7c36ec265bad524a91ef94e1f14311fc3d7f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_crackity_hack_bass_unused.mid",
+        "sha": "52cd81c96a8bfc197272254c897e1ecfb449c332",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_meta_knight_appears.mid",
+        "sha": "3e8151a657571969bca8296d01c1af873b7c1a41",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_meta_knight_battle.mid",
+        "sha": "1c210a0c044d38c402225938c9620bd50a7a686c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_mind_second_form.mid",
+        "sha": "61fd55ae4e470489d62ae26cc0b0480ae93e676b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_mind_sky.mid",
+        "sha": "8b3c8bf883e192c7f739b5050032a42060cf964e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_ending.mid",
+        "sha": "f1fe894d27146e318e8fb9a4f429b6667d1a2b68",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_goal_bonus.mid",
+        "sha": "964082d66011dceb566531148bc8f48e568a4a39",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_mid_boss.mid",
+        "sha": "11147c7106ce4fa5a0f5eeeaf76b144533266471",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_mustard_mountain.mid",
+        "sha": "cf1fbf1e2623d6b82bbc5c102c06c486ea41fcb0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_olive_ocean.mid",
+        "sha": "e04f99e2efcbebf4a378e409c0e4234399ab8033",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_rainbow_route_echo_unused.mid",
+        "sha": "6e464de40771c8ad6b654a209a93cddb2bd4e133",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_speed_eaters.mid",
+        "sha": "f4989783e1fa7f6b06a76e9a3c35a88362a18398",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_wave_ride.mid",
+        "sha": "3a53ee92db7240e8034be74488d5e2bcc1cc3bdc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/se_08D558B8.mid",
+        "sha": "c267dbb48e17b4fcd1eb0a3b052b7530f3c3e20d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_boss.s",
+        "sha": "1b6b2fa3dcbbe8c43397276dd23d4e8177e4b853",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_boss_brass_unused.s",
+        "sha": "2b8d63866b195df83475b35eeca45bd74b9b3b91",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_candy_constellation.s",
+        "sha": "ef7123f0f2b4a509f582e00abba276b516a2d5bc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_crackity_hack.s",
+        "sha": "0ce812e6539dac8578df7c11e6be36fe17a70ad6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_crackity_hack_bass_unused.s",
+        "sha": "f9bec299fb958ba89aa0cb59c2c2a8a3bcb25974",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_meta_knight_appears.s",
+        "sha": "1e5d67bfd8d3d0a9f6554931ed0ea54c9a98c19a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_meta_knight_battle.s",
+        "sha": "d03dedb8e2b91e7e35b552c3d0385ca9e7f479b0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_mind_second_form.s",
+        "sha": "c651da54a35976e4cf594bfdff5f89402db734d4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_mind_sky.s",
+        "sha": "bab10f70ad9c767b1003a5f4e57df1efdad0c973",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_ending.s",
+        "sha": "2a9474b289815c9998cd7677e9490b81670d3a33",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_goal_bonus.s",
+        "sha": "49b793b1d04347f5ef5b9471d4724ee36508b6bf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_mid_boss.s",
+        "sha": "67ad4246b5c30a8cf763cc3cc63c19a9a5ab28cd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_mustard_mountain.s",
+        "sha": "b92b99e2e0e33e9c513d5d4cd98c26104099f4ce",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_olive_ocean.s",
+        "sha": "d59347f06e649dc2cb962ea2972e3d07119c2340",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_rainbow_route_echo_unused.s",
+        "sha": "5737be97ea5e10b246d974ab41090cc8dbb796bf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_speed_eaters.s",
+        "sha": "4f1c1cdcc68ae108c2fd8dac3a73b3a316125b40",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_wave_ride.s",
+        "sha": "cc8fb873370885ed8a10fb2a53644496878db8f6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/se_08D558B8.s",
+        "sha": "7b41fb47ab9886004cddf4724439f49d404c2f79",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/ability_objects.c",
+        "sha": "bba93769c5e2043341bd058747752a63020144cf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/agb_sram.c",
+        "sha": "b643bc45cb453e13f1383075ae5c226b488dea5a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bang_bang.c",
+        "sha": "d91302f9ca343ffb23850ddedc14bb43d3a8b115",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/batafire.c",
+        "sha": "62c889383e98273302819c53fde08a57e7550b36",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/batty.c",
+        "sha": "ef522ad5d1517ae69e71f58d19eea0a6bf6ebb71",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bg.c",
+        "sha": "7598f010f67facc2e31ca9d8d3aea60b505023d7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/big_waddle_dee.c",
+        "sha": "8d6ede6747e611d8cb3a9b7daab9c7f6a3037829",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/blipper.c",
+        "sha": "fe141997481cb1e2949c677dffcf449ea57eac63",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/blockin.c",
+        "sha": "1606cc419e54a6ba34e1803a4894c9ea1b28c59b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bombar.c",
+        "sha": "64568cb09e5ef8a04430586a8a7ad4960b95113d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bomber.c",
+        "sha": "a143f6189dd50b494449d70f8a6da8181f4f16fb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bonkers.c",
+        "sha": "0da4c107adad713888901d714ff5916af992ab8e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bonus.c",
+        "sha": "8c589e2c1e44313a2f9d9b253b7846e0e0ef459e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/box_boxer.c",
+        "sha": "a4ae21f05227c095e27550d2f2e7744186c87f5d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/boxin.c",
+        "sha": "8e019387e917f1ec489ec3f72e3e74bb74919be3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/boxy.c",
+        "sha": "7a732146820295eefa54773497951377526bbcfc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bronto_burt.c",
+        "sha": "d113e268198c611c0376aaddcbe1cb1fb5cf353a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/cannon_fuse.c",
+        "sha": "84de13de4048a9ef9d823468860460db08b86744",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/chest.c",
+        "sha": "a418b834b6fc415057a5971e2ead2203fc69d06c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/chip.c",
+        "sha": "1d47ff5b1e7f0187f4c298d7bbf745c6dc4229c8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_080023A4.c",
+        "sha": "6d73a297092828758e4704fe73465070304cdcf3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800E0E4.c",
+        "sha": "4c9f7f7c373df23dfbf5a3716bd21df4a42850f0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800ECAC.c",
+        "sha": "d2133a6fd5d0db033950d0ca6c3a5ee86d2c3b53",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800ECAC_2.c",
+        "sha": "dffcd81fd1c60a81a589adb7267c8eca06ceeb63",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0801C6F8.c",
+        "sha": "b9fa1dd0e383b86986775dd64bff7c5245bc3ae4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0801DA58.c",
+        "sha": "386c503c4742677aaca0f2bffa1ddfa341baa17a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08026044.c",
+        "sha": "4a2679a803a70372fc4a603e67ec974d52de8606",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_080332BC.c",
+        "sha": "36357c481f7e50663c9b30e6f1e2c987ba43e8e0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0806F780.c",
+        "sha": "c90c88d14435b82681bfb7ed094337909be524e4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08123950.c",
+        "sha": "abb8aef0c04b4b42ce13204560c64d16b71236a3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08138D64.c",
+        "sha": "85a12699597c5c7a227d6ff6bd266e930bb76ead",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0814A828.c",
+        "sha": "9595af2c8bdeab5adb9b0a3289575e8e664084e4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0814EBE4.c",
+        "sha": "4178716520d45d35336532050206bcb758e0c276",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/collection_room.c",
+        "sha": "b48d7878889ce7636995be8853cf862ad4cf4be0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/crazy_hand.c",
+        "sha": "3a8b702bf64818b2509840814e632539424fb5d0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/cupie.c",
+        "sha": "f257f67d6b38bf1aea05015197d9e16d61abdeb2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/dark_meta_knight.c",
+        "sha": "77bc3e4a9b86d687ed7b2e25ffb86bcbd41feee2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/dark_mind.c",
+        "sha": "30dbe498a58a7459484f50027415510f263bc9b9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/demo.c",
+        "sha": "c465f6fe548a57ab1ed91f032d242298cb827b1f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/destroyable_rock_block.c",
+        "sha": "24408ca7cec2abd274a46c72042d220582449611",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/droppy.c",
+        "sha": "261e46828ebd708aae177ca59724e3f8f39da8c5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/fire.c",
+        "sha": "ce701e9e6a52a7b7527322eb8f61962de725474b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/flame_column.c",
+        "sha": "7384f78816a8257fa14b8432797acff2abbbff74",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/flamer.c",
+        "sha": "8e2c5f869d1c58e1c9893f969146f0b156dab463",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/foley.c",
+        "sha": "1aa2195704f19a27270c82ce696d2681745ce10e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/giant_rocky.c",
+        "sha": "efc0a1e4f33b007c4f7ef46207e57641d5c6a1e1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/glunk.c",
+        "sha": "22730c5a9b9c573a86a132066688cb045cdb662a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/goal_game_bonus.c",
+        "sha": "23960e0a3a893cc47a4627c02e3c4b603e065ef4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/gobbler.c",
+        "sha": "4a0be7f1ec716db8f1486810507707e0a332732c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/golem.c",
+        "sha": "9ea4fe1e1be8e7008519eef97487df8964af2e62",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/gordo.c",
+        "sha": "9f6f0cdf8a34607c80c76361ab8d011e2089f008",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/haley.c",
+        "sha": "449f31dfe359961a2d22d4a7e9d7a2b58f747769",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/hammer_peg.c",
+        "sha": "8cdc92cc69bf877ccbb062bd29adb153b6933aa6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/heavy_knight.c",
+        "sha": "82422d15e6bc73119788ff8dc2f93e4d805d4565",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/inhalable_star.c",
+        "sha": "07d061fe5bb5de06d6bd19f6489650ab81cd0495",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/init.c",
+        "sha": "1e2912178e356c34f46974e4f76ff97529fee048",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/intro.c",
+        "sha": "aea3a7ed168816947314ac3421467dc12a7895da",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/jack.c",
+        "sha": "2794264fdf99d58a76c04369b412af7aae053ffe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/king_golem.c",
+        "sha": "9594f0f0d979978357b12d3d34513f76a7af24f0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/kirby.c",
+        "sha": "dd29b855c0dbeeb540c57f32234b906e94a352b7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/kracko.c",
+        "sha": "ef34222e5e4eb7b5c2723facf43af8d10a919ef1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/large_stone_block_7D.c",
+        "sha": "bf5e1daf64dca59eeea8c1aab4ee565afc8e64a2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/laser_ball.c",
+        "sha": "b308fea59a37c34df99b324565b7c029b33015e0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/lava_wall.c",
+        "sha": "7520f94de74c2134ab794a6253a3f35aaad5c43d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/lever_wall.c",
+        "sha": "57203efbac5f3cbf027fd5e6a6c1671b875c824f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/main.c",
+        "sha": "226f6b4d917c5fc37f6186db595d364002d8d4d0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/master_hand.c",
+        "sha": "0a5a8cfcf11399c6b2e3493dd1d98839c7a87bb3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/master_sword.c",
+        "sha": "25f7d96e7b3054051fde3d29a4a100d2a483c8ac",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mega_titan.c",
+        "sha": "1d473c6f887d8d7ddf389d96cbb250cacea87d0d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/metal_guardian.c",
+        "sha": "040c63b3d1aecd9cf0b350333f2882d0060ae573",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/minny.c",
+        "sha": "a0254c8ccbb4899c405c7010fa24311d23b06949",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mirra.c",
+        "sha": "e553278b47471f718863d98b550f346146c513ec",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mirror_door.c",
+        "sha": "69aaa539e77ec2ee9d2231def1883d4e460bc144",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/moley.c",
+        "sha": "06548d575448aa4364fb3389dd8cc214b838c9d5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mr_frosty.c",
+        "sha": "3fb9e8c5104b39b12c99a6ebdb618ef7b87f00dd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08019F28.c",
+        "sha": "25a8bcaaf5bc182e89a9bd0e3866914a1993206a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08030C94.c",
+        "sha": "6420d17df2306ad50862eb7fe2b93d0b986e9ed3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08032E98.c",
+        "sha": "0b80f3ab5942a96b7df27f3d54962d1442f86222",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/noddy.c",
+        "sha": "54e10d2ec9c41e4deeb7f9e42c5cb042eb13fd9f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/object.c",
+        "sha": "7fc844ddb4fb050e47dbabf8defef3cea535d831",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/parasol.c",
+        "sha": "20103a16a313f58bc959272eeb2250bbd7528a62",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_area_map.c",
+        "sha": "9193774c6267511d094392f9f8b795f4f6bc5044",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_fade.c",
+        "sha": "1a2b937a1d6635d30db31dd2a13866800c0ed508",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_help.c",
+        "sha": "e46445a914957b644c0f4650decb21969b1c4e1d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_world_map.c",
+        "sha": "5bc5b115c0872183c75d2a682302e14ca5ff2f3c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pengy.c",
+        "sha": "86b4a947f859a1173fc382fcbee61ef04697cb84",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/phan_phan.c",
+        "sha": "90420a740069dd269f4e818da5c5fcb3a208b630",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/prank.c",
+        "sha": "0f6d228fd7cb263027c14d76f0add2decb3fc36e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/rocky.c",
+        "sha": "b402b1e1ebfd2944c9356edc7504e81b9f2d0ec9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/roly_poly.c",
+        "sha": "39a8425cbdb0c4d6fb24c555bbec4b94cc686abc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/scarfy.c",
+        "sha": "4cb8e4f8daa60142f234919893f8532a8c486da6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/scroll_lock.c",
+        "sha": "215140be5f6e0079ec44b043bc74655b17165c2e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shadow_kirby.c",
+        "sha": "4c07f806b2def4b7ddf0cc1f610a1d60515d3ca5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shard.c",
+        "sha": "9d07094720b04d12f3660491d3aa72822d1256d1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shooty.c",
+        "sha": "29249e4ae45a90a5d16e02c79915bc97c805a64e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sir_kibble.c",
+        "sha": "ff4204669521ead9de490381ec591b685115ac0c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/snooter.c",
+        "sha": "2088c628b125efa94443b482f050506a10e20363",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/soarar.c",
+        "sha": "9b9ac7b59d36e31c92daa2bb718e66241fb7cbe0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sparky.c",
+        "sha": "e67671fa1766ddb448f47c4c3162495d155c63a7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/special_doors.c",
+        "sha": "38444d9ccae57424416a8a46c7587468a1cff99f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/special_hub_mirror.c",
+        "sha": "28ae6b998c27f1f630356f4b38f6110ac63c7d1e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sprite_1.c",
+        "sha": "bc2284abec6c97505e1c0d0bb7986d429fb18bd1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/sprite_2.c",
+        "sha": "40a204f74a3dd684f5bbdfedfb235c222f4b6fe0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/squishy.c",
+        "sha": "09859255f057d775630d797678f674d3c4fde0f6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/star_platform.c",
+        "sha": "46a685b9503b3d9575ec6d0e53978c7710e8c5b9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/subgame_menu.c",
+        "sha": "d7201fb1f4dcbbd109d31dab6ea1d62b6ff96fb7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/subgames.c",
+        "sha": "bf7aa936bdd9a7d3dfa917cfd45e0f5f55eb2931",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/task.c",
+        "sha": "a7a3a9a2dbd2e17898679d4e5dff8eb4e8c2b03d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/title_screen.c",
+        "sha": "0824c47e548ff6414fb3e4d0490f6cf88926b575",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/twister.c",
+        "sha": "a0d13e3f4ad1bdee69aa07ce0bcd73a49c34aced",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/ufo.c",
+        "sha": "8801220368202bcf78dfd5512866a9c1ef4d9904",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/unknown_75.c",
+        "sha": "b4e610e0efafda0c91fb96e81bad81fcda85a760",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/waddle_dee.c",
+        "sha": "9d1a5c7fd76a85fa2b9d51e361aee09669e63f13",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/waddle_doo.c",
+        "sha": "796463c940abf65d222dd482312cbf6f21542c44",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/warp_star.c",
+        "sha": "605e1657f77119b8a9f4c158fed4f2ef400ea7cc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/wheelie.c",
+        "sha": "8add9870f32435eade1b2d9c5dad5b4288a5c246",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/wiz.c",
+        "sha": "26679b2a145b57479f44378ffd77bf23ef7c1b6a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/agb.cpp",
+        "sha": "b8b3cd7ef7072f868d906abff6d1c8a5c6c6dbb7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/error.cpp",
+        "sha": "13e38ffa81665ac6f15f4c83011d437c26a259a3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/main.cpp",
+        "sha": "23f012195a5bee3c0201e182bce0b802365e809b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/main.h",
+        "sha": "61864a52cbc2894432e9b927368c8d999b3c4210",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/midi.cpp",
+        "sha": "fa7d9ce28574275001948ad9a06935c4f09cebe6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/midi.h",
+        "sha": "434c8e8e816a1481d99fa4b42a6c2b07c94a1745",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      }
+    ],
+    "removed_tree_paths": [
+      "AGENTS.md",
+      "data/data_08D60980.s",
+      "data/data_24.s",
+      "data/data_25.s",
+      "include/big_small_switch.h",
+      "include/boss_challenge_door.h",
+      "include/code_08020220.h",
+      "include/code_08025650.h",
+      "include/code_080257A8.h",
+      "include/code_0802E16C.h",
+      "include/code_0802F8D8.h",
+      "include/cookin.h",
+      "include/cpu_kirby_trigger.h",
+      "include/cutscene_trigger.h",
+      "include/eight_dir_cannon.h",
+      "include/gbplayer.h",
+      "include/hot_head.h",
+      "include/hud.h",
+      "include/in_game_interlude.h",
+      "include/kirby_cannon.h",
+      "include/large_star_stone_block.h",
+      "include/large_star_stone_block_88.h",
+      "include/large_star_stone_block_89.h",
+      "include/leap.h",
+      "include/level.h",
+      "include/multi_sio_util.h",
+      "include/object_collision.h",
+      "include/object_spawner.h",
+      "include/palette_effects.h",
+      "include/star_stone_block.h",
+      "include/sword_knight.h",
+      "include/unknown_7A.h",
+      "include/unknown_82.h",
+      "include/unknown_87.h",
+      "include/vert_sliding_door.h",
+      "sound/songs/midi/mus_boss.mid",
+      "sound/songs/midi/mus_boss_brass_unused.mid",
+      "sound/songs/midi/mus_candy_constellation.mid",
+      "sound/songs/midi/mus_crackity_hack.mid",
+      "sound/songs/midi/mus_crackity_hack_bass_unused.mid",
+      "sound/songs/midi/mus_dark_meta_knight_appears.mid",
+      "sound/songs/midi/mus_dark_meta_knight_battle.mid",
+      "sound/songs/midi/mus_dark_mind_second_form.mid",
+      "sound/songs/midi/mus_dark_mind_sky.mid",
+      "sound/songs/midi/mus_ending.mid",
+      "sound/songs/midi/mus_goal_bonus.mid",
+      "sound/songs/midi/mus_mid_boss.mid",
+      "sound/songs/midi/mus_mustard_mountain.mid",
+      "sound/songs/midi/mus_olive_ocean.mid",
+      "sound/songs/midi/mus_rainbow_route_echo_unused.mid",
+      "sound/songs/midi/mus_speed_eaters.mid",
+      "sound/songs/midi/mus_wave_ride.mid",
+      "sound/songs/midi/se_08D558B8.mid",
+      "src/big_small_switch.c",
+      "src/boss_challenge_door.c",
+      "src/code_08020220.c",
+      "src/code_08025650.c",
+      "src/code_080257A8.c",
+      "src/code_0802E16C.c",
+      "src/code_0802F8D8.c",
+      "src/cookin.c",
+      "src/cpu_kirby_trigger.c",
+      "src/cutscene_trigger.c",
+      "src/eight_dir_cannon.c",
+      "src/gbplayer.c",
+      "src/hot_head.c",
+      "src/hud.c",
+      "src/in_game_interlude.c",
+      "src/kirby_cannon.c",
+      "src/large_star_stone_block.c",
+      "src/large_star_stone_block_88.c",
+      "src/large_star_stone_block_89.c",
+      "src/leap.c",
+      "src/level.c",
+      "src/multi_sio_util.c",
+      "src/object_collision.c",
+      "src/object_spawner.c",
+      "src/palette_effects.c",
+      "src/sprite.c",
+      "src/star_stone_block.c",
+      "src/sword_knight.c",
+      "src/unknown_7A.c",
+      "src/unknown_82.c",
+      "src/unknown_87.c",
+      "src/vert_sliding_door.c",
+      "tools/mid2agb/MID2AGB_USAGE_GUIDE.md"
+    ],
+    "new_reachable_blob_count": 223,
+    "new_binary_blobs": [],
+    "suspicious_new_blobs": [],
+    "suspicious_full_tree_paths": [],
+    "credited_matching_c_bytes": 0,
+    "reference_only": true,
+    "checks": [
+      "Full tip-tree paths checked for ROM/BIOS/compiled/archive extensions.",
+      "Every blob newly reachable relative to the baseline was inspected for UTF-8/NUL content and ELF/MZ/wasm/archive magic.",
+      "No new binary blob or suspicious compiled/game artifact found."
+    ],
+    "proposed_remote_branch": "research/naming-proposals-pr371",
+    "original_author": "jackmgaller <68564754+jackmgaller@users.noreply.github.com>",
+    "parent": "60e50b84fa64ea5d73ff15ac6ffe2a7d86462a62"
+  },
+  "terrain": {
+    "ref": "refs/remotes/candidates/reference-terrain",
+    "head": "60bb564a0f46a856479ee3f56ae80bff648c5d3a",
+    "new_reachable_commits": 14,
+    "tree_entries": 1517,
+    "changed_tree_paths": [
+      {
+        "path": "asm/boss_challenge_door.s",
+        "sha": "855358e2e2ff63cd6036863046e16ad009874c8a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code.s",
+        "sha": "51d5c5d5802557ab9f40c77d27306825ea5a2b57",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/code_0802B4A8.s",
+        "sha": "ca0c8216376b7c1230dd6e0838d717dcd817d4b4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/code_0802E57C.s",
+        "sha": "d66fce8e4f2ce556ecebd6eea5991eeb5bc0ff8b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/code_08032E98.s",
+        "sha": "13484819eda6034f1a6c9242fc27af1f8a28c5fa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/cutscene_trigger.s",
+        "sha": "1bb1cc9c75822f90dfd0b202b189d951c9c1af87",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/flamer.s",
+        "sha": "4e943e0d83affbcc2c91699558aa527d20cba4bc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "asm/large_star_stone_block.s",
+        "sha": "d11d69e92b95e32e39cee653bcac07470c46d03b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0800F044.inc",
+        "sha": "7e37df2d0ee6ebe2bef8ea7de25a69954d854551",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08025650.inc",
+        "sha": "38329140ba3d1cc2cc1bebd6d77bbcf08cf3ceb6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08098E54.inc",
+        "sha": "7ddc211e86559708d33313e91665363a5aa54571",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0809924C.inc",
+        "sha": "09ee99e437d784a6b0398ae4eaec7cef09ab3b7d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_081194DC.inc",
+        "sha": "97205c598668d9c848ca4a33b336f6329020eb17",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_081197D4.inc",
+        "sha": "25ee93356eace0cf42d1f5173723bbb26e032542",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08119980.inc",
+        "sha": "bb9de562636959b919b34a4bd5c9eb824b5c57c4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08119AA8.inc",
+        "sha": "3062e68ad4eee351b2139a18e427746e28652ae0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08119B3C.inc",
+        "sha": "bc7a0909651000ff81872300fad45ecf3dcd4dd4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811A934.inc",
+        "sha": "afdd27de8eb779554d7d7827242c6cb363efcbf2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811AA80.inc",
+        "sha": "e641aeed5d561b51ff05699daa41dbb1f4de6db5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811AB74.inc",
+        "sha": "c0434a2f6efcc7bd473de8c03bb65e2bc1c6c00f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811BA30.inc",
+        "sha": "fc3df73f4df12d82dcf7e749129666d1aba1d4f7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811BAAC.inc",
+        "sha": "2b054ea6d00e0bea0fa4b6b1be8a4299e1cc40b8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811BEBC.inc",
+        "sha": "50aa6fc9a8234c6beadb841e9c5494115fb20754",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811BF24.inc",
+        "sha": "250f65941115db98459ecf6dca50750153453c98",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_0811C07C.inc",
+        "sha": "6f541e66674de274c00b6df3e299024658ecd4a7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08121B70.inc",
+        "sha": "af2d9a4ff108e24c531192a8f9955b7880ae7c1c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08121FCC.inc",
+        "sha": "64e027fb93deda73b33bc67cf58d3eb240c0b06a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08122248.inc",
+        "sha": "757e59298c5b83e57096692921c3fde5280b4eee",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08153184.inc",
+        "sha": "3e01e140f5d25379058068486ae82ef4dfcbbe4f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08158AE4.inc",
+        "sha": "e762341e92424d5d130fde5430b824b2a9f72cfd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08158D80.inc",
+        "sha": "3629447994add3d1ac4b10f4475ae8cc04e67396",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/nonmatching/sub_08158DBC.inc",
+        "sha": "dcd5a92f67eba705c4deb2e788cc1257507beb74",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/sprite.s",
+        "sha": "df28e3ef01a5ed5d281eada2234ce6a3138c9f6e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "asm/star_stone_block.s",
+        "sha": "ba3b52e4038151f1d073ae4cf50d5f499e92862a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "calcrom.pl",
+        "sha": "97ce728ca85bd7d87fb3f06e95ec84498590c8d3",
+        "kind": "blob",
+        "mode": "100755",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_11.s",
+        "sha": "355af8658a26210ed39084d8366ee069d0bd668e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_13.s",
+        "sha": "a999b2996496454c50970612325a9c2dc2c23201",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_14.s",
+        "sha": "75a1f4589298f08aabbf88f7fd85996c278509c2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_17.s",
+        "sha": "baa61d88fa5edb101d11aa12f02df52911cc9217",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_19.s",
+        "sha": "2f2d78e5f3eeba72e31c359f046da6e362419d7a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_2.s",
+        "sha": "b696d711f90e1e1dddc72ba8a72df145bd47eaf5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_22.s",
+        "sha": "593159d3ffe0b0da15f7d5fc3ff3c7c5ffd31822",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "data/data_6.s",
+        "sha": "a3dc15e4b7ae238d1b6bb64c4d05ddda851fe87d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/ability_objects.h",
+        "sha": "743594549181460b7b7e37a68655406417af1f18",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bang_bang.h",
+        "sha": "90db64551ef8b0b90f61726c15af45166bf32ee3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/batafire.h",
+        "sha": "0ccdeca44fa1da4ad4015fa35a8437920b70caa3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/batty.h",
+        "sha": "c6310f391bdccebe74a7394eb595ef45e64ef017",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bg.h",
+        "sha": "5daacfbb424edfd82a47b06dd964485491c81f0a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/big_waddle_dee.h",
+        "sha": "b8001dbe130e9219c2661894f5beaef5e1d51de4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/blipper.h",
+        "sha": "9ffb56031e7444c248f12a76339fd3b092abb9f0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/blockin.h",
+        "sha": "f5fe88e3953baa69f3b5cfd59205a8e38f973977",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bombar.h",
+        "sha": "0da1ba32d2861eafb99175a41d19c21e0373695e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bomber.h",
+        "sha": "5981f398dedc78b11b64bb08c06101e8794e98ec",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bonkers.h",
+        "sha": "77ec35ac95358b34541800fcb1f6298a92bcef58",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bonus.h",
+        "sha": "14672746d078fa680f171440cf3f5bf0a4c3f098",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/box_boxer.h",
+        "sha": "98fbc416dec9d4938ebb4af8034b6df20069c400",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/boxin.h",
+        "sha": "0f91db2120a7ce777c349b238636b264d07dfbcb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/boxy.h",
+        "sha": "60f7e35c81b243c4202594c421e5bcd0376ddb51",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/bronto_burt.h",
+        "sha": "7cdf00fca8de9dcdcf7c2895fc8d6c2a9933f61c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/cannon_fuse.h",
+        "sha": "1c82e94d0b3ba43c8f38a8d12549ff95745cb523",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/chest.h",
+        "sha": "e4694631f93993364cebb837211122f850eda0f9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/chip.h",
+        "sha": "12c2f52883ed862ea826bd6293034dadbf0cb1b6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0800E0E4.h",
+        "sha": "1f2046e8a8d5c5326f980fbdbd50d61400d866a5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0801DA58.h",
+        "sha": "8202a287148a79756b4e06f8af2e34aaa68e1deb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_08026044.h",
+        "sha": "5beeb30aa8f2e4c74f14eddd40d24e77ef426893",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0802E57C.h",
+        "sha": "e6b67e296aadf4db700b0f2ffc952731d9936bcc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/code_0806F780.h",
+        "sha": "ee3fe75436d48b717526b0d71b0341d91ceccd8c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/constants/object_types.h",
+        "sha": "bca958fa20b274071b93615316dd95b2d3bb271b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/cookin.h",
+        "sha": "268aa890bfb0457b9682c81afa42d2fa89ca94ce",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/crazy_hand.h",
+        "sha": "835b3226ad7ffc0e10b36a8ac2636067f7d1779d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/cupie.h",
+        "sha": "252f840f33a8cab6d69033977ccfa2e50b3908de",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/dark_meta_knight.h",
+        "sha": "2a1b64b66aa05fd9029699fa75cf8223b17c55fe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/dark_mind.h",
+        "sha": "ba2e98c0b281c4f5aed391c2b6cbc605e2128945",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/data.h",
+        "sha": "cde54002286e4dea5733d2fe99ac8b946537cac4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/demo.h",
+        "sha": "851593ad616fe501ccf2f3721c7fb6e2e9c47ea5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/destroyable_rock_block.h",
+        "sha": "a07cc2e62bf31fb37956f93f966bb480c86951fe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/droppy.h",
+        "sha": "927f0998a35cf91d1037570d38d4c0ec235b671a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/eight_dir_cannon.h",
+        "sha": "b64995513d3f20e5061594c65ef867d40e1b0fe9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/fire.h",
+        "sha": "fa30b12ff937030a4cafc4588a8c0d6f12091276",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/flame_column.h",
+        "sha": "7a79ee37d12dfb20cadb9e26f9dfedc47d0d1575",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/flamer.h",
+        "sha": "079145087740508a7928b7487276bab7cdaa40c6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/foley.h",
+        "sha": "8873f2550e999c47cdcfa3d29027cb99528f84b3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/functions.h",
+        "sha": "02b7b3c3af10569a60ff1bfc1f125d09dd3cbfe1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gba/m4a.h",
+        "sha": "7e16a635531685da558eb78e3c38a72f2b760f5a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/giant_rocky.h",
+        "sha": "698cf0555db65245443251963c79da032787581c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/glunk.h",
+        "sha": "9c2cc02d9d7d86b9bd9f4401bafe05cc0a9c5a06",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/goal_game_bonus.h",
+        "sha": "abb62d409f0e58dd3eca896f20f6f67fa41912ea",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gobbler.h",
+        "sha": "d5206e4d81bef8199ccc9f01812c0198d3b0f19f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/golem.h",
+        "sha": "b31b40b2b0c930bc3da01eb44da716e7acb1a3ed",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/gordo.h",
+        "sha": "68af8e4171d741b6069902f72048c84fd1102887",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/haley.h",
+        "sha": "fd2935092cae88d2196642306aab902aca3e004c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/hammer_peg.h",
+        "sha": "5c98a689844622dc6f3ccf6bd866d157c37d31c2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/heavy_knight.h",
+        "sha": "192b877c0a91a28b39f48c2a5048770bc6dda13e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/hot_head.h",
+        "sha": "84057017b1e86af078f4ef5d29b668ccd9df130e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/inhalable_star.h",
+        "sha": "b5209a77e013f70c0baa2f0af2ea05dd7bb95e62",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/jack.h",
+        "sha": "4c3cc3961c5804c56ac00e1ed7d5bfd65e9edd36",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/king_golem.h",
+        "sha": "34e48d85e3f46b4580d69bd22137004d131249e6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/kirby.h",
+        "sha": "d450f82ed2698f4ea285c7740f4baddf9e40dbd8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/kracko.h",
+        "sha": "ad2811b4ed92ced6c8c17a94f02163d0d1aa69e2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/large_stone_block_7D.h",
+        "sha": "d3a7f27cec5189dae681778d5e79af018d2c9044",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/laser_ball.h",
+        "sha": "feaa5d549b3a19bfd599781f681c12d10c44c8a9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/lava_wall.h",
+        "sha": "92f1790a048f084f2e9a88ae5a2f0bc3eaf8aee3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/leap.h",
+        "sha": "aca1e35c4baccf31f5199c542ff772c5ce88c263",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/lever_wall.h",
+        "sha": "6f86eb84af5c497e7c541cb2c80512522b3cfed9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/main.h",
+        "sha": "9c8a33d2bf25705c74e82a4604b84b863b696568",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/master_hand.h",
+        "sha": "a1a5b1c3b17591002e836ee1e011ea49c7b7b8d8",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/master_sword.h",
+        "sha": "aab4fa670a3f8fbd4a9bbbe7dd4d8d3d7219b3f3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mega_titan.h",
+        "sha": "6c4def5a1e5fb6febd07533aa911591f066adde5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/metal_guardian.h",
+        "sha": "6f510ece8d2f799d2ab114f351b94ceff3c7e502",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/minny.h",
+        "sha": "9dda64006fe2db46459ba16bfb6e8dff25673dc5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mirra.h",
+        "sha": "e4d98fcf91d2a3881e38d120b2ded8589e6fdb2b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mirror_door.h",
+        "sha": "4a0669bdc844e237fabe3b3eb42d68ade222db01",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/moley.h",
+        "sha": "7d12f1401c31b31dd47e30c1022e90fa7048dc2f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/mr_frosty.h",
+        "sha": "dd0fff69a0977ea82120cb9fcc8007ca12e4c6fe",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/noddy.h",
+        "sha": "66ccc6fad2f78949921c2aa22f317aac48c5164f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/object.h",
+        "sha": "5307fb5358ea2f794706b64bc86c7a89e9ee556a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/parasol.h",
+        "sha": "d98c37800952323faa8073b91695f3bb012a6b35",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/pause_world_map.h",
+        "sha": "868d23b8e27fea02a0a09641990f8161ab39cca2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/pengy.h",
+        "sha": "36e109e4fe9521b652bfe3aa4598465a4fde70fa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/phan_phan.h",
+        "sha": "3d7783d38d2304eda743390f4264b4bdd2df3127",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/prank.h",
+        "sha": "3cbd1b538746911f7b0f17fde8f3860e95b0ce02",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/rocky.h",
+        "sha": "2707fefbf529ddcf41ffdd25e5f651ac99abd2c3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/roly_poly.h",
+        "sha": "466f4468f1d9f1dc197b3a7b6882e72ff14d6bb0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/scarfy.h",
+        "sha": "c0fa761fe5a841e72a64c90d860a8b3acd18f6e6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/scroll_lock.h",
+        "sha": "f47e981c60c56f4221b663786e55d99a43368b93",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shadow_kirby.h",
+        "sha": "afab506c9a49c5e3dd5a2007ee8945cd8f59d4ee",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shard.h",
+        "sha": "6ef9374a89092527a303ec348bea195bd882e28c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shooty.h",
+        "sha": "a5a958123c64514d44a22c904c562b26d3664388",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/shotzo.h",
+        "sha": "d6148bb156fdf107c3324c06e864669bfaacddb0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "include/sir_kibble.h",
+        "sha": "655da8f8ef1ea4eb7aded1d6e7507445611d29d9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/snooter.h",
+        "sha": "8a04ab3896246f30dfd254cab759c5a7ed8fa6d3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/soarar.h",
+        "sha": "9985c5591330cafc46dcb33b346f5600ea58b83d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sparky.h",
+        "sha": "0c9224b6a6771085beb3d6785f15931191a9ce80",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/special_doors.h",
+        "sha": "05e1ca755a681cbdc9ceba009e902f0b7de66f0a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/special_hub_mirror.h",
+        "sha": "c19a3677b8546abcf6f250e163f1a4f456ddf794",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sprite.h",
+        "sha": "9399fa3f59b7794e56b74e375432e33223874149",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/squishy.h",
+        "sha": "73c5e28aa71e51ac95aa6e732835b723ee52e8b5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/star_platform.h",
+        "sha": "bb89384de723d40975671d2a122e1c7fc3ccf3d4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/sword_knight.h",
+        "sha": "46acb2fc20ca7b21dc4184fda9d92210fb3115e3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/twister.h",
+        "sha": "d64676256aa9a402bd409a0898a6ba0efa4848a0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/ufo.h",
+        "sha": "84737fdbb20c04b932ed06543338dea4f9a30db3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/unknown_75.h",
+        "sha": "35f2edfb391f5524484a214706eb3ea92b889827",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/vert_sliding_door.h",
+        "sha": "caa057fc22aacdc8a3813c19b19dceeef37ab24f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/waddle_dee.h",
+        "sha": "343ff2397b7cd50f139e7738044296e3bd26fd06",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/waddle_doo.h",
+        "sha": "8db356457ef216aa309b88cab0c0fff51f71b56d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/warp_star.h",
+        "sha": "06c6de81fb1960a7efb19473e713f4d9880b0e31",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/wheelie.h",
+        "sha": "d3adb397e72535e7a91a5dc767d5aedee4bf8abb",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "include/wiz.h",
+        "sha": "39102269f1f8b5aa51ea20ed6ba92452f13ec594",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "linker.ld",
+        "sha": "a1a9a41f2d73b32a7f072271cd843bc9208992ee",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "sound/songs/midi/midi.cfg",
+        "sha": "91d077c6b078b15632927ca53caa9a4ca7ae32e0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/NOTES.md",
+        "sha": "b991ad330396343aa4d225be472845672a57156c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_boss.mid",
+        "sha": "1699d0fc711087991a38d6c83c462cc92f1136ca",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_boss_brass_unused.mid",
+        "sha": "533d10f25747b37dbdb872cf51dd11492686b291",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_candy_constellation.mid",
+        "sha": "2b5e45716a2aa99441873401857022304c0c7c99",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_crackity_hack.mid",
+        "sha": "b2ff7c36ec265bad524a91ef94e1f14311fc3d7f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_crackity_hack_bass_unused.mid",
+        "sha": "52cd81c96a8bfc197272254c897e1ecfb449c332",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_meta_knight_appears.mid",
+        "sha": "3e8151a657571969bca8296d01c1af873b7c1a41",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_meta_knight_battle.mid",
+        "sha": "1c210a0c044d38c402225938c9620bd50a7a686c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_mind_second_form.mid",
+        "sha": "61fd55ae4e470489d62ae26cc0b0480ae93e676b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_dark_mind_sky.mid",
+        "sha": "8b3c8bf883e192c7f739b5050032a42060cf964e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_ending.mid",
+        "sha": "f1fe894d27146e318e8fb9a4f429b6667d1a2b68",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_goal_bonus.mid",
+        "sha": "964082d66011dceb566531148bc8f48e568a4a39",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_mid_boss.mid",
+        "sha": "11147c7106ce4fa5a0f5eeeaf76b144533266471",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_mustard_mountain.mid",
+        "sha": "cf1fbf1e2623d6b82bbc5c102c06c486ea41fcb0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_olive_ocean.mid",
+        "sha": "e04f99e2efcbebf4a378e409c0e4234399ab8033",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_rainbow_route_echo_unused.mid",
+        "sha": "6e464de40771c8ad6b654a209a93cddb2bd4e133",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_speed_eaters.mid",
+        "sha": "f4989783e1fa7f6b06a76e9a3c35a88362a18398",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/mus_wave_ride.mid",
+        "sha": "3a53ee92db7240e8034be74488d5e2bcc1cc3bdc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/midi/non_matching/se_08D558B8.mid",
+        "sha": "c267dbb48e17b4fcd1eb0a3b052b7530f3c3e20d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_boss.s",
+        "sha": "1b6b2fa3dcbbe8c43397276dd23d4e8177e4b853",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_boss_brass_unused.s",
+        "sha": "2b8d63866b195df83475b35eeca45bd74b9b3b91",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_candy_constellation.s",
+        "sha": "ef7123f0f2b4a509f582e00abba276b516a2d5bc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_crackity_hack.s",
+        "sha": "0ce812e6539dac8578df7c11e6be36fe17a70ad6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_crackity_hack_bass_unused.s",
+        "sha": "f9bec299fb958ba89aa0cb59c2c2a8a3bcb25974",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_meta_knight_appears.s",
+        "sha": "1e5d67bfd8d3d0a9f6554931ed0ea54c9a98c19a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_meta_knight_battle.s",
+        "sha": "d03dedb8e2b91e7e35b552c3d0385ca9e7f479b0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_mind_second_form.s",
+        "sha": "c651da54a35976e4cf594bfdff5f89402db734d4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_dark_mind_sky.s",
+        "sha": "bab10f70ad9c767b1003a5f4e57df1efdad0c973",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_ending.s",
+        "sha": "2a9474b289815c9998cd7677e9490b81670d3a33",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_goal_bonus.s",
+        "sha": "49b793b1d04347f5ef5b9471d4724ee36508b6bf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_mid_boss.s",
+        "sha": "67ad4246b5c30a8cf763cc3cc63c19a9a5ab28cd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_mustard_mountain.s",
+        "sha": "b92b99e2e0e33e9c513d5d4cd98c26104099f4ce",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_olive_ocean.s",
+        "sha": "d59347f06e649dc2cb962ea2972e3d07119c2340",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_rainbow_route_echo_unused.s",
+        "sha": "5737be97ea5e10b246d974ab41090cc8dbb796bf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_speed_eaters.s",
+        "sha": "4f1c1cdcc68ae108c2fd8dac3a73b3a316125b40",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/mus_wave_ride.s",
+        "sha": "cc8fb873370885ed8a10fb2a53644496878db8f6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "sound/songs/se_08D558B8.s",
+        "sha": "7b41fb47ab9886004cddf4724439f49d404c2f79",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/ability_objects.c",
+        "sha": "70db906e23a2863efd69097dba1f08d00cc8f9e6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/agb_sram.c",
+        "sha": "b643bc45cb453e13f1383075ae5c226b488dea5a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bang_bang.c",
+        "sha": "239bbfbf88854c5363c2b80eefc7e7137db7df70",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/batafire.c",
+        "sha": "a8164e0c3d7463175f5caa789938fddee6eb7bb4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/batty.c",
+        "sha": "f0a6aef5523613603529a44720524b0005397aa3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bg.c",
+        "sha": "7598f010f67facc2e31ca9d8d3aea60b505023d7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/big_small_switch.c",
+        "sha": "d0cfa197e343d407de159922dafe7423d61bb7bf",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/big_waddle_dee.c",
+        "sha": "e46cd31883c6e2bb74f6f34254eeb50673830b7e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/blipper.c",
+        "sha": "8cdb922583b4c6ddd82590beb5de273276933824",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/blockin.c",
+        "sha": "8b497cb772697f60c6a24e21a5a75653787eb5ae",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bombar.c",
+        "sha": "46e825c6b7c8cdd216b36a7312cdbe22db55e59b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bomber.c",
+        "sha": "a6e2fc03e15359bd4e00341c89018e59a378016c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bonkers.c",
+        "sha": "f93f216d09d69dc02b2c10956b542d1d6c198101",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bonus.c",
+        "sha": "e7652f6f2b16bd9e10c8cd57c6974dcf940e517a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/box_boxer.c",
+        "sha": "87ba55b8eb58d5ff8ca87d3a53ee61a167280d26",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/boxin.c",
+        "sha": "4353ea6a6643a1e4538a92b0c8003f02cd92f4f9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/boxy.c",
+        "sha": "bd744245a815ef469e7ce6eed3635e12cb52d71f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/bronto_burt.c",
+        "sha": "161767ec0347f30e085d02f9e12e5f70aff6183a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/cannon_fuse.c",
+        "sha": "1ec6661491ef895699e54e94ec89b30a044d75d6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/chest.c",
+        "sha": "4639747b247c5d0607432cff12454dc19c014c1a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/chip.c",
+        "sha": "d30ae87deefd4b76f40b28779493c989f0ca6add",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_080023A4.c",
+        "sha": "4b6330165ff684c4107d92029c4e5da01505962c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800E0E4.c",
+        "sha": "31e6a5a134b960b6e3bbfe9f7e7d26d323c4498c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800ECAC.c",
+        "sha": "0faeb79b860d27bc37d980127476ebc6df30190d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0800ECAC_2.c",
+        "sha": "ba1058d680c9765f7e8a201c274b7aa8329d8cdc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0801C6F8.c",
+        "sha": "3a633280c012da5ac270d72ffd12215135476f91",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0801DA58.c",
+        "sha": "be62020280151fab988fa7f9f284d0091e001cb9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08020220.c",
+        "sha": "e91c168c621b8719864e7344dcef5e1976a5d61f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08025650.c",
+        "sha": "ed120db528ce1a08dfe2d0d67f3996df368f5b7f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08026044.c",
+        "sha": "50370c59b80c9f2af3f57acddaa5c22af290b00d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0802F8D8.c",
+        "sha": "260f7497f37e26a648b2f2fb46d2e9f166032875",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_080332BC.c",
+        "sha": "e30ccc5324539ebd826853d2568460ac54a0b74f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0806F734.c",
+        "sha": "c89d75067d4c0904f31c3bfc0051066b52cb3528",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/code_0806F780.c",
+        "sha": "9da027d1feed4eb569415b002e1e49c17216fcab",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08123950.c",
+        "sha": "db5c16699bd3ac57a879ca0ab988984d7089864d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_08138D64.c",
+        "sha": "b439a55246608c06683e9d9a62fff6b87333e0d7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0814A828.c",
+        "sha": "45670140ff3cfef54549347e09640b7e849d03be",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/code_0814EBE4.c",
+        "sha": "3b9bb37c57f8f9aa1fd4f6b7e2aa938e6350521b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/collection_room.c",
+        "sha": "c9e1d38178c399bdbe2bbbb2a73c1fcd2fa1a1cd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/cookin.c",
+        "sha": "78b59de461b22631e07518c5c772fbff38b1f6aa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/crazy_hand.c",
+        "sha": "a81386403523bdbb58753a6bf01fcdeaf4ae17b7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/cupie.c",
+        "sha": "f94b69779f4aeb2b1a99f7a51543f36faad3a558",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/dark_meta_knight.c",
+        "sha": "38aa8a70b0e1b1c3a72a802a6ee1fece7786fe2d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/dark_mind.c",
+        "sha": "abf56664dcbbd4be2f05241409b9efa33393fdc5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/demo.c",
+        "sha": "08d74d6ee874f93ccaa4e2f5dcfbb2b383bd2d4c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/destroyable_rock_block.c",
+        "sha": "5285afb377dada8002e5866da2ebdb3253b8abb6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/droppy.c",
+        "sha": "4e13bd9be40216e3b380eaacc7cc670b178cb4a9",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/eight_dir_cannon.c",
+        "sha": "1fdb18eba881d9ed36a0210f8b9dd81eda85d237",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/fire.c",
+        "sha": "1b3b0403b9c90d108aa0b9da71ec85c55ef8bdb6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/flame_column.c",
+        "sha": "fc7b100fdd4ae80c259a9f1cd631c187b25b3d6a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/flamer.c",
+        "sha": "798992d6ebeb7233638c8698f0b2762184e31f13",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/foley.c",
+        "sha": "58fdb6bdc4940bb0d026a714d0bcc86dbd57a2a6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/giant_rocky.c",
+        "sha": "6ef45742b229455594a443070b6a654733e68984",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/glunk.c",
+        "sha": "4b22667060715fa8cfafe5ecc7dbd1227200dd20",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/goal_game_bonus.c",
+        "sha": "0f673690601b288cbf9d5495ac86e485ee9541af",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/gobbler.c",
+        "sha": "c74929aaa34b0f69d52fa97a72ae214f809b0a30",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/golem.c",
+        "sha": "41b14a9788feeb6e2da439f078b668b644077645",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/gordo.c",
+        "sha": "911944e2aaa8249c24f3b0fbfd5d97351036423d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/haley.c",
+        "sha": "ed4db2afd58de5e5e4efeeb5f96bc2ee9a147d88",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/hammer_peg.c",
+        "sha": "ce0c810464d1cf1dd31f3abc84d73540ccf16573",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/heavy_knight.c",
+        "sha": "d544d084499cdcb43aa98ca1cdf307f2444b5bb1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/hot_head.c",
+        "sha": "4f9bab29cc7178aa38cc4d10ad69a3347d78d88b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/inhalable_star.c",
+        "sha": "bfeb7153146a45857ec339baae1147e6f027084d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/init.c",
+        "sha": "1e2912178e356c34f46974e4f76ff97529fee048",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/intro.c",
+        "sha": "5ad125949faf0c434b87d99455657a9e5a5c435f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/jack.c",
+        "sha": "fd2827f1d98d402bc01f25631edfdab91dee9aba",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/king_golem.c",
+        "sha": "e5193e0ab832f022b7fd51b5818de5aa3441b7de",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/kirby.c",
+        "sha": "5fbae7043f45c806bf37061af5fbf8dbcb8db3cd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/kirby_cannon.c",
+        "sha": "a90c263b9cdde00fc0db86279ba54ad31c020278",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/kracko.c",
+        "sha": "ac73bb3eab2ea2558b1ade2b6dba0c0bc6fd8a67",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/large_stone_block_7D.c",
+        "sha": "3039a8900756b5d4ef8a68167c0278111d5755b5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/laser_ball.c",
+        "sha": "d02e11431295f16340ab09251322fbd0a989466c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/lava_wall.c",
+        "sha": "62d02c01eccd3fa01b075756640bb562b0bfe45a",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/leap.c",
+        "sha": "e7698bcd8bd94e95756d24c0129439fe0115c673",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/lever_wall.c",
+        "sha": "57203efbac5f3cbf027fd5e6a6c1671b875c824f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/main.c",
+        "sha": "226f6b4d917c5fc37f6186db595d364002d8d4d0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/master_hand.c",
+        "sha": "d736e5ebb0f129f76be22653621e0d35fb663509",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/master_sword.c",
+        "sha": "f5dd461655d41f89d90f31584b7c0d703d018120",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mega_titan.c",
+        "sha": "b6a5b5abd14de9c299809df05e31b6027f2bafac",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/metal_guardian.c",
+        "sha": "93dbe10d49559df93ff4136a9d757dbc619da768",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/minny.c",
+        "sha": "f8f0009f8c7ea4a2b3935493f0ba380123c220cd",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mirra.c",
+        "sha": "7d1877fce5d863f337dbb0925b94e526e0152602",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mirror_door.c",
+        "sha": "32f3d614a27402a537a880786ec3003867323846",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/moley.c",
+        "sha": "10a7cbe8127ef9e3d221dc792a0da83200d6e671",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/mr_frosty.c",
+        "sha": "a428561a6d4eaf1ed62601d2d656d3d0f59689b0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08019F28.c",
+        "sha": "1096761d311c70dc234e91640aa19bab9afd3d28",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08030C94.c",
+        "sha": "ab8969450cef5c8e3cb70ec71372faa1e39523b0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_08032E98.c",
+        "sha": "0b80f3ab5942a96b7df27f3d54962d1442f86222",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/multi_sio_08158934.c",
+        "sha": "741d1dddeec2031d38e00e56f244d4885eaf5f67",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/noddy.c",
+        "sha": "484118bc04755d94b01cdf1f6f82cc353b6e8e77",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/object.c",
+        "sha": "d754c842545a0148f7b0728a1601d6a83d06489e",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/object_spawner.c",
+        "sha": "a07c626562fcc59e6d56e63c28f5e2ae05ed69e5",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/parasol.c",
+        "sha": "bb6a4f18a96079920d1f1c504b3371780de4758d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_area_map.c",
+        "sha": "194070365c80f0cbff741ee68dff29adfcfba848",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_help.c",
+        "sha": "d57869dea3337e3426535ad0ac310a3cf320ff2c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pause_world_map.c",
+        "sha": "38f5a2ce81218b950cdd8b96f7d2a023c5112f7c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/pengy.c",
+        "sha": "8ca57699bb4a562d69d894a470d753c1c9c0bda0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/phan_phan.c",
+        "sha": "92364ec140af1b9fb6665ef33c06ce54c4d19c38",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/prank.c",
+        "sha": "5c595fb0d619ae49abe5948e81167b6b40e88ac2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/rocky.c",
+        "sha": "42af8e1d1bb4a33ff45a969ff5e04a0c1e83afe1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/roly_poly.c",
+        "sha": "d1140372322b30bc469b8c614c0c1fafda7167a2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/scarfy.c",
+        "sha": "894070d4fd6f28f9a3fe63df47640851fd6bd6da",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/scroll_lock.c",
+        "sha": "de4c7abdb09ef3a66665bbd6f4b9ee106ef51427",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shadow_kirby.c",
+        "sha": "69c1e7702443881a40b78afc5bc1bcbcbe511a99",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shard.c",
+        "sha": "35a756f4854792adb74b57084dc9759a479c4b4d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shooty.c",
+        "sha": "97231be032f48009d086e6f47c5e96a65a3f8412",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/shotzo.c",
+        "sha": "3716a34a29aa15ffe847874d71c4b04f71b993dc",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/sir_kibble.c",
+        "sha": "1554dd226faf6fe9eb6f4cb98a0f9082a59caa72",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/snooter.c",
+        "sha": "8640d969954a4eb76935ac1a322539157af6683f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/soarar.c",
+        "sha": "7e12ea9276111c250234782f032152d5993757c4",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sparky.c",
+        "sha": "0b421ff648d9fbd3f1c84d9f320698608b39c816",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/special_doors.c",
+        "sha": "0f7b57f3e5c045f7be5b8c89bee3ddf294440b54",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/special_hub_mirror.c",
+        "sha": "04120414919a54086a9575a8ae5053580c9ac11d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sprite_1.c",
+        "sha": "bf389434cdcde1499bb6f1fdd82c6aec876056d0",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/sprite_2.c",
+        "sha": "2a4a2c25fa52d752e76c15ba81de07522aab24a2",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/squishy.c",
+        "sha": "1a255893df25ecd2fd1d82a866aa0868b81482ad",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/star_platform.c",
+        "sha": "adc473eda40ac5242e3d93980c491ef8077618aa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sub_0800F044.c",
+        "sha": "762d6b59d767b27ede2f8cb2f9a6ca8cf3092dfa",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "added"
+      },
+      {
+        "path": "src/subgame_menu.c",
+        "sha": "c72457464de57441fb6a5f8f0821ec0e0b6bed8c",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/subgames.c",
+        "sha": "209524ab098bd3fefa9afd2a25a475f66981dbe3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/sword_knight.c",
+        "sha": "a0de4f98ddac9a625965b1fd97b9aab2f2d02dda",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/task.c",
+        "sha": "a7a3a9a2dbd2e17898679d4e5dff8eb4e8c2b03d",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/title_screen.c",
+        "sha": "8b8c6f41290d9828344f252c8ee1cf13f2aba19f",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/twister.c",
+        "sha": "85d0b1781a6670e21ac8bf88290db4119b715138",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/ufo.c",
+        "sha": "632173652b3e14f4fc8c2b681e79fbc2baf1eb10",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/unknown_75.c",
+        "sha": "70a35093e6d7e7eff5c168e923b6ffeb8b60e86b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/vert_sliding_door.c",
+        "sha": "c302ccd8051c71b4091c75be829fe0e013ad5f52",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/waddle_dee.c",
+        "sha": "4504254c08c4df6d289e7944fc7f40de90ced391",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/waddle_doo.c",
+        "sha": "ba105e88f26c1b56f9d760f640a93ed4fba7fe76",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/warp_star.c",
+        "sha": "ebce0cd45a46799195aa7f26e20edf4f9ab6e067",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/wheelie.c",
+        "sha": "46ce2b800d93562f9c93567c9592414103adc2c1",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "src/wiz.c",
+        "sha": "7f179ff0a1b2c8d7017fe7125c38cc4f79b68a36",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/agb.cpp",
+        "sha": "b8b3cd7ef7072f868d906abff6d1c8a5c6c6dbb7",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/error.cpp",
+        "sha": "13e38ffa81665ac6f15f4c83011d437c26a259a3",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/main.cpp",
+        "sha": "23f012195a5bee3c0201e182bce0b802365e809b",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/main.h",
+        "sha": "61864a52cbc2894432e9b927368c8d999b3c4210",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/midi.cpp",
+        "sha": "fa7d9ce28574275001948ad9a06935c4f09cebe6",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      },
+      {
+        "path": "tools/mid2agb/midi.h",
+        "sha": "434c8e8e816a1481d99fa4b42a6c2b07c94a1745",
+        "kind": "blob",
+        "mode": "100644",
+        "status": "modified"
+      }
+    ],
+    "removed_tree_paths": [
+      "AGENTS.md",
+      "asm/code_0806F734.s",
+      "asm/prank.s",
+      "asm/shotzo.s",
+      "asm/sub_0800F044.s",
+      "data/data_08D60980.s",
+      "data/data_24.s",
+      "data/data_25.s",
+      "include/big_small_switch.h",
+      "include/boss_challenge_door.h",
+      "include/code_08020220.h",
+      "include/code_08025650.h",
+      "include/code_080257A8.h",
+      "include/code_0802E16C.h",
+      "include/code_0802F8D8.h",
+      "include/cpu_kirby_trigger.h",
+      "include/cutscene_trigger.h",
+      "include/gbplayer.h",
+      "include/hud.h",
+      "include/in_game_interlude.h",
+      "include/kirby_cannon.h",
+      "include/large_star_stone_block.h",
+      "include/large_star_stone_block_88.h",
+      "include/large_star_stone_block_89.h",
+      "include/level.h",
+      "include/multi_sio_util.h",
+      "include/object_collision.h",
+      "include/object_spawner.h",
+      "include/palette_effects.h",
+      "include/star_stone_block.h",
+      "include/unknown_7A.h",
+      "include/unknown_82.h",
+      "include/unknown_87.h",
+      "sound/songs/midi/mus_boss.mid",
+      "sound/songs/midi/mus_boss_brass_unused.mid",
+      "sound/songs/midi/mus_candy_constellation.mid",
+      "sound/songs/midi/mus_crackity_hack.mid",
+      "sound/songs/midi/mus_crackity_hack_bass_unused.mid",
+      "sound/songs/midi/mus_dark_meta_knight_appears.mid",
+      "sound/songs/midi/mus_dark_meta_knight_battle.mid",
+      "sound/songs/midi/mus_dark_mind_second_form.mid",
+      "sound/songs/midi/mus_dark_mind_sky.mid",
+      "sound/songs/midi/mus_ending.mid",
+      "sound/songs/midi/mus_goal_bonus.mid",
+      "sound/songs/midi/mus_mid_boss.mid",
+      "sound/songs/midi/mus_mustard_mountain.mid",
+      "sound/songs/midi/mus_olive_ocean.mid",
+      "sound/songs/midi/mus_rainbow_route_echo_unused.mid",
+      "sound/songs/midi/mus_speed_eaters.mid",
+      "sound/songs/midi/mus_wave_ride.mid",
+      "sound/songs/midi/se_08D558B8.mid",
+      "src/boss_challenge_door.c",
+      "src/code_080257A8.c",
+      "src/code_0802E16C.c",
+      "src/cpu_kirby_trigger.c",
+      "src/cutscene_trigger.c",
+      "src/gbplayer.c",
+      "src/hud.c",
+      "src/in_game_interlude.c",
+      "src/large_star_stone_block.c",
+      "src/large_star_stone_block_88.c",
+      "src/large_star_stone_block_89.c",
+      "src/level.c",
+      "src/multi_sio_util.c",
+      "src/object_collision.c",
+      "src/palette_effects.c",
+      "src/sprite.c",
+      "src/star_stone_block.c",
+      "src/unknown_7A.c",
+      "src/unknown_82.c",
+      "src/unknown_87.c",
+      "tools/mid2agb/MID2AGB_USAGE_GUIDE.md"
+    ],
+    "new_reachable_blob_count": 57,
+    "new_binary_blobs": [],
+    "suspicious_new_blobs": [],
+    "suspicious_full_tree_paths": [],
+    "credited_matching_c_bytes": 0,
+    "reference_only": true,
+    "checks": [
+      "Full tip-tree paths checked for ROM/BIOS/compiled/archive extensions.",
+      "Every blob newly reachable relative to the baseline was inspected for UTF-8/NUL content and ELF/MZ/wasm/archive magic.",
+      "No new binary blob or suspicious compiled/game artifact found."
+    ],
+    "proposed_remote_branch": "research/terrain-collision-draft",
+    "original_author": "sh1ftmaker <shiftmaker@gmail.com>",
+    "parent": "fdad26898be4bb065b9c6a4932f30d83c5568ac0",
+    "draft_sources": [
+      {
+        "path": "src/sub_0800F044.c",
+        "git_blob_sha1": "762d6b59d767b27ede2f8cb2f9a6ca8cf3092dfa",
+        "sha256": "6ba96b73df999666e07d8bfe1f9259da112cf8607f5a94d8e110e6ffc39ced58",
+        "bytes": 16200,
+        "lines": 491
+      },
+      {
+        "path": "asm/nonmatching/sub_0800F044.inc",
+        "git_blob_sha1": "7e37df2d0ee6ebe2bef8ea7de25a69954d854551",
+        "sha256": "2d7174c2cd12e4dcab2979085647a25b13af82d8d2881472da1acb992bb29146",
+        "bytes": 30252,
+        "lines": 1885
+      }
+    ]
+  },
+  "audited_at_utc": "2026-11-12T22:44:08.058936+00:00",
+  "baseline": "1197474f80e5de282fbedcd0025ebfa61f61a764",
+  "publication_status": "Local refs prepared and safety-reviewed; publishing is orchestrated separately by root."
+}

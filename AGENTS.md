@@ -1,5 +1,11 @@
 # Instructions for AI agents
 
+## Fork regional target
+
+The user selected Europe as this fork's primary profile. `GNUmakefile` dispatches normal `make`, `make compare`, and `make progress` to the owned B8KP ROM, SHA1 `6f478a455383a2a12378f292581dfd7300300700`. Preserve all five original languages, including Spanish. A European change must pass the dependency-aware European rebuild, full 16 MiB byte comparison, expected SHA1, per-span verification and current source provenance before receiving C credit. Raw fallback code remains pending; exact ROM preservation is not complete C decompilation.
+
+The original USA Makefile is retained as a secondary profile through `REGION=us`; its original six-output matching requirements below still govern USA claims. European verification does not establish USA matching or a complete `NONMATCHING` build. Report explicitly which regional gates and configurations were checked. Reporting-only tooling may run without a ROM, but it must clear credit for missing/stale receipts and must never claim that CI rebuilt the owned ROM. The requested generated SVG/JSON progress views are maintained through their source generators.
+
 This document defines the repository-specific standards for AI-assisted work on `katam`. Read it before editing code, data, build files, assets, or documentation. These rules do not replace direct inspection of the relevant C, assembly, linker layout, ROM data, build system, and pull-request history.
 
 ## 1. Non-negotiable principles

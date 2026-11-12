@@ -52,8 +52,7 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Generate isolated object inventory and reports
         run: |
-          python tools/progress/metadata_build.py --jobs 4
-          python tools/progress/report.py --metadata-dir build/metadata --out docs/progress
+          python tools/progress/update_progress.py
       - name: Upload reports only
         uses: actions/upload-artifact@v4
         with:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Measure compiled main-object text without claiming a linked ROM comparison."""
+"""Measure secondary USA main-object text without claiming a ROM comparison."""
 import argparse
 import json
 from pathlib import Path
@@ -123,7 +123,7 @@ def markdown(report):
         f"Pending assembly: {s['pending_asm_bytes']:,} bytes. Intentionally retained assembly: {s['original_asm_bytes']:,} bytes. Unattributed padding/text: {s['unattributed_bytes']:,} bytes.", '',
         f"Excluded cartridge header: {report['excluded_header_bytes']} bytes. Compiler archives, auxiliary multiboot programs and non-text sections are outside this denominator. Function extents may include literal pools and alignment.", '',
         'Data-format recovery is not measured. Existing source assets and preserved bytes receive no automatic identification credit.', '',
-        'The authoritative matching gate remains the original dependency-aware make compare with six successful checksums. No owned Kirby ROM was available for this report.', ''])
+        'The authoritative USA gate remains the original dependency-aware make REGION=us compare with six successful checksums. No owned USA ROM was available for this reference.', ''])
 
 
 def write(report, out):
@@ -142,7 +142,7 @@ def write(report, out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--metadata-dir', type=Path, default=Path('build/metadata'))
-    parser.add_argument('--out', type=Path, default=Path('docs/progress'))
+    parser.add_argument('--out', type=Path, default=Path('docs/progress/usa'))
     args = parser.parse_args()
     from metadata_build import validate_manifest
     root = Path(__file__).resolve().parents[2]
