@@ -479,7 +479,7 @@ static void sub_0802ED44(struct Unk_0802E57C *x) {
 }
 
 static void sub_0802EDC8(struct Unk_0802E57C *x) {
-    if (gUnk_03002558 == 1) {
+    if (gMultiSioEnabled == 1) {
         x->unk174 = gUnk_082EB740;
     } else {
         x->unk174 = gUnk_082EB700;
@@ -488,7 +488,7 @@ static void sub_0802EDC8(struct Unk_0802E57C *x) {
     x->unk186 = 0;
     x->unk180 = x->unk174->unk0;
     x->unk182 = x->unk174->unk2;
-    if (gUnk_03002558 == 1) {
+    if (gMultiSioEnabled == 1) {
         m4aSongNumStart(0x206);
     } else {
         m4aSongNumStart(0x208);
