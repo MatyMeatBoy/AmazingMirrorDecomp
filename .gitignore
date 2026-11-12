@@ -63,3 +63,7 @@ _Deparsed_XSubs.pm
 
 .clangd
 *.ss*
+
+# Reproducible reporting tools and tests are maintained source, not scratch files.
+!tools/progress/*.py
+!tests/*.py
