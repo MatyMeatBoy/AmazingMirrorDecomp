@@ -334,7 +334,7 @@ SECTIONS {
         src/big_small_switch.o(.text);
         src/fire.o(.text);
         src/mirror_door.o(.text);
-        asm/shotzo.o(.text);
+        src/shotzo.o(.text);
         src/vert_sliding_door.o(.text);
         src/object_spawner.o(.text);
         src/destroyable_rock_block.o(.text);
