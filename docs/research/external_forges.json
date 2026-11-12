@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-11-12T21:56:33.771686+00:00",
+  "baseline": "1197474f80e5de282fbedcd0025ebfa61f61a764",
+  "finding": "No new non-GitHub matching code, names, type or typed-data artifact verified from searched public forge surfaces. Semantic candidates from known GitHub branches are explicitly separate.",
+  "coverage": [
+    {
+      "forge": "GitLab.com",
+      "status": "successful_search",
+      "queries": [
+        "katam (two pages, 103 results)",
+        "amazing mirror (3 results)",
+        "AmazingMirror (0)",
+        "kirby-mirror (0)",
+        "MirrorRecomp (0)",
+        "katam-port (0)",
+        "jiangzhengwenjz (one unrelated Pokemon archive)",
+        "B8KE (one README-only project)",
+        "kirby (first 100, CMS-heavy, incomplete)"
+      ],
+      "primary_url": "https://gitlab.com/api/v4/projects?search=katam&simple=true&per_page=100&page=1",
+      "finding": "No matching-decomp source project identified. One exact-game-title emulator wrapper excluded after complete tree inspection."
+    },
+    {
+      "forge": "Codeberg.org",
+      "status": "blocked_rate_limit",
+      "queries": [
+        "katam",
+        "kirby",
+        "amazing mirror",
+        "AmazingMirror"
+      ],
+      "primary_url": "https://codeberg.org/api/v1/repos/search?q=AmazingMirror&limit=50",
+      "finding": "HTTP 429; browser search also reports robots exclusion. Not negative evidence about repository existence."
+    },
+    {
+      "forge": "Bitbucket.org",
+      "status": "unavailable_search",
+      "queries": [
+        "katam",
+        "amazing mirror"
+      ],
+      "primary_url": "https://api.bitbucket.org/2.0/repositories?q=name~%22katam%22&pagelen=100",
+      "finding": "Global repository API returned 404; UI query returned 202 with empty body. Targeted indexed web searches produced no relevant artifact; no complete forge search established."
+    },
+    {
+      "forge": "SourceHut",
+      "status": "no_public_catalog_results",
+      "queries": [
+        "katam",
+        "kirby",
+        "Amazing Mirror"
+      ],
+      "primary_url": "https://git.sr.ht/?search=katam",
+      "finding": "HTTP 200 was welcome/login HTML, not search results. Indexed search was robots-limited. Unlisted/private repositories cannot be covered."
+    },
+    {
+      "forge": "Gitea.com",
+      "status": "successful_search",
+      "queries": [
+        "katam",
+        "amazing mirror"
+      ],
+      "primary_url": "https://gitea.com/api/v1/repos/search?q=katam&limit=50",
+      "finding": "Public search API returned empty data for both queries."
+    },
+    {
+      "forge": "GitGud.io",
+      "status": "successful_search",
+      "queries": [
+        "katam",
+        "amazing mirror"
+      ],
+      "primary_url": "https://gitgud.io/api/v4/projects?search=katam&simple=true&per_page=100",
+      "finding": "Public project search API returned empty arrays for both queries."
+    },
+    {
+      "forge": "Gitdab.com",
+      "status": "successful_search",
+      "queries": [
+        "katam",
+        "amazing mirror"
+      ],
+      "primary_url": "https://gitdab.com/api/v1/repos/search?q=katam&limit=50",
+      "finding": "Public repository search API returned empty data for both queries."
+    },
+    {
+      "forge": "git.sdf.org",
+      "status": "successful_search",
+      "queries": [
+        "katam"
+      ],
+      "primary_url": "https://git.sdf.org/api/v1/repos/search?q=katam&limit=50",
+      "finding": "Public repository search API returned empty data."
+    },
+    {
+      "forge": "git.disroot.org",
+      "status": "timeout",
+      "queries": [
+        "katam",
+        "amazing mirror"
+      ],
+      "primary_url": "https://git.disroot.org/api/v1/repos/search?q=katam&limit=50",
+      "finding": "Both public API requests timed out; no negative repository conclusion."
+    },
+    {
+      "forge": "NotABug.org",
+      "status": "unavailable_endpoint",
+      "queries": [
+        "katam"
+      ],
+      "primary_url": "https://notabug.org/api/v1/repos/search?q=katam&limit=50",
+      "finding": "Attempted repository search endpoint returned 404; no negative repository conclusion."
+    },
+    {
+      "forge": "repo.or.cz",
+      "status": "bot_challenge",
+      "queries": [
+        "katam",
+        "kirby"
+      ],
+      "primary_url": "https://repo.or.cz/?a=project_list;pf=katam",
+      "finding": "HTTP 200 returned an anti-bot challenge, not project results."
+    },
+    {
+      "forge": "SourceForge.net",
+      "status": "indexed_search_only",
+      "queries": [
+        "katam decomp",
+        "Amazing Mirror source"
+      ],
+      "primary_url": "https://sourceforge.net/",
+      "finding": "Targeted indexed search found unrelated Katam surname references, no verified game artifact. Native catalogue coverage not established."
+    }
+  ],
+  "artifacts": [
+    {
+      "repository": "cmug/kirby-the-amazing-mirror",
+      "forge": "GitLab",
+      "url": "https://gitlab.com/cmug/kirby-the-amazing-mirror",
+      "default_branch": "web",
+      "head": "594c698da6ec95b7c72fbb95cf91c28f484f4d4d",
+      "commit_date": "2025-11-10T09:20:30+00:00",
+      "other_branch": "main",
+      "other_head": "8a63de7a225e4c9f52d53956e6b1af545b5f529f",
+      "tree": [
+        {
+          "id": "f058e399ff2f649581069ad8adac912ebffb9840",
+          "name": "emulatorgames",
+          "type": "tree",
+          "path": "emulatorgames",
+          "mode": "040000"
+        },
+        {
+          "id": "e963fbff880437865d8f87bb6c81e3a1d3e996dc",
+          "name": ".gitlab-ci.yml",
+          "type": "blob",
+          "path": ".gitlab-ci.yml",
+          "mode": "100644"
+        },
+        {
+          "id": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "name": "README.md",
+          "type": "blob",
+          "path": "README.md",
+          "mode": "100644"
+        },
+        {
+          "id": "671e84ce31f65e077af9878f8557e5fd7bf5c294",
+          "name": "kirbytheamazingmirror.gba",
+          "type": "blob",
+          "path": "emulatorgames/kirbytheamazingmirror.gba",
+          "mode": "100644"
+        },
+        {
+          "id": "99036c6082de7239dfdd517de6cf987575b686a1",
+          "name": "index.html",
+          "type": "blob",
+          "path": "index.html",
+          "mode": "100644"
+        }
+      ],
+      "decision": "Exclude: wrapper plus tracked game image, not recovered source. No game-image content was downloaded."
+    }
+  ],
+  "semantic_candidates": {
+    "pr403": {
+      "head": "8cacafd24d75f270e10c4bdc639dce1dd6239e66",
+      "url": "https://github.com/jiangzhengwenjz/katam/pull/403",
+      "renames": [
+        {
+          "old": "sub_0811938C",
+          "proposed": "SwitchSetFunc",
+          "baseline_evidence": "Installs the main callback; resets press state or installs despawn for an already-unlocked world slot.",
+          "limitation": "Includes already-unlocked fallback; not an unconditional constructor."
+        },
+        {
+          "old": "sub_081194DC",
+          "proposed": "SwitchCheckPressAndGiveTomato",
+          "baseline_evidence": "Checks block/Kirby/attack routes; calls BonusCreateTomato only for an eligible human hit on a big switch before unlock-start flag.",
+          "limitation": "Tomato is conditional; return TRUE also has routes without a tomato."
+        },
+        {
+          "old": "sub_081197D4",
+          "proposed": "SwitchUpdatePressState",
+          "baseline_evidence": "Maintains held/new-press/release bits and release timer; latching template flag prevents normal release.",
+          "limitation": "Held duration is not a fresh press every frame."
+        },
+        {
+          "old": "sub_08119980",
+          "proposed": "SwitchMain",
+          "baseline_evidence": "Calls press-state update, sets sprite state, dispatches template effects, increments counter.",
+          "limitation": "Four effect routes exist, one intentionally remains unnamed."
+        },
+        {
+          "old": "sub_08119A20",
+          "proposed": "SwitchUpdateHeldCount",
+          "baseline_evidence": "Increments room slot on press-edge bit; decrements on release-edge bit only when nonzero.",
+          "limitation": "This is a shared room slot, not a count of allocated objects."
+        },
+        {
+          "old": "sub_08119B3C",
+          "proposed": "SwitchTryWorldMapUnlock",
+          "baseline_evidence": "Marks pending after press, gates callback table dispatch on CanStartInGameInterlude.",
+          "limitation": "Request can wait; avoid an unconditional Start or Unlock name."
+        },
+        {
+          "old": "sub_08119BB8",
+          "proposed": "SwitchUpdateCPUKirbyTrigger",
+          "baseline_evidence": "Also updates held count; raises room slot0xF while held. Same slot appears in cpu_kirby_trigger.c and CPU script reader.",
+          "limitation": "Per-template threshold; not proof that every switch triggers CPU AI."
+        },
+        {
+          "old": "sub_08119C0C",
+          "proposed": "SwitchDespawn",
+          "baseline_evidence": "Sets generic object flag0x1000; ObjectMain destroys the task on that flag.",
+          "limitation": "Deferred destruction by ObjectMain rather than immediate TaskDestroy call."
+        }
+      ],
+      "status": "Source-reviewed candidate; original ROM-scan and six-checksum claims remain external, no local match measured."
+    },
+    "zalo_field_docs": {
+      "head": "6f470934be50d2990c71e2470344b222c46196e3",
+      "url": "https://github.com/zalo/katam/commit/6f470934be50d2990c71e2470344b222c46196e3",
+      "verified_narrow_fact": "Kirby movementState is held button word; unk11A = held & ~previous; unk11C = previous & ~held in sub_0803F324. Source selection depends on mode and player.",
+      "counterevidence": "Generic ObjectBase flag0x1000 is a task-destruction request in ObjectPreUpdate and ObjectMain; broad generic Kirby-dropthrough description must not be adopted.",
+      "remaining": "Terrain-grid dimensions, vulnerability flags, animation table sizes, physical scales and all other port comments require independent full-consumer audit."
+    }
+  },
+  "cached_response_digests": [
+    {
+      "path": "bitbucket-search.response",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "gitdab-katam.response",
+      "size": 22,
+      "sha256": "7c60055808f1242bb4ee29c5aac08d78235f51f17b2c4bd692ffc798399dddd9"
+    },
+    {
+      "path": "gitdab-mirror.response",
+      "size": 22,
+      "sha256": "7c60055808f1242bb4ee29c5aac08d78235f51f17b2c4bd692ffc798399dddd9"
+    },
+    {
+      "path": "gitea-katam.response",
+      "size": 21,
+      "sha256": "45b93ccefd22e5ec4796dc8d5173e3060566fec357528dfe20b3bd814d9bc430"
+    },
+    {
+      "path": "gitea-mirror.response",
+      "size": 21,
+      "sha256": "45b93ccefd22e5ec4796dc8d5173e3060566fec357528dfe20b3bd814d9bc430"
+    },
+    {
+      "path": "gitgud-katam.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "gitgud-mirror.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "gitlab-amazingmirror.response",
+      "size": 2816,
+      "sha256": "5821e0a78af0e4a3516d753c4af879dad7bd59bc45b5df148d6a2298c1cffa72"
+    },
+    {
+      "path": "gitlab-amazingmirror2.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "gitlab-b8ke-meta.response",
+      "size": 1155,
+      "sha256": "586802a527e3c52d93606f706cfbba251e6d7fb4cedb6bb88a68bca3b063600b"
+    },
+    {
+      "path": "gitlab-b8ke-tree.response",
+      "size": 119,
+      "sha256": "9575c47c818c760117db40e67d1132fd070963d19067b824804b11120954fbe6"
+    },
+    {
+      "path": "gitlab-b8ke.response",
+      "size": 1157,
+      "sha256": "8f3a883e5d1eafad4dbcd34516d0d079b9c0b1f3a208f24d1cd6e7e5d97dbc45"
+    },
+    {
+      "path": "gitlab-cmug-branches.response",
+      "size": 1577,
+      "sha256": "49f3bc2dbb5e2219ac03fe029a13d1263c2b78d8675d38403a349b0506ea80fa"
+    },
+    {
+      "path": "gitlab-cmug-meta.response",
+      "size": 874,
+      "sha256": "753f44f17dca7cf8d5a7059e06bb7367084fabc5112bff90b042a4d0d99cf37d"
+    },
+    {
+      "path": "gitlab-cmug-tree.response",
+      "size": 657,
+      "sha256": "53cbb68d0427122004da1995442815a5e5019a7fc8f90059990e3ba5085110ed"
+    },
+    {
+      "path": "gitlab-jiang.response",
+      "size": 1019,
+      "sha256": "924fbe3c0752f21c21ae4d35b11a39e5e561f2d51f6ea8a6aa0961570e1c23bd"
+    },
+    {
+      "path": "gitlab-katam-page2.response",
+      "size": 2787,
+      "sha256": "68bd8a16fcd77dede600deb2571c1cabaa2dd6a6f94ed8343cc26e60e3ae4ab7"
+    },
+    {
+      "path": "gitlab-katam-retry.response",
+      "size": 99519,
+      "sha256": "4dc9cb9834043f96620d7f3df144f3f0bde93e619527c94f8abf80b378fbbf0c"
+    },
+    {
+      "path": "gitlab-katam.response",
+      "size": 99519,
+      "sha256": "4dc9cb9834043f96620d7f3df144f3f0bde93e619527c94f8abf80b378fbbf0c"
+    },
+    {
+      "path": "gitlab-katamport.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "gitlab-kirby.response",
+      "size": 99472,
+      "sha256": "4371dc3e84c9210797f812c9b9d186bf337a28f26ebeb3dc8b2e539c5ecd6e77"
+    },
+    {
+      "path": "gitlab-kirbymirror.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "gitlab-mirrorrecomp.response",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "repoorcz-katam.response",
+      "size": 3814,
+      "sha256": "8ab53837882c222dbcf294a7e1c10029a501aa854a3cb2cb8e924272f91e3696"
+    },
+    {
+      "path": "repoorcz-kirby.response",
+      "size": 3814,
+      "sha256": "b7780170eb2d3357b634acf1f47608afcb4d69fed756570842f375f11f3dad5c"
+    },
+    {
+      "path": "sdf-katam.response",
+      "size": 21,
+      "sha256": "45b93ccefd22e5ec4796dc8d5173e3060566fec357528dfe20b3bd814d9bc430"
+    },
+    {
+      "path": "sourcehut-grep.response",
+      "size": 2831,
+      "sha256": "633ab880484a2c210190d713c69a122d0fdbf946ae354fc4cb6d992daa15557e"
+    },
+    {
+      "path": "sourcehut-katam.response",
+      "size": 2831,
+      "sha256": "633ab880484a2c210190d713c69a122d0fdbf946ae354fc4cb6d992daa15557e"
+    },
+    {
+      "path": "sourcehut-kirby.response",
+      "size": 2831,
+      "sha256": "7dff737bda8212ac769ef261919b9872db13827387e81f88147b251ed1fea81d"
+    }
+  ],
+  "limitations": [
+    "Search terms, APIs and public indexing do not enumerate the entire internet or all Forgejo/GitLab installations.",
+    "Blocked or unavailable searches are not evidence of zero repositories.",
+    "No game image, BIOS, asset download, candidate code import, source edit, build or ROM comparison performed.",
+    "Naming and type documentation do not increase compiled-code coverage; typed-data progress requires exact emitted-byte and boundary verification."
+  ]
+}

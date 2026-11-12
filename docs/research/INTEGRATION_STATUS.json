@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "scope": "main_object_text",
+  "rom_match_verified": false,
+  "candidates": [
+    {
+      "upstream_pr": 411,
+      "review": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/pull/2",
+      "source_head": "17f13a36e3f6478fb6a5a66bd4d1a88e487ef18c",
+      "ci": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/actions/runs/43314023295",
+      "status": "draft; metadata build passed; full ROM comparison unavailable",
+      "totals": {
+        "bytes": 1413780,
+        "c_bytes": 1371418,
+        "c_percent": 97.0036,
+        "pending_asm_bytes": 36728,
+        "original_asm_bytes": 3816,
+        "unattributed_bytes": 1818,
+        "functions": 5783,
+        "c_functions": 5488,
+        "named_functions": 761
+      },
+      "rom_match_verified": false
+    },
+    {
+      "upstream_pr": 397,
+      "review": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/pull/3",
+      "source_head": "e1f830d94dd94e262819b1c71556e78628c60eb1",
+      "ci": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/actions/runs/43314038700",
+      "status": "draft; metadata build passed; full ROM comparison unavailable",
+      "totals": {
+        "bytes": 1413780,
+        "c_bytes": 1379502,
+        "c_percent": 97.5754,
+        "pending_asm_bytes": 28640,
+        "original_asm_bytes": 3816,
+        "unattributed_bytes": 1822,
+        "functions": 5783,
+        "c_functions": 5582,
+        "named_functions": 761
+      },
+      "rom_match_verified": false
+    },
+    {
+      "upstream_pr": 398,
+      "review": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/pull/4",
+      "source_head": "515f79312d8438474a24af06b92c485326ee967a",
+      "ci": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/actions/runs/43314053224",
+      "status": "draft; metadata build passed; full ROM comparison unavailable",
+      "totals": {
+        "bytes": 1413780,
+        "c_bytes": 1376772,
+        "c_percent": 97.3823,
+        "pending_asm_bytes": 31360,
+        "original_asm_bytes": 3816,
+        "unattributed_bytes": 1832,
+        "functions": 5783,
+        "c_functions": 5515,
+        "named_functions": 761
+      },
+      "rom_match_verified": false
+    }
+  ],
+  "combined": {
+    "source_head": "7061f75eb2b74cd28d4d02a6ccbc1ff9bc90ccc2",
+    "branch": "codex/combined-upstream-candidates",
+    "ci": "https://github.com/MatyMeatBoy/AmazingMirrorDecomp/actions/runs/43314600929",
+    "status": "all three contributions compiled together; full ROM comparison unavailable",
+    "totals": {
+      "bytes": 1413780,
+      "c_bytes": 1391592,
+      "c_percent": 98.4306,
+      "pending_asm_bytes": 16528,
+      "original_asm_bytes": 3816,
+      "unattributed_bytes": 1844,
+      "functions": 5783,
+      "c_functions": 5631,
+      "named_functions": 761
+    }
+  },
+  "exclusions": [
+    "Compiler archives",
+    "Auxiliary multiboot programs",
+    "Non-text sections",
+    "Cartridge header"
+  ]
+}

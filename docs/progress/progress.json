@@ -82741,11 +82741,91 @@
       "named_functions": 0
     }
   ],
-  "baseline_commit": "c337c4d043a9166dcce3daafcb88585b40961f6d",
-  "source_fingerprint": "f09778b968b730b9f0dc9a50fc3459b19bc1596fd086320cf3aec0fa1765cab4",
+  "baseline_commit": "1197474f80e5de282fbedcd0025ebfa61f61a764",
+  "source_fingerprint": "a175ca4d7a1507b964ac07653f249c865505032b95efac47205adaff0c95019f",
   "data": {
     "identified_bytes": null,
     "total_bytes": null,
-    "status": "not measured"
+    "status": "source census; recovery not measured",
+    "source_formats": {
+      "main": {
+        ".pal": 1,
+        ".bin": 79,
+        ".png": 74,
+        ".s": 1,
+        ".inc": 5,
+        ".aif": 225,
+        ".pcm": 19,
+        ".cfg": 1,
+        ".mid": 424
+      },
+      "multi_boot/subgame_loaders": {
+        "<none>": 1,
+        ".s": 2,
+        ".inc": 10,
+        ".ld": 1,
+        ".sha1": 1
+      },
+      "multi_boot/subgame_loaders/payload": {
+        "<none>": 1,
+        ".s": 7,
+        ".inc": 9,
+        ".mk": 1,
+        ".h": 11,
+        ".ld": 1,
+        ".sha1": 1
+      },
+      "multi_boot/unk_8D94B9C": {
+        "<none>": 1,
+        ".s": 12,
+        ".inc": 10,
+        ".mk": 1,
+        ".h": 11,
+        ".ld": 1,
+        ".sha1": 1
+      },
+      "multi_boot/unk_8E1FE28": {
+        "<none>": 1,
+        ".s": 12,
+        ".inc": 10,
+        ".mk": 1,
+        ".h": 11,
+        ".ld": 1,
+        ".sha1": 1
+      },
+      "multi_boot/unk_8E8490C": {
+        "<none>": 1,
+        ".s": 12,
+        ".inc": 10,
+        ".mk": 1,
+        ".h": 11,
+        ".ld": 1,
+        ".sha1": 1
+      }
+    },
+    "data_translation_units": 35,
+    "incbin_wrappers": 130,
+    "raw_by_target": {
+      "main": {
+        "directives": 28505,
+        "union_bytes": 9574560
+      },
+      "multi_boot/subgame_loaders/payload": {
+        "directives": 23,
+        "union_bytes": 11848
+      },
+      "multi_boot/unk_8D94B9C": {
+        "directives": 216,
+        "union_bytes": 77672
+      },
+      "multi_boot/unk_8E1FE28": {
+        "directives": 250,
+        "union_bytes": 89216
+      },
+      "multi_boot/unk_8E8490C": {
+        "directives": 287,
+        "union_bytes": 111892
+      }
+    }
   }
 }

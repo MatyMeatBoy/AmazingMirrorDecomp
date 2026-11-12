@@ -24,6 +24,18 @@ class ReportTests(unittest.TestCase):
     def symbol(self, name, offset, size, kind):
         return {'name': name, 'section': '.text', 'offset': offset, 'size': size, 'kind': kind}
 
+    def test_data_census_keeps_target_spaces_and_credit_separate(self):
+        result = self.mod.data_summary({'formats': {'main': {'.png': 2}},
+            'data_translation_units': ['src/data/a.c'], 'incbin_wrappers': [],
+            'raw': {'main': {'directives': 2, 'union_bytes': 12, 'entries': []},
+                    'payload': {'directives': 1, 'union_bytes': 12, 'entries': []}}})
+        self.assertIsNone(result['identified_bytes'])
+        self.assertIsNone(result['total_bytes'])
+        self.assertEqual(result['raw_by_target']['main']['union_bytes'], 12)
+        self.assertEqual(result['raw_by_target']['payload']['union_bytes'], 12)
+        self.assertEqual(result['data_translation_units'], 1)
+        self.assertIn('not remaining data', self.mod.render.data_svg(result))
+
     def source(self, name, size, symbols):
         return {'source': name, 'sections': [{'name': '.text', 'size': size}], 'symbols': symbols}
 

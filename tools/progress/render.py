@@ -42,8 +42,19 @@ def treemap(report, names=False):
     return '\n'.join(parts)
 
 
-def data_svg():
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="130" role="img" aria-label="Data recovery not measured"><rect width="1000" height="130" fill="{BG}"/><text x="16" y="32" fill="{FG}" font-family="sans-serif" font-size="18">AmazingMirrorDecomp | data recovery: not measured</text><text x="16" y="66" fill="{FG}" font-family="sans-serif" font-size="13">Source assets and raw ranges require a separate format and boundary audit.</text><text x="16" y="96" fill="{FG}" font-family="sans-serif" font-size="13">No automatic credit for preserved bytes, INCBIN counts or native ports.</text></svg>'
+def data_svg(data=None):
+    data = data or {}
+    lines = ['Data recovery percentage: not measured.', 'Source assets and raw references do not establish recovered byte credit.']
+    if 'source_formats' in data:
+        formats = data['source_formats'].get('main', {})
+        lines += [f"Source inventory: {data['data_translation_units']} data C units; {formats.get('.png', 0)} PNGs; {formats.get('.aif', 0)} AIFFs; {formats.get('.mid', 0)} MIDIs."]
+        main = data['raw_by_target'].get('main', {})
+        lines += [f"Main raw references: {main.get('union_bytes', 0):,} unique bytes (not remaining data).", 'Auxiliary targets have separate coordinate spaces and are never added to main raw offsets.']
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" role="img" aria-label="Data source inventory; recovery percentage unmeasured"><rect width="1000" height="240" fill="{BG}"/>', f'<text x="16" y="32" fill="{FG}" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="18">AmazingMirrorDecomp | data and editable sources</text>']
+    parts += [f'<text x="16" y="{66+i*30}" fill="{FG}" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13">{escape(line)}</text>' for i,line in enumerate(lines)]
+    return '\n'.join(parts+['</svg>'])
+
+
 def squarify(items, x, y, w, h):
     """items: list of (weight, obj). Returns list of (obj, x, y, w, h)."""
     items = [(v, o) for v, o in items if v > 0]
