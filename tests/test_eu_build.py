@@ -5,6 +5,7 @@ import sys
 import unittest
 import tempfile
 import os
+from unittest.mock import patch
 
 DIRECTORY=Path(__file__).resolve().parents[1]/'tools/progress'
 sys.path.insert(0,str(DIRECTORY))
@@ -13,6 +14,19 @@ m=importlib.util.module_from_spec(spec)
 if (DIRECTORY/'eu_build.py').exists():spec.loader.exec_module(m)
 
 class EuBuildTests(unittest.TestCase):
+    def test_auxiliary_text_provenance_is_portable(self):
+        names=['tools/preproc/.gitignore','tools/preproc/LICENSE','tools/preproc/io.cpp']
+        names += ['tools/progress/'+n+'.py' for n in ('eu_match','eu_build','metadata_build')]
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            for name in names:
+                path=root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b'a\r\nb\r\n')
+            with patch.object(m.subprocess,'check_output',return_value=('\0'.join(names)+'\0').encode()):
+                hashes,modes=m.provenance(root)
+                for name in names:
+                    self.assertEqual(modes[name],'lf')
+                    self.assertEqual(hashes[name],m.source_digest(b'a\nb\n','lf'))
+
     def test_abs32_is_emitted_from_object_addend(self):
         reloc={'offset':0,'type':2,'symbol':{'name':'external','section':0,'value':0}}
         self.assertEqual(m.relocate(struct.pack('<I',4),[reloc],0x08000100,{}, {'external':0x08200000}),struct.pack('<I',0x08200004))

@@ -12,7 +12,7 @@ import subprocess
 
 from eu_match import BASE,CODE_END,EU_SHA1,Elf,analyze,digest,section_relocations,thumb_displacement,validate_rom
 
-TEXT_SUFFIXES={'.c','.h','.s','.inc','.mk','.ld','.py','.txt','.sha1','.json','.pal'}
+TEXT_SUFFIXES={'.c','.cpp','.h','.s','.inc','.mk','.ld','.py','.txt','.sha1','.json','.pal'}
 
 
 def source_digest(data,mode):
@@ -33,7 +33,7 @@ def provenance(root):
         path=root/name
         if not path.is_file():
             raise ValueError('missing source provenance file: '+name)
-        mode='lf' if path.suffix.lower() in TEXT_SUFFIXES or path.name in {'Makefile','GNUmakefile'} else 'raw'
+        mode='lf' if path.suffix.lower() in TEXT_SUFFIXES or path.name in {'Makefile','GNUmakefile','.gitignore','LICENSE'} else 'raw'
         hashes[name]=source_digest(path.read_bytes(),mode)
         modes[name]=mode
     return hashes,modes
