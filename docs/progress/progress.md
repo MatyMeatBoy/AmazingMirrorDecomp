@@ -1,15 +1,16 @@
-# AmazingMirrorDecomp progress
+# AmazingMirrorDecomp Europe (B8KP)
 
-Compiled C coverage in measured main-object text: **96.765%** (1,368,050 / 1,413,780 bytes).
+Verified C: **94.407%** (1,347,220 / 1,427,032 executable bytes).
 
-**ROM match: not verified.** This is an unlinked source inventory, not the complete-game matching percentage.
+ROM rebuild: **verified locally against the owned European ROM**.
+Expected SHA1: `6f478a455383a2a12378f292581dfd7300300700`.
 
-C functions: 5,477 / 5,783. Existing names: 761 / 5,783; names are not independently validated semantics.
+Mapped C function spans: 5,442; existing names: 642. The total European function count is unknown; raw gaps are pending code.
 
-Pending assembly: 40,100 bytes. Intentionally retained assembly: 3,816 bytes. Unattributed padding/text: 1,814 bytes.
+All original multilingual bytes, including Spanish, are preserved by a verified full-ROM rebuild. Language-specific gameplay testing is separate.
 
-Excluded cartridge header: 188 bytes. Compiler archives, auxiliary multiboot programs and non-text sections are outside this denominator. Function extents may include literal pools and alignment.
+Cartridge header: 188 excluded bytes. Data-format recovery is not measured. USA source metrics are a separate reference.
 
-Data-format recovery is not measured. Existing source assets and preserved bytes receive no automatic identification credit.
+Verified source-backed local data: 127,189 unique bytes. C initializers and included assets remain distinct from audited semantic formats.
 
-The authoritative matching gate remains the original dependency-aware make compare with six successful checksums. No owned Kirby ROM was available for this report.
+Owned local full-ROM rebuild receipt; CI validates current source evidence and does not obtain the ROM.

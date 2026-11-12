@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" role="img" aria-label="Data source inventory; recovery percentage unmeasured"><rect width="1000" height="240" fill="#0d1117"/>
-<text x="16" y="32" fill="#e6edf3" font-family="sans-serif" font-size="18">AmazingMirrorDecomp | data and editable sources</text>
-<text x="16" y="66" fill="#e6edf3" font-family="sans-serif" font-size="13">Data recovery percentage: not measured.</text>
-<text x="16" y="96" fill="#e6edf3" font-family="sans-serif" font-size="13">Source assets and raw references do not establish recovered byte credit.</text>
-<text x="16" y="126" fill="#e6edf3" font-family="sans-serif" font-size="13">Source inventory: 35 data C units; 74 PNGs; 225 AIFFs; 424 MIDIs.</text>
-<text x="16" y="156" fill="#e6edf3" font-family="sans-serif" font-size="13">Main raw references: 9,574,560 unique bytes (not remaining data).</text>
-<text x="16" y="186" fill="#e6edf3" font-family="sans-serif" font-size="13">Auxiliary targets have separate coordinate spaces and are never added to main raw offsets.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="185" role="img" aria-label="European multilingual data; identification unmeasured"><rect width="1000" height="185" fill="#0d1117"/><g fill="#e6edf3" font-family="Segoe UI,Helvetica,Arial,sans-serif"><text x="16" y="30" font-size="18">Europe B8KP | multilingual data</text><text x="16" y="64">Asset region: 15,349,996 bytes. Format-identification progress: not measured.</text><text x="16" y="96">Verified local source-backed data: 127,189 unique bytes (C initializers / included assets).</text><text x="16" y="128">Original English, French, German, Spanish and Italian bytes preserved by verified rebuild.</text><text x="16" y="160">Source-backed bytes and preservation do not automatically identify semantic formats.</text></g></svg>
