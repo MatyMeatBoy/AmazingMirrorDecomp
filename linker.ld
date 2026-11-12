@@ -251,7 +251,7 @@ SECTIONS {
         src/demo.o(.text);
         src/code_08026044.o(.text);
         src/special_doors.o(.text);
-        asm/code_0802B4A8.o(.text);
+        src/code_0802B4A8.o(.text);
         src/code_0802E16C.o(.text);
         asm/code_0802E57C.o(.text);
         src/code_0802F8D8.o(.text);
@@ -265,7 +265,6 @@ SECTIONS {
         src/palette_effects.o(.text);
         src/kirby.o(.text);
         src/code_0806F780.o(.text);
-        asm/code_0806F734.o(.text);
         src/object.o(.text);
         src/gordo.o(.text);
         src/droppy.o(.text);
@@ -298,7 +297,6 @@ SECTIONS {
         src/cookin.o(.text);
         src/waddle_doo.o(.text);
         src/flamer.o(.text);
-        asm/flamer.o(.text);
         src/pengy.o(.text);
         src/twister.o(.text);
         src/wheelie.o(.text);
@@ -445,6 +443,8 @@ SECTIONS {
         src/demo.o(.rodata);
         src/code_08026044.o(.rodata);
         src/special_doors.o(.rodata);
+        src/code_0802B4A8.o(.rodata);
+        src/code_0802E16C.o(.rodata);
         data/data_17.o(.rodata);
         src/code_0802F8D8.o(.rodata);
         data/data_24.o(.rodata);
