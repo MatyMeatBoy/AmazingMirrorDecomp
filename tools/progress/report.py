@@ -25,6 +25,14 @@ def _stats(cells):
             'named_functions': sum(c['named'] for c in funcs)}
 
 
+def data_summary(census):
+    return {'identified_bytes': None, 'total_bytes': None, 'status': 'source census; recovery not measured',
+            'source_formats': census['formats'], 'data_translation_units': len(census['data_translation_units']),
+            'incbin_wrappers': len(census['incbin_wrappers']),
+            'raw_by_target': {target: {'directives': values['directives'], 'union_bytes': values['union_bytes']}
+                              for target, values in census['raw'].items()}}
+
+
 def summarize(manifest):
     if manifest.get('schema_version') != 1 or manifest.get('scope') != 'main_object_text' or manifest.get('rom_verified') is not False:
         raise ValueError('Expected an unverified main-object-text manifest')
@@ -122,7 +130,7 @@ def write(report, out):
     out.mkdir(parents=True, exist_ok=True)
     outputs = {'progress.json': json.dumps(report, indent=2)+'\n', 'progress.md': markdown(report),
                'treemap.svg': render.treemap(report), 'names_treemap.svg': render.treemap(report, names=True),
-               'data.svg': render.data_svg(),
+               'data.svg': render.data_svg(report.get('data')),
                'badge_decompiled.svg': render.badge_svg('main object C', f"{report['totals']['c_percent']:.2f}%", render.GREEN),
                'badge_rom.svg': render.badge_svg('ROM match', 'NOT VERIFIED', render.GREY),
                'badge_names.svg': render.badge_svg('existing names', f"{report['totals']['named_functions']}/{report['totals']['functions']}", render.GREEN),
@@ -141,6 +149,8 @@ def main():
     manifest = json.loads((args.metadata_dir/'manifest.json').read_text())
     validate_manifest(manifest, root)
     report = summarize(manifest)
+    from data_inventory import inventory
+    report['data'] = data_summary(inventory(root))
     write(report, args.out)
     print(json.dumps(report['totals'], indent=2))
 
