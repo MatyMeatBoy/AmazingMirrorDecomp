@@ -12,6 +12,11 @@ if PATH.exists():
 
 
 class MetadataTests(unittest.TestCase):
+    def test_regional_preprocessing_and_outputs_are_explicit_and_separate(self):
+        self.assertIn('-DREGION_EU',m.preprocessor_flags('eu'))
+        self.assertNotIn('-DREGION_EU',m.preprocessor_flags('us'))
+        self.assertNotEqual(m.metadata_directory(pathlib.Path('root'),'eu'),m.metadata_directory(pathlib.Path('root'),'us'))
+        with self.assertRaises(ValueError):m.preprocessor_flags('other')
     def test_aliases_and_padding_count_once(self):
         spans = m.partition_symbols(12, [dict(name='a', offset=2, size=4), dict(name='alias', offset=2, size=4), dict(name='b', offset=8, size=0)], {'a': 'c', 'alias': 'c', 'b': 'asm'})
         self.assertEqual(sum(x['size'] for x in spans), 12)
@@ -35,7 +40,9 @@ class MetadataTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root = pathlib.Path(folder)
             with self.assertRaises(ValueError):
-                m.validate_manifest(dict(schema_version=1, scope='main_object_text', rom_verified=False, input_sha256='wrong'), root)
+                m.validate_manifest(dict(schema_version=1, scope='main_object_text',region='eu',
+                                         recipe={'preprocessor_flags':m.preprocessor_flags('eu')},
+                                         rom_verified=False,input_sha256='wrong'),root)
 
     def test_nested_body_does_not_create_false_functions(self):
         text = 'void A(void) { if (1) { x(); } }\nvoid B(void) { }'

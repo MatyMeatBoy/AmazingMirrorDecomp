@@ -9,8 +9,9 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def main():
     for args in [
-        ['tools/progress/metadata_build.py','--jobs','4'],
-        ['tools/progress/report.py','--metadata-dir','build/metadata','--out','docs/progress/usa'],
+        ['tools/progress/metadata_build.py','--jobs','4','--region','eu'],
+        ['tools/progress/metadata_build.py','--jobs','4','--region','us'],
+        ['tools/progress/report.py','--metadata-dir','build/metadata-us','--out','docs/progress/usa'],
         ['tools/progress/eu_report.py','--out','docs/progress'],
     ]:
         subprocess.run([sys.executable,*args],cwd=ROOT,check=True)

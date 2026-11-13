@@ -83021,8 +83021,8 @@
       "named_functions": 0
     }
   ],
-  "baseline_commit": "2d39937b3a2e5cdb61e516d76ecef1c701ab8634",
-  "source_fingerprint": "6b1a472ada711543f684ee717cb2529e50c1813b86795d238d2926c5b5d9d703",
+  "baseline_commit": "31679f4937822807ea346f28b0f57a7f1008393c",
+  "source_fingerprint": "f73d75a57d44af174efb14fe043d2d49a52cc05fc23b0e69b5c552bf8a1b5bd0",
   "data": {
     "identified_bytes": null,
     "total_bytes": null,
@@ -83031,7 +83031,7 @@
       "main": {
         ".pal": 1,
         ".bin": 79,
-        ".png": 74,
+        ".png": 94,
         ".s": 1,
         ".inc": 5,
         ".aif": 225,
@@ -83084,7 +83084,7 @@
       }
     },
     "data_translation_units": 35,
-    "incbin_wrappers": 130,
+    "incbin_wrappers": 150,
     "raw_by_target": {
       "main": {
         "directives": 28472,

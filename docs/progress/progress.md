@@ -1,17 +1,17 @@
 # AmazingMirrorDecomp Europe (B8KP)
 
-Verified C: **94.652%** (1,350,708 / 1,427,032 executable bytes).
+Verified C: **96.800%** (1,381,360 / 1,427,032 executable bytes).
 
 ROM rebuild: **verified locally against the owned European ROM**.
 Expected SHA1: `6f478a455383a2a12378f292581dfd7300300700`.
 
-Mapped C function spans: 5,472; existing names: 670. The total European function count is unknown; raw gaps are pending code.
+Mapped C function spans: 5,579; existing names: 675. The total European function count is unknown; raw gaps are pending code.
 
 All original multilingual bytes, including Spanish, are preserved by a verified full-ROM rebuild. Language-specific gameplay testing is separate.
 
 Cartridge header: 188 excluded bytes. Data-format recovery is not measured. USA source metrics are a separate reference.
 
-Verified source-backed local data: 127,189 unique bytes. C initializers and included assets remain distinct from audited semantic formats.
+Verified source-backed local data: 229,477 unique bytes. C initializers and included assets remain distinct from audited semantic formats.
 
 Owned local full-ROM rebuild receipt; CI validates current source evidence and does not obtain the ROM.
 
@@ -19,10 +19,10 @@ Owned local full-ROM rebuild receipt; CI validates current source evidence and d
 
 | Categoría | Total | C EU verificado | C pendiente EU | Borrador C | ASM pendiente | ASM conservado |
 |---|---:|---:|---:|---:|---:|---:|
-| Juego y motor | 5,638 | 5,391 | 242 | 5 | 0 | 0 |
+| Juego y motor | 5,638 | 5,498 | 135 | 5 | 0 | 0 |
 | SDK / bibliotecas | 143 | 81 | 0 | 0 | 0 | 62 |
 | Arranque | 2 | 0 | 0 | 0 | 0 | 2 |
-| Total | 5,783 | 5,472 | 242 | 5 | 0 | 64 |
+| Total | 5,783 | 5,579 | 135 | 5 | 0 | 64 |
 
 | Nombrado | Total | Nombre existente | Sin nombre descriptivo |
 |---|---:|---:|---:|

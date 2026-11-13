@@ -169,7 +169,7 @@ def svg(inventory):
 def treemap(inventory):
     parts=[f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="title" font-family="Segoe UI,Helvetica,Arial,sans-serif"><title id="title">Inventario de funciones y borradores</title><rect width="1000" height="680" fill="{render.BG}"/><g fill="{render.FG}">']
     lines=['AmazingMirrorDecomp | Inventario de funciones',
-           'Área = bytes del objeto fuente USA; no representa posiciones ni tamaños europeos.',
+           'Área = bytes del objeto fuente; no representa posiciones ni huecos regionales europeos.',
            'Verde: C verificado EU | Amarillo: C disponible pendiente EU / borrador | Gris: ASM']
     for i,line in enumerate(lines):parts.append(f'<text x="14" y="{28+22*i}" font-size="{17 if i==0 else 12}">{escape(line)}</text>')
     if inventory.get('available'):

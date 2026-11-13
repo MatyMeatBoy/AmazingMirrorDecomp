@@ -19,6 +19,17 @@ import subprocess
 COMPILER_COMMIT = '59b966ed1b8f371856dcf99f1546c2fe89c678ca'
 
 
+def preprocessor_flags(region):
+    if region not in ('eu','us'):raise ValueError('unsupported metadata region')
+    common='-E -iquote include -Wno-trigraphs -DMODERN=0 -I tools/agbcc/include -I tools/agbcc -nostdinc -iquote include -DREVISION=0 -DENGLISH'
+    return common+(' -DREGION_EU' if region=='eu' else '')
+
+
+def metadata_directory(root,region):
+    preprocessor_flags(region)
+    return Path(root)/'build'/('metadata' if region=='eu' else 'metadata-us')
+
+
 def code_sources(root):
     c = [p for p in root.glob('src/**/*.c') if '.inc.c' not in p.name and len(p.relative_to(root).parts) <= 4 and 'data' not in p.relative_to(root).parts]
     return sorted(c) + sorted(root.glob('src/**/*.s')) + sorted(root.glob('asm/*.s'))
@@ -139,7 +150,7 @@ def asset_make_command(assets):
     return 'make NODEP=1 SETUP_PREREQS=0 ' + ' '.join(shlex.quote(a) for a in assets)
 
 
-def input_fingerprint(root):
+def input_fingerprint(root,region='eu'):
     paths = list(root.glob('src/**/*')) + list(root.glob('asm/**/*')) + list(root.glob('include/**/*'))
     paths += [root/'Makefile', root/'linker.ld', root/'tools/progress/metadata_build.py']
     paths += [root/'graphics_file_rules.mk', root/'graphics.mk']
@@ -151,7 +162,7 @@ def input_fingerprint(root):
     paths += list((root/'tools/agbcc/include').glob('**/*'))
     paths += list((root/'tools/agbcc/bin').glob('*'))
     paths += [root/('tools/preproc/preproc' + ('.exe' if os.name == 'nt' else ''))]
-    game_inputs = b''.join(p.relative_to(root).as_posix().encode()+b'\0'+p.read_bytes() for p in sorted(set(paths)) if p.is_file())
+    game_inputs = preprocessor_flags(region).encode()+b'\0'+b''.join(p.relative_to(root).as_posix().encode()+b'\0'+p.read_bytes() for p in sorted(set(paths)) if p.is_file())
     for name in ('gcc', 'arm-none-eabi-as'):
         tool = Path('C:/msys64/ucrt64/bin')/(name+'.exe') if os.name == 'nt' else Path(shutil.which(name) or '/missing-tool')
         if not tool.is_file():
@@ -164,7 +175,11 @@ def validate_manifest(manifest, root):
     root = Path(root)
     if manifest.get('schema_version') != 1 or manifest.get('scope') != 'main_object_text' or manifest.get('rom_verified') is not False:
         raise ValueError('unsupported metadata manifest')
-    if manifest.get('input_sha256') != input_fingerprint(root):
+    region=manifest.get('region')
+    output=metadata_directory(root,region)
+    if manifest.get('recipe',{}).get('preprocessor_flags')!=preprocessor_flags(region):
+        raise ValueError('metadata regional preprocessing profile differs')
+    if manifest.get('input_sha256') != input_fingerprint(root,region):
         raise ValueError('stale metadata inputs; rebuild metadata')
     expected = [p.relative_to(root).as_posix() for p in code_sources(root)]
     if [record['source'] for record in manifest.get('sources', [])] != expected or not expected:
@@ -172,8 +187,8 @@ def validate_manifest(manifest, root):
     if manifest.get('compiler', {}).get('commit') != COMPILER_COMMIT:
         raise ValueError('metadata compiler does not match pinned upstream')
     for record in manifest.get('sources', []):
-        path = (root/'build/metadata'/record['object']).resolve()
-        if not path.is_relative_to((root/'build/metadata/objects').resolve()):
+        path = (output/record['object']).resolve()
+        if not path.is_relative_to((output/'objects').resolve()):
             raise ValueError('object path outside metadata directory')
         if not path.is_file() or digest(path.read_bytes()) != record['sha256']:
             raise ValueError('missing or stale metadata object')
@@ -205,8 +220,8 @@ def validate_manifest(manifest, root):
                 raise ValueError('incomplete metadata coverage')
 
 
-def build(root, jobs, bash):
-    output = root / 'build/metadata'
+def build(root, jobs, bash,region='eu'):
+    output = metadata_directory(root,region)
     output.mkdir(parents=True, exist_ok=True)
     manifest = output / 'manifest.json'
     manifest.unlink(missing_ok=True)  # A failed rebuild must not leave valid-looking stale data.
@@ -226,7 +241,7 @@ def build(root, jobs, bash):
     if command:
         asset_script += 'make -C tools/gbagfx; ' + command
         run([bash, '-lc', asset_script], root)
-    fingerprint = input_fingerprint(root)
+    fingerprint = input_fingerprint(root,region)
     def compile_one(source):
         relative = source.relative_to(root).as_posix()
         obj = output / 'objects' / Path(relative).with_suffix('.o')
@@ -242,7 +257,7 @@ def build(root, jobs, bash):
             common = common.replace('-O2', '-O1').replace(' -f2003-patch', '')
         preprocessed = objrel + '.i'
         if source.suffix == '.c':
-            script = f'gcc -E -iquote include -Wno-trigraphs -DMODERN=0 -I tools/agbcc/include -I tools/agbcc -nostdinc -iquote include -DREVISION=0 -DENGLISH {q(relative)} | tools/preproc/preproc{exe} -i {q(relative)} > {q(preprocessed)}; tools/agbcc/bin/{cc}{exe} {common} -o - {q(preprocessed)} | {{ cat; printf "\\n.text\\n.align 2, 0\\n"; }} | arm-none-eabi-as -mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1 -o {q(objrel)} -'
+            script = f'gcc {preprocessor_flags(region)} {q(relative)} | tools/preproc/preproc{exe} -i {q(relative)} > {q(preprocessed)}; tools/agbcc/bin/{cc}{exe} {common} -o - {q(preprocessed)} | {{ cat; printf "\\n.text\\n.align 2, 0\\n"; }} | arm-none-eabi-as -mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1 -o {q(objrel)} -'
         else:
             script = f'arm-none-eabi-as -mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1 -o {q(objrel)} {q(relative)}'
         prefix = 'export PATH=/ucrt64/bin:/usr/bin:$PATH; set -e -o pipefail; '
@@ -262,11 +277,12 @@ def build(root, jobs, bash):
         return record
     with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as pool:
         records = list(pool.map(compile_one, sources))
-    current = input_fingerprint(root)
+    current = input_fingerprint(root,region)
     if current != fingerprint:
         raise ValueError('source inputs changed during metadata compilation')
-    result = dict(schema_version=1, scope='main_object_text', rom_verified=False, baseline_commit=run(['git','rev-parse','HEAD'],root).decode().strip(), input_sha256=fingerprint, compiler=dict(commit=commit, branch='new_newlib_pret', sha256=digest((compiler/('bin/agbcc'+exe)).read_bytes())), sources=records)
+    result = dict(schema_version=1, scope='main_object_text', region=region,rom_verified=False, baseline_commit=run(['git','rev-parse','HEAD'],root).decode().strip(), input_sha256=fingerprint, compiler=dict(commit=commit, branch='new_newlib_pret', sha256=digest((compiler/('bin/agbcc'+exe)).read_bytes())), sources=records)
     result['recipe'] = {'sha256': digest(Path(__file__).read_bytes()), 'default_cflags': '-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g', 'exceptions': {'src/task.c': 'omit -Werror', 'src/agb_sram.c': 'old_agbcc -O1, omit -f2003-patch', 'src/m4a.c': 'old_agbcc'}, 'excluded': ['src/data/**/*.c (data-only)', 'multi_boot/**', 'linked libraries'], 'sizes': 'ELF STT_FUNC sizes; zero sizes inferred to next function or section end; gaps unattributed'}
+    result['recipe'].update(region=region,preprocessor_flags=preprocessor_flags(region))
     manifest.write_text(json.dumps(result, indent=2)+'\n')
     print(f'{manifest}: {len(records)} objects, {sum(s["size"] for r in records for s in r["sections"])} executable section bytes; ROM not verified')
 
@@ -275,5 +291,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--jobs', type=int, default=4)
     parser.add_argument('--bash', default='C:/msys64/usr/bin/bash.exe' if os.name == 'nt' else 'bash')
+    parser.add_argument('--region',choices=('eu','us'),default='eu')
     args = parser.parse_args()
-    build(Path(__file__).resolve().parents[2], args.jobs, args.bash)
+    build(Path(__file__).resolve().parents[2], args.jobs, args.bash,args.region)

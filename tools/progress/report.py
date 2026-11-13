@@ -105,7 +105,7 @@ def summarize(manifest):
                                   'function': kind != 'unknown' and index == 0})
         modules.append({'source': path, 'cells': cells, **_stats(cells)})
     totals = _stats([cell for m in modules for cell in m['cells']])
-    return {'schema_version': 1, 'game': 'Kirby & The Amazing Mirror', 'region': 'USA (B8KE)',
+    return {'schema_version': 1, 'game': 'Kirby & The Amazing Mirror', 'region': 'EU (B8KP) source objects' if manifest.get('region')=='eu' else 'USA (B8KE)',
             'scope': 'main_object_text', 'rom_match_verified': False,
             'measurement': 'Unlinked main-object .text source inventory; not a whole-game matching percentage.',
             'excluded': ['Compiler archives', 'Auxiliary multiboot programs', 'Non-text sections', 'Cartridge header'],
@@ -141,7 +141,7 @@ def write(report, out):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--metadata-dir', type=Path, default=Path('build/metadata'))
+    parser.add_argument('--metadata-dir', type=Path, default=Path('build/metadata-us'))
     parser.add_argument('--out', type=Path, default=Path('docs/progress/usa'))
     args = parser.parse_args()
     from metadata_build import validate_manifest

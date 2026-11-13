@@ -312,6 +312,7 @@ def analyze(root, rom_path):
     manifest_path = directory/'manifest.json'
     manifest = json.loads(manifest_path.read_text())
     validate_manifest(manifest,root)
+    if manifest.get('region')!='eu':raise ValueError('European reconstruction requires EU-profile metadata')
     rom = pathlib.Path(rom_path).read_bytes()
     validate_rom(rom)
     linker=(root/'linker.ld').read_text()

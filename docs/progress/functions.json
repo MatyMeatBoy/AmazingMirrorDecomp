@@ -23049,9 +23049,11 @@
         "sub_08138B44"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 544
+      "source_object_bytes": 560,
+      "eu_start": 1281004,
+      "eu_bytes": 560
     },
     {
       "source": "src/code_08138D64.c",
@@ -23125,9 +23127,11 @@
         "sub_08139368"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 1172
+      "source_object_bytes": 1172,
+      "eu_start": 1283104,
+      "eu_bytes": 1172
     },
     {
       "source": "src/code_08138D64.c",
@@ -23149,9 +23153,11 @@
         "sub_08139A3C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 1308
+      "source_object_bytes": 1308,
+      "eu_start": 1284852,
+      "eu_bytes": 1308
     },
     {
       "source": "src/code_08138D64.c",
@@ -23212,9 +23218,11 @@
         "sub_0813A908"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 210
+      "source_object_bytes": 210,
+      "eu_start": 1288640,
+      "eu_bytes": 210
     },
     {
       "source": "src/code_08138D64.c",
@@ -23223,9 +23231,11 @@
         "sub_0813A9DC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 110
+      "source_object_bytes": 110,
+      "eu_start": 1288852,
+      "eu_bytes": 110
     },
     {
       "source": "src/code_08138D64.c",
@@ -23273,9 +23283,11 @@
         "sub_0813AD2C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 110
+      "source_object_bytes": 110,
+      "eu_start": 1289700,
+      "eu_bytes": 110
     },
     {
       "source": "src/code_08138D64.c",
@@ -23284,9 +23296,11 @@
         "sub_0813AD9C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 146
+      "source_object_bytes": 146,
+      "eu_start": 1289812,
+      "eu_bytes": 146
     },
     {
       "source": "src/code_08138D64.c",
@@ -23295,9 +23309,11 @@
         "sub_0813AE30"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 152
+      "source_object_bytes": 152,
+      "eu_start": 1289960,
+      "eu_bytes": 152
     },
     {
       "source": "src/code_08138D64.c",
@@ -23397,9 +23413,11 @@
         "sub_0813B61C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 148
+      "source_object_bytes": 148,
+      "eu_start": 1291988,
+      "eu_bytes": 148
     },
     {
       "source": "src/code_08138D64.c",
@@ -23590,9 +23608,11 @@
         "sub_0813C260"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 296
+      "source_object_bytes": 296,
+      "eu_start": 1295128,
+      "eu_bytes": 296
     },
     {
       "source": "src/code_08138D64.c",
@@ -23601,9 +23621,11 @@
         "sub_0813C388"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 140
+      "source_object_bytes": 140,
+      "eu_start": 1295424,
+      "eu_bytes": 140
     },
     {
       "source": "src/code_08138D64.c",
@@ -23677,9 +23699,11 @@
         "sub_0813C8D8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 332
+      "source_object_bytes": 332,
+      "eu_start": 1296784,
+      "eu_bytes": 332
     },
     {
       "source": "src/code_08138D64.c",
@@ -23688,9 +23712,11 @@
         "sub_0813CA24"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 340
+      "source_object_bytes": 340,
+      "eu_start": 1297116,
+      "eu_bytes": 340
     },
     {
       "source": "src/code_08138D64.c",
@@ -23738,9 +23764,11 @@
         "sub_0813D0DC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 156
+      "source_object_bytes": 156,
+      "eu_start": 1298836,
+      "eu_bytes": 156
     },
     {
       "source": "src/code_08138D64.c",
@@ -23840,9 +23868,11 @@
         "sub_0813D784"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 688
+      "source_object_bytes": 688,
+      "eu_start": 1300540,
+      "eu_bytes": 688
     },
     {
       "source": "src/code_08138D64.c",
@@ -23890,9 +23920,11 @@
         "sub_0813DE7C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 116
+      "source_object_bytes": 116,
+      "eu_start": 1302324,
+      "eu_bytes": 116
     },
     {
       "source": "src/code_08138D64.c",
@@ -23914,9 +23946,11 @@
         "sub_0813DF4C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 128
+      "source_object_bytes": 128,
+      "eu_start": 1302532,
+      "eu_bytes": 128
     },
     {
       "source": "src/code_08138D64.c",
@@ -24029,9 +24063,11 @@
         "sub_0813E554"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 300
+      "source_object_bytes": 300,
+      "eu_start": 1304076,
+      "eu_bytes": 300
     },
     {
       "source": "src/code_08138D64.c",
@@ -24066,9 +24102,11 @@
         "sub_0813EAC0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 284
+      "source_object_bytes": 284,
+      "eu_start": 1305464,
+      "eu_bytes": 284
     },
     {
       "source": "src/code_08138D64.c",
@@ -24077,9 +24115,11 @@
         "sub_0813EBDC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 224
+      "source_object_bytes": 224,
+      "eu_start": 1305748,
+      "eu_bytes": 224
     },
     {
       "source": "src/code_08138D64.c",
@@ -24114,9 +24154,11 @@
         "sub_0813EED0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 168
+      "source_object_bytes": 168,
+      "eu_start": 1306504,
+      "eu_bytes": 168
     },
     {
       "source": "src/code_08138D64.c",
@@ -24125,9 +24167,11 @@
         "sub_0813EF78"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 120
+      "source_object_bytes": 120,
+      "eu_start": 1306672,
+      "eu_bytes": 120
     },
     {
       "source": "src/code_08138D64.c",
@@ -24136,9 +24180,11 @@
         "sub_0813EFF0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 168
+      "source_object_bytes": 168,
+      "eu_start": 1306792,
+      "eu_bytes": 168
     },
     {
       "source": "src/code_08138D64.c",
@@ -24147,9 +24193,11 @@
         "sub_0813F098"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 316
+      "source_object_bytes": 316,
+      "eu_start": 1306960,
+      "eu_bytes": 316
     },
     {
       "source": "src/code_08138D64.c",
@@ -24158,9 +24206,11 @@
         "sub_0813F1D4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 192
+      "source_object_bytes": 192,
+      "eu_start": 1307276,
+      "eu_bytes": 192
     },
     {
       "source": "src/code_08138D64.c",
@@ -24169,9 +24219,11 @@
         "sub_0813F294"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 236
+      "source_object_bytes": 236,
+      "eu_start": 1307468,
+      "eu_bytes": 236
     },
     {
       "source": "src/code_08138D64.c",
@@ -24180,9 +24232,11 @@
         "sub_0813F380"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 344
+      "source_object_bytes": 344,
+      "eu_start": 1307704,
+      "eu_bytes": 344
     },
     {
       "source": "src/code_08138D64.c",
@@ -24191,9 +24245,11 @@
         "sub_0813F4D8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 148
+      "source_object_bytes": 148,
+      "eu_start": 1308048,
+      "eu_bytes": 148
     },
     {
       "source": "src/code_08138D64.c",
@@ -24202,9 +24258,11 @@
         "sub_0813F56C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 176
+      "source_object_bytes": 176,
+      "eu_start": 1308196,
+      "eu_bytes": 176
     },
     {
       "source": "src/code_08138D64.c",
@@ -24213,9 +24271,11 @@
         "sub_0813F61C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 176
+      "source_object_bytes": 176,
+      "eu_start": 1308372,
+      "eu_bytes": 176
     },
     {
       "source": "src/code_08138D64.c",
@@ -24224,9 +24284,11 @@
         "sub_0813F6CC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 240
+      "source_object_bytes": 240,
+      "eu_start": 1308548,
+      "eu_bytes": 240
     },
     {
       "source": "src/code_08138D64.c",
@@ -24235,9 +24297,11 @@
         "sub_0813F7BC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 344
+      "source_object_bytes": 344,
+      "eu_start": 1308788,
+      "eu_bytes": 344
     },
     {
       "source": "src/code_08138D64.c",
@@ -24246,9 +24310,11 @@
         "sub_0813F914"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 148
+      "source_object_bytes": 148,
+      "eu_start": 1309132,
+      "eu_bytes": 148
     },
     {
       "source": "src/code_08138D64.c",
@@ -24257,9 +24323,11 @@
         "sub_0813F9A8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 368
+      "source_object_bytes": 368,
+      "eu_start": 1309280,
+      "eu_bytes": 368
     },
     {
       "source": "src/code_08138D64.c",
@@ -24268,9 +24336,11 @@
         "sub_0813FB18"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 176
+      "source_object_bytes": 176,
+      "eu_start": 1309648,
+      "eu_bytes": 176
     },
     {
       "source": "src/code_08138D64.c",
@@ -24279,9 +24349,11 @@
         "sub_0813FBC8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 212
+      "source_object_bytes": 212,
+      "eu_start": 1309824,
+      "eu_bytes": 212
     },
     {
       "source": "src/code_08138D64.c",
@@ -24290,9 +24362,11 @@
         "sub_0813FC9C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 296
+      "source_object_bytes": 296,
+      "eu_start": 1310036,
+      "eu_bytes": 296
     },
     {
       "source": "src/code_08138D64.c",
@@ -24301,9 +24375,11 @@
         "sub_0813FDC4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 148
+      "source_object_bytes": 148,
+      "eu_start": 1310332,
+      "eu_bytes": 148
     },
     {
       "source": "src/code_08138D64.c",
@@ -24312,9 +24388,11 @@
         "sub_0813FE58"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 276
+      "source_object_bytes": 276,
+      "eu_start": 1310480,
+      "eu_bytes": 276
     },
     {
       "source": "src/code_08138D64.c",
@@ -24323,9 +24401,11 @@
         "sub_0813FF6C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 336
+      "source_object_bytes": 384,
+      "eu_start": 1310756,
+      "eu_bytes": 384
     },
     {
       "source": "src/code_08138D64.c",
@@ -24334,9 +24414,11 @@
         "sub_081400BC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 220
+      "source_object_bytes": 220,
+      "eu_start": 1311140,
+      "eu_bytes": 220
     },
     {
       "source": "src/code_08138D64.c",
@@ -24345,9 +24427,11 @@
         "sub_08140198"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 236
+      "source_object_bytes": 236,
+      "eu_start": 1311360,
+      "eu_bytes": 236
     },
     {
       "source": "src/code_08138D64.c",
@@ -24356,9 +24440,11 @@
         "sub_08140284"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 252
+      "source_object_bytes": 252,
+      "eu_start": 1311596,
+      "eu_bytes": 252
     },
     {
       "source": "src/code_08138D64.c",
@@ -24367,9 +24453,11 @@
         "sub_08140380"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 300
+      "source_object_bytes": 300,
+      "eu_start": 1311848,
+      "eu_bytes": 300
     },
     {
       "source": "src/code_08138D64.c",
@@ -24378,9 +24466,11 @@
         "sub_081404AC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 496
+      "source_object_bytes": 496,
+      "eu_start": 1312148,
+      "eu_bytes": 496
     },
     {
       "source": "src/code_08138D64.c",
@@ -24389,9 +24479,11 @@
         "sub_0814069C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 280
+      "source_object_bytes": 280,
+      "eu_start": 1312644,
+      "eu_bytes": 280
     },
     {
       "source": "src/code_08138D64.c",
@@ -24400,9 +24492,11 @@
         "sub_081407B4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 184
+      "source_object_bytes": 184,
+      "eu_start": 1312924,
+      "eu_bytes": 184
     },
     {
       "source": "src/code_08138D64.c",
@@ -24411,9 +24505,11 @@
         "sub_0814086C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 320
+      "source_object_bytes": 320,
+      "eu_start": 1313108,
+      "eu_bytes": 320
     },
     {
       "source": "src/code_08138D64.c",
@@ -24435,9 +24531,11 @@
         "sub_08140A1C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 304
+      "source_object_bytes": 304,
+      "eu_start": 1313540,
+      "eu_bytes": 304
     },
     {
       "source": "src/code_08138D64.c",
@@ -24446,9 +24544,11 @@
         "sub_08140B4C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 156
+      "source_object_bytes": 156,
+      "eu_start": 1313844,
+      "eu_bytes": 156
     },
     {
       "source": "src/code_08138D64.c",
@@ -24483,9 +24583,11 @@
         "sub_08140E40"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 868
+      "source_object_bytes": 868,
+      "eu_start": 1314600,
+      "eu_bytes": 868
     },
     {
       "source": "src/code_08138D64.c",
@@ -24520,9 +24622,11 @@
         "sub_08141300"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 604
+      "source_object_bytes": 604,
+      "eu_start": 1315816,
+      "eu_bytes": 604
     },
     {
       "source": "src/code_08138D64.c",
@@ -24544,9 +24648,11 @@
         "sub_081416DC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 648
+      "source_object_bytes": 648,
+      "eu_start": 1316804,
+      "eu_bytes": 648
     },
     {
       "source": "src/code_08138D64.c",
@@ -24594,9 +24700,11 @@
         "sub_08141BF8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 228
+      "source_object_bytes": 228,
+      "eu_start": 1318112,
+      "eu_bytes": 228
     },
     {
       "source": "src/code_08138D64.c",
@@ -24605,9 +24713,11 @@
         "sub_08141CDC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 340
+      "source_object_bytes": 340,
+      "eu_start": 1318340,
+      "eu_bytes": 340
     },
     {
       "source": "src/code_08138D64.c",
@@ -24616,9 +24726,11 @@
         "sub_08141E30"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 66
+      "source_object_bytes": 66,
+      "eu_start": 1318680,
+      "eu_bytes": 66
     },
     {
       "source": "src/code_08138D64.c",
@@ -24666,9 +24778,11 @@
         "sub_08141FA4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 32
+      "source_object_bytes": 32,
+      "eu_start": 1319052,
+      "eu_bytes": 32
     },
     {
       "source": "src/code_08138D64.c",
@@ -24677,9 +24791,11 @@
         "sub_08141FC4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 84
+      "source_object_bytes": 84,
+      "eu_start": 1319084,
+      "eu_bytes": 84
     },
     {
       "source": "src/code_08138D64.c",
@@ -24688,9 +24804,11 @@
         "sub_08142018"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 100
+      "source_object_bytes": 100,
+      "eu_start": 1319168,
+      "eu_bytes": 100
     },
     {
       "source": "src/code_08138D64.c",
@@ -24699,9 +24817,11 @@
         "sub_0814207C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 112
+      "source_object_bytes": 112,
+      "eu_start": 1319268,
+      "eu_bytes": 112
     },
     {
       "source": "src/code_08138D64.c",
@@ -24775,9 +24895,11 @@
         "sub_081421A0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 24
+      "source_object_bytes": 24,
+      "eu_start": 1319560,
+      "eu_bytes": 24
     },
     {
       "source": "src/code_08138D64.c",
@@ -24812,9 +24934,11 @@
         "sub_08142228"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 128
+      "source_object_bytes": 128,
+      "eu_start": 1319696,
+      "eu_bytes": 128
     },
     {
       "source": "src/code_08138D64.c",
@@ -24862,9 +24986,11 @@
         "sub_081423F0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 112
+      "source_object_bytes": 112,
+      "eu_start": 1320152,
+      "eu_bytes": 112
     },
     {
       "source": "src/code_08138D64.c",
@@ -24873,9 +24999,11 @@
         "sub_08142460"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 52
+      "source_object_bytes": 52,
+      "eu_start": 1320264,
+      "eu_bytes": 52
     },
     {
       "source": "src/code_08138D64.c",
@@ -25014,9 +25142,11 @@
         "sub_0814271C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 32
+      "source_object_bytes": 32,
+      "eu_start": 1320964,
+      "eu_bytes": 32
     },
     {
       "source": "src/code_08138D64.c",
@@ -25025,9 +25155,11 @@
         "sub_0814273C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 128
+      "source_object_bytes": 128,
+      "eu_start": 1320996,
+      "eu_bytes": 128
     },
     {
       "source": "src/code_08138D64.c",
@@ -25127,9 +25259,11 @@
         "sub_0814293C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 72
+      "source_object_bytes": 72,
+      "eu_start": 1321508,
+      "eu_bytes": 72
     },
     {
       "source": "src/code_08138D64.c",
@@ -25138,9 +25272,11 @@
         "sub_08142984"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 104
+      "source_object_bytes": 104,
+      "eu_start": 1321580,
+      "eu_bytes": 104
     },
     {
       "source": "src/code_08138D64.c",
@@ -25149,9 +25285,11 @@
         "sub_081429EC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 104
+      "source_object_bytes": 104,
+      "eu_start": 1321684,
+      "eu_bytes": 104
     },
     {
       "source": "src/code_08138D64.c",
@@ -25160,9 +25298,11 @@
         "sub_08142A54"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 72
+      "source_object_bytes": 72,
+      "eu_start": 1321788,
+      "eu_bytes": 72
     },
     {
       "source": "src/code_08138D64.c",
@@ -25171,9 +25311,11 @@
         "sub_08142A9C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 56
+      "source_object_bytes": 56,
+      "eu_start": 1321860,
+      "eu_bytes": 56
     },
     {
       "source": "src/code_08138D64.c",
@@ -25195,9 +25337,11 @@
         "sub_08142AE8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 36
+      "source_object_bytes": 36,
+      "eu_start": 1321936,
+      "eu_bytes": 36
     },
     {
       "source": "src/code_08138D64.c",
@@ -25245,9 +25389,11 @@
         "sub_08142BCC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 48
+      "source_object_bytes": 48,
+      "eu_start": 1322164,
+      "eu_bytes": 48
     },
     {
       "source": "src/code_08138D64.c",
@@ -25256,9 +25402,11 @@
         "sub_08142BFC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 20
+      "source_object_bytes": 20,
+      "eu_start": 1322212,
+      "eu_bytes": 20
     },
     {
       "source": "src/code_08138D64.c",
@@ -25267,9 +25415,11 @@
         "sub_08142C10"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 20
+      "source_object_bytes": 20,
+      "eu_start": 1322232,
+      "eu_bytes": 20
     },
     {
       "source": "src/code_08138D64.c",
@@ -25278,9 +25428,11 @@
         "sub_08142C24"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 32
+      "source_object_bytes": 32,
+      "eu_start": 1322252,
+      "eu_bytes": 32
     },
     {
       "source": "src/code_08138D64.c",
@@ -25302,9 +25454,11 @@
         "sub_08142C9C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 32
+      "source_object_bytes": 32,
+      "eu_start": 1322372,
+      "eu_bytes": 32
     },
     {
       "source": "src/code_08138D64.c",
@@ -25313,9 +25467,11 @@
         "sub_08142CBC"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 72
+      "source_object_bytes": 72,
+      "eu_start": 1322404,
+      "eu_bytes": 72
     },
     {
       "source": "src/code_08138D64.c",
@@ -25324,9 +25480,11 @@
         "sub_08142D04"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 100
+      "source_object_bytes": 100,
+      "eu_start": 1322476,
+      "eu_bytes": 100
     },
     {
       "source": "src/code_08138D64.c",
@@ -25335,9 +25493,11 @@
         "sub_08142D68"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 112
+      "source_object_bytes": 112,
+      "eu_start": 1322576,
+      "eu_bytes": 112
     },
     {
       "source": "src/code_08138D64.c",
@@ -25346,9 +25506,11 @@
         "sub_08142DD8"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 52
+      "source_object_bytes": 52,
+      "eu_start": 1322688,
+      "eu_bytes": 52
     },
     {
       "source": "src/code_08138D64.c",
@@ -25461,9 +25623,11 @@
         "sub_08142FD0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 64
+      "source_object_bytes": 64,
+      "eu_start": 1323192,
+      "eu_bytes": 64
     },
     {
       "source": "src/code_08138D64.c",
@@ -25472,9 +25636,11 @@
         "sub_08143010"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 48
+      "source_object_bytes": 48,
+      "eu_start": 1323256,
+      "eu_bytes": 48
     },
     {
       "source": "src/code_08138D64.c",
@@ -25483,9 +25649,11 @@
         "sub_08143040"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 128
+      "source_object_bytes": 128,
+      "eu_start": 1323304,
+      "eu_bytes": 128
     },
     {
       "source": "src/code_08138D64.c",
@@ -25507,9 +25675,11 @@
         "sub_08143140"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 128
+      "source_object_bytes": 128,
+      "eu_start": 1323560,
+      "eu_bytes": 128
     },
     {
       "source": "src/code_08138D64.c",
@@ -25518,9 +25688,11 @@
         "sub_081431C0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 48
+      "source_object_bytes": 48,
+      "eu_start": 1323688,
+      "eu_bytes": 48
     },
     {
       "source": "src/code_08138D64.c",
@@ -25672,9 +25844,11 @@
         "sub_08143424"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 24
+      "source_object_bytes": 24,
+      "eu_start": 1324300,
+      "eu_bytes": 24
     },
     {
       "source": "src/code_08138D64.c",
@@ -25683,9 +25857,11 @@
         "sub_0814343C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 40
+      "source_object_bytes": 40,
+      "eu_start": 1324324,
+      "eu_bytes": 40
     },
     {
       "source": "src/code_08138D64.c",
@@ -25694,9 +25870,11 @@
         "sub_08143464"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 52
+      "source_object_bytes": 52,
+      "eu_start": 1324364,
+      "eu_bytes": 52
     },
     {
       "source": "src/code_08138D64.c",
@@ -60124,9 +60302,11 @@
         "CreatePauseMenu"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 484
+      "source_object_bytes": 484,
+      "eu_start": 1196692,
+      "eu_bytes": 484
     },
     {
       "source": "src/pause_help.c",
@@ -60135,9 +60315,11 @@
         "CreateHelpMenu"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 1352
+      "source_object_bytes": 1428,
+      "eu_start": 1197176,
+      "eu_bytes": 1428
     },
     {
       "source": "src/pause_help.c",
@@ -60185,9 +60367,11 @@
         "PauseMenuMain"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 672
+      "source_object_bytes": 672,
+      "eu_start": 1199220,
+      "eu_bytes": 672
     },
     {
       "source": "src/pause_help.c",
@@ -60248,9 +60432,11 @@
         "HelpMenuButtonLoadTiles"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 36
+      "source_object_bytes": 52,
+      "eu_start": 1200120,
+      "eu_bytes": 52
     },
     {
       "source": "src/pause_world_map.c",
@@ -67918,9 +68104,11 @@
         "LoadCrackityHackGfx"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 268
+      "source_object_bytes": 268,
+      "eu_start": 1222424,
+      "eu_bytes": 268
     },
     {
       "source": "src/subgames.c",
@@ -67929,9 +68117,11 @@
         "sub_0812A77C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 372
+      "source_object_bytes": 372,
+      "eu_start": 1222692,
+      "eu_bytes": 372
     },
     {
       "source": "src/subgames.c",
@@ -67953,9 +68143,11 @@
         "sub_0812AAE0"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 1828
+      "source_object_bytes": 1828,
+      "eu_start": 1223560,
+      "eu_bytes": 1828
     },
     {
       "source": "src/subgames.c",
@@ -68003,9 +68195,11 @@
         "sub_0812B63C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2104
+      "source_object_bytes": 2104,
+      "eu_start": 1226468,
+      "eu_bytes": 2104
     },
     {
       "source": "src/subgames.c",
@@ -68040,9 +68234,11 @@
         "sub_0812C168"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 308
+      "source_object_bytes": 308,
+      "eu_start": 1229328,
+      "eu_bytes": 308
     },
     {
       "source": "src/subgames.c",
@@ -68441,9 +68637,11 @@
         "nullsub_31"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1238892,
+      "eu_bytes": 2
     },
     {
       "source": "src/subgames.c",
@@ -68465,9 +68663,11 @@
         "nullsub_32"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1238920,
+      "eu_bytes": 2
     },
     {
       "source": "src/subgames.c",
@@ -68671,9 +68871,11 @@
         "sub_0812F814"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 264
+      "source_object_bytes": 264,
+      "eu_start": 1243324,
+      "eu_bytes": 264
     },
     {
       "source": "src/subgames.c",
@@ -69540,9 +69742,11 @@
         "sub_08134C58"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 268
+      "source_object_bytes": 268,
+      "eu_start": 1264896,
+      "eu_bytes": 268
     },
     {
       "source": "src/subgames.c",
@@ -69564,9 +69768,11 @@
         "sub_08134E54"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2712
+      "source_object_bytes": 2712,
+      "eu_start": 1265404,
+      "eu_bytes": 2712
     },
     {
       "source": "src/subgames.c",
@@ -69692,9 +69898,11 @@
         "sub_08136A40"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 420
+      "source_object_bytes": 420,
+      "eu_start": 1272552,
+      "eu_bytes": 420
     },
     {
       "source": "src/subgames.c",
@@ -69885,9 +70093,11 @@
         "nullsub_128"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1275488,
+      "eu_bytes": 2
     },
     {
       "source": "src/subgames.c",
@@ -69974,9 +70184,11 @@
         "sub_081377D4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 70
+      "source_object_bytes": 70,
+      "eu_start": 1276028,
+      "eu_bytes": 70
     },
     {
       "source": "src/subgames.c",
@@ -69998,9 +70210,11 @@
         "sub_08137874"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 70
+      "source_object_bytes": 70,
+      "eu_start": 1276188,
+      "eu_bytes": 70
     },
     {
       "source": "src/subgames.c",
@@ -74751,8 +74965,8 @@
     }
   ],
   "game": {
-    "verified_c": 5391,
-    "c_pending_eu": 242,
+    "verified_c": 5498,
+    "c_pending_eu": 135,
     "drafts": 5,
     "pending_asm": 0,
     "original_asm": 0,
@@ -74781,8 +74995,8 @@
     "unnamed": 0
   },
   "all": {
-    "verified_c": 5472,
-    "c_pending_eu": 242,
+    "verified_c": 5579,
+    "c_pending_eu": 135,
     "drafts": 5,
     "pending_asm": 0,
     "original_asm": 64,
