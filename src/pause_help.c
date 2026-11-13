@@ -129,7 +129,11 @@ static const u16 sHelpMenuUnkTiledBGsIndices[NUM_LANGUAGES][0x20] = {
 };
 
 extern const u16 gHelpMenuPalette[0x80];  // Remaining 0x80 Bytes afterwards: Zero-filled padding
+#ifdef REGION_EU
+extern const struct HelpMenuButtonTileAddress gHelpMenuButtonTileAddresses[5][NUM_HELPMENU_BUTTONS];
+#else
 extern const struct HelpMenuButtonTileAddress gHelpMenuButtonTileAddresses[NUM_HELPMENU_BUTTONS];
+#endif
 
 static void HelpMenuMain(void);
 static void HelpMenuToNextMenu(void);
@@ -142,7 +146,12 @@ inline struct Task* CreatePauseMenuTask(void) {
 }
 
 inline void HelpMenuButtonLoadTiles(enum HelpMenuButtonTile button) {
+#ifdef REGION_EU
+    u32 languageIndex = gLanguage - LANGUAGE_ENGLISH;
+    CpuCopy32(gHelpMenuButtonTileAddresses[languageIndex][button].tiles, gHelpMenuButtonTileAddresses[languageIndex][button].tilesVram, 0x400);
+#else
     CpuCopy32(gHelpMenuButtonTileAddresses[button].tiles, gHelpMenuButtonTileAddresses[button].tilesVram, 0x400);  // TODO: Replace with sizeof
+#endif
 }
 
 static void PauseMenuFetchInputs(struct PauseMenu* pauseMenu) {
