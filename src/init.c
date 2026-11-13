@@ -10,6 +10,7 @@
 #include "save.h"
 #include "gba/m4a.h"
 #include "code_08020220.h"
+#include "constants/languages.h"
 
 static void sub_080002C8(void);
 
@@ -41,6 +42,12 @@ void sub_080001CC(void) {
         UpdateSaveBufferByOffset(SAVE_BUFFER_TYPE_FILE_INFO, 0);
         r6 = 1;
     }
+#ifdef REGION_EU
+    if ((u16)(gLanguage - LANGUAGE_ENGLISH) > LANGUAGE_ITALIAN - LANGUAGE_ENGLISH) {
+        gLanguage = LANGUAGE_ENGLISH;
+        UpdateSaveBufferByOffset(SAVE_BUFFER_TYPE_FILE_INFO, 0);
+    }
+#endif
     for (i = 0; i < 3; i++) {
         if (WriteSaveSectionByID(SAVE_BUFFER_TYPE_WORLD_PROPS, i) != 0) {
             ClearSaveBuffer(SAVE_BUFFER_TYPE_WORLD_PROPS);
