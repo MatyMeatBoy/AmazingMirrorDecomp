@@ -1,0 +1,3779 @@
+{
+  "schema_version": 1,
+  "scope": "EU source-data candidate; not integrated into ROM rebuild or progress credit",
+  "baseline": "b302fb97d7b792bf57b55e236ecfbb0ae7f165e1",
+  "eu_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "owner_receipt_sha256": "9d767298d32f8bcf1dd97da2b5c8986f0aff905185bfa738583e859ad8e3eef0",
+  "source_files": [
+    "data/object.s",
+    "data/object_spawn_table.inc",
+    "docs/research/candidates/eu_object_spawn.s"
+  ],
+  "header": {
+    "symbol": "gUnk_0835105C",
+    "address": "0x08352B3C",
+    "bytes": 32,
+    "elements": [
+      "0x03E7",
+      "0x0144",
+      "0x02C6",
+      "0x01A1",
+      "0x0336",
+      "0x00DB",
+      "0x0204",
+      "0x02E2",
+      "0x0081",
+      "0x038D",
+      "0x038E",
+      "0x0390",
+      "0x0392",
+      "0x0394",
+      "0x0396",
+      "0x0397"
+    ],
+    "sha256": "ee5a14226cfe22538418534f6474e6a686d15a7a1e442e05107812a6a10ec8e4"
+  },
+  "table1": {
+    "symbol": "gSpawnFuncTable1",
+    "address": "0x08352B5C",
+    "bytes": 876,
+    "count": 219,
+    "unique_function_symbols": 159,
+    "relocations": "219 R_ARM_ABS32 with zero object addends; resolved only through independently verified global definitions",
+    "sha256": "d7171a261aff765961da917adc331f253ea41919740235fa46dff4c1361e9ab0",
+    "entries": [
+      {
+        "index": 0,
+        "symbol": "CreateWaddleDee",
+        "thumb_pointer": "0x080A3C25",
+        "verified_global_definition": "0x080A3C25",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/waddle_dee.c",
+            "kind": "c",
+            "address": "0x080A3C24",
+            "size": 276,
+            "emitted_sha256": "a58524bba5c0a9ff753737dd0493d52af1830243e0def12472fd77694ce7a478"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "symbol": "CreateBrontoBurt",
+        "thumb_pointer": "0x080AD6C5",
+        "verified_global_definition": "0x080AD6C5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bronto_burt.c",
+            "kind": "c",
+            "address": "0x080AD6C4",
+            "size": 322,
+            "emitted_sha256": "1fed247f32cd2cb6207b3b91ea8ad116020c978b13ac5d29042e03d5acb589c6"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "symbol": "CreateBlipper",
+        "thumb_pointer": "0x080A5109",
+        "verified_global_definition": "0x080A5109",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/blipper.c",
+            "kind": "c",
+            "address": "0x080A5108",
+            "size": 200,
+            "emitted_sha256": "23d7c1280414ee1e5679f43fde4c554bd111278b00a3f3dbec318deb451ad2c6"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "symbol": "CreateGlunk",
+        "thumb_pointer": "0x080AEE25",
+        "verified_global_definition": "0x080AEE25",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/glunk.c",
+            "kind": "c",
+            "address": "0x080AEE24",
+            "size": 200,
+            "emitted_sha256": "778f6f679f6294fe5dce4963d5334cc72ffb3e2a19d961bf83392d614076c2ab"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "symbol": "CreateSquishy",
+        "thumb_pointer": "0x080AF6C9",
+        "verified_global_definition": "0x080AF6C9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/squishy.c",
+            "kind": "c",
+            "address": "0x080AF6C8",
+            "size": 212,
+            "emitted_sha256": "b0f158abe1f0a85eae8e92445b46d9fcc364b4e5d94594dfc558a09442eb98af"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "symbol": "CreateScarfy",
+        "thumb_pointer": "0x080A7519",
+        "verified_global_definition": "0x080A7519",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/scarfy.c",
+            "kind": "c",
+            "address": "0x080A7518",
+            "size": 244,
+            "emitted_sha256": "9aa791c02d31df79f35c4c2b34cf83d435ac7b21b43c7119c192edb1dcb29874"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "symbol": "CreateGordo",
+        "thumb_pointer": "0x0809FA09",
+        "verified_global_definition": "0x0809FA09",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/gordo.c",
+            "kind": "c",
+            "address": "0x0809FA08",
+            "size": 250,
+            "emitted_sha256": "1524b21336083a99bce61c3b25d2e69d97e67bbbc71939d2c0cbc1a7b23a4eb3"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "symbol": "CreateSnooter",
+        "thumb_pointer": "0x080ACB19",
+        "verified_global_definition": "0x080ACB19",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/snooter.c",
+            "kind": "c",
+            "address": "0x080ACB18",
+            "size": 164,
+            "emitted_sha256": "37a4c32ac4da11a3f1724735cc9cc34f078a924b627475e3152b52e977e8cbbe"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "symbol": "CreateChip",
+        "thumb_pointer": "0x080AAAE9",
+        "verified_global_definition": "0x080AAAE9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/chip.c",
+            "kind": "c",
+            "address": "0x080AAAE8",
+            "size": 284,
+            "emitted_sha256": "65cc46472a9234398a2f2befc5ac27bb0f58d81eac9509b1de5b9bdf122358d1"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "symbol": "CreateSoarar",
+        "thumb_pointer": "0x080AB84D",
+        "verified_global_definition": "0x080AB84D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/soarar.c",
+            "kind": "c",
+            "address": "0x080AB84C",
+            "size": 216,
+            "emitted_sha256": "522fafc471d1dc32edba4b724355ccde12240e6b4659edddbd67ca4252e002c8"
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "symbol": "CreateHaley",
+        "thumb_pointer": "0x080A0E05",
+        "verified_global_definition": "0x080A0E05",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/haley.c",
+            "kind": "c",
+            "address": "0x080A0E04",
+            "size": 220,
+            "emitted_sha256": "33a6a43552abae6d149da3ba76662911c3619cd51b5643e11a34c2949e7be5c8"
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "symbol": "CreateRolyPoly",
+        "thumb_pointer": "0x080ACD19",
+        "verified_global_definition": "0x080ACD19",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/roly_poly.c",
+            "kind": "c",
+            "address": "0x080ACD18",
+            "size": 212,
+            "emitted_sha256": "0872b441c8d925279eac32da4d3c8a09457f8fa8ddb00ba40881185303845773"
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "symbol": "CreateCupie",
+        "thumb_pointer": "0x080A2A59",
+        "verified_global_definition": "0x080A2A59",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cupie.c",
+            "kind": "c",
+            "address": "0x080A2A58",
+            "size": 224,
+            "emitted_sha256": "69a2a8b7b4e565fa7b8a9379cdcb82cfe372ff24f1af2bacb45b0da2f42e4861"
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "symbol": "CreateBlockin",
+        "thumb_pointer": "0x080A469D",
+        "verified_global_definition": "0x080A469D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/blockin.c",
+            "kind": "c",
+            "address": "0x080A469C",
+            "size": 212,
+            "emitted_sha256": "87948ce91295083b8ae51c645784d7fae0ccb331d78da3091f9dae6014de3c9d"
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "symbol": "CreateSnooter",
+        "thumb_pointer": "0x080ACB19",
+        "verified_global_definition": "0x080ACB19",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/snooter.c",
+            "kind": "c",
+            "address": "0x080ACB18",
+            "size": 164,
+            "emitted_sha256": "37a4c32ac4da11a3f1724735cc9cc34f078a924b627475e3152b52e977e8cbbe"
+          }
+        ]
+      },
+      {
+        "index": 15,
+        "symbol": "CreateLeap",
+        "thumb_pointer": "0x080B01A1",
+        "verified_global_definition": "0x080B01A1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/leap.c",
+            "kind": "c",
+            "address": "0x080B01A0",
+            "size": 244,
+            "emitted_sha256": "3b06fe5b4f8caef41a64c9ac6b6ed7714d0a2921accfb458a3eb6c9d01109b39"
+          }
+        ]
+      },
+      {
+        "index": 16,
+        "symbol": "CreateJack",
+        "thumb_pointer": "0x080A8265",
+        "verified_global_definition": "0x080A8265",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/jack.c",
+            "kind": "c",
+            "address": "0x080A8264",
+            "size": 284,
+            "emitted_sha256": "ab9a990f2141422682e5ed7bb7bce2ae634ca683e729ec6bdc4a3c860a7dd55c"
+          }
+        ]
+      },
+      {
+        "index": 17,
+        "symbol": "CreateBigWaddleDee",
+        "thumb_pointer": "0x080A4AD9",
+        "verified_global_definition": "0x080A4AD9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/big_waddle_dee.c",
+            "kind": "c",
+            "address": "0x080A4AD8",
+            "size": 214,
+            "emitted_sha256": "c6a8a15749ba2ab74d91430a7b372124d1455f2b5e8583d7de21d55818fdcad6"
+          }
+        ]
+      },
+      {
+        "index": 18,
+        "symbol": "CreateWaddleDoo",
+        "thumb_pointer": "0x080B69B1",
+        "verified_global_definition": "0x080B69B1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/waddle_doo.c",
+            "kind": "c",
+            "address": "0x080B69B0",
+            "size": 236,
+            "emitted_sha256": "c94cc26575d746fb3f81b838d1bc3c7f362c89181927529fd68f885c94ddfbfb"
+          }
+        ]
+      },
+      {
+        "index": 19,
+        "symbol": "CreateFlamer",
+        "thumb_pointer": "0x080B7525",
+        "verified_global_definition": "0x080B7525",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/flamer.c",
+            "kind": "c",
+            "address": "0x080B7524",
+            "size": 244,
+            "emitted_sha256": "d8fd9d6b06440194656663582c0325fc506dd04dbc0bd5ce1456f2ad42ad2e4b"
+          }
+        ]
+      },
+      {
+        "index": 20,
+        "symbol": "CreateHotHead",
+        "thumb_pointer": "0x080C3109",
+        "verified_global_definition": "0x080C3109",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/hot_head.c",
+            "kind": "c",
+            "address": "0x080C3108",
+            "size": 372,
+            "emitted_sha256": "da733623dfa4bcdaa82130e05dfb3826ad6b2c6812ff5b61ad52199536d32861"
+          }
+        ]
+      },
+      {
+        "index": 21,
+        "symbol": "CreateLaserBall",
+        "thumb_pointer": "0x080B2295",
+        "verified_global_definition": "0x080B2295",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/laser_ball.c",
+            "kind": "c",
+            "address": "0x080B2294",
+            "size": 228,
+            "emitted_sha256": "5d5261e9f817f15073c49fd7e1ea7c34fabd05cac29f6de55e2b2892f45aee10"
+          }
+        ]
+      },
+      {
+        "index": 22,
+        "symbol": "CreatePengy",
+        "thumb_pointer": "0x080BABC1",
+        "verified_global_definition": "0x080BABC1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/pengy.c",
+            "kind": "c",
+            "address": "0x080BABC0",
+            "size": 234,
+            "emitted_sha256": "f6c96f075ef9d3c4bc5951a6b1a1a2a87f9dc10e42635f113f2d156a31d29f0d"
+          }
+        ]
+      },
+      {
+        "index": 23,
+        "symbol": "CreateRocky",
+        "thumb_pointer": "0x080BE341",
+        "verified_global_definition": "0x080BE341",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/rocky.c",
+            "kind": "c",
+            "address": "0x080BE340",
+            "size": 208,
+            "emitted_sha256": "6c6bfa915a70d4f99704820d32c59e6f2bf683d362edc14388ab04dda90ccaea"
+          }
+        ]
+      },
+      {
+        "index": 24,
+        "symbol": "CreateSirKibble",
+        "thumb_pointer": "0x080B12B5",
+        "verified_global_definition": "0x080B12B5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/sir_kibble.c",
+            "kind": "c",
+            "address": "0x080B12B4",
+            "size": 190,
+            "emitted_sha256": "60c4844935f009ab7256bc56d4d0a32d2e1b0dde55cca9e30e1d9863a0d7c072"
+          }
+        ]
+      },
+      {
+        "index": 25,
+        "symbol": "CreateSparky",
+        "thumb_pointer": "0x080C40F5",
+        "verified_global_definition": "0x080C40F5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/sparky.c",
+            "kind": "c",
+            "address": "0x080C40F4",
+            "size": 268,
+            "emitted_sha256": "ed59bb5e3025b52bd81bcfb5148b911f029d10e61f421b31a32f4eb2389ac3db"
+          }
+        ]
+      },
+      {
+        "index": 26,
+        "symbol": "CreateSwordKnight",
+        "thumb_pointer": "0x080B2DED",
+        "verified_global_definition": "0x080B2DED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/sword_knight.c",
+            "kind": "c",
+            "address": "0x080B2DEC",
+            "size": 200,
+            "emitted_sha256": "4df9476ae4fa6fc2a227d00574013efb7809ead0d03cf30ad3cc841af3af14f7"
+          }
+        ]
+      },
+      {
+        "index": 27,
+        "symbol": "CreateUFO",
+        "thumb_pointer": "0x080C4A01",
+        "verified_global_definition": "0x080C4A01",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ufo.c",
+            "kind": "c",
+            "address": "0x080C4A00",
+            "size": 276,
+            "emitted_sha256": "55f21221fe84212ff88073c5547b2f85adb110d3843adad7dbe0b2d680900e2a"
+          }
+        ]
+      },
+      {
+        "index": 28,
+        "symbol": "CreateTwister",
+        "thumb_pointer": "0x080BBD81",
+        "verified_global_definition": "0x080BBD81",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/twister.c",
+            "kind": "c",
+            "address": "0x080BBD80",
+            "size": 208,
+            "emitted_sha256": "d67e5850598c29491a8dffc10e1018aba8a5c14a8bd5f9800982a69f94b479a2"
+          }
+        ]
+      },
+      {
+        "index": 29,
+        "symbol": "CreateWheelie",
+        "thumb_pointer": "0x080BC50D",
+        "verified_global_definition": "0x080BC50D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wheelie.c",
+            "kind": "c",
+            "address": "0x080BC50C",
+            "size": 208,
+            "emitted_sha256": "636b72d7efccd5459b54270f3ca38301f7f77049790634187952d41b430c1ca6"
+          }
+        ]
+      },
+      {
+        "index": 30,
+        "symbol": "CreateNoddy",
+        "thumb_pointer": "0x080C2249",
+        "verified_global_definition": "0x080C2249",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/noddy.c",
+            "kind": "c",
+            "address": "0x080C2248",
+            "size": 226,
+            "emitted_sha256": "3fc96864c84e15594e416f875dfe55d1e53eb31528188b2b6928c7914e5645b4"
+          }
+        ]
+      },
+      {
+        "index": 31,
+        "symbol": "CreateGolem",
+        "thumb_pointer": "0x080C5439",
+        "verified_global_definition": "0x080C5439",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/golem.c",
+            "kind": "c",
+            "address": "0x080C5438",
+            "size": 272,
+            "emitted_sha256": "e008ac80f7c497d71544efa64716c6be3a8375e02aae22143fed290401ef5176"
+          }
+        ]
+      },
+      {
+        "index": 32,
+        "symbol": "CreateGolem",
+        "thumb_pointer": "0x080C5439",
+        "verified_global_definition": "0x080C5439",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/golem.c",
+            "kind": "c",
+            "address": "0x080C5438",
+            "size": 272,
+            "emitted_sha256": "e008ac80f7c497d71544efa64716c6be3a8375e02aae22143fed290401ef5176"
+          }
+        ]
+      },
+      {
+        "index": 33,
+        "symbol": "CreateGolem",
+        "thumb_pointer": "0x080C5439",
+        "verified_global_definition": "0x080C5439",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/golem.c",
+            "kind": "c",
+            "address": "0x080C5438",
+            "size": 272,
+            "emitted_sha256": "e008ac80f7c497d71544efa64716c6be3a8375e02aae22143fed290401ef5176"
+          }
+        ]
+      },
+      {
+        "index": 34,
+        "symbol": "CreateFoley",
+        "thumb_pointer": "0x080C05F1",
+        "verified_global_definition": "0x080C05F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/foley.c",
+            "kind": "c",
+            "address": "0x080C05F0",
+            "size": 196,
+            "emitted_sha256": "cd7424f039e768c2f20ce60512119d4121e48e8cb28e4269d46ce02d80404936"
+          }
+        ]
+      },
+      {
+        "index": 35,
+        "symbol": "CreateShooty",
+        "thumb_pointer": "0x080C0DE1",
+        "verified_global_definition": "0x080C0DE1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shooty.c",
+            "kind": "c",
+            "address": "0x080C0DE0",
+            "size": 216,
+            "emitted_sha256": "2ee8862a4698a870b3da9250753c29deb29bc3a6f05306366b5756ce87264379"
+          }
+        ]
+      },
+      {
+        "index": 36,
+        "symbol": "CreateScarfy",
+        "thumb_pointer": "0x080A7519",
+        "verified_global_definition": "0x080A7519",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/scarfy.c",
+            "kind": "c",
+            "address": "0x080A7518",
+            "size": 244,
+            "emitted_sha256": "9aa791c02d31df79f35c4c2b34cf83d435ac7b21b43c7119c192edb1dcb29874"
+          }
+        ]
+      },
+      {
+        "index": 37,
+        "symbol": "CreateBoxin",
+        "thumb_pointer": "0x080B3FF5",
+        "verified_global_definition": "0x080B3FF5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/boxin.c",
+            "kind": "c",
+            "address": "0x080B3FF4",
+            "size": 224,
+            "emitted_sha256": "2496a306c5680a83c3ac3ae9a5dcee857038b5ed8e5e48e890847139fcd9cd5e"
+          }
+        ]
+      },
+      {
+        "index": 38,
+        "symbol": "CreateCookin",
+        "thumb_pointer": "0x080B5B61",
+        "verified_global_definition": "0x080B5B61",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cookin.c",
+            "kind": "c",
+            "address": "0x080B5B60",
+            "size": 208,
+            "emitted_sha256": "4cf4f36286f54a284d148143f021f50aa6de89683f9b13c8c5bd1690996f6846"
+          }
+        ]
+      },
+      {
+        "index": 39,
+        "symbol": "CreateMinny",
+        "thumb_pointer": "0x080B3BC1",
+        "verified_global_definition": "0x080B3BC1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/minny.c",
+            "kind": "c",
+            "address": "0x080B3BC0",
+            "size": 204,
+            "emitted_sha256": "c80f38ec042e616550f68d12543e24d56466e365e5680f72de0d0b64edc12e10"
+          }
+        ]
+      },
+      {
+        "index": 40,
+        "symbol": "CreateBomber",
+        "thumb_pointer": "0x080C46FD",
+        "verified_global_definition": "0x080C46FD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bomber.c",
+            "kind": "c",
+            "address": "0x080C46FC",
+            "size": 216,
+            "emitted_sha256": "6743693a7107af239e71896f1ecbe7f2dfab89e74e74c98ee72048a4e8b633b0"
+          }
+        ]
+      },
+      {
+        "index": 41,
+        "symbol": "CreateHeavyKnight",
+        "thumb_pointer": "0x080BEA51",
+        "verified_global_definition": "0x080BEA51",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/heavy_knight.c",
+            "kind": "c",
+            "address": "0x080BEA50",
+            "size": 224,
+            "emitted_sha256": "3af2082cef15df242a3f771284cfe0eb868077064a7bd599b07fa64874a9b6d7"
+          }
+        ]
+      },
+      {
+        "index": 42,
+        "symbol": "CreateGiantRocky",
+        "thumb_pointer": "0x080BFDED",
+        "verified_global_definition": "0x080BFDED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/giant_rocky.c",
+            "kind": "c",
+            "address": "0x080BFDEC",
+            "size": 252,
+            "emitted_sha256": "fd72772d8d54bd50761728b6e50b7a81eabdc3f4048dbe5683979a4171912871"
+          }
+        ]
+      },
+      {
+        "index": 43,
+        "symbol": "CreateMetalGuardian",
+        "thumb_pointer": "0x080BD585",
+        "verified_global_definition": "0x080BD585",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/metal_guardian.c",
+            "kind": "c",
+            "address": "0x080BD584",
+            "size": 248,
+            "emitted_sha256": "8c0748de741d95e422e21048d6e19116aa5ad1131c39c1bbb004e12cbae5c4e7"
+          }
+        ]
+      },
+      {
+        "index": 44,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 45,
+        "symbol": "CreateBatty",
+        "thumb_pointer": "0x080BCC15",
+        "verified_global_definition": "0x080BCC15",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/batty.c",
+            "kind": "c",
+            "address": "0x080BCC14",
+            "size": 228,
+            "emitted_sha256": "cc3928bc9db94e00e14f93f538880fad4fb01df8622baab745df4b51be2b0fdb"
+          }
+        ]
+      },
+      {
+        "index": 46,
+        "symbol": "CreateFoley",
+        "thumb_pointer": "0x080C05F1",
+        "verified_global_definition": "0x080C05F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/foley.c",
+            "kind": "c",
+            "address": "0x080C05F0",
+            "size": 196,
+            "emitted_sha256": "cd7424f039e768c2f20ce60512119d4121e48e8cb28e4269d46ce02d80404936"
+          }
+        ]
+      },
+      {
+        "index": 47,
+        "symbol": "CreateBangBang",
+        "thumb_pointer": "0x080C67FD",
+        "verified_global_definition": "0x080C67FD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bang_bang.c",
+            "kind": "c",
+            "address": "0x080C67FC",
+            "size": 208,
+            "emitted_sha256": "b76fcd011157cf675517f53fc5acbca18b5fa4e9ab4f1924c2f32ac45df1a9f4"
+          }
+        ]
+      },
+      {
+        "index": 48,
+        "symbol": "CreateDarkMindBomb",
+        "thumb_pointer": "0x08107381",
+        "verified_global_definition": "0x08107381",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08107380",
+            "size": 208,
+            "emitted_sha256": "d929770861707f3ea3c88119a1567654477ca652ab554d1bd08f8ae414a50a80"
+          }
+        ]
+      },
+      {
+        "index": 49,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 50,
+        "symbol": "CreateDroppy",
+        "thumb_pointer": "0x0809FD89",
+        "verified_global_definition": "0x0809FD89",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/droppy.c",
+            "kind": "c",
+            "address": "0x0809FD88",
+            "size": 348,
+            "emitted_sha256": "d0629b09ec2391237297343cb061678b0cf077ff4d2af0b5c899eadb02e72595"
+          }
+        ]
+      },
+      {
+        "index": 51,
+        "symbol": "CreatePrank",
+        "thumb_pointer": "0x080A11F5",
+        "verified_global_definition": "0x080A11F5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/prank.c",
+            "kind": "c",
+            "address": "0x080A11F4",
+            "size": 312,
+            "emitted_sha256": "2c5936abb2225179657983a43549fce5285038f9844d2792794df74f0ef5213e"
+          }
+        ]
+      },
+      {
+        "index": 52,
+        "symbol": "CreateMirra",
+        "thumb_pointer": "0x080B0FD9",
+        "verified_global_definition": "0x080B0FD9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mirra.c",
+            "kind": "c",
+            "address": "0x080B0FD8",
+            "size": 280,
+            "emitted_sha256": "00c93b9df6925b4bbc3348cb4c05d509e891294deff1bfff98b3b43477e879e0"
+          }
+        ]
+      },
+      {
+        "index": 53,
+        "symbol": "CreateShotzo",
+        "thumb_pointer": "0x0811A789",
+        "verified_global_definition": "0x0811A789",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shotzo.c",
+            "kind": "c",
+            "address": "0x0811A788",
+            "size": 308,
+            "emitted_sha256": "e666eaec3c7f1d75b8c5370a35f48ddf3871a7c10fd131acb23cc4ddfdb0c64a"
+          }
+        ]
+      },
+      {
+        "index": 54,
+        "symbol": "CreateShadowKirby",
+        "thumb_pointer": "0x0802384D",
+        "verified_global_definition": "0x0802384D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shadow_kirby.c",
+            "kind": "c",
+            "address": "0x0802384C",
+            "size": 256,
+            "emitted_sha256": "bd7986281f636f9d4e61d9a303e0bd2ea7a77411238387829faf9a0ebb022440"
+          }
+        ]
+      },
+      {
+        "index": 55,
+        "symbol": "CreateWaddleDee",
+        "thumb_pointer": "0x080A3C25",
+        "verified_global_definition": "0x080A3C25",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/waddle_dee.c",
+            "kind": "c",
+            "address": "0x080A3C24",
+            "size": 276,
+            "emitted_sha256": "a58524bba5c0a9ff753737dd0493d52af1830243e0def12472fd77694ce7a478"
+          }
+        ]
+      },
+      {
+        "index": 56,
+        "symbol": "CreateMrFrosty",
+        "thumb_pointer": "0x080CB745",
+        "verified_global_definition": "0x080CB745",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mr_frosty.c",
+            "kind": "c",
+            "address": "0x080CB744",
+            "size": 236,
+            "emitted_sha256": "5b6edd8bf79d2b2363e2b32235d2787e783e4c84144defe158d9a7288066a133"
+          }
+        ]
+      },
+      {
+        "index": 57,
+        "symbol": "CreateBonkers",
+        "thumb_pointer": "0x080CF5ED",
+        "verified_global_definition": "0x080CF5ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonkers.c",
+            "kind": "c",
+            "address": "0x080CF5EC",
+            "size": 232,
+            "emitted_sha256": "6bb10d2f9fe0a6e59de2b4526debe1227aec79cf2f0fc82c4de3039a6faf43d5"
+          }
+        ]
+      },
+      {
+        "index": 58,
+        "symbol": "CreatePhanPhan",
+        "thumb_pointer": "0x080CD615",
+        "verified_global_definition": "0x080CD615",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/phan_phan.c",
+            "kind": "c",
+            "address": "0x080CD614",
+            "size": 242,
+            "emitted_sha256": "97f182066f3adf870eef7192b9d6cd384e4f82e8712b3c72c2513bf48e91afca"
+          }
+        ]
+      },
+      {
+        "index": 59,
+        "symbol": "CreateBatafire",
+        "thumb_pointer": "0x080C9301",
+        "verified_global_definition": "0x080C9301",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/batafire.c",
+            "kind": "c",
+            "address": "0x080C9300",
+            "size": 228,
+            "emitted_sha256": "001c0d59730d56f39a5c0f01fa1ada99ed662e6e5f6087501d769690ea41b238"
+          }
+        ]
+      },
+      {
+        "index": 60,
+        "symbol": "CreateBoxBoxer",
+        "thumb_pointer": "0x080C7225",
+        "verified_global_definition": "0x080C7225",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/box_boxer.c",
+            "kind": "c",
+            "address": "0x080C7224",
+            "size": 238,
+            "emitted_sha256": "914d75c5d3c9c345faed7780591509d03033fb889473cbb121138da6bc71bd81"
+          }
+        ]
+      },
+      {
+        "index": 61,
+        "symbol": "CreateBoxy",
+        "thumb_pointer": "0x080D566D",
+        "verified_global_definition": "0x080D566D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/boxy.c",
+            "kind": "c",
+            "address": "0x080D566C",
+            "size": 248,
+            "emitted_sha256": "62a29b3ac0adb459f15a2f2d199a069afc671e4cad268a0fd06f41e5ddbf4d12"
+          }
+        ]
+      },
+      {
+        "index": 62,
+        "symbol": "CreateMasterHand",
+        "thumb_pointer": "0x080D16D5",
+        "verified_global_definition": "0x080D16D5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/master_hand.c",
+            "kind": "c",
+            "address": "0x080D16D4",
+            "size": 244,
+            "emitted_sha256": "e90b1b4a755e0b240ca51163d1ba628ef12dec11f0c3e50cb62cb8429d978f1d"
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "symbol": "CreateBombar",
+        "thumb_pointer": "0x080D79D1",
+        "verified_global_definition": "0x080D79D1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bombar.c",
+            "kind": "c",
+            "address": "0x080D79D0",
+            "size": 228,
+            "emitted_sha256": "43943a24663598bf5ec7f738d6e239e5b159f1cdad436df55cd379681c279833"
+          }
+        ]
+      },
+      {
+        "index": 64,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 65,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 66,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 67,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 68,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 69,
+        "symbol": "CreateKracko",
+        "thumb_pointer": "0x080DB8F1",
+        "verified_global_definition": "0x080DB8F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/kracko.c",
+            "kind": "c",
+            "address": "0x080DB8F0",
+            "size": 372,
+            "emitted_sha256": "3de0c06390d92f2b647a2f14f355de7c3e31a0fec11fdba35e5590cec48a0018"
+          }
+        ]
+      },
+      {
+        "index": 70,
+        "symbol": "CreateKingGolem",
+        "thumb_pointer": "0x080DA139",
+        "verified_global_definition": "0x080DA139",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/king_golem.c",
+            "kind": "c",
+            "address": "0x080DA138",
+            "size": 460,
+            "emitted_sha256": "60ccb5ee2fff3f8ff6a4dd491fddb9400fcf2dfe9d2ff7636e54d8cbf71f3616"
+          }
+        ]
+      },
+      {
+        "index": 71,
+        "symbol": "CreateCrazyHand",
+        "thumb_pointer": "0x080DF361",
+        "verified_global_definition": "0x080DF361",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/crazy_hand.c",
+            "kind": "c",
+            "address": "0x080DF360",
+            "size": 424,
+            "emitted_sha256": "09e515c4c64a6f6fe9c64057dd3ea4954a829a79b6d6a4430c7753f8425a00d6"
+          }
+        ]
+      },
+      {
+        "index": 72,
+        "symbol": "CreateGobbler",
+        "thumb_pointer": "0x080E3EC1",
+        "verified_global_definition": "0x080E3EC1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/gobbler.c",
+            "kind": "c",
+            "address": "0x080E3EC0",
+            "size": 388,
+            "emitted_sha256": "a51fb5cd407b616cbdf22651c4a7f6ea9b6f319c2b3804c7023939709b3f537c"
+          }
+        ]
+      },
+      {
+        "index": 73,
+        "symbol": "CreateWiz",
+        "thumb_pointer": "0x080E7DBD",
+        "verified_global_definition": "0x080E7DBD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080E7DBC",
+            "size": 328,
+            "emitted_sha256": "ab2d900a1eeb931ab86d748060235bf5740e175b296fb078c584511be844cd41"
+          }
+        ]
+      },
+      {
+        "index": 74,
+        "symbol": "CreateMoley",
+        "thumb_pointer": "0x080EB17D",
+        "verified_global_definition": "0x080EB17D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EB17C",
+            "size": 396,
+            "emitted_sha256": "febf1b497b5ad38e83d6be313ce045d900046026ae8fdd1f149bace5060c7d66"
+          }
+        ]
+      },
+      {
+        "index": 75,
+        "symbol": "CreateMegaTitan",
+        "thumb_pointer": "0x080ED999",
+        "verified_global_definition": "0x080ED999",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080ED998",
+            "size": 384,
+            "emitted_sha256": "143f24c8bfbda822e157352f4554d2480d1fd2fd5d5a8669c0f92faa1aa86e83"
+          }
+        ]
+      },
+      {
+        "index": 76,
+        "symbol": "CreateTitanHead",
+        "thumb_pointer": "0x080F4585",
+        "verified_global_definition": "0x080F4585",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080F4584",
+            "size": 240,
+            "emitted_sha256": "6471ebd4777209e2c96da050dbbb1c5ebe96170ad443e3670ebabc6ce7bdfa07"
+          }
+        ]
+      },
+      {
+        "index": 77,
+        "symbol": "CreateCrazyHand",
+        "thumb_pointer": "0x080DF361",
+        "verified_global_definition": "0x080DF361",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/crazy_hand.c",
+            "kind": "c",
+            "address": "0x080DF360",
+            "size": 424,
+            "emitted_sha256": "09e515c4c64a6f6fe9c64057dd3ea4954a829a79b6d6a4430c7753f8425a00d6"
+          }
+        ]
+      },
+      {
+        "index": 78,
+        "symbol": "CreateDarkMetaKnight",
+        "thumb_pointer": "0x080F5825",
+        "verified_global_definition": "0x080F5825",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_meta_knight.c",
+            "kind": "c",
+            "address": "0x080F5824",
+            "size": 408,
+            "emitted_sha256": "190c235273899eee875a79cd7d584dcc7411f1e189bd1872c7ab7b39ec88ec1e"
+          }
+        ]
+      },
+      {
+        "index": 79,
+        "symbol": "CreateDarkMindForm1",
+        "thumb_pointer": "0x08100255",
+        "verified_global_definition": "0x08100255",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08100254",
+            "size": 480,
+            "emitted_sha256": "774bc2f51ef3dc4db2f052d399211eece7c29c3bb04529fd9adaff71cfbe5f1a"
+          }
+        ]
+      },
+      {
+        "index": 80,
+        "symbol": "CreateDarkMindForm2",
+        "thumb_pointer": "0x0810B9B9",
+        "verified_global_definition": "0x0810B9B9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x0810B9B8",
+            "size": 952,
+            "emitted_sha256": "05ac5d1be16f65628c2079bd65fb33d1b48c65b5e00f40b91ae659d894189728"
+          }
+        ]
+      },
+      {
+        "index": 81,
+        "symbol": "CreateDarkMindTrigger",
+        "thumb_pointer": "0x08114879",
+        "verified_global_definition": "0x08114879",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08114878",
+            "size": 292,
+            "emitted_sha256": "2b2c8a9430ed67f8ad9905a6d05cb6a4ff7030e78703028e8b07aef0c100d9dd"
+          }
+        ]
+      },
+      {
+        "index": 82,
+        "symbol": "CreateDarkMetaKnight",
+        "thumb_pointer": "0x080F5825",
+        "verified_global_definition": "0x080F5825",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_meta_knight.c",
+            "kind": "c",
+            "address": "0x080F5824",
+            "size": 408,
+            "emitted_sha256": "190c235273899eee875a79cd7d584dcc7411f1e189bd1872c7ab7b39ec88ec1e"
+          }
+        ]
+      },
+      {
+        "index": 83,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 84,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 85,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 86,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 87,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 88,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 89,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 90,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 91,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 92,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 93,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 94,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 95,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 96,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 97,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 98,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 99,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 100,
+        "symbol": "CreateBonus",
+        "thumb_pointer": "0x08122BB5",
+        "verified_global_definition": "0x08122BB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonus.c",
+            "kind": "c",
+            "address": "0x08122BB4",
+            "size": 384,
+            "emitted_sha256": "6ee992e1305d9401df35eb95cf620602c094947567912bb10182aa85f5915655"
+          }
+        ]
+      },
+      {
+        "index": 101,
+        "symbol": "CreateShard",
+        "thumb_pointer": "0x0801B8B9",
+        "verified_global_definition": "0x0801B8B9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shard.c",
+            "kind": "c",
+            "address": "0x0801B8B8",
+            "size": 412,
+            "emitted_sha256": "21e6866f49112b09195cecc363548e891f758762b6d09176d196b226946427e2"
+          }
+        ]
+      },
+      {
+        "index": 102,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 103,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 104,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 105,
+        "symbol": "CreateGoalGameBonus",
+        "thumb_pointer": "0x0801AAD1",
+        "verified_global_definition": "0x0801AAD1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/goal_game_bonus.c",
+            "kind": "c",
+            "address": "0x0801AAD0",
+            "size": 360,
+            "emitted_sha256": "1e641fc24dbf2e71c9b4592024621ea8221e7bd48ac93e12a5747f5e300b88b9"
+          }
+        ]
+      },
+      {
+        "index": 106,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 107,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 108,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 109,
+        "symbol": "CreateSmallSwitch",
+        "thumb_pointer": "0x0811920D",
+        "verified_global_definition": "0x0811920D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/big_small_switch.c",
+            "kind": "c",
+            "address": "0x0811920C",
+            "size": 256,
+            "emitted_sha256": "aacb0f745e6f0aafaf67bd34ed173f02b57acea78cfce5b59ad7600bb9c51ea4"
+          }
+        ]
+      },
+      {
+        "index": 110,
+        "symbol": "CreateFire",
+        "thumb_pointer": "0x08119C61",
+        "verified_global_definition": "0x08119C61",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/fire.c",
+            "kind": "c",
+            "address": "0x08119C60",
+            "size": 184,
+            "emitted_sha256": "3186da8198626a4a03c3591edbd732e07c131aa50fad936e74634373f6d3a764"
+          }
+        ]
+      },
+      {
+        "index": 111,
+        "symbol": "CreateMirrorDoor",
+        "thumb_pointer": "0x08119D31",
+        "verified_global_definition": "0x08119D31",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mirror_door.c",
+            "kind": "c",
+            "address": "0x08119D30",
+            "size": 672,
+            "emitted_sha256": "512ee69af5b1930175ada48e411c1370b34d4ffd553f992e10e03271809684a8"
+          }
+        ]
+      },
+      {
+        "index": 112,
+        "symbol": "CreateShotzo",
+        "thumb_pointer": "0x0811A789",
+        "verified_global_definition": "0x0811A789",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shotzo.c",
+            "kind": "c",
+            "address": "0x0811A788",
+            "size": 308,
+            "emitted_sha256": "e666eaec3c7f1d75b8c5370a35f48ddf3871a7c10fd131acb23cc4ddfdb0c64a"
+          }
+        ]
+      },
+      {
+        "index": 113,
+        "symbol": "CreateVertSlidingDoor",
+        "thumb_pointer": "0x0811B539",
+        "verified_global_definition": "0x0811B539",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/vert_sliding_door.c",
+            "kind": "c",
+            "address": "0x0811B538",
+            "size": 200,
+            "emitted_sha256": "8d598a21d953952d940aac28f3f476e96cda2f2dd0bb117de183d81a000c3d19"
+          }
+        ]
+      },
+      {
+        "index": 114,
+        "symbol": "CreateBossChallengeDoor",
+        "thumb_pointer": "0x08118B99",
+        "verified_global_definition": "0x08118B99",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/boss_challenge_door.c",
+            "kind": "c",
+            "address": "0x08118B98",
+            "size": 200,
+            "emitted_sha256": "3a4cf84d46a79327e52c98935039b2b740dc907c524723b6b11d544472e61cb2"
+          }
+        ]
+      },
+      {
+        "index": 115,
+        "symbol": "CreateObjectSpawner",
+        "thumb_pointer": "0x0811BE19",
+        "verified_global_definition": "0x0811BE19",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object_spawner.c",
+            "kind": "c",
+            "address": "0x0811BE18",
+            "size": 148,
+            "emitted_sha256": "613b89dcbb85eacdffc5d6de80f513489b1dec93ef0460eeb1cd89cd0fdd8ea7"
+          }
+        ]
+      },
+      {
+        "index": 116,
+        "symbol": "CreateDestroyableRockBlock",
+        "thumb_pointer": "0x0811C1C9",
+        "verified_global_definition": "0x0811C1C9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/destroyable_rock_block.c",
+            "kind": "c",
+            "address": "0x0811C1C8",
+            "size": 148,
+            "emitted_sha256": "cd8e513f68339e239fb3db61a870cf406ea9331ec91e91110dfb1399474a6c9f"
+          }
+        ]
+      },
+      {
+        "index": 117,
+        "symbol": "CreateUnknown75",
+        "thumb_pointer": "0x0811C3DD",
+        "verified_global_definition": "0x0811C3DD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/unknown_75.c",
+            "kind": "c",
+            "address": "0x0811C3DC",
+            "size": 148,
+            "emitted_sha256": "ac3be5104647826e453f25619acb1898ebfd5add4c9fab089052f7027fd1f525"
+          }
+        ]
+      },
+      {
+        "index": 118,
+        "symbol": "CreateLavaWall",
+        "thumb_pointer": "0x0811C471",
+        "verified_global_definition": "0x0811C471",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/lava_wall.c",
+            "kind": "c",
+            "address": "0x0811C470",
+            "size": 432,
+            "emitted_sha256": "54b45fe8b9b846930347a9bb2575378ded876d00cfcbdbc4c07d51ab7d3e7576"
+          }
+        ]
+      },
+      {
+        "index": 119,
+        "symbol": "CreateScrollLock",
+        "thumb_pointer": "0x0811DC89",
+        "verified_global_definition": "0x0811DC89",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/scroll_lock.c",
+            "kind": "c",
+            "address": "0x0811DC88",
+            "size": 152,
+            "emitted_sha256": "42fd78e910e4e13eba6c7a5086a42b1488515c0ec8db6f400594c4e5ddab41b9"
+          }
+        ]
+      },
+      {
+        "index": 120,
+        "symbol": "CreateCannonFuse",
+        "thumb_pointer": "0x0811DD21",
+        "verified_global_definition": "0x0811DD21",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cannon_fuse.c",
+            "kind": "c",
+            "address": "0x0811DD20",
+            "size": 188,
+            "emitted_sha256": "26d7a79862bd92461b61ab70537240032263649df502c0a73bacb03b2d4fc368"
+          }
+        ]
+      },
+      {
+        "index": 121,
+        "symbol": "CreateStarStoneBlock",
+        "thumb_pointer": "0x0811E9A9",
+        "verified_global_definition": "0x0811E9A9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/star_stone_block.c",
+            "kind": "c",
+            "address": "0x0811E9A8",
+            "size": 256,
+            "emitted_sha256": "dc9b11fbc5c168f42a94626978466338f2b3edc5b8a66616b5e245f3465630e9"
+          }
+        ]
+      },
+      {
+        "index": 122,
+        "symbol": "CreateUnknown7A",
+        "thumb_pointer": "0x0811F171",
+        "verified_global_definition": "0x0811F171",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/unknown_7A.c",
+            "kind": "c",
+            "address": "0x0811F170",
+            "size": 228,
+            "emitted_sha256": "63d2dee9e425e7443bce8eddea505aebdd146e2934e3169799070e03785c9b11"
+          }
+        ]
+      },
+      {
+        "index": 123,
+        "symbol": "CreateStarPlatform",
+        "thumb_pointer": "0x0811F9D5",
+        "verified_global_definition": "0x0811F9D5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/star_platform.c",
+            "kind": "c",
+            "address": "0x0811F9D4",
+            "size": 260,
+            "emitted_sha256": "f862d860607cd8bc55f6150de424c4ad32a2cd9ddfa5538b7fc82b5477d03822"
+          }
+        ]
+      },
+      {
+        "index": 124,
+        "symbol": "CreateFlameColumn",
+        "thumb_pointer": "0x0811FD39",
+        "verified_global_definition": "0x0811FD39",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/flame_column.c",
+            "kind": "c",
+            "address": "0x0811FD38",
+            "size": 256,
+            "emitted_sha256": "3804a3d08109a9f8d9f5c7d5f9c279e9ae7d4364c89f8d1687aefc27c0ad7cf7"
+          }
+        ]
+      },
+      {
+        "index": 125,
+        "symbol": "CreateLargeStarStoneBlock7D",
+        "thumb_pointer": "0x08120095",
+        "verified_global_definition": "0x08120095",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/large_stone_block_7D.c",
+            "kind": "c",
+            "address": "0x08120094",
+            "size": 252,
+            "emitted_sha256": "c6f3a02a7be9a5b61a59f68e08b1facf05eadbff7e84eb6786a86a7b5d5af365"
+          }
+        ]
+      },
+      {
+        "index": 126,
+        "symbol": "CreateLargeStarStoneBlock7E",
+        "thumb_pointer": "0x081201F1",
+        "verified_global_definition": "0x081201F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/large_star_stone_block.c",
+            "kind": "c",
+            "address": "0x081201F0",
+            "size": 248,
+            "emitted_sha256": "1397eb7ed50f8118171143fa79b9782da98b22c87f8d8330fd46f1feab8b67a0"
+          }
+        ]
+      },
+      {
+        "index": 127,
+        "symbol": "CreateCPUKirbyTrigger",
+        "thumb_pointer": "0x0812093D",
+        "verified_global_definition": "0x0812093D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cpu_kirby_trigger.c",
+            "kind": "c",
+            "address": "0x0812093C",
+            "size": 152,
+            "emitted_sha256": "4319d72e2c5d4f3d8275420e0829c290eb9070706e9764172e4ad3c05aec5ef1"
+          }
+        ]
+      },
+      {
+        "index": 128,
+        "symbol": "CreateChest",
+        "thumb_pointer": "0x0800AD79",
+        "verified_global_definition": "0x0800AD79",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/chest.c",
+            "kind": "c",
+            "address": "0x0800AD78",
+            "size": 352,
+            "emitted_sha256": "ee1b0b05da6b1b90026bfecfb4e5ce98204a1cee5b12205a05a8b6cf057393a7"
+          }
+        ]
+      },
+      {
+        "index": 129,
+        "symbol": "CreateChest",
+        "thumb_pointer": "0x0800AD79",
+        "verified_global_definition": "0x0800AD79",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/chest.c",
+            "kind": "c",
+            "address": "0x0800AD78",
+            "size": 352,
+            "emitted_sha256": "ee1b0b05da6b1b90026bfecfb4e5ce98204a1cee5b12205a05a8b6cf057393a7"
+          }
+        ]
+      },
+      {
+        "index": 130,
+        "symbol": "CreateUnknown82",
+        "thumb_pointer": "0x08120D2D",
+        "verified_global_definition": "0x08120D2D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/unknown_82.c",
+            "kind": "c",
+            "address": "0x08120D2C",
+            "size": 148,
+            "emitted_sha256": "5613da87dea5b21824e15fdfbab5f9f279f3ef4f5afa223d9dbf34faee590c3a"
+          }
+        ]
+      },
+      {
+        "index": 131,
+        "symbol": "CreateUnknown83",
+        "thumb_pointer": "0x080A9B55",
+        "verified_global_definition": "0x080A9B55",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080A9B54",
+            "size": 168,
+            "emitted_sha256": "22f6258df85cf35deb0a73b1042865ad0e7b5c275721e32a29ac13e7f91cda3a"
+          }
+        ]
+      },
+      {
+        "index": 132,
+        "symbol": "CreateWarpStar",
+        "thumb_pointer": "0x0800BE39",
+        "verified_global_definition": "0x0800BE39",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/warp_star.c",
+            "kind": "c",
+            "address": "0x0800BE38",
+            "size": 232,
+            "emitted_sha256": "46c50a7d98bff4cb36c4f3e201d6a3de382886f96ce74c270f08c00aa07c0293"
+          }
+        ]
+      },
+      {
+        "index": 133,
+        "symbol": "CreateGoalStar",
+        "thumb_pointer": "0x0800BF21",
+        "verified_global_definition": "0x0800BF21",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/warp_star.c",
+            "kind": "c",
+            "address": "0x0800BF20",
+            "size": 208,
+            "emitted_sha256": "bbb82755482fc7be7475b43addc8e3340ef5ee4b7bf865190f716472c5d930df"
+          }
+        ]
+      },
+      {
+        "index": 134,
+        "symbol": "CreateBigSwitch",
+        "thumb_pointer": "0x0811930D",
+        "verified_global_definition": "0x0811930D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/big_small_switch.c",
+            "kind": "c",
+            "address": "0x0811930C",
+            "size": 200,
+            "emitted_sha256": "fffc07bc703d83a46c3b38e83a941b7d2958cfcf38c217ae78b77140a4b32fc7"
+          }
+        ]
+      },
+      {
+        "index": 135,
+        "symbol": "CreateUnknown87",
+        "thumb_pointer": "0x08120FD9",
+        "verified_global_definition": "0x08120FD9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/unknown_87.c",
+            "kind": "c",
+            "address": "0x08120FD8",
+            "size": 156,
+            "emitted_sha256": "4c23160a75e67f2a3542f6bc0ffa5792526fe9b3a753b4107a84a3f4eb37bef5"
+          }
+        ]
+      },
+      {
+        "index": 136,
+        "symbol": "CreateLargeStarStoneBlock88",
+        "thumb_pointer": "0x081210E5",
+        "verified_global_definition": "0x081210E5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/large_star_stone_block_88.c",
+            "kind": "c",
+            "address": "0x081210E4",
+            "size": 248,
+            "emitted_sha256": "c3893d27a39d472524b11e54f51a22563bf0aad6df35ba9fcb1a2cea94241169"
+          }
+        ]
+      },
+      {
+        "index": 137,
+        "symbol": "CreateLargeStarStoneBlock89",
+        "thumb_pointer": "0x081215A5",
+        "verified_global_definition": "0x081215A5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/large_star_stone_block_89.c",
+            "kind": "c",
+            "address": "0x081215A4",
+            "size": 248,
+            "emitted_sha256": "f2b14a8da46942c70744273e22689dbcede0046cbf83fd376b5ace461c145268"
+          }
+        ]
+      },
+      {
+        "index": 138,
+        "symbol": "CreateKirbyCannon",
+        "thumb_pointer": "0x08121A65",
+        "verified_global_definition": "0x08121A65",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/kirby_cannon.c",
+            "kind": "c",
+            "address": "0x08121A64",
+            "size": 220,
+            "emitted_sha256": "c7706b97c6895de8d7fbdb22414078d1cd7d12737ad5abb9293289fbb1e3c595"
+          }
+        ]
+      },
+      {
+        "index": 139,
+        "symbol": "CreateEightDirCannon",
+        "thumb_pointer": "0x0812243D",
+        "verified_global_definition": "0x0812243D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/eight_dir_cannon.c",
+            "kind": "c",
+            "address": "0x0812243C",
+            "size": 196,
+            "emitted_sha256": "32eccb487dc6549917da81fc4946bfdff47c38b2c4936c16326d423f199dab05"
+          }
+        ]
+      },
+      {
+        "index": 140,
+        "symbol": "CreateSpecialHubMirror",
+        "thumb_pointer": "0x0801E309",
+        "verified_global_definition": "0x0801E309",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/special_hub_mirror.c",
+            "kind": "c",
+            "address": "0x0801E308",
+            "size": 180,
+            "emitted_sha256": "fcaf4c2ea1d1da28676b2571f6fcea0ad6071ad51f5255e23df727013ea2261b"
+          }
+        ]
+      },
+      {
+        "index": 141,
+        "symbol": "CreateHammerPeg",
+        "thumb_pointer": "0x080252AD",
+        "verified_global_definition": "0x080252AD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/hammer_peg.c",
+            "kind": "c",
+            "address": "0x080252AC",
+            "size": 176,
+            "emitted_sha256": "73201d94f5de6ccb77a240f13731aba6a0ea225e6e152b62e555619d446a695d"
+          }
+        ]
+      },
+      {
+        "index": 142,
+        "symbol": "CreateCutsceneTrigger",
+        "thumb_pointer": "0x080206DD",
+        "verified_global_definition": "0x080206DD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cutscene_trigger.c",
+            "kind": "c",
+            "address": "0x080206DC",
+            "size": 248,
+            "emitted_sha256": "9b65589db14d32e3fcdaceb5a95ec37e1fc0da15486159ce5e01a875e1b188b4"
+          }
+        ]
+      },
+      {
+        "index": 143,
+        "symbol": "CreateMasterSwordNonCollectible",
+        "thumb_pointer": "0x080253C9",
+        "verified_global_definition": "0x080253C9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/master_sword.c",
+            "kind": "c",
+            "address": "0x080253C8",
+            "size": 168,
+            "emitted_sha256": "172a196bd3389efb06f64986a9e6a9ffe703f19170e5bb9129fec16a415f82e8"
+          }
+        ]
+      },
+      {
+        "index": 144,
+        "symbol": "CreateDustCloud",
+        "thumb_pointer": "0x080A9C69",
+        "verified_global_definition": "0x080A9C69",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080A9C68",
+            "size": 202,
+            "emitted_sha256": "f3555d58b467355f021e044fdf123b92ca7145f3ddd3c939ae920a351defc5fe"
+          }
+        ]
+      },
+      {
+        "index": 145,
+        "symbol": "CreateLeverWall",
+        "thumb_pointer": "0x080255F1",
+        "verified_global_definition": "0x080255F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/lever_wall.c",
+            "kind": "c",
+            "address": "0x080255F0",
+            "size": 140,
+            "emitted_sha256": "f280539c690c5a0ce70816b45dc3bae588aaf3262eb4db71745a93e8beebf07b"
+          }
+        ]
+      },
+      {
+        "index": 146,
+        "symbol": "CreateAbilityStatue",
+        "thumb_pointer": "0x080AA43D",
+        "verified_global_definition": "0x080AA43D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA43C",
+            "size": 248,
+            "emitted_sha256": "ea85a029f143000ca867f886f49a650b24757c49a1fa3b8e7b004d8ddccdcbbd"
+          }
+        ]
+      },
+      {
+        "index": 147,
+        "symbol": "CreateAbilityStatue",
+        "thumb_pointer": "0x080AA43D",
+        "verified_global_definition": "0x080AA43D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA43C",
+            "size": 248,
+            "emitted_sha256": "ea85a029f143000ca867f886f49a650b24757c49a1fa3b8e7b004d8ddccdcbbd"
+          }
+        ]
+      },
+      {
+        "index": 148,
+        "symbol": "CreateAbilityStatue",
+        "thumb_pointer": "0x080AA43D",
+        "verified_global_definition": "0x080AA43D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA43C",
+            "size": 248,
+            "emitted_sha256": "ea85a029f143000ca867f886f49a650b24757c49a1fa3b8e7b004d8ddccdcbbd"
+          }
+        ]
+      },
+      {
+        "index": 149,
+        "symbol": "CreateAbilityStatue",
+        "thumb_pointer": "0x080AA43D",
+        "verified_global_definition": "0x080AA43D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA43C",
+            "size": 248,
+            "emitted_sha256": "ea85a029f143000ca867f886f49a650b24757c49a1fa3b8e7b004d8ddccdcbbd"
+          }
+        ]
+      },
+      {
+        "index": 150,
+        "symbol": "CreateAbilityStatueRandom",
+        "thumb_pointer": "0x080AA9D5",
+        "verified_global_definition": "0x080AA9D5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA9D4",
+            "size": 134,
+            "emitted_sha256": "41facbb9fbd3d32c4fd91db8a20ff2aa66614182c2ca7ecd5cb266f19f5b6e43"
+          }
+        ]
+      },
+      {
+        "index": 151,
+        "symbol": "CreateDoorToHub",
+        "thumb_pointer": "0x0802AB35",
+        "verified_global_definition": "0x0802AB35",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/special_doors.c",
+            "kind": "c",
+            "address": "0x0802AB34",
+            "size": 356,
+            "emitted_sha256": "ba586fe45daf198920e5e618097ecee953cf5735d0fc15efa20383b5a67ccfa4"
+          }
+        ]
+      },
+      {
+        "index": 152,
+        "symbol": "CreateAbilityStatue",
+        "thumb_pointer": "0x080AA43D",
+        "verified_global_definition": "0x080AA43D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080AA43C",
+            "size": 248,
+            "emitted_sha256": "ea85a029f143000ca867f886f49a650b24757c49a1fa3b8e7b004d8ddccdcbbd"
+          }
+        ]
+      },
+      {
+        "index": 153,
+        "symbol": "CreateAreaDoor",
+        "thumb_pointer": "0x0802B205",
+        "verified_global_definition": "0x0802B205",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/special_doors.c",
+            "kind": "c",
+            "address": "0x0802B204",
+            "size": 300,
+            "emitted_sha256": "9ebc5ae71322e16a388b28154f2351ed5d9c479a77428004ef76260f3251220f"
+          }
+        ]
+      },
+      {
+        "index": 154,
+        "symbol": "CreateEmpty",
+        "thumb_pointer": "0x0809F621",
+        "verified_global_definition": "0x0809F621",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/object.c",
+            "kind": "c",
+            "address": "0x0809F620",
+            "size": 228,
+            "emitted_sha256": "62bcd8288b9d36f8f752357135478755885a10d5e4c30fd25410ad47d8460df0"
+          }
+        ]
+      },
+      {
+        "index": 155,
+        "symbol": "CreateKingGolemRockOrGordo",
+        "thumb_pointer": "0x080DB055",
+        "verified_global_definition": "0x080DB055",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/king_golem.c",
+            "kind": "c",
+            "address": "0x080DB054",
+            "size": 240,
+            "emitted_sha256": "243250d2198b9621d03a3efd5ca661b6c9654b3114fc04adb13f61c0885637d7"
+          }
+        ]
+      },
+      {
+        "index": 156,
+        "symbol": "CreateKingGolemRockOrGordo",
+        "thumb_pointer": "0x080DB055",
+        "verified_global_definition": "0x080DB055",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/king_golem.c",
+            "kind": "c",
+            "address": "0x080DB054",
+            "size": 240,
+            "emitted_sha256": "243250d2198b9621d03a3efd5ca661b6c9654b3114fc04adb13f61c0885637d7"
+          }
+        ]
+      },
+      {
+        "index": 157,
+        "symbol": "CreateFoleyLeaves",
+        "thumb_pointer": "0x080C0AE5",
+        "verified_global_definition": "0x080C0AE5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/foley.c",
+            "kind": "c",
+            "address": "0x080C0AE4",
+            "size": 192,
+            "emitted_sha256": "67c220fa13ccfc2fb9a58d0f0daf1f7970a8ba165dd29a8f698eae7ae8e69832"
+          }
+        ]
+      },
+      {
+        "index": 158,
+        "symbol": "CreateCookinPan",
+        "thumb_pointer": "0x080B5F61",
+        "verified_global_definition": "0x080B5F61",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cookin.c",
+            "kind": "c",
+            "address": "0x080B5F60",
+            "size": 404,
+            "emitted_sha256": "04ff96dfc68dbddfe29772839b0c6ee82942c91506638baeb15e964f4e7d8fdd"
+          }
+        ]
+      },
+      {
+        "index": 159,
+        "symbol": "CreateGobblerBaby",
+        "thumb_pointer": "0x080E66E5",
+        "verified_global_definition": "0x080E66E5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/gobbler.c",
+            "kind": "c",
+            "address": "0x080E66E4",
+            "size": 232,
+            "emitted_sha256": "1a3f74b952ec6d8f93c3a5fa2af2da427bf3cb8f1845d793f9c08e5597620662"
+          }
+        ]
+      },
+      {
+        "index": 160,
+        "symbol": "CreateUnknownA0",
+        "thumb_pointer": "0x080B1735",
+        "verified_global_definition": "0x080B1735",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/sir_kibble.c",
+            "kind": "c",
+            "address": "0x080B1734",
+            "size": 208,
+            "emitted_sha256": "55e9894d418a403871c7c3f06c61e5084041d22c83618d9f5dbaf729da8c25a9"
+          }
+        ]
+      },
+      {
+        "index": 161,
+        "symbol": "CreateBatafireFireball",
+        "thumb_pointer": "0x080CACFD",
+        "verified_global_definition": "0x080CACFD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/batafire.c",
+            "kind": "c",
+            "address": "0x080CACFC",
+            "size": 260,
+            "emitted_sha256": "9e5647ffede738dbaef8a3713366f66677b851324182b8b22a28551f5a88267a"
+          }
+        ]
+      },
+      {
+        "index": 162,
+        "symbol": "CreateParasol",
+        "thumb_pointer": "0x080C2AB5",
+        "verified_global_definition": "0x080C2AB5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/parasol.c",
+            "kind": "c",
+            "address": "0x080C2AB4",
+            "size": 188,
+            "emitted_sha256": "75ea651591f450e08d9ee07a90ccc2d78fe000b9b9fc3845fc9f7c5828cb0b0e"
+          }
+        ]
+      },
+      {
+        "index": 163,
+        "symbol": "CreateAbilityStar",
+        "thumb_pointer": "0x080A919D",
+        "verified_global_definition": "0x080A919D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080A919C",
+            "size": 260,
+            "emitted_sha256": "bea7f8a78936481fce20282c9ad7a48563dbf18503b7167bb3bcb421479b2122"
+          }
+        ]
+      },
+      {
+        "index": 164,
+        "symbol": "CreateAbilityStar",
+        "thumb_pointer": "0x080A919D",
+        "verified_global_definition": "0x080A919D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/ability_objects.c",
+            "kind": "c",
+            "address": "0x080A919C",
+            "size": 260,
+            "emitted_sha256": "bea7f8a78936481fce20282c9ad7a48563dbf18503b7167bb3bcb421479b2122"
+          }
+        ]
+      },
+      {
+        "index": 165,
+        "symbol": "CreateInhalableStar",
+        "thumb_pointer": "0x080A8E69",
+        "verified_global_definition": "0x080A8E69",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/inhalable_star.c",
+            "kind": "c",
+            "address": "0x080A8E68",
+            "size": 212,
+            "emitted_sha256": "349eaaa240048877b9d57ab84c194a784c648dce5d4dc897cb6651bae0440d9d"
+          }
+        ]
+      },
+      {
+        "index": 166,
+        "symbol": "CreateMrFrostyIceCube",
+        "thumb_pointer": "0x080CCB81",
+        "verified_global_definition": "0x080CCB81",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mr_frosty.c",
+            "kind": "c",
+            "address": "0x080CCB80",
+            "size": 368,
+            "emitted_sha256": "7f9ac3bab99a8f770ea727e5d9194536455454090f66c06e97d90766f4011c2b"
+          }
+        ]
+      },
+      {
+        "index": 167,
+        "symbol": "CreateMrFrostyIceCube",
+        "thumb_pointer": "0x080CCB81",
+        "verified_global_definition": "0x080CCB81",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mr_frosty.c",
+            "kind": "c",
+            "address": "0x080CCB80",
+            "size": 368,
+            "emitted_sha256": "7f9ac3bab99a8f770ea727e5d9194536455454090f66c06e97d90766f4011c2b"
+          }
+        ]
+      },
+      {
+        "index": 168,
+        "symbol": "CreateBonkersNut",
+        "thumb_pointer": "0x080D1275",
+        "verified_global_definition": "0x080D1275",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonkers.c",
+            "kind": "c",
+            "address": "0x080D1274",
+            "size": 360,
+            "emitted_sha256": "c0d195d5829fcc2165d62406984702e12de2854f88e027dc0d47f90d8fa869ef"
+          }
+        ]
+      },
+      {
+        "index": 169,
+        "symbol": "CreateBonkersNut",
+        "thumb_pointer": "0x080D1275",
+        "verified_global_definition": "0x080D1275",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bonkers.c",
+            "kind": "c",
+            "address": "0x080D1274",
+            "size": 360,
+            "emitted_sha256": "c0d195d5829fcc2165d62406984702e12de2854f88e027dc0d47f90d8fa869ef"
+          }
+        ]
+      },
+      {
+        "index": 170,
+        "symbol": "CreatePhanPhanApple",
+        "thumb_pointer": "0x080CEFE5",
+        "verified_global_definition": "0x080CEFE5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/phan_phan.c",
+            "kind": "c",
+            "address": "0x080CEFE4",
+            "size": 312,
+            "emitted_sha256": "5fafcf3e1772bde1451516df99ab33ac9dfb1d54e95b75e08b6628718fc84a3d"
+          }
+        ]
+      },
+      {
+        "index": 171,
+        "symbol": "CreatePrankItem",
+        "thumb_pointer": "0x080A1B31",
+        "verified_global_definition": "0x080A1B31",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/prank.c",
+            "kind": "c",
+            "address": "0x080A1B30",
+            "size": 312,
+            "emitted_sha256": "d68dcdb4ade675d8fe4827240a928f84d18e08f93a389c0663e4416df9c9a726"
+          }
+        ]
+      },
+      {
+        "index": 172,
+        "symbol": "CreatePrankItem",
+        "thumb_pointer": "0x080A1B31",
+        "verified_global_definition": "0x080A1B31",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/prank.c",
+            "kind": "c",
+            "address": "0x080A1B30",
+            "size": 312,
+            "emitted_sha256": "d68dcdb4ade675d8fe4827240a928f84d18e08f93a389c0663e4416df9c9a726"
+          }
+        ]
+      },
+      {
+        "index": 173,
+        "symbol": "CreatePrankItem",
+        "thumb_pointer": "0x080A1B31",
+        "verified_global_definition": "0x080A1B31",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/prank.c",
+            "kind": "c",
+            "address": "0x080A1B30",
+            "size": 312,
+            "emitted_sha256": "d68dcdb4ade675d8fe4827240a928f84d18e08f93a389c0663e4416df9c9a726"
+          }
+        ]
+      },
+      {
+        "index": 174,
+        "symbol": "CreateCookinPan",
+        "thumb_pointer": "0x080B5F61",
+        "verified_global_definition": "0x080B5F61",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cookin.c",
+            "kind": "c",
+            "address": "0x080B5F60",
+            "size": 404,
+            "emitted_sha256": "04ff96dfc68dbddfe29772839b0c6ee82942c91506638baeb15e964f4e7d8fdd"
+          }
+        ]
+      },
+      {
+        "index": 175,
+        "symbol": "CreateBananaPeel",
+        "thumb_pointer": "0x080A22BD",
+        "verified_global_definition": "0x080A22BD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/prank.c",
+            "kind": "c",
+            "address": "0x080A22BC",
+            "size": 268,
+            "emitted_sha256": "e7e302e0725eecbadf7d0622aba71175bb897c46c2c1495cddc2324c968ca5ce"
+          }
+        ]
+      },
+      {
+        "index": 176,
+        "symbol": "CreateBoxyBox",
+        "thumb_pointer": "0x080D6F39",
+        "verified_global_definition": "0x080D6F39",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/boxy.c",
+            "kind": "c",
+            "address": "0x080D6F38",
+            "size": 304,
+            "emitted_sha256": "245e88fb4c5c197e4459c1046ba1482d815297a403d9e8110d45ea437fd8d518"
+          }
+        ]
+      },
+      {
+        "index": 177,
+        "symbol": "CreateShootingEnemyStar",
+        "thumb_pointer": "0x080D4EC1",
+        "verified_global_definition": "0x080D4EC1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/master_hand.c",
+            "kind": "c",
+            "address": "0x080D4EC0",
+            "size": 196,
+            "emitted_sha256": "6c4660c09c8a9088e98e5326c96a1b8145161436bf8838f797c81bee879ce30e"
+          }
+        ]
+      },
+      {
+        "index": 178,
+        "symbol": "CreateBombarBomb",
+        "thumb_pointer": "0x080D96A5",
+        "verified_global_definition": "0x080D96A5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bombar.c",
+            "kind": "c",
+            "address": "0x080D96A4",
+            "size": 172,
+            "emitted_sha256": "50c7b522f7b8347ae2e37ce61ff30c953d4fefb88dbd69988210c7c4e670472b"
+          }
+        ]
+      },
+      {
+        "index": 179,
+        "symbol": "CreateBombarMissile",
+        "thumb_pointer": "0x080D9939",
+        "verified_global_definition": "0x080D9939",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/bombar.c",
+            "kind": "c",
+            "address": "0x080D9938",
+            "size": 180,
+            "emitted_sha256": "71091cbfa380bbba0e8a3e16f6eacfdfa109e954665fb67dbcbe0dbe692dfa41"
+          }
+        ]
+      },
+      {
+        "index": 180,
+        "symbol": "CreateBoxBoxerEnergyBall",
+        "thumb_pointer": "0x080C8D49",
+        "verified_global_definition": "0x080C8D49",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/box_boxer.c",
+            "kind": "c",
+            "address": "0x080C8D48",
+            "size": 176,
+            "emitted_sha256": "c9fd2387033450a40d2044f97f82e9fec7e0870b6faf694f5ee7c2184b0e3978"
+          }
+        ]
+      },
+      {
+        "index": 181,
+        "symbol": "CreateWizFootball",
+        "thumb_pointer": "0x080EA819",
+        "verified_global_definition": "0x080EA819",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080EA818",
+            "size": 164,
+            "emitted_sha256": "bff16a7d80e8fe2047b680d48ceb1716876c97e2d05af48a583f4db3b5c9a3bf"
+          }
+        ]
+      },
+      {
+        "index": 182,
+        "symbol": "CreateWizCar",
+        "thumb_pointer": "0x080EA909",
+        "verified_global_definition": "0x080EA909",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080EA908",
+            "size": 156,
+            "emitted_sha256": "3c7ee7407d905916f454aa727d46801fb2bafc81de3e3a947be83f4cd44f63fa"
+          }
+        ]
+      },
+      {
+        "index": 183,
+        "symbol": "CreateWizBalloon",
+        "thumb_pointer": "0x080E98E1",
+        "verified_global_definition": "0x080E98E1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080E98E0",
+            "size": 176,
+            "emitted_sha256": "2829858bb479095618f20d69f2f06a08ed926dc73a5221f7aa373148ac311d41"
+          }
+        ]
+      },
+      {
+        "index": 184,
+        "symbol": "CreateWizBomb",
+        "thumb_pointer": "0x080EA9D5",
+        "verified_global_definition": "0x080EA9D5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080EA9D4",
+            "size": 164,
+            "emitted_sha256": "87daf0292d2d592b1436bb501b37457e8a0b7003f17ed192b5577fefb5904a8b"
+          }
+        ]
+      },
+      {
+        "index": 185,
+        "symbol": "CreateWizCloud",
+        "thumb_pointer": "0x080E9D65",
+        "verified_global_definition": "0x080E9D65",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080E9D64",
+            "size": 184,
+            "emitted_sha256": "a8516fc0a779694b3e735893b60d058f7f93cff9e2686c7c9f74d842c33d267e"
+          }
+        ]
+      },
+      {
+        "index": 186,
+        "symbol": "CreateWizApple",
+        "thumb_pointer": "0x080EAAC9",
+        "verified_global_definition": "0x080EAAC9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080EAAC8",
+            "size": 164,
+            "emitted_sha256": "ef75a8bc4c02d29acdc2b847294efd2e6558335d2a275fadae65f44cdfb4f3d0"
+          }
+        ]
+      },
+      {
+        "index": 187,
+        "symbol": "CreateWizDroppy",
+        "thumb_pointer": "0x080EAB6D",
+        "verified_global_definition": "0x080EAB6D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/wiz.c",
+            "kind": "c",
+            "address": "0x080EAB6C",
+            "size": 156,
+            "emitted_sha256": "f7567677e3db21cec502861435c4035ad487c0a1e305ca6c7ef8d5510f3ecea1"
+          }
+        ]
+      },
+      {
+        "index": 188,
+        "symbol": "CreateTitanArm1",
+        "thumb_pointer": "0x080EF125",
+        "verified_global_definition": "0x080EF125",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080EF124",
+            "size": 204,
+            "emitted_sha256": "36a0e7fc50a0341a3be45602e108b87d9becee4cfd029fb31c820fcb2d8bd7a0"
+          }
+        ]
+      },
+      {
+        "index": 189,
+        "symbol": "CreateTitanArm2",
+        "thumb_pointer": "0x080F20ED",
+        "verified_global_definition": "0x080F20ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080F20EC",
+            "size": 204,
+            "emitted_sha256": "7e712ac47bd3a12bd0e472e60782e464f7853b28cace9d0fd35c0d61c2dd6f0c"
+          }
+        ]
+      },
+      {
+        "index": 190,
+        "symbol": "CreateTitanArm3",
+        "thumb_pointer": "0x080F1515",
+        "verified_global_definition": "0x080F1515",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080F1514",
+            "size": 204,
+            "emitted_sha256": "e9662e3c1cbb342d33cca02cfc71d1c78b2e891c4a1ce25f79b100e1a73b5387"
+          }
+        ]
+      },
+      {
+        "index": 191,
+        "symbol": "CreateTitanArm4",
+        "thumb_pointer": "0x080F2CF1",
+        "verified_global_definition": "0x080F2CF1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080F2CF0",
+            "size": 204,
+            "emitted_sha256": "e4c3d8636241e949b690ef5e5e712c118604cc92aad9bd70d74a90f577471df5"
+          }
+        ]
+      },
+      {
+        "index": 192,
+        "symbol": "CreateTitanHeadMissile",
+        "thumb_pointer": "0x080F54BD",
+        "verified_global_definition": "0x080F54BD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/mega_titan.c",
+            "kind": "c",
+            "address": "0x080F54BC",
+            "size": 308,
+            "emitted_sha256": "2113e257f42902781b9160f3c4d2e0d2fd39185685c5c4485a3810015196ee14"
+          }
+        ]
+      },
+      {
+        "index": 193,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 194,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 195,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 196,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 197,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 198,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 199,
+        "symbol": "CreateMoleyItem",
+        "thumb_pointer": "0x080EC7ED",
+        "verified_global_definition": "0x080EC7ED",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/moley.c",
+            "kind": "c",
+            "address": "0x080EC7EC",
+            "size": 324,
+            "emitted_sha256": "536641b244f1fb7364f0cf4eca31098829861686635e76fef494a9c4135f1361"
+          }
+        ]
+      },
+      {
+        "index": 200,
+        "symbol": "CreateMasterHandBullet",
+        "thumb_pointer": "0x080E32F1",
+        "verified_global_definition": "0x080E32F1",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/crazy_hand.c",
+            "kind": "c",
+            "address": "0x080E32F0",
+            "size": 200,
+            "emitted_sha256": "94753ef0e10f690999db12f078b439f315814450e4194d3d864b34f7912878df"
+          }
+        ]
+      },
+      {
+        "index": 201,
+        "symbol": "sub_0802470C",
+        "thumb_pointer": "0x08024749",
+        "verified_global_definition": "0x08024749",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shadow_kirby.c",
+            "kind": "c",
+            "address": "0x08024748",
+            "size": 212,
+            "emitted_sha256": "b698541f372d32909595f9eeb53acc3c539dbab4aa70fde0893fee66143b66d4"
+          }
+        ]
+      },
+      {
+        "index": 202,
+        "symbol": "CreateShadowKirbyBomb",
+        "thumb_pointer": "0x08105B79",
+        "verified_global_definition": "0x08105B79",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08105B78",
+            "size": 192,
+            "emitted_sha256": "1f80f0d6e9169f258722ff0d3c909e916d4caec0d2e99700d5e433dfbdbf54c8"
+          }
+        ]
+      },
+      {
+        "index": 203,
+        "symbol": "CreateDarkMindStar",
+        "thumb_pointer": "0x08106499",
+        "verified_global_definition": "0x08106499",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08106498",
+            "size": 184,
+            "emitted_sha256": "6793eb2a73e342f6509752902507eb612a005d0608eb8421deca66ca782079ad"
+          }
+        ]
+      },
+      {
+        "index": 204,
+        "symbol": "CreateDarkMindStar",
+        "thumb_pointer": "0x08106499",
+        "verified_global_definition": "0x08106499",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08106498",
+            "size": 184,
+            "emitted_sha256": "6793eb2a73e342f6509752902507eb612a005d0608eb8421deca66ca782079ad"
+          }
+        ]
+      },
+      {
+        "index": 205,
+        "symbol": "CreateDarkMindStar",
+        "thumb_pointer": "0x08106499",
+        "verified_global_definition": "0x08106499",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08106498",
+            "size": 184,
+            "emitted_sha256": "6793eb2a73e342f6509752902507eb612a005d0608eb8421deca66ca782079ad"
+          }
+        ]
+      },
+      {
+        "index": 206,
+        "symbol": "CreateDarkMindStar",
+        "thumb_pointer": "0x08106499",
+        "verified_global_definition": "0x08106499",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08106498",
+            "size": 184,
+            "emitted_sha256": "6793eb2a73e342f6509752902507eb612a005d0608eb8421deca66ca782079ad"
+          }
+        ]
+      },
+      {
+        "index": 207,
+        "symbol": "sub_08107780",
+        "thumb_pointer": "0x081077C9",
+        "verified_global_definition": "0x081077C9",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x081077C8",
+            "size": 196,
+            "emitted_sha256": "40697ec0e90def14f69be5bbb7e4604736a45ffdf493b039c1a5392c2fb4f3d7"
+          }
+        ]
+      },
+      {
+        "index": 208,
+        "symbol": "sub_0810F320",
+        "thumb_pointer": "0x0810F369",
+        "verified_global_definition": "0x0810F369",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x0810F368",
+            "size": 264,
+            "emitted_sha256": "4cb24fc940495daab7cd07e5d1d296cb901f18033a5a1d0825cb5b308188855c"
+          }
+        ]
+      },
+      {
+        "index": 209,
+        "symbol": "sub_081113EC",
+        "thumb_pointer": "0x08111435",
+        "verified_global_definition": "0x08111435",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08111434",
+            "size": 328,
+            "emitted_sha256": "05a6229b1f3b4da11167d58bd42649f0bd9f355e1a7492844581cd314415232b"
+          }
+        ]
+      },
+      {
+        "index": 210,
+        "symbol": "sub_08111984",
+        "thumb_pointer": "0x081119CD",
+        "verified_global_definition": "0x081119CD",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x081119CC",
+            "size": 360,
+            "emitted_sha256": "f6bfa4f1722e5b422c71d050d0034a8f24cfa7d0d861bdb55886fb04bf13e22a"
+          }
+        ]
+      },
+      {
+        "index": 211,
+        "symbol": "CreateDarkMindMirrorCutter",
+        "thumb_pointer": "0x081131B5",
+        "verified_global_definition": "0x081131B5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x081131B4",
+            "size": 208,
+            "emitted_sha256": "6d3d023ea211328b831e153e0af47f36856daf4e1538659a724d88f7fdc112a9"
+          }
+        ]
+      },
+      {
+        "index": 212,
+        "symbol": "sub_08117BBC",
+        "thumb_pointer": "0x08117C05",
+        "verified_global_definition": "0x08117C05",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/dark_mind.c",
+            "kind": "c",
+            "address": "0x08117C04",
+            "size": 200,
+            "emitted_sha256": "c7549676c5e484c0c74ab37aa856173bd838e5dd70679b586417d8e6abce112e"
+          }
+        ]
+      },
+      {
+        "index": 213,
+        "symbol": "CreateSirKibbleCutter",
+        "thumb_pointer": "0x080B1F2D",
+        "verified_global_definition": "0x080B1F2D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/sir_kibble.c",
+            "kind": "c",
+            "address": "0x080B1F2C",
+            "size": 236,
+            "emitted_sha256": "6c95484cf2b6639ed778f3ef1a0748ffc03bc764c48914baddaaa7668fedc0c6"
+          }
+        ]
+      },
+      {
+        "index": 214,
+        "symbol": "CreateGlunkBullet",
+        "thumb_pointer": "0x080AF005",
+        "verified_global_definition": "0x080AF005",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/glunk.c",
+            "kind": "c",
+            "address": "0x080AF004",
+            "size": 236,
+            "emitted_sha256": "e3d31f1f08c421773a813a06c04aa9b61af23af26463dbb4c0c83b122b632d43"
+          }
+        ]
+      },
+      {
+        "index": 215,
+        "symbol": "CreateShotzoBullet",
+        "thumb_pointer": "0x0811B201",
+        "verified_global_definition": "0x0811B201",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shotzo.c",
+            "kind": "c",
+            "address": "0x0811B200",
+            "size": 236,
+            "emitted_sha256": "d134e1ee47f58046bd7d75cb13a5bc0a3bbd08dbb328c82c6ccf3133abbc77bd"
+          }
+        ]
+      },
+      {
+        "index": 216,
+        "symbol": "CreateCupieArrow",
+        "thumb_pointer": "0x080A3751",
+        "verified_global_definition": "0x080A3751",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/cupie.c",
+            "kind": "c",
+            "address": "0x080A3750",
+            "size": 236,
+            "emitted_sha256": "5acf2a4d48e6282813af1351c341090791ce471879acdc0f95a4c35d116661e3"
+          }
+        ]
+      },
+      {
+        "index": 217,
+        "symbol": "CreateJackStar",
+        "thumb_pointer": "0x080A86E5",
+        "verified_global_definition": "0x080A86E5",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/jack.c",
+            "kind": "c",
+            "address": "0x080A86E4",
+            "size": 236,
+            "emitted_sha256": "9da32d569a9f7a55f5c150cb1e720461ad29fb0c70bad647f8cd9f66c63f2d89"
+          }
+        ]
+      },
+      {
+        "index": 218,
+        "symbol": "CreateShootyBomb",
+        "thumb_pointer": "0x080C1D9D",
+        "verified_global_definition": "0x080C1D9D",
+        "complete_verified_function_spans": [
+          {
+            "source": "src/shooty.c",
+            "kind": "c",
+            "address": "0x080C1D9C",
+            "size": 228,
+            "emitted_sha256": "92eccf96718b96a0fa2b7d58633767cdab3598af3ac5e06ce33af23174af5b71"
+          }
+        ]
+      }
+    ]
+  },
+  "table2": {
+    "symbol": "gSpawnFuncTable2",
+    "source": "src/code_080023A4.c",
+    "address": "0x082DB074",
+    "bytes": 16,
+    "count": 4,
+    "values": [
+      "0x00000000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "status": "Existing C source retained; all16 zero bytes verified; no new definition"
+  },
+  "validation": {
+    "candidate_size": 1516,
+    "all_candidate_bytes_exact": true,
+    "candidate_sha256": "7d1a55ddd76d74f2aa5002799798e756d419653075414d6e557dfdb50f15e8c4",
+    "shared_extraction_original_bytes_and_all_relocations_unchanged": true,
+    "default_usa_full_rom_checks": "not run; owned USA ROM unavailable",
+    "full_eu_rebuild_credit": "not requested for this unintegrated data candidate; no C credit gained",
+    "extra_numeric_bytes": 608,
+    "next_verified_symbol": {
+      "symbol": "gUnk_08351648",
+      "address": "0x08353128"
+    }
+  },
+  "owner_compiler_commit": "59b966ed1b8f371856dcf99f1546c2fe89c678ca",
+  "owner_compiler_recipe": {
+    "sha256": "4f40595716848e96708cc5b17ca4deac7b71b0ae7c646e2299d53d3230f35e19",
+    "default_cflags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
+    "exceptions": {
+      "src/task.c": "omit -Werror",
+      "src/agb_sram.c": "old_agbcc -O1, omit -f2003-patch",
+      "src/m4a.c": "old_agbcc"
+    },
+    "excluded": [
+      "src/data/**/*.c (data-only)",
+      "multi_boot/**",
+      "linked libraries"
+    ],
+    "sizes": "ELF STT_FUNC sizes; zero sizes inferred to next function or section end; gaps unattributed",
+    "region": "eu",
+    "preprocessor_flags": "-E -iquote include -Wno-trigraphs -DMODERN=0 -I tools/agbcc/include -I tools/agbcc -nostdinc -iquote include -DREVISION=0 -DENGLISH -DREGION_EU"
+  },
+  "adjacent_arrays": [
+    {
+      "symbol": "gUnk_083513E8",
+      "address": "0x08352EC8",
+      "bytes": 112,
+      "existing_element_type": "u16",
+      "dimensions": [
+        56
+      ],
+      "values": [
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x4000",
+        "0x2000",
+        "0x1000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x1000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x0CCC",
+        "0x1000",
+        "0x1000",
+        "0x1000",
+        "0x2000",
+        "0x1000",
+        "0x1000",
+        "0x2000",
+        "0x0924",
+        "0x0924",
+        "0x0924",
+        "0x2000",
+        "0x2000",
+        "0x4000",
+        "0x1000",
+        "0x2000",
+        "0x2000",
+        "0x4000",
+        "0x0800",
+        "0x0666",
+        "0x0666",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x0666",
+        "0x2000",
+        "0x1000",
+        "0x1000",
+        "0x2000",
+        "0x2000",
+        "0x1000",
+        "0x0222"
+      ],
+      "reader_and_declaration_files": [
+        "src/hud.c"
+      ],
+      "sha256": "ddf698ea759c59c215ef3dcdd60e8ef894598df58be4591653ee7dc42bb08138"
+    },
+    {
+      "symbol": "gUnk_08351458",
+      "address": "0x08352F38",
+      "bytes": 216,
+      "existing_element_type": "u16",
+      "dimensions": [
+        27,
+        4
+      ],
+      "values": [
+        "0x0222",
+        "0x0199",
+        "0x0155",
+        "0x012F",
+        "0x0199",
+        "0x0111",
+        "0x00CC",
+        "0x00B6",
+        "0x0222",
+        "0x0199",
+        "0x0155",
+        "0x012F",
+        "0x0222",
+        "0x0199",
+        "0x0155",
+        "0x012F",
+        "0x0199",
+        "0x0111",
+        "0x00CC",
+        "0x00B6",
+        "0x0199",
+        "0x0111",
+        "0x00CC",
+        "0x00B6",
+        "0x0199",
+        "0x0111",
+        "0x00CC",
+        "0x00B6",
+        "0x0199",
+        "0x0111",
+        "0x00CC",
+        "0x00B6",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x2000",
+        "0x0111",
+        "0x00CC",
+        "0x00A3",
+        "0x0094",
+        "0x0111",
+        "0x00CC",
+        "0x00A3",
+        "0x0094",
+        "0x0111",
+        "0x00CA",
+        "0x00AA",
+        "0x0097",
+        "0x0111",
+        "0x00B6",
+        "0x0094",
+        "0x0088",
+        "0x00CC",
+        "0x007E",
+        "0x0066",
+        "0x0060",
+        "0x00CC",
+        "0x0094",
+        "0x007E",
+        "0x006D",
+        "0x0199",
+        "0x0199",
+        "0x0147",
+        "0x0147",
+        "0x0333",
+        "0x02AA",
+        "0x0200",
+        "0x0199",
+        "0x0199",
+        "0x0199",
+        "0x0147",
+        "0x0147",
+        "0x0155",
+        "0x0100",
+        "0x00D2",
+        "0x00AA",
+        "0x00AA",
+        "0x0080",
+        "0x0066",
+        "0x005D",
+        "0x00AA",
+        "0x0080",
+        "0x0066",
+        "0x005D",
+        "0x0041",
+        "0x0036",
+        "0x0031",
+        "0x002E",
+        "0x0111",
+        "0x00CA",
+        "0x00AA",
+        "0x0097"
+      ],
+      "reader_and_declaration_files": [
+        "src/hud.c"
+      ],
+      "sha256": "e2b3e11f74a47ff7cae5db0e4c7ac13aa850314042e96cee3bdc6a84cf174a54"
+    },
+    {
+      "symbol": "gUnk_08351530",
+      "address": "0x08353010",
+      "bytes": 216,
+      "existing_element_type": "s16",
+      "dimensions": [
+        27,
+        4
+      ],
+      "values": [
+        "0x001E",
+        "0x0028",
+        "0x0030",
+        "0x0036",
+        "0x0028",
+        "0x003C",
+        "0x0050",
+        "0x005A",
+        "0x001E",
+        "0x0028",
+        "0x0030",
+        "0x0036",
+        "0x001E",
+        "0x0028",
+        "0x0030",
+        "0x0036",
+        "0x0028",
+        "0x003C",
+        "0x0050",
+        "0x005A",
+        "0x0028",
+        "0x003C",
+        "0x0050",
+        "0x005A",
+        "0x0028",
+        "0x003C",
+        "0x0050",
+        "0x005A",
+        "0x0028",
+        "0x003C",
+        "0x0050",
+        "0x005A",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x0002",
+        "0x003C",
+        "0x0050",
+        "0x0064",
+        "0x006E",
+        "0x003C",
+        "0x0050",
+        "0x0064",
+        "0x006E",
+        "0x003C",
+        "0x0051",
+        "0x0060",
+        "0x006C",
+        "0x003C",
+        "0x005A",
+        "0x006E",
+        "0x0078",
+        "0x0050",
+        "0x0082",
+        "0x00A0",
+        "0x00AA",
+        "0x0050",
+        "0x006E",
+        "0x0082",
+        "0x0096",
+        "0x0028",
+        "0x0028",
+        "0x0032",
+        "0x0032",
+        "0x0014",
+        "0x0018",
+        "0x0020",
+        "0x0028",
+        "0x0028",
+        "0x0028",
+        "0x0032",
+        "0x0032",
+        "0x0030",
+        "0x0040",
+        "0x004E",
+        "0x0060",
+        "0x0060",
+        "0x0080",
+        "0x00A0",
+        "0x00B0",
+        "0x0060",
+        "0x0080",
+        "0x00A0",
+        "0x00B0",
+        "0x00FA",
+        "0x012C",
+        "0x014A",
+        "0x015E",
+        "0x003C",
+        "0x0051",
+        "0x0060",
+        "0x006C"
+      ],
+      "reader_and_declaration_files": [
+        "src/batafire.c",
+        "src/bombar.c",
+        "src/bonkers.c",
+        "src/boxy.c",
+        "src/dark_mind.c",
+        "src/dark_meta_knight.c",
+        "include/data.h",
+        "src/gobbler.c",
+        "src/king_golem.c",
+        "src/kracko.c",
+        "src/master_hand.c",
+        "src/mega_titan.c",
+        "src/moley.c",
+        "src/object.c",
+        "src/phan_phan.c",
+        "src/wiz.c"
+      ],
+      "sha256": "56ed1abd0c83d0f57824353dfb9d5ea0583c4277e1dd297f6610b7dd84e03356"
+    },
+    {
+      "symbol": "gUnk_08351608",
+      "address": "0x083530E8",
+      "bytes": 32,
+      "existing_element_type": "s16",
+      "dimensions": [
+        4,
+        4
+      ],
+      "values": [
+        "0x0020",
+        "0x0028",
+        "0x0030",
+        "0x0038",
+        "0x0028",
+        "0x0030",
+        "0x0038",
+        "0x0040",
+        "0x0028",
+        "0x0030",
+        "0x0038",
+        "0x0040",
+        "0x0038",
+        "0x0040",
+        "0x0048",
+        "0x0058"
+      ],
+      "reader_and_declaration_files": [
+        "include/data.h",
+        "src/dark_mind.c",
+        "src/object.c"
+      ],
+      "sha256": "8979ce8f17996ae0f64c4ebb28176a0b59f56059e9538acdbfcaad3a84b999a6"
+    },
+    {
+      "symbol": "gUnk_08351628",
+      "address": "0x08353108",
+      "bytes": 32,
+      "existing_element_type": "u16",
+      "dimensions": [
+        4,
+        4
+      ],
+      "values": [
+        "0x0200",
+        "0x0199",
+        "0x0155",
+        "0x0124",
+        "0x0199",
+        "0x0155",
+        "0x0124",
+        "0x0100",
+        "0x0199",
+        "0x0155",
+        "0x0124",
+        "0x0100",
+        "0x0124",
+        "0x0100",
+        "0x00E3",
+        "0x00BA"
+      ],
+      "reader_and_declaration_files": [
+        "src/hud.c"
+      ],
+      "sha256": "102c969353cf0dbbb841e5a9bf07692d8898d771227e845bb454756cdce2131e"
+    }
+  ]
+}
