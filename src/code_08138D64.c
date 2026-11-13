@@ -622,6 +622,9 @@ void sub_08138B44(void) {
         gBgScrollRegs[i][0] = 0;
         gBgScrollRegs[i][1] = 0;
     }
+#ifdef REGION_EU
+    gBgScrollRegs[1][1] = 0x18;
+#endif
     gBldRegs.bldCnt = BLDCNT_TGT1_ALL | BLDCNT_EFFECT_LIGHTEN;
     gBldRegs.bldAlpha = 0;
     gBldRegs.bldY = 0x10;
