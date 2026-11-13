@@ -37,6 +37,8 @@ See the [fork and port audit](docs/research/REPOSITORY_AUDIT.md), [European fork
 
 [Preserved research branches](docs/research/PRESERVED_DRAFTS.md) retain the complete historical naming proposal and readable collision draft. [European integration results](docs/research/EU_RECOVERY_PROGRESS.md) record the separately verified source gains.
 
+[Remaining-source search](docs/research/REMAINING_SOURCE_SEARCH.md) crosses the current European gaps with a refreshed fork inventory and additional tools, randomizers and recompilations.
+
 </details>
 
 With the matching toolchain installed, supply your own EU dump as `baserom_eu.gba` and run:
