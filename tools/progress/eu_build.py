@@ -39,7 +39,7 @@ def provenance(root):
     return hashes,modes
 
 
-def relocate(data,relocs,address,bases,bindings,symbol_addresses=None):
+def relocate(data,relocs,address,bases,bindings,symbol_addresses=None,object_mappings=None):
     output=bytearray(data)
     for reloc in relocs:
         off,kind,symbol=reloc['offset'],reloc['type'],reloc['symbol']
@@ -54,8 +54,19 @@ def relocate(data,relocs,address,bases,bindings,symbol_addresses=None):
             value=bindings[symbol['name']]
         elif section==0xFFF1:
             value=symbol['value']
-        else:
+        elif section in bases:
             value=bases[section]+symbol['value']
+        else:
+            if kind != 2:
+                raise ValueError('non-ABS32 object mapping')
+            addend=struct.unpack_from('<I',data,off)[0]
+            point=symbol['value']+addend
+            mappings=[m for m in (object_mappings or []) if m.get('section_index')==section
+                      and m['object_offset']<=point<m['object_offset']+m['size']]
+            if len(mappings)!=1:
+                raise ValueError('missing or ambiguous complete object mapping')
+            mapped=mappings[0]
+            value=mapped['address']+symbol['value']-mapped['object_offset']
         if kind==2:
             addend=struct.unpack_from('<I',data,off)[0]
             struct.pack_into('<I',output,off,(value+addend)&0xFFFFFFFF)
@@ -112,7 +123,7 @@ def build(root,rom_path):
         symbol_addresses={r['symbol']:r['inferred_value'] for r in module['relocations'] if r.get('anchored_function')}
         a=module.get('object_text_offset',0);b=a+module['size']
         relocs=[dict(r,offset=r['offset']-a) for r in elf.relocs if a<=r['offset']<b]
-        emitted=relocate(elf.text[a:b],relocs,module['eu_start'],bases,module['bindings'],symbol_addresses)
+        emitted=relocate(elf.text[a:b],relocs,module['eu_start'],bases,module['bindings'],symbol_addresses,module['sections'])
         offset=module['eu_start']-BASE
         if emitted!=original[offset:offset+len(emitted)]:
             raise ValueError('compiled relocated text differs: '+module['source'])
@@ -124,10 +135,12 @@ def build(root,rom_path):
             index=elf.names.index(section['name'])
             section_start=section.get('object_offset',0);section_end=section_start+section['size']
             relocs=[dict(r,offset=r['offset']-section_start) for r in section_relocations(elf,index) if section_start<=r['offset']<section_end]
-            data=relocate(elf.data(elf.sections[index])[section_start:section_end],relocs,section['address'],bases,module['bindings'],symbol_addresses)
+            data=relocate(elf.data(elf.sections[index])[section_start:section_end],relocs,section['address'],bases,module['bindings'],symbol_addresses,module['sections'])
             start=section['address']-BASE
             if data!=original[start:start+len(data)]:
                 raise ValueError('compiled relocated local section differs')
+            rebuilt[start:start+len(data)]=data
+            section['emitted_sha256']=hashlib.sha256(data).hexdigest()
         for symbol in module['symbols']:
             if symbol['kind']=='c' and symbol['size']:
                 start=symbol['eu_address']-BASE
