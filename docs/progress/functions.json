@@ -15922,7 +15922,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "3c1433b559ef18027f40efc50c733b03a0355cf24b30b3a15dd664d733595d52",
+        "object_sha256": "6abf05a1923065b65d96e621efd1fe2ee186c6884819984a0993dcbe03ccbb26",
         "c_functions": [
           "sub_0802E57C",
           "sub_0802E6C4",
@@ -64301,7 +64301,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
+        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -64365,7 +64365,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
+        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -64403,7 +64403,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
+        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -74682,7 +74682,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "13aff1afbf2ecfad2db544f9acfa6972e13aec5e602324c49582c63c60d66f89",
+        "object_sha256": "0c056889e8ad82be3f5363bdc2a79ecdf73d3ddd76819a00a3aa1891bd7f0237",
         "c_functions": [
           "sub_0800F044"
         ],
