@@ -47,3 +47,21 @@ python docs/research/drafts/check_terrain_defined.py --evidence build/research/t
 The checker requires the pinned compiler and owned B8KP ROM. It copies headers into a fresh ignored scratch directory, applies the context-checked research patch there, compiles the candidate, compiles the original and adapted reader modules, and compiles an independent sizeof/offsetof record. It never edits core files, links a ROM or grants C credit. The checked-in `sub_0800F044_defined.layout-proof.json` records the actual object, LF source/patch/header hashes, explicit profile, layout values and results. Its distinct suffix keeps this overlay-dependent experiment out of automatic standalone-draft registration.
 
 The original registered draft is retained. The improved alternative requires its declared header overlay and must not be treated as a plain-header compilation. Both are candidates for the same3596-byte original assembly symbol: **matching C credit is zero and yellow accounting must deduplicate them**. No full-ROM claim is made for this research-only candidate.
+
+
+## Subsequent EU structural experiments
+
+All experiments below used the same pinned compiler, original flags and EU CPP profile, in ignored scratch storage. No experiment earned a strict candidate site; no core source was changed. Sizes are emitted function sizes, not measures of semantic correctness.
+
+| Hypothesis | Result |
+| --- | --- |
+| Compile the defined3588-byte draft after its actual initializer in the original translation-unit context | Identical3588-byte function; first fixed difference0xE. File boundaries do not explain this candidate's mismatch. |
+| Keep signed16 pixel coordinates, inline wrapped directional point calculations in comparisons, and scope byte-cache destinations to each query | 3584bytes. Normalized branch-kind and literal-constant counts agree with the reference; register allocation, signed loads and spills still differ. |
+| Change only that variant's cellY declaration to unsigned16 | 3608bytes; no match. |
+| Change only cellX to signed32 retaining explicit unsigned16 coordinate conversion | 3556bytes; no match. |
+| Make the object-list cursor point to const objects | Identical3584-byte code. |
+| Wrap the four signed16 bounds in a single-member aggregate | Identical3584-byte code. |
+| Express bounds as two coordinate pairs | 3580bytes; no match. This describes bounding corners, not a rectangular terrain cache. |
+| Use named edge members through a union view | 3684bytes; compiler performs wider union operations, unlike the reference. Rejected. |
+
+The normalized instruction comparison is diagnostic only: it removes register identities and stack offsets, so it cannot establish CFG or dataflow equivalence. For the3584-byte candidate, the reference has12 additional signed-halfword loads, while the candidate has16 additional arithmetic-right shifts,8 additional left shifts and additional stack traffic. These differences motivate further work on the signed bounds/point lifetimes; they do not justify pointer aliasing violations, volatile variables, register bindings or claiming a nearly complete byte match. The checked-in defined3588-byte draft and its independently reproducible layout proof remain the preserved alternative.
