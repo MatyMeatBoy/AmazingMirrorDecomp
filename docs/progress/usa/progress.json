@@ -14,13 +14,13 @@
   "excluded_header_bytes": 188,
   "totals": {
     "bytes": 1413780,
-    "c_bytes": 1402726,
-    "c_percent": 99.2181,
-    "pending_asm_bytes": 5368,
+    "c_bytes": 1403624,
+    "c_percent": 99.2816,
+    "pending_asm_bytes": 4468,
     "original_asm_bytes": 3816,
-    "unattributed_bytes": 1870,
+    "unattributed_bytes": 1872,
     "functions": 5783,
-    "c_functions": 5714,
+    "c_functions": 5717,
     "named_functions": 761
   },
   "modules": [
@@ -17503,10 +17503,22 @@
           ],
           "section": ".text",
           "offset": 528,
-          "size": 496,
-          "kind": "asm",
+          "size": 494,
+          "kind": "c",
           "named": false,
           "function": true
+        },
+        {
+          "name": "<unattributed>",
+          "aliases": [
+            "<unattributed>"
+          ],
+          "section": ".text",
+          "offset": 1022,
+          "size": 2,
+          "kind": "unknown",
+          "named": false,
+          "function": false
         },
         {
           "name": "sub_0802E97C",
@@ -18398,13 +18410,13 @@
         }
       ],
       "bytes": 7376,
-      "c_bytes": 6860,
-      "c_percent": 93.0043,
-      "pending_asm_bytes": 496,
+      "c_bytes": 7354,
+      "c_percent": 99.7017,
+      "pending_asm_bytes": 0,
       "original_asm_bytes": 0,
-      "unattributed_bytes": 20,
+      "unattributed_bytes": 22,
       "functions": 68,
-      "c_functions": 67,
+      "c_functions": 68,
       "named_functions": 0
     },
     {
@@ -70777,7 +70789,7 @@
           "section": ".text",
           "offset": 500,
           "size": 160,
-          "kind": "asm",
+          "kind": "c",
           "named": false,
           "function": true
         },
@@ -70813,7 +70825,7 @@
           "section": ".text",
           "offset": 832,
           "size": 244,
-          "kind": "asm",
+          "kind": "c",
           "named": false,
           "function": true
         },
@@ -70939,13 +70951,13 @@
         }
       ],
       "bytes": 3504,
-      "c_bytes": 2224,
-      "c_percent": 63.4703,
-      "pending_asm_bytes": 1276,
+      "c_bytes": 2628,
+      "c_percent": 75.0,
+      "pending_asm_bytes": 872,
       "original_asm_bytes": 0,
       "unattributed_bytes": 4,
       "functions": 16,
-      "c_functions": 13,
+      "c_functions": 15,
       "named_functions": 2
     },
     {
@@ -83021,15 +83033,15 @@
       "named_functions": 0
     }
   ],
-  "baseline_commit": "d764adc4182e8607af972d60b4c879cef56049a1",
-  "source_fingerprint": "8913bcb34e2f97ddd7263b7f851e7f77bbc2917b8cadfd1c82acd0763e320053",
+  "baseline_commit": "89c523671327599fa416cd3a29f3572a4bfe912e",
+  "source_fingerprint": "ef88b90469e6419840969d02cae4efac6eca88114b0922f4b9f8b48802a2ab9c",
   "data": {
     "identified_bytes": null,
     "total_bytes": null,
     "status": "source census; recovery not measured",
     "source_formats": {
       "main": {
-        ".pal": 1,
+        ".pal": 2,
         ".bin": 79,
         ".png": 94,
         ".s": 1,
@@ -83084,7 +83096,7 @@
       }
     },
     "data_translation_units": 35,
-    "incbin_wrappers": 150,
+    "incbin_wrappers": 151,
     "raw_by_target": {
       "main": {
         "directives": 28472,
