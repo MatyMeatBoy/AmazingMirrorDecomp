@@ -195,7 +195,11 @@ void GameInit(void) {
     REG_IE = INTR_FLAG_VBLANK;
     REG_DISPSTAT = DISPSTAT_HBLANK_INTR | DISPSTAT_VBLANK_INTR;
 
+#ifdef REGION_EU
+    if ((RomHeaderMagic == 0x96) && (RomHeaderGameCode == 0x504B3842)) {
+#else
     if ((RomHeaderMagic == 0x96) && (RomHeaderGameCode == 0x454B3842)) {
+#endif
         REG_IE |= INTR_FLAG_GAMEPAK;
     }
     
