@@ -35,8 +35,37 @@ struct EuTitleSpriteInfo {
     /* 0x5 */ u8 unk5;
     /* 0x6 */ u8 unk6[2];
 }; /* size = 0x8 */
-extern const struct EuTitleSpriteInfo gEuTitleSpriteInfos[21];
-extern const u16 gEuTitleAuxSpriteInfos[6][3];
+const struct EuTitleSpriteInfo gEuTitleSpriteInfos[21] = {
+    {0x3aa, 11, 28, 0, 25, {0, 0}},
+    {0x3aa, 0, 192, 1, 19, {0, 0}},
+    {0x3aa, 17, 4, 2, 25, {0, 0}},
+    {0x3aa, 17, 4, 2, 25, {0, 0}},
+    {0x3aa, 17, 4, 2, 10, {0, 0}},
+    {0x3aa, 17, 4, 2, 10, {0, 0}},
+    {0x3aa, 1, 6, 4, 15, {0, 0}},
+    {0x3aa, 6, 2, 4, 20, {0, 0}},
+    {0x3aa, 12, 28, 0, 25, {0, 0}},
+    {0x3aa, 2, 6, 5, 15, {0, 0}},
+    {0x3aa, 7, 2, 5, 20, {0, 0}},
+    {0x3aa, 13, 28, 0, 25, {0, 0}},
+    {0x3aa, 3, 6, 6, 15, {0, 0}},
+    {0x3aa, 8, 2, 6, 20, {0, 0}},
+    {0x3aa, 14, 28, 0, 25, {0, 0}},
+    {0x3aa, 4, 6, 7, 15, {0, 0}},
+    {0x3aa, 9, 2, 7, 20, {0, 0}},
+    {0x3aa, 15, 28, 0, 25, {0, 0}},
+    {0x3aa, 5, 6, 8, 15, {0, 0}},
+    {0x3aa, 10, 2, 8, 20, {0, 0}},
+    {0x3aa, 16, 28, 0, 25, {0, 0}},
+};
+const u16 gEuTitleAuxSpriteInfos[6][3] = {
+    {0x3aa, 0x12, 0x3},
+    {0x3aa, 0x13, 0x9},
+    {0x3aa, 0x14, 0xa},
+    {0x3aa, 0x15, 0xb},
+    {0x3aa, 0x16, 0xc},
+    {0x3aa, 0x17, 0xd},
+};
 
 void CreateTitleScreen(void);
 static void EuTitleDestroy(struct Task *task);
@@ -105,6 +134,8 @@ void CreateTitleScreen(void) {
     CpuFill16(0, title, sizeof(struct EuTitle));
     title->flags |= 0x50;
     title->unk354 = sub_0814ACF0;
+    /* TODO: The original initializes this language-indexed object before validating
+     * gLanguage; values beyond the table can index out of bounds. Preserve the order. */
     sub_0814ABC4(title);
     if ((u16)(gLanguage - LANGUAGE_ENGLISH) > 4) {
         gLanguage = LANGUAGE_ENGLISH;

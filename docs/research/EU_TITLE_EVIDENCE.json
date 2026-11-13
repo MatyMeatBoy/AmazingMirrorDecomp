@@ -13,7 +13,7 @@
   "asm_flags": "-mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1",
   "source_sha256_lf": {
     "src/title_screen.c": "9d2f908799d5f605721aedb450865a3e8a4b03540e1d06790e182e4ef932badb",
-    "src/title_screen_eu.inc": "74c399727d389e115233c6621a03692ab05d8459046bb5ad8f7199533d846492"
+    "src/title_screen_eu.inc": "37a42ddec2a33f0d9b46b21a330f1212967e855186eb056e01f9f9255d7e9d85"
   },
   "compiled_text_size": 5016,
   "original_eu_text_start": "0x8149dcc",

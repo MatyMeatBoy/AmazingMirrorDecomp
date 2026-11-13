@@ -22,7 +22,7 @@ The only remaining instruction differences are in `sub_0814A62C`, the 584-byte b
 
 Structural experiments: direct palette loading instead of the original inline wrapper increases differences to 16. Expanding the Object11 initializer manually yields 568 bytes and 463 differences; recovering its inline function and ordinary call yields the original 584-byte shape. Independent scratch review tried aggregate locals, loop/palette scopes and wider background-index types without resolving the final ten bytes. Those unsuccessful variants are excluded.
 
-The sprite configuration at 0x08391D34 and auxiliary animation table at 0x08391DDC remain external original data. Their format and counts come from the consumers (21 eight-byte records and six three-u16 records). Their editable data recovery is separate. The six-row background index table is identical to the existing USA C table, including the preserved Japanese row; EU selectable languages remain five.
+The sprite configuration at 0x08391D34 and auxiliary animation table at 0x08391DDC are now explicit structured C initializers. Their formats and counts come from the consumers: 21 eight-byte records and six three-u16 records. Together with the 48-byte background index table, the complete 252-byte compiled .rodata matches EU 0x08391D04–0x08391E00 exactly. Unknown record fields retain their exact values without invented semantics. EU_TITLE_DATA.json records all three ranges and hashes. The background index table is identical to the existing USA table, including its preserved Japanese row; EU selectable languages remain five.
 
 ## Regional validation
 
@@ -31,3 +31,10 @@ This isolated worktree's final gate: 172 objects, 1416196 executable object byte
 Commands: `python tools/progress/metadata_build.py --jobs 4`, then `python tools/progress/eu_build.py`, with the explicit experimental European CPP recipe. The temporary recipe is excluded from source commits. Production must rebuild with its own declared European profile.
 
 USA compatibility was independently checked against the original source without REGION_EU: identical 2884-byte .text, full .rodata and text relocation signatures. All later changes are confined to the excluded EU include. This does not claim the original six-output USA ROM gate.
+
+
+## Structured-data follow-up gate
+
+After recovering the additional 204 bytes of sprite configuration and auxiliary animation data, the complete compiled .rodata is 252 bytes and remains byte exact. All 38 previously passing complete-function proofs still pass. The full European reconstruction also passes: 1229 verified units, 1356494 credited C bytes (95.05701343768044%), full 16 MiB comparison and expected SHA1. The data change itself adds no code credit. This gate includes the separate European pause-map palette commit 5a8ab5a and uses the older local matcher; production must independently rebuild.
+
+The constructor now records a TODO for another preserved ordering issue: it initializes its language-indexed Object11 before validating gLanguage. Inputs beyond the table range can index out of bounds. The original ordering is retained instead of moving validation and changing behavior.
