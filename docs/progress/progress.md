@@ -1,17 +1,17 @@
 # AmazingMirrorDecomp Europe (B8KP)
 
-Verified C: **0.000%** (0 / 1,427,032 executable bytes).
+Verified C: **99.180%** (1,415,336 / 1,427,032 executable bytes).
 
-ROM rebuild: **unverified; no C credit**.
+ROM rebuild: **verified locally against the owned European ROM**.
 Expected SHA1: `6f478a455383a2a12378f292581dfd7300300700`.
 
-Mapped C function spans: 0; existing names: 0. The total European function count is unknown; raw gaps are pending code.
+Mapped C function spans: 5,777; existing names: 756. The total European function count is unknown; raw gaps are pending code.
 
-Current source evidence does not establish a verified multilingual ROM rebuild. Language-specific gameplay testing is separate.
+All original multilingual bytes, including Spanish, are preserved by a verified full-ROM rebuild. Language-specific gameplay testing is separate.
 
 Cartridge header: 188 excluded bytes. Data-format recovery is not measured. USA source metrics are a separate reference.
 
-Verified source-backed local data: 0 unique bytes. C initializers and included assets remain distinct from audited semantic formats.
+Verified source-backed local data: 185,362 unique bytes. C initializers and included assets remain distinct from audited semantic formats.
 
 Owned local full-ROM rebuild receipt; CI validates current source evidence and does not obtain the ROM.
 
@@ -19,10 +19,10 @@ Owned local full-ROM rebuild receipt; CI validates current source evidence and d
 
 | Categoría | Total | C EU verificado | C pendiente EU | Borrador C | ASM pendiente | ASM conservado |
 |---|---:|---:|---:|---:|---:|---:|
-| Juego y motor | 5,646 | 0 | 5,644 | 2 | 0 | 0 |
-| SDK / bibliotecas | 143 | 0 | 81 | 0 | 0 | 62 |
+| Juego y motor | 5,646 | 5,640 | 4 | 2 | 0 | 0 |
+| SDK / bibliotecas | 143 | 81 | 0 | 0 | 0 | 62 |
 | Arranque | 2 | 0 | 0 | 0 | 0 | 2 |
-| Total | 5,791 | 0 | 5,725 | 2 | 0 | 64 |
+| Total | 5,791 | 5,721 | 4 | 2 | 0 | 64 |
 
 | Nombrado | Total | Nombre existente | Sin nombre descriptivo |
 |---|---:|---:|---:|
@@ -42,7 +42,7 @@ Inventario completo: [functions.json](functions.json).
 
 | Programa | Funciones | C disponible | C EU verificado | ASM |
 |---|---:|---:|---:|---:|
-| Principal: libc/libgcc | 76 | 56 | 0 | 20 |
+| Principal: libc/libgcc | 76 | 56 | 56 | 20 |
 | multi_boot/subgame_loaders | 1 | 0 | 0 | 1 |
 | multi_boot/subgame_loaders/payload | 47 | 0 | 0 | 47 |
 | multi_boot/unk_8D94B9C | 344 | 1 | 0 | 343 |
@@ -52,6 +52,3 @@ Inventario completo: [functions.json](functions.json).
 Solo las instancias del programa principal con prueba regional reciben crédito C EU; las copias auxiliares no heredan esa prueba. Los aliases comparten una función. La entrada manual __start del cargador se cuenta una vez; no se cuentan etiquetas internas.
 
 Nombre existente en todo el inventario: **1,248**; sin nombre descriptivo: **5,712**. Las propuestas externas sin revisar no se cuentan como nombres confirmados.
-
-
-Current source inventory unavailable
