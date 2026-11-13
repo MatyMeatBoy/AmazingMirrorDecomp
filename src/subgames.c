@@ -2088,10 +2088,18 @@ static const u16 gUnk_0836535C[] = {
     RGB(31,  0,  0) | 0x0000, RGB(31, 31, 31) | 0x8000,
 };
 
+#ifdef REGION_EU
+const u32 gCrackityHackBgMainTileset[] = INCBIN_U32("graphics/crackity_hack/bg/main_tileset_eu.4bpp.lz");
+#else
 const u32 gCrackityHackBgMainTileset[] = INCBIN_U32("graphics/crackity_hack/bg/main_tileset.4bpp.lz");
+#endif
 
 const u32 gCrackityHackGameEndedTileset_Japanese[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_japanese.4bpp.lz");
+#ifdef REGION_EU
+const u32 gCrackityHackGameEndedTileset_Italian[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_italian_eu.4bpp.lz");
+#else
 const u32 gCrackityHackGameEndedTileset_Italian[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_italian.4bpp.lz");
+#endif
 const u32 gCrackityHackGameEndedTileset_French[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_french.4bpp.lz");
 const u32 gCrackityHackGameEndedTileset_Spanish[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_spanish.4bpp.lz");
 const u32 gCrackityHackGameEndedTileset_English[] = INCBIN_U32("graphics/crackity_hack/bg/game_ended/tileset_english.4bpp.lz");
@@ -5781,7 +5789,11 @@ static const u16 gUnk_083729E0[0x100] = {
 const u32 gUnk_08372BE0[] = INCBIN_U32("graphics/wave_ride/bg/main_tileset.4bpp.lz");
 
 const u32 gUnk_083744AC[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_japanese.4bpp.lz");
+#ifdef REGION_EU
+const u32 gUnk_08374890[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_italian_eu.4bpp.lz");
+#else
 const u32 gUnk_08374890[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_italian.4bpp.lz");
+#endif
 const u32 gUnk_08374C50[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_french.4bpp.lz");
 const u32 gUnk_08375064[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_spanish.4bpp.lz");
 const u32 gUnk_08375400[] = INCBIN_U32("graphics/wave_ride/bg/game_ended/tileset_english.4bpp.lz");
@@ -9991,10 +10003,18 @@ static const u16 gUnk_0837F4C4[] = {
     RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000, RGB( 0,  0,  0) | 0x0000,
 };
 
+#ifdef REGION_EU
+const u32 gUnk_0837F6C4[] = INCBIN_U32("graphics/speed_eaters/bg/main_tileset_eu.4bpp.lz");
+#else
 const u32 gUnk_0837F6C4[] = INCBIN_U32("graphics/speed_eaters/bg/main_tileset.4bpp.lz");
+#endif
 
 const u32 gUnk_083828DC[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_japanese.4bpp.lz");
+#ifdef REGION_EU
+const u32 gUnk_08382DB8[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_italian_eu.4bpp.lz");
+#else
 const u32 gUnk_08382DB8[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_italian.4bpp.lz");
+#endif
 const u32 gUnk_0838326C[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_french.4bpp.lz");
 const u32 gUnk_08383774[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_spanish.4bpp.lz");
 const u32 gUnk_08383C0C[] = INCBIN_U32("graphics/speed_eaters/bg/game_ended/tileset_english.4bpp.lz");
