@@ -64683,7 +64683,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "85dbe156cc8cff481598f437953757e0ec262ca38a7585dee1ae1c184f79db38",
+        "object_sha256": "a66c2275cb0c1268c305b9c3194c04d4ea899f85e3d1fc48930f0bccb49b0b44",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -75203,7 +75203,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "13aff1afbf2ecfad2db544f9acfa6972e13aec5e602324c49582c63c60d66f89",
+        "object_sha256": "0c056889e8ad82be3f5363bdc2a79ecdf73d3ddd76819a00a3aa1891bd7f0237",
         "c_functions": [
           "sub_0800F044"
         ],
