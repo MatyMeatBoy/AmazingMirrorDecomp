@@ -861,6 +861,9 @@ static void sub_0801F8EC(struct SubGameMenu* arg0) {
     u16 i, j, *vram;
     const u16 *unk18;
     const u32 *unk8;
+#ifdef REGION_EU
+    gDispCnt |= DISPCNT_OBJ_ON;
+#endif
     unk8 = gUnk_082D7850[gUnk_082DE96C[arg0->unk150][gLanguage]]->tileset;
     unk18 = gUnk_082D7850[gUnk_082DE96C[arg0->unk150][gLanguage]]->tilemap;
     gBgCntRegs[1] = BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(30) | BGCNT_16COLOR;
@@ -1045,7 +1048,9 @@ static void sub_0801FE94(struct SubGameMenu* arg0) {
 static void nullsub_111(struct Task* arg0) {}
 
 static void sub_0801FEC0(struct SubGameMenu* arg0) {
+#ifndef REGION_EU
     gDispCnt |= DISPCNT_OBJ_ON;
+#endif
     gDispCnt &= ~(DISPCNT_BG2_ON | DISPCNT_BG1_ON);
     gBgScrollRegs[2][0] = 0;
     gBgScrollRegs[2][1] = 0;
