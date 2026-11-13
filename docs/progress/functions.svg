@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="670" viewBox="0 0 1000 670" role="img" aria-labelledby="title" font-family="Segoe UI,Helvetica,Arial,sans-serif"><title id="title">Funciones: juego, SDK y arranque</title><rect width="1000" height="670" fill="#0d1117"/><g fill="#e6edf3">
+<text x="16" y="30" font-size="20">AmazingMirrorDecomp | Funciones por categoría</text>
+<text x="16" y="60" font-size="23">TOTAL CONTABILIZADO: 6,952 funciones</text>
+<text x="16" y="85" font-size="13">Programa principal: 5,783. El total definitivo de toda la ROM europea sigue sin medir.</text>
+<text x="16" y="121" font-size="12">Categoría</text>
+<text x="230" y="121" font-size="12">Total</text>
+<text x="325" y="121" font-size="12">C EU verificado</text>
+<text x="465" y="121" font-size="12">C pendiente EU</text>
+<text x="595" y="121" font-size="12">Borrador C</text>
+<text x="720" y="121" font-size="12">ASM pendiente</text>
+<text x="850" y="121" font-size="12">ASM conservado</text>
+<text x="16" y="151" font-size="14">Juego y motor</text>
+<text x="230" y="151" font-size="14">5,638</text>
+<text x="325" y="151" font-size="14">5,384</text>
+<text x="465" y="151" font-size="14">249</text>
+<text x="595" y="151" font-size="14">5</text>
+<text x="720" y="151" font-size="14">0</text>
+<text x="850" y="151" font-size="14">0</text>
+<text x="16" y="182" font-size="14">SDK / bibliotecas</text>
+<text x="230" y="182" font-size="14">143</text>
+<text x="325" y="182" font-size="14">58</text>
+<text x="465" y="182" font-size="14">23</text>
+<text x="595" y="182" font-size="14">0</text>
+<text x="720" y="182" font-size="14">0</text>
+<text x="850" y="182" font-size="14">62</text>
+<text x="16" y="213" font-size="14">Arranque</text>
+<text x="230" y="213" font-size="14">2</text>
+<text x="325" y="213" font-size="14">0</text>
+<text x="465" y="213" font-size="14">0</text>
+<text x="595" y="213" font-size="14">0</text>
+<text x="720" y="213" font-size="14">0</text>
+<text x="850" y="213" font-size="14">2</text>
+<text x="16" y="244" font-size="14">Total</text>
+<text x="230" y="244" font-size="14">5,783</text>
+<text x="325" y="244" font-size="14">5,442</text>
+<text x="465" y="244" font-size="14">272</text>
+<text x="595" y="244" font-size="14">5</text>
+<text x="720" y="244" font-size="14">0</text>
+<text x="850" y="244" font-size="14">64</text>
+<text x="16" y="285" font-size="16">Nombres existentes / sin nombre descriptivo</text>
+<text x="16" y="313" font-size="13">Juego y motor: 627 / 5,011</text>
+<text x="506" y="313" font-size="13">SDK / bibliotecas: 132 / 11</text>
+<text x="16" y="340" font-size="13">Arranque: 2 / 0</text>
+<text x="506" y="340" font-size="13">Total: 761 / 5,022</text>
+<text x="16" y="375" font-size="16">Bibliotecas del compilador y programas auxiliares (contados aparte del principal)</text>
+<text x="16" y="405" font-size="12">Programa</text>
+<text x="650" y="405" font-size="12">Funciones</text>
+<text x="760" y="405" font-size="12">C disponible</text>
+<text x="875" y="405" font-size="12">ASM</text>
+<text x="16" y="432" font-size="12">Principal: libc/libgcc</text>
+<text x="650" y="432" font-size="12">76</text>
+<text x="760" y="432" font-size="12">56</text>
+<text x="875" y="432" font-size="12">20</text>
+<text x="16" y="458" font-size="12">multi_boot/subgame_loaders</text>
+<text x="650" y="458" font-size="12">1</text>
+<text x="760" y="458" font-size="12">0</text>
+<text x="875" y="458" font-size="12">1</text>
+<text x="16" y="484" font-size="12">multi_boot/subgame_loaders/payload</text>
+<text x="650" y="484" font-size="12">47</text>
+<text x="760" y="484" font-size="12">0</text>
+<text x="875" y="484" font-size="12">47</text>
+<text x="16" y="510" font-size="12">multi_boot/unk_8D94B9C</text>
+<text x="650" y="510" font-size="12">344</text>
+<text x="760" y="510" font-size="12">1</text>
+<text x="875" y="510" font-size="12">343</text>
+<text x="16" y="536" font-size="12">multi_boot/unk_8E1FE28</text>
+<text x="650" y="536" font-size="12">345</text>
+<text x="760" y="536" font-size="12">1</text>
+<text x="875" y="536" font-size="12">344</text>
+<text x="16" y="562" font-size="12">multi_boot/unk_8E8490C</text>
+<text x="650" y="562" font-size="12">356</text>
+<text x="760" y="562" font-size="12">1</text>
+<text x="875" y="562" font-size="12">355</text>
+<text x="16" y="590" font-size="13">Todos los programas: 1,254 nombres existentes / 5,698 sin nombre descriptivo.</text>
+<text x="16" y="610" font-size="12">Las copias de biblioteca en distintos programas se cuentan por separado. Aliases no se duplican.</text>
+<text x="16" y="633" font-size="12">C disponible / borradores sin crédito EU. Nombres existentes pendientes de auditoría semántica.</text>
+<text x="16" y="655" font-size="12">Fuentes sin inventariar o funciones regionales aún no delimitadas no reciben un total inventado.</text>
+</g></svg>

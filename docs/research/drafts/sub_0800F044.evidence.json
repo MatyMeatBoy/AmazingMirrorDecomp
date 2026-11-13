@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "symbol": "sub_0800F044",
+  "classification": "compilable_readable_draft_not_matching",
+  "source": "docs/research/drafts/sub_0800F044.c",
+  "source_sha256": "120570d35a224fd402d8f66d1f30c81b28798df0f813667f41e6ef90218526b5",
+  "source_hash_mode": "lf",
+  "dependent_headers_sha256": {
+    "include/bg.h": "a20be5e009445cc647ee7002a6be9da7fc2145330fedd0b818aeac36f962827d",
+    "include/code_0800ECAC.h": "db79b353e091560bbdacf9b0fa3468e1ec026f07e747bec2dfffe9b582c02154",
+    "include/constants/kirby.h": "e90379f2478ef2ac6db4342276773649b97c760a88ddb1f4e1a87c1463669917",
+    "include/constants/object_types.h": "0eff8e731ead5c481c7cbadd2536a0c170e353b2f8941a6c34b6d6494b1c3cb0",
+    "include/constants/songs.h": "302412c235eaa5694d117ad2cf42f9887009e91e151b94ecf5a5e51780fb9836",
+    "include/data.h": "4891c836c0d551495330bb95b3d108c7706c7d8e06272df6d663a21413208752",
+    "include/functions.h": "6e4abb446674d24f9ed11c2395fd4b318c810501687976ca34b64c90355499b5",
+    "include/gba/defines.h": "1ecb1fd0643b01785954c43edd0bd1bdd415d0b839ce83e51266f6387ee98c4f",
+    "include/gba/gba.h": "b313af5a12e02a9d08f5ae5bff173261914b0c07453ffa93e0b57ded80b206ed",
+    "include/gba/io_reg.h": "3f0db65c1db27a87aa58680caf576ad21fb84de1b0e2d4335905d01bc435a4f7",
+    "include/gba/isagbprint.h": "b6bca4d41411ed6f642ec7b96d714ea4d3725b9a553d289b11e825fbe4c903e6",
+    "include/gba/m4a.h": "aa6100f9187fed6508888ca7d0ee2c5ff250053b5757bc1e1b5c6a8a9c9be6ce",
+    "include/gba/macro.h": "940f984d83685717e490d6cf95206d941a970cf0ea7a5a55310f196aca1d8660",
+    "include/gba/multi_boot.h": "736e91044cc7058ef6120b06e61abfb7d332c65d5d8383b0b7a331adb4324974",
+    "include/gba/syscall.h": "12aeca6e5337974433862026a94b24946a1337b07fe3b897e682efcffe21e1d7",
+    "include/gba/types.h": "8e093c6018f50eff5865ffdb5d265a7f036836d2763c47e34545ee2dddb4f92c",
+    "include/global.h": "e0827fc6ec8c4eee35ac3381f10b8af76eea04673ebdd00696c861724aeee545",
+    "include/hud.h": "52f9744819a6ad003bbf0e8aefd77090f4ddbf878a7f8ef625018028da1bb3e7",
+    "include/kirby.h": "511450e3cd67f512d422f64905c8f59f378b6ec6d3f7f5ee2f85cd085b987271",
+    "include/main.h": "09b4785946b4082a83e26b1bb24d7e558104197098966f571b3710f3fbe327fe",
+    "include/malloc_vram.h": "ae4bbdab2f80995d113d211e79e5dfff59f7bccc715a3a496febf4cd09da7979",
+    "include/multi_08030C94.h": "6850bbdf824a66b780a1c53613c8279e673be103ec925f2085334f6b2759fce7",
+    "include/object.h": "df87ba5d12ad2136e5d2a931d078f999e11a89db9be89ad6d6be2270d3be2b07",
+    "include/object_collision.h": "61f66a4583e5a63b82568684c894002cabd0435f241d0e7116ff961fd1bf8e35",
+    "include/palette_effects.h": "6d67303adece602d2c968ab6659f319f21d7eab9d681e85c5b549caed0fc27d0",
+    "include/sprite.h": "03f7980831df4a19aaeef3a4eb5386a562fa4550b96aa4cce041f217f1ab5388",
+    "include/task.h": "8b44b8c39bb9400748343afd7f56dab73ecc415a1cd745a2c1650a84d3ba5d3d",
+    "tools/agbcc/include/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
+    "tools/agbcc/include/limits.h": "b1ca5da9af53e461e21a61c0f063335843dca090deaca819fbc03b9445d25336",
+    "tools/agbcc/include/stddef.h": "0bd065aeddd8467b20b91c35ef7e969ad178b63cc2825471ab4a65f7722db0c0",
+    "tools/agbcc/include/stdint.h": "a985259efca1ea8d477ff5e99f7e12e6a3797c1cd0d60611b38f451f85fa9da4",
+    "tools/agbcc/include/string.h": "c681435b7d34caf736616669fe42ad40c1756f98850145da53c8ff54aeb19572",
+    "tools/agbcc/include/sys/config.h": "daeed98c0fda9675cce19327d2bd4180bb47335bcae63845cee8ef7d39a4404e"
+  },
+  "dependent_header_hash_mode": "lf",
+  "origin": {
+    "author": "sh1ftmaker",
+    "commit": "60bb564a0f46a856479ee3f56ae80bff648c5d3a",
+    "url": "https://github.com/sh1ftmaker/katam/commit/60bb564a0f46a856479ee3f56ae80bff648c5d3a",
+    "rebased_patch_commit": "3f92d3ab211bc1ac00909c20fee20def0cccdbd6",
+    "patch_source": "sh1ftmaker/katam-port at 1249ebf6bc68e45b24cacc3050f27ffdcdac6bc2, tools/legacy-sync/patches-decomp/0006"
+  },
+  "adaptation": {
+    "author": "MatyMeatBoy",
+    "changes": [
+      "Standalone research source only; no default source or linker integration.",
+      "Use current functions.h and object_collision.h declarations; sub_080024F0 coordinates are u16, not stale u32.",
+      "Replace unproved semantic/bounds assertions with TODO markers; cross-array pointer arithmetic remains provisional.",
+      "Default wrapper and all moved assembly were removed from this isolated delivery."
+    ]
+  },
+  "compiler": {
+    "repository": "https://github.com/jiangzhengwenjz/agbcc",
+    "branch": "new_newlib_pret",
+    "commit": "59b966ed1b8f371856dcf99f1546c2fe89c678ca",
+    "binary_sha256": "846715d8bae7326bab569bb97e1c747de9a73732d0fd505e642f372018a96583"
+  },
+  "profile": {
+    "preprocessor_flags": "-E -iquote include -Wno-trigraphs -DMODERN=0 -I tools/agbcc/include -I tools/agbcc -nostdinc -DREVISION=0 -DENGLISH",
+    "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
+    "assembler_flags": "-mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1"
+  },
+  "compilation": {
+    "compiled": true,
+    "assembled": true,
+    "object_artifact": "build/research/terrain_isolated.o",
+    "object_sha256": "0cb987b36b2890a342245a487d48eea271e873412fba18760d6d71119bcc8c86",
+    "text_size": 3576,
+    "text_sha256": "6332e525e42734709648a7bf9b7ebd813f15e28be30929fbeb807ea3623e5b28"
+  },
+  "eu_reference": {
+    "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+    "source_asm": "asm/sub_0800F044.s",
+    "source_asm_sha256": "c4ef0fce531bace843032f4e34e8792750aec6234d5bf208d0fc43aa46759b4b",
+    "start": "0x0800F06C",
+    "end_exclusive": "0x0800FE78",
+    "size": 3596,
+    "relocations": 28,
+    "linked_span_sha256": "6e26ff81f7a92423692413d53d12d2005cdc46fca9562abadabf2df3cdb98451",
+    "reference_exact_relocation_emission_verified": true
+  },
+  "comparison": {
+    "c_full_eu_match": false,
+    "masked_eu_sites": [],
+    "first_fixed_byte_divergence_offset": "0xA",
+    "eu_instruction_address": "0x0800F076",
+    "reference_instruction": "sub sp, #0x3c",
+    "draft_instruction": "sub sp, #0x64",
+    "observed_category": "Stack-frame size; later register and spill differences also remain",
+    "semantic_equivalence_verified": false
+  },
+  "accounting": {
+    "matching_c_credit": 0,
+    "eligible_yellow_reference_bytes_if_hashes_and_compile_remain_valid": 3596,
+    "duplicate_of_existing_comment_draft": true,
+    "do_not_add_old_comment_and_recovered_source_twice": true
+  }
+}
