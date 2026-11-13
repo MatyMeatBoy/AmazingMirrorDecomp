@@ -1,4 +1,6 @@
 /* European title state; unexamined fields remain explicitly unnamed. */
+#include <stddef.h>
+
 struct EuTitle {
     /* 0x000 */ u32 unk0;
     /* 0x004 */ u32 flags;
@@ -405,7 +407,21 @@ u32 sub_0814A62C(struct EuTitle *title) {
         DmaCopy16(3, gUnk_082D7850[bg]->palette, gBgPalette, 0x200);
         gMainFlags |= MAIN_FLAG_BG_PALETTE_SYNC_ENABLE;
     }
-    title->unk36D = 0;
+    {
+        /* TODO: Remove this steering when a natural form reproduces the full
+         * title object. The initialized member offset in r3 and the loop
+         * counter's zero lifetime reproduce ten otherwise different register
+         * bytes in this 584-byte function. The empty asm emits no instructions;
+         * removing it restores ten differences, removing the binding gives
+         * three, and storing a literal zero gives 31. This is not evidence of
+         * the original source form. See EU_TITLE_BG_EXPERIMENTS.md.
+         */
+        register u32 displacement asm("r3") = offsetof(struct EuTitle, unk36D);
+        s8 *slot = &title->unk36D;
+        asm("" : : "r"(displacement));
+        i = 0;
+        *slot = i;
+    }
     title->flags |= 0x50;
     sub_0814ABC4(title);
     sub_0814A134(title);
@@ -668,7 +684,7 @@ inline u32 sub_0814AFE4(struct EuTitle *title) {
     CpuFill16(RGB_WHITE, gObjPalette, 0x200);
     gMainFlags |= MAIN_FLAG_BG_PALETTE_SYNC_ENABLE | MAIN_FLAG_OBJ_PALETTE_SYNC_ENABLE;
     TaskDestroy(gCurTask);
-    CreateCutscene();
+    sub_08138B44();
     return 1;
 }
 

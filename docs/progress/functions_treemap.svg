@@ -533,7 +533,7 @@
 <rect x="375.54" y="87.00" width="13.90" height="13.78" fill="#238636"><title>Juego y motor :: src/code_0806F780.c :: sub_08085E60 | verified_c | 584 source-object bytes</title></rect>
 <rect x="375.54" y="101.28" width="13.90" height="13.78" fill="#238636"><title>Juego y motor :: src/dark_mind.c :: sub_08104080 | verified_c | 584 source-object bytes</title></rect>
 <rect x="375.54" y="115.56" width="13.90" height="13.78" fill="#238636"><title>Juego y motor :: src/master_hand.c :: sub_080D4B5C | verified_c | 584 source-object bytes</title></rect>
-<rect x="375.54" y="129.85" width="13.90" height="13.78" fill="#e4bd4c"><title>Juego y motor :: src/title_screen.c :: sub_0814A62C | c_pending_eu | 584 source-object bytes</title></rect>
+<rect x="375.54" y="129.85" width="13.90" height="13.78" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814A62C | verified_c | 584 source-object bytes</title></rect>
 <rect x="375.54" y="144.13" width="13.90" height="13.73" fill="#238636"><title>Juego y motor :: src/moley.c :: sub_080EB4B8 | verified_c | 582 source-object bytes</title></rect>
 <rect x="375.54" y="158.36" width="13.90" height="13.68" fill="#238636"><title>Juego y motor :: src/code_0806F780.c :: sub_08090968 | verified_c | 580 source-object bytes</title></rect>
 <rect x="375.54" y="172.55" width="13.90" height="13.68" fill="#238636"><title>Juego y motor :: src/cutscene_trigger.c :: sub_0802084C | verified_c | 580 source-object bytes</title></rect>
@@ -3710,7 +3710,7 @@
 <rect x="946.46" y="409.22" width="5.25" height="5.13" fill="#238636"><title>Juego y motor :: src/subgame_menu.c :: sub_0801F5AC | verified_c | 92 source-object bytes</title></rect>
 <rect x="952.22" y="409.22" width="5.25" height="5.13" fill="#238636"><title>Juego y motor :: src/subgames.c :: sub_081314C8 | verified_c | 92 source-object bytes</title></rect>
 <rect x="957.97" y="409.22" width="5.25" height="5.13" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814ADD0 | verified_c | 92 source-object bytes</title></rect>
-<rect x="963.73" y="409.22" width="5.25" height="5.13" fill="#e4bd4c"><title>Juego y motor :: src/title_screen.c :: sub_0814AFE4 | c_pending_eu | 92 source-object bytes</title></rect>
+<rect x="963.73" y="409.22" width="5.25" height="5.13" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814AFE4 | verified_c | 92 source-object bytes</title></rect>
 <rect x="969.48" y="409.22" width="5.13" height="5.13" fill="#238636"><title>Juego y motor :: src/blipper.c :: sub_080A712C | verified_c | 90 source-object bytes</title></rect>
 <rect x="975.11" y="409.22" width="5.13" height="5.13" fill="#238636"><title>Juego y motor :: src/bombar.c :: sub_080D9708 | verified_c | 90 source-object bytes</title></rect>
 <rect x="980.74" y="409.22" width="5.13" height="5.13" fill="#238636"><title>Juego y motor :: src/bonkers.c :: BonkersChooseAttack | verified_c | 90 source-object bytes</title></rect>
@@ -4546,7 +4546,7 @@
 <rect x="877.78" y="491.67" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/subgame_menu.c :: sub_080201EC | verified_c | 52 source-object bytes</title></rect>
 <rect x="877.78" y="495.99" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/subgames.c :: sub_08134720 | verified_c | 52 source-object bytes</title></rect>
 <rect x="877.78" y="500.31" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/subgames.c :: sub_081386A8 | verified_c | 52 source-object bytes</title></rect>
-<rect x="877.78" y="504.63" width="3.74" height="3.82" fill="#e4bd4c"><title>Juego y motor :: src/title_screen.c :: sub_0814AB90 | c_pending_eu | 52 source-object bytes</title></rect>
+<rect x="877.78" y="504.63" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814AB90 | verified_c | 52 source-object bytes</title></rect>
 <rect x="877.78" y="508.95" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814AFB0 | verified_c | 52 source-object bytes</title></rect>
 <rect x="877.78" y="513.27" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/treasures.c :: NumShardsCollected | verified_c | 52 source-object bytes</title></rect>
 <rect x="877.78" y="517.59" width="3.74" height="3.82" fill="#238636"><title>Juego y motor :: src/treasures.c :: NumSprayPaintsCollected | verified_c | 52 source-object bytes</title></rect>
@@ -4885,7 +4885,7 @@
 <rect x="969.71" y="506.93" width="3.25" height="3.26" fill="#238636"><title>Juego y motor :: src/subgame_menu.c :: sub_0801FE10 | verified_c | 40 source-object bytes</title></rect>
 <rect x="973.46" y="506.93" width="3.25" height="3.26" fill="#238636"><title>Juego y motor :: src/subgame_menu.c :: sub_0801FE94 | verified_c | 40 source-object bytes</title></rect>
 <rect x="977.20" y="506.93" width="3.25" height="3.26" fill="#238636"><title>Juego y motor :: src/subgame_menu.c :: sub_0801FF28 | verified_c | 40 source-object bytes</title></rect>
-<rect x="980.95" y="506.93" width="3.25" height="3.26" fill="#e4bd4c"><title>Juego y motor :: src/title_screen.c :: sub_0814AB68 | c_pending_eu | 40 source-object bytes</title></rect>
+<rect x="980.95" y="506.93" width="3.25" height="3.26" fill="#238636"><title>Juego y motor :: src/title_screen.c :: sub_0814AB68 | verified_c | 40 source-object bytes</title></rect>
 <rect x="984.70" y="506.93" width="3.25" height="3.26" fill="#238636"><title>Juego y motor :: src/waddle_doo.c :: sub_080B74B4 | verified_c | 40 source-object bytes</title></rect>
 <rect x="988.44" y="506.93" width="3.06" height="3.26" fill="#238636"><title>Juego y motor :: src/bomber.c :: sub_080C4900 | verified_c | 38 source-object bytes</title></rect>
 <rect x="906.04" y="510.69" width="3.14" height="3.18" fill="#238636"><title>Juego y motor :: src/bronto_burt.c :: sub_080ADA08 | verified_c | 38 source-object bytes</title></rect>

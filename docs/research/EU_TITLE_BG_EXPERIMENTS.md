@@ -1,12 +1,15 @@
-# European title background: unresolved register allocation
+# European title background: complete source-object proof
 
 AI-assisted experiments for the European B8KP profile. These are internal experiments in this fork; no upstream contribution or source-authenticity claim is made. No ROM bytes or object files accompany this dossier.
 
-The current natural reconstruction emits **584 bytes**, with **10 fixed-byte differences**. A local callback-copy experiment reduces that to **two differences**, but remains unverified matching C and must not earn additional C credit. No experiment here was applied to the game source.
+The final source emits **584 matching background bytes**, and the complete title `.text` emits **5,016 matching bytes**. The complete module proof also verifies and emits **252 bytes of local `.rodata`**, with **42 consistent external bindings and 202 relocation records**. This is a source-object and local-data proof against the owned European ROM; the coordinator must still run the official full-ROM rebuild before updating published credit.
+
+The final patch uses one initialized member-offset register constraint and an empty input-only asm statement, plus a defined zero assignment through the existing loop counter. This is documented matching debt, not recovered historical source. A separate incorrect callee in the title exit routine was corrected from direct ROM evidence and the corresponding original source caller.
 
 ## Reproduction baseline
 
 - Source: `src/title_screen_eu.inc`, snapshot LF SHA256 `37a42ddec2a33f0d9b46b21a330f1212967e855186eb056e01f9f9255d7e9d85`.
+- Final commented source LF SHA256: `3b0e0bac40ac9babd285dc94a0765080135c42c6587067d839941c5a5ac41750`.
 - Compiler: agbcc commit `59b966ed1b8f371856dcf99f1546c2fe89c678ca`.
 - Preprocessing: `gcc -E -iquote include -Wno-trigraphs -DMODERN=0 -DREGION_EU -I tools/agbcc/include -I tools/agbcc -nostdinc -DREVISION=0 -DENGLISH`, followed by the repository preprocessor.
 - Compiler flags: `-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g`.
@@ -47,25 +50,67 @@ Scratch scripts and generated assembly were kept outside the repository. Experim
 
 The whole-title pointer passed through the inline helper is material: direct expansion or passing a narrower subobject changes hoisting and the prologue. The existing prototypes of `sub_0814F3C4` and `LoadBgPaletteWithTransformation` agree with their available C definitions; no prototype change is justified by these trials.
 
-## Best partial candidate
+## Final minimized source form
 
-The optional [callback patch](drafts/eu_title_bg_callback_partial.patch) duplicates ABC4's two operations in a **local static inline copy**, called only by BG. The original ABC4 remains unchanged. The callback target is initialized in r0 and the actual callback-slot pointer in r1, tied to an empty read/write extended-asm statement. It emits no hand-written instructions. This is explicit compiler steering, not evidence of an original helper boundary.
+Inside BG, before the existing flags update:
 
-Fixed-byte results for that candidate:
+```c
+{
+    register u32 displacement asm("r3") = offsetof(struct EuTitle, unk36D);
+    s8 *slot = &title->unk36D;
+    asm("" : : "r"(displacement));
+    i = 0;
+    *slot = i;
+}
+```
 
-- BG: **584 bytes / two differences**, at `+0x1CF` and `+0x1D0` (absolute European addresses `0x0814A7FB`, `0x0814A7FC`).
-- Complete title `.text`: **5,016 bytes / those same two differences**; all other fixed bytes retain the baseline result.
-- ROM loads the `unk36D` member displacement into r3 and uses `adds r0,r7,r3`; the candidate uses r1 instead. The displacement and destination address are otherwise the same.
-- Removing the local callback steering returns the original eight additional differences. Applying the steering directly to shared ABC4 instead of its local copy moves eight differences into standalone ABC4: BG improves, but the complete translation unit does not.
+`stddef.h` supplies the real member offset. The slot is the actual byte member, so no numeric layout guess or untyped whole-object write remains. Both values are initialized. The empty asm has only an input operand and emits no instructions; it creates no call, memory write or additional ABI dependency. r3 is caller-saved and this value is dead before the following calls. The existing loop counter is set to zero before the byte store; its source form permits the compiler's zero reuse in r4. The later `unk358 = 0` remains a literal: changing it to `i` was unnecessary and was removed.
 
-The patch contains a local TODO explaining the unresolved differences and removal condition. It must not be applied as a matching completion. Its duplication and fixed-register constraints are technical debt; prefer a natural source reconstruction when one produces the same complete proof.
+There is **no callback clone, fixed callback pointer, output asm operand or hand-written instruction** in the final source. All other fixed bytes remain unchanged; the complete final module emits exact ROM bytes, including the corrected AFE4 call relocation. The source contains a local TODO with the measured effects and removal condition.
+
+### Final-source removal checks
+
+Each row recompiles the final commented source with one change; no other variant is combined into these counts.
+
+| Removed or simplified element | BG / full-title fixed-byte result |
+|---|---|
+| Final source | 584 / 5,016 bytes; zero differences |
+| Remove empty input-only asm | Ten differences, all in BG |
+| Remove r3 binding while retaining initialized input operand | Three differences: BG `+0x1CF`, `+0x1D0`, `+0x1D4` |
+| Replace `i = 0; *slot = i` with `*slot = 0` | 31 differences, all in BG |
+
+Earlier minimization established that a fixed r0 slot binding, a second asm operand, a read/write operand and assigning `i` to the later `unk358` store are unnecessary. They were removed before the final-source checks. Removing both initial bindings from the earlier two-operand form gave three differences. A plain typed slot with no displacement constraint returned the baseline ten differences.
+
+The original ten BG differences were at `+0x1CF`, `+0x1D0`, `+0x1F6`, `+0x1F8`, `+0x201`, `+0x202`, `+0x204`, `+0x209`, `+0x20A`, `+0x20C`. They were register encodings, not opcode/control-flow changes. The offset constraint and real zero lifetime interact; their isolated failure counts do not prove an independent cause for each changed register.
+
+## Correct title-exit callee
+
+Fixed-byte masking initially concealed an independent source error: `sub_0814AFE4` called `CreateCutscene`, while its European BL at `0x0814B01A` targets `0x08138BEC`, the already verified implementation retaining the original identifier `sub_08138B44`. The analogous USA source exit caller in `src/title_screen.c` also calls `sub_08138B44` after the same palette fills and `TaskDestroy`. Only the European exit call was changed; no semantic rename or USA-source modification was made.
+
+`sub_0814A9DC` still calls `CreateCutscene`, whose European target is `0x08026080`. The complete proof now establishes the distinct Thumb bindings `CreateCutscene = 0x08026081` and `sub_08138B44 = 0x08138BED`. Before this correction, complete-module proof rejected conflicting bindings even when all fixed bytes matched.
+
+## Complete-module verification
+
+The final commented source was compiled again under the pinned profile. `prove_module` verified the entire title module at `0x08149DCC`, with its explicit linker NOLOAD ownership. `relocate` then emitted the complete text and every referenced local extent, and each was compared byte-for-byte with the owned European ROM:
+
+- `.text`: **5,016 bytes**, exact.
+- Local `.rodata` objects: **48 + 36 + 168 = 252 bytes**, exact.
+- **42 external bindings**, consistent across the complete module.
+- **202 relocation records** handled by the complete proof.
+- BG itself: **584 bytes**, exact; all other title fixed bytes retain their baseline output.
+
+No ROM, object, generated assembly, private local path or extracted bytes are included in this dossier. The full dependency-aware ROM gate remains the coordinator's subsequent check.
+
+## Superseded callback-copy candidate
+
+The archived [callback-only experimental patch](drafts/eu_title_bg_callback_partial.patch) is **not the final source patch and must not be applied**. It records an intermediate result: a local inline callback copy reduced BG to two fixed differences (`+0x1CF`, `+0x1D0`, European addresses `0x0814A7FB`, `0x0814A7FC`) while keeping the rest of the title's fixed bytes unchanged. Applying its constraints to shared ABC4 instead moved eight differences into standalone ABC4. The final source needs neither the clone nor callback constraints.
 
 ## Failed attempts to resolve the final two differences
 
 A real `offsetof(struct EuTitle, unk36D)` initialized in r3 was tested both as a read/write operand and an input-only operand. Access through a character pointer produced 31 differences on the baseline and 39 with the callback copy, losing reuse of zero in r4. Keeping the typed field store with the input-only offset added a r3-to-r1 copy and produced 72 differences. These variants are rejected.
 
-Register-constrained pointers to the real byte subobject also changed zero reuse. Character lvalues, alternate equivalent byte-store expressions and reusing the loop counter did not resolve the final load. No extra register constraints, changed compiler flags, volatile game fields, fabricated values or hand-written instructions are part of the optional patch.
+Register-constrained pointers to the real byte subobject alone also changed zero reuse. Character lvalues and loop-counter reuse alone did not resolve the mismatch. The successful combination was then minimized to the final typed-slot, single-input form above. No changed compiler flags, volatile game fields, fabricated values or hand-written instructions are part of the final source.
 
 ## Acceptance boundary
 
-A future candidate must pass the **entire title translation unit**, all relevant relocations/local data and the full owned European ROM rebuild. Verify that prior matching functions retain their output, and remove each steering adjustment independently to establish its actual effect. Two residual bytes are still a mismatch; byte similarity establishes neither original source structure nor semantic naming correctness.
+The source-object checks above pass the **entire title translation unit** and all relevant relocations/local data. Before publication, run the full owned European ROM rebuild and confirm prior matching functions retain their output. Remove the steering when a natural reconstruction passes the same complete checks. Exact emitted bytes establish neither original source structure nor semantic naming correctness.
