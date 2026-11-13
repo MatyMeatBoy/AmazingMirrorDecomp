@@ -46,6 +46,92 @@ extern u8 gUnk_08D90A6C[], gUnk_08D90A6C_End[0];
 extern u8 gUnk_08E1BA58[], gUnk_08E1BA58_End[0];
 extern u8 gUnk_08E8009C[], gUnk_08E8009C_End[0];
 
+#ifdef REGION_EU
+extern u8 gUnk_EU_08392094[];
+extern u8 gUnk_EU_08394D94[];
+extern u8 gUnk_EU_083979FC[];
+extern u8 gUnk_EU_0839A6A4[];
+extern u8 gUnk_EU_0839D3A4[];
+extern u8 gUnk_EU_083A0098[];
+extern u8 gUnk_EU_083A3580[];
+extern u8 gUnk_EU_083A6AB0[];
+extern u8 gUnk_EU_083A9FBC[];
+extern u8 gUnk_EU_083AD49C[];
+extern u8 gUnk_EU_083B096C[];
+extern u8 gUnk_EU_083B3A04[];
+extern u8 gUnk_EU_083B6A04[];
+extern u8 gUnk_EU_083B9B84[];
+extern u8 gUnk_EU_083BCBE0[];
+extern u8 gUnk_EU_08D782E0[];
+extern u8 gUnk_EU_08D7C410[];
+extern u8 gUnk_EU_08D9AE7C[];
+extern u8 gUnk_EU_08D9EE9C[];
+extern u8 gUnk_EU_08DBD908[];
+extern u8 gUnk_EU_08DC1AF0[];
+extern u8 gUnk_EU_08DE0564[];
+extern u8 gUnk_EU_08DE47C0[];
+extern u8 gUnk_EU_08E03248[];
+extern u8 gUnk_EU_08E07290[];
+extern u8 gUnk_EU_08E25CEC[];
+extern u8 gUnk_EU_08E2A0CC[];
+extern u8 gUnk_EU_08E4E768[];
+extern u8 gUnk_EU_08E52A64[];
+extern u8 gUnk_EU_08E56EA0[];
+extern u8 gUnk_EU_08E5B1E0[];
+extern u8 gUnk_EU_08E5F544[];
+extern u8 gUnk_EU_08E63DB4[];
+extern u8 gUnk_EU_08E8C5C4[];
+extern u8 gUnk_EU_08E90D68[];
+extern u8 gUnk_EU_08EB955C[];
+extern u8 gUnk_EU_08EBDCA4[];
+extern u8 gUnk_EU_08EE648C[];
+extern u8 gUnk_EU_08EEAC00[];
+extern u8 gUnk_EU_08F133F8[];
+extern u8 gUnk_EU_08F17A94[];
+extern const u32 gCrackityHackGameEndedTileset_French[];
+extern const u32 gCrackityHackGameEndedTileset_German[];
+extern const u32 gCrackityHackGameEndedTileset_Italian[];
+extern const u32 gCrackityHackGameEndedTileset_Spanish[];
+extern const u32 gUnk_08374890[];
+extern const u32 gUnk_08374C50[];
+extern const u32 gUnk_08375064[];
+extern const u32 gUnk_08375798[];
+extern const u32 gUnk_08382DB8[];
+extern const u32 gUnk_0838326C[];
+extern const u32 gUnk_08383774[];
+extern const u32 gUnk_08384098[];
+#endif
+
+#ifdef REGION_EU
+static void *const sMultiBootPrograms[][NUM_LANGUAGES][2] =
+{
+    {
+        [LANGUAGE_JAPANESE] = { NULL, NULL },
+        [LANGUAGE_ENGLISH] = { gUnk_EU_08D782E0, gUnk_EU_08D7C410 },
+        [LANGUAGE_GERMAN] = { gUnk_EU_08D9AE7C, gUnk_EU_08D9EE9C },
+        [LANGUAGE_FRENCH] = { gUnk_EU_08DBD908, gUnk_EU_08DC1AF0 },
+        [LANGUAGE_SPANISH] = { gUnk_EU_08DE0564, gUnk_EU_08DE47C0 },
+        [LANGUAGE_ITALIAN] = { gUnk_EU_08E03248, gUnk_EU_08E07290 },
+    },
+    {
+        [LANGUAGE_JAPANESE] = { NULL, NULL },
+        [LANGUAGE_ENGLISH] = { gUnk_EU_08E25CEC, gUnk_EU_08E2A0CC },
+        [LANGUAGE_GERMAN] = { gUnk_EU_08E4E768, gUnk_EU_08E52A64 },
+        [LANGUAGE_FRENCH] = { gUnk_EU_08E52A64, gUnk_EU_08E56EA0 },
+        [LANGUAGE_SPANISH] = { gUnk_EU_08E56EA0, gUnk_EU_08E5B1E0 },
+        [LANGUAGE_ITALIAN] = { gUnk_EU_08E5B1E0, gUnk_EU_08E5F544 },
+    },
+    {
+        [LANGUAGE_JAPANESE] = { NULL, NULL },
+        [LANGUAGE_ENGLISH] = { gUnk_EU_08E5F544, gUnk_EU_08E63DB4 },
+        [LANGUAGE_GERMAN] = { gUnk_EU_08E8C5C4, gUnk_EU_08E90D68 },
+        [LANGUAGE_FRENCH] = { gUnk_EU_08EB955C, gUnk_EU_08EBDCA4 },
+        [LANGUAGE_SPANISH] = { gUnk_EU_08EE648C, gUnk_EU_08EEAC00 },
+        [LANGUAGE_ITALIAN] = { gUnk_EU_08F133F8, gUnk_EU_08F17A94 },
+    },
+    {},
+};
+#else
 static void *const sMultiBootPrograms[][NUM_LANGUAGES][2] = 
 {
     {
@@ -74,12 +160,76 @@ static void *const sMultiBootPrograms[][NUM_LANGUAGES][2] =
     },
     {},
 };
+#endif
 
 extern const u32 gUnk_0838AD48[];
 extern const u32 gUnk_0837F6C4[];
 extern const u32 gUnk_08383C0C[];
 extern u8 gUnk_08D94B9C[];
 
+#ifdef REGION_EU
+static const void *const gUnk_082DE158[][9] =
+{
+    [LANGUAGE_JAPANESE] = {
+        NULL,
+    },
+    [LANGUAGE_ENGLISH] = {
+        gUnk_EU_08392094,
+        gUnk_0837F6C4,
+        gUnk_08383C0C,
+        gUnk_EU_08D7C410,
+        gUnk_EU_08D7C410 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08D7C410 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08D7C410 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08D7C410 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08D7C410 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_GERMAN] = {
+        gUnk_EU_08394D94,
+        gUnk_0837F6C4,
+        gUnk_08384098,
+        gUnk_EU_08D9EE9C,
+        gUnk_EU_08D9EE9C + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08D9EE9C + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08D9EE9C + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08D9EE9C + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08D9EE9C + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_FRENCH] = {
+        gUnk_EU_083979FC,
+        gUnk_0837F6C4,
+        gUnk_0838326C,
+        gUnk_EU_08DC1AF0,
+        gUnk_EU_08DC1AF0 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08DC1AF0 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08DC1AF0 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08DC1AF0 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08DC1AF0 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_SPANISH] = {
+        gUnk_EU_0839A6A4,
+        gUnk_0837F6C4,
+        gUnk_08383774,
+        gUnk_EU_08DE47C0,
+        gUnk_EU_08DE47C0 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08DE47C0 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08DE47C0 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08DE47C0 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08DE47C0 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_ITALIAN] = {
+        gUnk_EU_0839D3A4,
+        gUnk_0837F6C4,
+        gUnk_08382DB8,
+        gUnk_EU_08E07290,
+        gUnk_EU_08E07290 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E07290 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E07290 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E07290 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E07290 + SIO32ML_BLOCK_SIZE * 5,
+    },
+};
+#else
 static const void *const gUnk_082DE158[][9] =
 {
     [LANGUAGE_JAPANESE] = {
@@ -149,12 +299,76 @@ static const void *const gUnk_082DE158[][9] =
         gUnk_08D94B9C + SIO32ML_BLOCK_SIZE * 5,
     },
 };
+#endif
 
 extern const u32 gCrackityHackObjTileset_English[];
 extern const u32 gCrackityHackBgMainTileset[];
 extern const u32 gCrackityHackGameEndedTileset_English[];
 extern u8 gUnk_08E1FE28[];
 
+#ifdef REGION_EU
+static const void *const gUnk_082DE230[][9] =
+{
+    [LANGUAGE_JAPANESE] = {
+        NULL,
+    },
+    [LANGUAGE_ENGLISH] = {
+        gUnk_EU_083A0098,
+        gCrackityHackBgMainTileset,
+        gCrackityHackGameEndedTileset_English,
+        gUnk_EU_08E2A0CC,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_GERMAN] = {
+        gUnk_EU_083A3580,
+        gCrackityHackBgMainTileset,
+        gCrackityHackGameEndedTileset_German,
+        gUnk_EU_08E2A0CC,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_FRENCH] = {
+        gUnk_EU_083A6AB0,
+        gCrackityHackBgMainTileset,
+        gCrackityHackGameEndedTileset_French,
+        gUnk_EU_08E2A0CC,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_SPANISH] = {
+        gUnk_EU_083A9FBC,
+        gCrackityHackBgMainTileset,
+        gCrackityHackGameEndedTileset_Spanish,
+        gUnk_EU_08E2A0CC,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_ITALIAN] = {
+        gUnk_EU_083AD49C,
+        gCrackityHackBgMainTileset,
+        gCrackityHackGameEndedTileset_Italian,
+        gUnk_EU_08E2A0CC,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E2A0CC + SIO32ML_BLOCK_SIZE * 5,
+    },
+};
+#else
 static const void *const gUnk_082DE230[][9] =
 {
     [LANGUAGE_JAPANESE] = {
@@ -225,12 +439,76 @@ static const void *const gUnk_082DE230[][9] =
         gUnk_08E1FE28 + SIO32ML_BLOCK_SIZE * 5,
     },
 };
+#endif
 
 extern const u32 gUnk_08372BE0[];
 extern const u32 gUnk_08375400[];
 extern const u32 gUnk_083A9AAC[];
 extern u8 gUnk_08E8490C[];
 
+#ifdef REGION_EU
+static const void *const gUnk_082DE308[][9] =
+{
+    [LANGUAGE_JAPANESE] = {
+        NULL,
+    },
+    [LANGUAGE_ENGLISH] = {
+        gUnk_08372BE0,
+        gUnk_08375400,
+        gUnk_EU_083B096C,
+        gUnk_EU_08E63DB4,
+        gUnk_EU_08E63DB4 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E63DB4 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E63DB4 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E63DB4 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E63DB4 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_GERMAN] = {
+        gUnk_08372BE0,
+        gUnk_08375798,
+        gUnk_EU_083B3A04,
+        gUnk_EU_08E90D68,
+        gUnk_EU_08E90D68 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08E90D68 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08E90D68 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08E90D68 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08E90D68 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_FRENCH] = {
+        gUnk_08372BE0,
+        gUnk_08374C50,
+        gUnk_EU_083B6A04,
+        gUnk_EU_08EBDCA4,
+        gUnk_EU_08EBDCA4 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08EBDCA4 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08EBDCA4 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08EBDCA4 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08EBDCA4 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_SPANISH] = {
+        gUnk_08372BE0,
+        gUnk_08375064,
+        gUnk_EU_083B9B84,
+        gUnk_EU_08EEAC00,
+        gUnk_EU_08EEAC00 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08EEAC00 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08EEAC00 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08EEAC00 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08EEAC00 + SIO32ML_BLOCK_SIZE * 5,
+    },
+    [LANGUAGE_ITALIAN] = {
+        gUnk_08372BE0,
+        gUnk_08374890,
+        gUnk_EU_083BCBE0,
+        gUnk_EU_08F17A94,
+        gUnk_EU_08F17A94 + SIO32ML_BLOCK_SIZE * 1,
+        gUnk_EU_08F17A94 + SIO32ML_BLOCK_SIZE * 2,
+        gUnk_EU_08F17A94 + SIO32ML_BLOCK_SIZE * 3,
+        gUnk_EU_08F17A94 + SIO32ML_BLOCK_SIZE * 4,
+        gUnk_EU_08F17A94 + SIO32ML_BLOCK_SIZE * 5,
+    },
+};
+#else
 static const void *const gUnk_082DE308[][9] =
 {
     [LANGUAGE_JAPANESE] = {
@@ -300,6 +578,7 @@ static const void *const gUnk_082DE308[][9] =
         gUnk_08E8490C + SIO32ML_BLOCK_SIZE * 5,
     },
 };
+#endif
 
 struct Multi_08019F28 *sub_08019F28(s32 r7)
 {
@@ -636,7 +915,12 @@ static void sub_0801A618(struct Multi_08019F28 *r5)
         if (r5->unkA9 < r3)
             r5->callback = sub_0801A6BC;
         else
+        {
+#ifdef REGION_EU
+            gDispCnt &= ~DISPCNT_OBJ_ON;
+#endif
             r5->callback = sub_0801A8E8;
+        }
     }
     if (gMultiSioStatusFlags & MULTI_SIO_LD_ENABLE)
         r5->loadRequest = 1;

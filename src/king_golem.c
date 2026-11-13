@@ -480,7 +480,10 @@ static void sub_080DB694(struct KingGolem *kg)
         kg->obj.base.flags |= 4;
         kg->obj.unk83 = 6;
     }
-    ++kg->obj.base.counter;
+#ifdef REGION_EU
+    else
+#endif
+        ++kg->obj.base.counter;
 }
 
 static void sub_080DB6BC(struct KingGolem *kg)

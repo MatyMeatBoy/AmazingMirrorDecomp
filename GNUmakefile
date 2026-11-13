@@ -22,6 +22,7 @@ all rom compare progress: compare-eu
 
 metadata:
 	$(PYTHON) tools/progress/metadata_build.py --jobs $(JOBS)
+	$(PYTHON) tools/progress/library_metadata.py
 
 compare-eu: metadata
 	$(PYTHON) tools/progress/eu_build.py --rom "$(EU_ROM)"

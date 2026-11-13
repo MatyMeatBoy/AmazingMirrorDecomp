@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "status": "research_evidence_not_production_receipt",
+  "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "compiler_commit": "59b966ed1b8f371856dcf99f1546c2fe89c678ca",
+  "cflags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
+  "cpp_defines": [
+    "MODERN=0",
+    "REGION_EU",
+    "REVISION=0",
+    "ENGLISH"
+  ],
+  "asm_flags": "-mcpu=arm7tdmi --defsym REVISION=0 --defsym ENGLISH=1",
+  "source_sha256_lf": {
+    "src/title_screen.c": "9d2f908799d5f605721aedb450865a3e8a4b03540e1d06790e182e4ef932badb",
+    "src/title_screen_eu.inc": "37a42ddec2a33f0d9b46b21a330f1212967e855186eb056e01f9f9255d7e9d85"
+  },
+  "compiled_text_size": 5016,
+  "original_eu_text_start": "0x8149dcc",
+  "original_eu_text_end_exclusive": "0x814b164",
+  "complete_fixed_instruction_match": false,
+  "fixed_byte_difference_count": 10,
+  "functions": [
+    {
+      "symbol": "CreateTitleScreen",
+      "rom_start": "0x8149dcc",
+      "size": 300,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 13,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "EuTitleDestroy",
+      "rom_start": "0x8149ef8",
+      "size": 116,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 3,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "EuTitleMain",
+      "rom_start": "0x8149f6c",
+      "size": 132,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_08149FF0",
+      "rom_start": "0x8149ff0",
+      "size": 324,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 6,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A134",
+      "rom_start": "0x814a134",
+      "size": 188,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 1,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A1F0",
+      "rom_start": "0x814a1f0",
+      "size": 284,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 9,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A30C",
+      "rom_start": "0x814a30c",
+      "size": 348,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A468",
+      "rom_start": "0x814a468",
+      "size": 340,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 13,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A5BC",
+      "rom_start": "0x814a5bc",
+      "size": 110,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A62C",
+      "rom_start": "0x814a62c",
+      "size": 584,
+      "complete_fixed_instruction_match": false,
+      "fixed_byte_difference_offsets": [
+        "0x1cf",
+        "0x1d0",
+        "0x1f6",
+        "0x1f8",
+        "0x201",
+        "0x202",
+        "0x204",
+        "0x209",
+        "0x20a",
+        "0x20c"
+      ],
+      "actual_elf_relocation_count": 22,
+      "strict_candidate_proof_passed": false,
+      "rejection": "mapped section fixed bytes differ: .text"
+    },
+    {
+      "symbol": "sub_0814A874",
+      "rom_start": "0x814a874",
+      "size": 96,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A8D4",
+      "rom_start": "0x814a8d4",
+      "size": 264,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 9,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814A9DC",
+      "rom_start": "0x814a9dc",
+      "size": 148,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 14,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AA70",
+      "rom_start": "0x814aa70",
+      "size": 248,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 12,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AB68",
+      "rom_start": "0x814ab68",
+      "size": 40,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 1,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AB90",
+      "rom_start": "0x814ab90",
+      "size": 52,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 1,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814ABC4",
+      "rom_start": "0x814abc4",
+      "size": 60,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AC00",
+      "rom_start": "0x814ac00",
+      "size": 32,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 1,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AC20",
+      "rom_start": "0x814ac20",
+      "size": 68,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 5,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AC64",
+      "rom_start": "0x814ac64",
+      "size": 72,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 5,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814ACAC",
+      "rom_start": "0x814acac",
+      "size": 68,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 5,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814ACF0",
+      "rom_start": "0x814acf0",
+      "size": 32,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AD10",
+      "rom_start": "0x814ad10",
+      "size": 80,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AD60",
+      "rom_start": "0x814ad60",
+      "size": 56,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AD98",
+      "rom_start": "0x814ad98",
+      "size": 56,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814ADD0",
+      "rom_start": "0x814add0",
+      "size": 92,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AE2C",
+      "rom_start": "0x814ae2c",
+      "size": 60,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 5,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AE68",
+      "rom_start": "0x814ae68",
+      "size": 68,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AEAC",
+      "rom_start": "0x814aeac",
+      "size": 72,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AEF4",
+      "rom_start": "0x814aef4",
+      "size": 68,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AF38",
+      "rom_start": "0x814af38",
+      "size": 72,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AF80",
+      "rom_start": "0x814af80",
+      "size": 48,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 3,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AFB0",
+      "rom_start": "0x814afb0",
+      "size": 52,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814AFE4",
+      "rom_start": "0x814afe4",
+      "size": 92,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 8,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814B040",
+      "rom_start": "0x814b040",
+      "size": 80,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814B090",
+      "rom_start": "0x814b090",
+      "size": 36,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814B0B4",
+      "rom_start": "0x814b0b4",
+      "size": 68,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814B0F8",
+      "rom_start": "0x814b0f8",
+      "size": 72,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 4,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    },
+    {
+      "symbol": "sub_0814B140",
+      "rom_start": "0x814b140",
+      "size": 36,
+      "complete_fixed_instruction_match": true,
+      "fixed_byte_difference_offsets": [],
+      "actual_elf_relocation_count": 2,
+      "strict_candidate_proof_passed": true,
+      "rejection": null
+    }
+  ]
+}

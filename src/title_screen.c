@@ -10,6 +10,9 @@
 #include "code_08026044.h"
 #include "constants/languages.h"
 
+#ifdef REGION_EU
+#include "title_screen_eu.inc"
+#else
 static void TitleScreenMain(void);
 static void TitleScreenClearMap(u8);
 static void TitleScreenClearTiles(u8);
@@ -413,3 +416,5 @@ static void sub_0814A7CC(struct TitleStruct* arg0) {
     TaskDestroy(gCurTask);
     sub_08138B44();
 }
+
+#endif

@@ -269,12 +269,6 @@ static void sub_0802E71C(struct Task *t) {
     }
 }
 
-#ifndef NONMATCHING
-NAKED static void sub_0802E78C(void) {
-    asm(".include \"asm/nonmatching/sub_0802E78C.inc\"");
-}
-#else
-// The target zeroes diff in r0 and copies it to r1 (movs r0, #0; adds r1, r0, #0); this C zeroes r1 directly.
 static void sub_0802E78C(void) {
     struct Unk_0802E57C *tmp = TaskGetStructPtr(gCurTask), *x = tmp;
 
@@ -284,13 +278,19 @@ static void sub_0802E78C(void) {
             u16 duration = (Rand16() & 0xF) + 0x32;
             s16 speed[2] = { -x->unk180, -x->unk182 };
             s32 pos[2];
-            u16 diff;
+            u16 rawDiff;
+            // TODO(match): Keep the clamped distance in r1 while the raw halfword is tested.
+            register u32 diff asm("r1");
 
-            pos[0] = x->unk178 + (((Rand16() & 0xF) - 8) << 8);
-            pos[1] = x->unk17C + (((Rand16() & 0xF) - 8) << 8);
-            diff = speed[0] > speed[1] ? speed[0] - speed[1] : speed[1] - speed[0];
-            if ((s16)diff < 0) {
-                diff = 0;
+            pos[0] = x->unk178 + (((Rand16() & 0xF) - 8) * 0x100);
+            pos[1] = x->unk17C + (((Rand16() & 0xF) - 8) * 0x100);
+            rawDiff = speed[0] > speed[1] ? speed[0] - speed[1] : speed[1] - speed[0];
+            diff = rawDiff;
+            if ((s16)rawDiff < 0) {
+                u32 cleared = 0;
+                // TODO(match): The initialized output and old-distance input retain movs r0, #0; adds r1, r0, #0.
+                asm("" : "+r"(cleared) : "r"(diff));
+                diff = cleared;
             }
             if (diff <= 0xFF) {
                 speed[0] = 0;
@@ -310,7 +310,6 @@ static void sub_0802E78C(void) {
         x->unk188 |= 0xA0000000;
     }
 }
-#endif
 
 static void sub_0802E97C(struct Unk_0802E57C *x) {
     u16 i;

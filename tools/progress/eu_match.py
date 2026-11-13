@@ -124,6 +124,31 @@ def choose_site(text,mask,rom,end,hint=None):
     return None
 
 
+def context_hint(name,global_symbol,bindings,local_context):
+    local=local_context.get(name)
+    if not global_symbol:return local
+    external=bindings.get(name)
+    if local is not None and external is not None and local!=external:
+        raise ValueError('conflicting global/caller callback context')
+    return external if external is not None else local
+
+
+def library_chain_starts(objects,rom,end):
+    """Bound small runtime members by the unique final object and linker order."""
+    if not objects:raise ValueError('empty runtime object chain')
+    last=objects[-1][1]
+    sites=unique_sites(last.text,relocation_mask(last.text,last.relocs),rom,end)
+    if len(sites)!=1 or sites[0]+len(last.text)!=BASE+end:
+        raise ValueError('runtime chain lacks a unique terminal object at code end')
+    cursor=BASE+end;result={}
+    for member,elf in reversed(objects):
+        if len(elf.text)%4:raise ValueError('runtime input text is not word aligned')
+        cursor-=len(elf.text)
+        if cursor<BASE+0xC0:raise ValueError('runtime chain outside executable code')
+        result[member]=cursor
+    return result
+
+
 def bind_relocations(elf, rom, start):
     bindings, evidence = {}, []
     for r in elf.relocs:
@@ -218,53 +243,90 @@ def validate_noload(elf,index,address,region):
     return result
 
 
+def local_object_extent(elf, index, symbol, addend):
+    """Resolve one real ELF object; never infer an extent from the next symbol."""
+    point = symbol['value'] + addend
+    if symbol.get('info', 0) & 15 == 1 and symbol.get('size', 0):
+        if not symbol['value'] <= point < symbol['value'] + symbol['size']:
+            raise ValueError('local object reference is outside its declared extent')
+    extents = {(s['value'], s['value'] + s['size']) for s in elf.symbols
+               if s['section'] == index and s.get('info', 0) & 15 == 1 and s.get('size', 0) > 0}
+    candidates = [(lo, hi) for lo, hi in extents if lo <= point < hi]
+    if len(candidates) != 1:
+        raise ValueError('local data reference has no exact ELF object extent')
+    lo, hi = candidates[0]
+    if lo < 0 or hi > elf.sections[index][5]:
+        raise ValueError('local object outside section')
+    if any(a < hi and lo < b for a, b in extents if (a, b) != (lo, hi)):
+        raise ValueError('overlapping local ELF objects')
+    return lo, hi
+
+
 def prove_module(elf, rom, start, text_range=None, function_anchors=None,noload_sections=None):
-    """Prove whole mapped sections, including every internal data reference."""
+    """Prove complete referenced objects with explicit RAM output ownership."""
     bases = {elf.text_index: start}
-    initial=text_range or (0,len(elf.text))
-    pending = [(elf.text_index,*initial)]
-    processed=set()
+    initial = (elf.text_index, *(text_range or (0, len(elf.text))))
+    locations = {initial: start + initial[1]}
+    pending = [initial]
+    processed = set()
     verified, bindings, evidence = {}, {}, []
+
+    def enqueue(scope, address):
+        if scope in locations and locations[scope] != address:
+            raise ValueError('conflicting local object mapping')
+        for other, mapped in locations.items():
+            if scope[0] == other[0] and scope != other and scope[0] != elf.text_index:
+                if address < mapped + other[2] - other[1] and mapped < address + scope[2] - scope[1]:
+                    raise ValueError('overlapping mapped local objects')
+        locations[scope] = address
+        pending.append(scope)
+
     while pending:
-        index,segment_offset,stop = pending.pop()
-        scope=(index,segment_offset,stop)
+        scope = pending.pop()
         if scope in processed:
             continue
         processed.add(scope)
+        index, segment_offset, stop = scope
         section = elf.sections[index]
+        address = locations[scope]
         region=next((region for pattern,region in (noload_sections or {}).items() if fnmatchcase(elf.names[index],pattern)),None)
         if region:
-            verified[scope]=validate_noload(elf,index,bases[index],region)
+            verified[scope]=dict(validate_noload(elf,index,bases[index],region),section_index=index)
             continue
         if section[1]==8:
-            verified[scope]=validate_nobits(elf,index,bases[index])
+            verified[scope]=dict(validate_nobits(elf,index,bases[index]),section_index=index)
             continue
         if section[1] != 1 or not section[2] & 2:
             raise ValueError('referenced local section is not allocated file data')
         data = elf.data(section)[segment_offset:stop]
-        address = bases[index]+segment_offset
-        offset = address-BASE
-        if offset < 0 or offset+len(data) > len(rom):
-            raise ValueError('mapped local section outside ROM')
-        relocs = section_relocations(elf,index)
-        relocs=[dict(r,offset=r['offset']-segment_offset) for r in relocs if segment_offset<=r['offset']<stop]
-        mask = relocation_mask(data,relocs)
-        if any(rom[offset+i] != byte for i,byte in enumerate(data) if mask[i]):
-            raise ValueError('mapped section fixed bytes differ: '+elf.names[index])
+        offset = address - BASE
+        if segment_offset < 0 or stop > section[5] or stop <= segment_offset:
+            raise ValueError('invalid complete local extent')
+        if offset < 0 or offset + len(data) > len(rom):
+            raise ValueError('mapped local object outside ROM')
+        all_relocs = section_relocations(elf, index)
+        for r in all_relocs:
+            if r['offset'] < stop and r['offset'] + 4 > segment_offset:
+                if r['offset'] < segment_offset or r['offset'] + 4 > stop:
+                    raise ValueError('relocation straddles complete object boundary')
+        relocs = [dict(r, offset=r['offset'] - segment_offset) for r in all_relocs
+                  if segment_offset <= r['offset'] < stop]
+        mask = relocation_mask(data, relocs)
+        if any(rom[offset + i] != byte for i, byte in enumerate(data) if mask[i]):
+            raise ValueError('mapped section fixed bytes differ: ' + elf.names[index])
         for reloc in relocs:
-            off, kind, symbol = reloc['offset'],reloc['type'],reloc['symbol']
+            off, kind, symbol = reloc['offset'], reloc['type'], reloc['symbol']
             if kind == 40:
                 continue
-            actual = rom[offset+off:offset+off+4]
+            actual = rom[offset + off:offset + off + 4]
             if kind == 2:
-                addend = struct.unpack_from('<I',data,off)[0]
-                value = (struct.unpack('<I',actual)[0]-addend)&0xFFFFFFFF
+                addend = struct.unpack_from('<I', data, off)[0]
+                value = (struct.unpack('<I', actual)[0] - addend) & 0xFFFFFFFF
             else:
-                addend = thumb_displacement(data,off)
-                value = thumb_target(actual,0,address+off)|1
-            target = symbol['section']
-            name = symbol['name']
-            anchored=False
+                addend = thumb_displacement(data, off)
+                value = thumb_target(actual, 0, address + off) | 1
+            target, name = symbol['section'], symbol['name']
+            anchored = False
             if target == 0:
                 if not name or (name in bindings and bindings[name] != value):
                     raise ValueError('conflicting or unnamed external binding')
@@ -272,32 +334,59 @@ def prove_module(elf, rom, start, text_range=None, function_anchors=None,noload_
             elif target == 0xFFF1:
                 if value != symbol['value']:
                     raise ValueError('absolute symbol differs')
-            elif target==elf.text_index and function_anchors and name in function_anchors:
-                if (value&~1) not in function_anchors[name]:
+            elif target == elf.text_index and function_anchors and name in function_anchors:
+                if symbol.get('info', 0) & 15 == 2 and symbol['value'] & 1 and not value & 1:
+                    raise ValueError('invalid local Thumb function pointer')
+                if (value & ~1) not in function_anchors[name]:
                     raise ValueError('local function target has no fixed-byte anchor')
-                anchored=True
+                anchored = True
+            elif target == elf.text_index and symbol.get('info', 0) & 15 == 2 and 0 < symbol.get('size', 0) < 16 and symbol['value'] & 1:
+                if not value & 1 or (kind == 2 and addend != 0):
+                    raise ValueError('invalid local Thumb function pointer')
+                lo = symbol['value'] & ~1
+                hi = lo + symbol['size']
+                if hi > elf.sections[target][5] or value < BASE + 0xC0 or (value & ~1) + symbol['size'] > BASE + CODE_END:
+                    raise ValueError('local Thumb function outside code extent')
+                if function_anchors and name in function_anchors and (value & ~1) not in function_anchors[name]:
+                    raise ValueError('local function target has no fixed-byte anchor')
+                if text_range is None:
+                    if value != start + symbol['value']:
+                        raise ValueError('local function differs from complete text mapping')
+                else:
+                    enqueue((target, lo, hi), value & ~1)
+                    anchored = True
             else:
                 if target >= len(elf.sections):
                     raise ValueError('unsupported special symbol section')
-                inferred = value-symbol['value']
-                if target in bases and bases[target] != inferred:
-                    raise ValueError('conflicting local section binding')
-                if target not in bases:
+                if target == elf.text_index or elf.sections[target][1] == 8 or any(fnmatchcase(elf.names[target],pattern) for pattern in (noload_sections or {})):
+                    inferred = value - symbol['value']
+                    if target in bases and bases[target] != inferred:
+                        raise ValueError('conflicting local section binding')
                     bases[target] = inferred
-                if target!=elf.text_index:
-                    if text_range is None or elf.sections[target][1]==8:
-                        pending.append((target,0,elf.sections[target][5]))
+                    if target != elf.text_index:
+                        enqueue((target, 0, elf.sections[target][5]), inferred)
+                else:
+                    if kind != 2:
+                        raise ValueError('non-ABS32 local data reference')
+                    point = symbol['value'] + addend
+                    # Anonymous aggregate literals may have no STT_OBJECT records.
+                    # Preserve the older, stronger complete-section proof only for
+                    # an already complete text module; partial callers never guess.
+                    has_objects = any(s['section'] == target and s.get('info', 0) & 15 == 1 and s.get('size', 0) > 0 for s in elf.symbols)
+                    if text_range is None and not has_objects and 0 <= point < elf.sections[target][5]:
+                        lo, hi = 0, elf.sections[target][5]
                     else:
-                        target_offset=symbol['value']+addend
-                        objects=[s for s in elf.symbols if s['section']==target and s['info']&15==1 and s['size']>0 and s['value']<=target_offset<s['value']+s['size']]
-                        extents={(s['value'],s['value']+s['size']) for s in objects}
-                        if len(extents)!=1:
-                            raise ValueError('local data reference has no exact ELF object extent')
-                        lo,hi=next(iter(extents))
-                        pending.append((target,lo,hi))
-            evidence.append(dict(section=elf.names[index],offset=off,type=kind,symbol=name,addend=addend,inferred_value=value,external=target==0,anchored_function=anchored))
-        verified[scope] = dict(name=elf.names[index],address=address,object_offset=segment_offset,size=len(data),sha256=hashlib.sha256(rom[offset:offset+len(data)]).hexdigest())
-    return bindings,evidence,list(verified.values()),bases
+                        lo, hi = local_object_extent(elf, target, symbol, addend)
+                    object_address = struct.unpack('<I', actual)[0] - (point - lo)
+                    enqueue((target, lo, hi), object_address)
+            evidence.append(dict(section=elf.names[index], offset=off,
+                                 object_offset=segment_offset, type=kind, symbol=name,
+                                 addend=addend, inferred_value=value, external=target == 0,
+                                 anchored_function=anchored))
+        verified[scope] = dict(name=elf.names[index], section_index=index, address=address,
+                               object_offset=segment_offset, size=len(data),
+                               sha256=hashlib.sha256(rom[offset:offset+len(data)]).hexdigest())
+    return bindings, evidence, list(verified.values()), bases
 
 
 def validate_rom(rom):
@@ -315,24 +404,33 @@ def analyze(root, rom_path):
     if manifest.get('region')!='eu':raise ValueError('European reconstruction requires EU-profile metadata')
     rom = pathlib.Path(rom_path).read_bytes()
     validate_rom(rom)
+    import library_metadata
+    library_path=directory/'library_manifest.json'
+    libraries=json.loads(library_path.read_text())
+    library_metadata.validate(libraries,root)
+    modules=manifest['sources']+libraries['sources']
+    library_sites=library_chain_starts([(r['library_member'],Elf(directory/r['object'])) for r in libraries['sources']],rom,CODE_END)
     linker=(root/'linker.ld').read_text()
-    noload={module['source']:noload_inputs(linker,str(pathlib.PurePosixPath(module['source']).with_suffix('.o'))) for module in manifest['sources']}
+    noload={module['source']:noload_inputs(linker,str(pathlib.PurePosixPath(module['source']).with_suffix('.o'))) for module in modules}
     report = dict(schema_version=1, analysis_only=True, rom_match_verified=False, eu_sha1=EU_SHA1, code_end=CODE_END, source_manifest_sha256=digest(manifest_path), candidates=[], rejected=[])
-    for module in manifest['sources']:
-        if not module['source'].endswith('.c'):
+    report.update(library_manifest_sha256=digest(library_path),library_compiler=libraries['compiler'],
+                  library_inputs_sha256=libraries['inputs_sha256'],
+                  library_profiles={r['library_member']:{k:r[k] for k in ('source','cpp_flags','compiler_flags','assembler_flags','source_kind')} for r in libraries['sources']})
+    for module in modules:
+        if not module['source'].endswith('.c') and not module.get('library_member'):
             continue
         path = directory/module['object']
         try:
             elf = Elf(path)
             if not elf.text:
                 continue
-            sites = unique_sites(elf.text,relocation_mask(elf.text,elf.relocs),rom,CODE_END)
+            sites = [library_sites[module['library_member']]] if module.get('library_member') else unique_sites(elf.text,relocation_mask(elf.text,elf.relocs),rom,CODE_END)
             if len(sites) != 1:
                 raise ValueError('absent or ambiguous full module match: '+str(len(sites)))
             start = sites[0]
             bindings,relocs,sections,bases = prove_module(elf,rom,start,noload_sections=noload[module['source']])
             symbols = [dict(s,eu_address=start+s['offset']) for s in module['symbols'] if s['section']=='.text']
-            report['candidates'].append(dict(source=module['source'],object=module['object'],object_sha256=module['sha256'],eu_start=start,size=len(elf.text),bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
+            report['candidates'].append(dict(source=module['source'],library_member=module.get('library_member'),object=module['object'],object_sha256=module['sha256'],eu_start=start,size=len(elf.text),bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
         except ValueError as error:
             report['rejected'].append(dict(source=module['source'],reason=str(error)))
     all_bindings = {}
@@ -341,10 +439,10 @@ def analyze(root, rom_path):
             if name in all_bindings and all_bindings[name] != value:
                 raise ValueError('cross-module external binding conflict: '+name)
             all_bindings[name] = value
-    covered={c['source'] for c in report['candidates']}
+    covered={c['object'] for c in report['candidates']}
     occupied=[(c['eu_start'],c['eu_start']+c['size']) for c in report['candidates']]
-    for module in manifest['sources']:
-        if module['source'] in covered or not module['source'].endswith('.c'):
+    for module in modules:
+        if module['object'] in covered or not module['source'].endswith('.c'):
             continue
         elf=Elf(directory/module['object'])
         functions={s['name']:s for s in elf.symbols if s['section']==elf.text_index and s['info']&15==2}
@@ -362,35 +460,41 @@ def analyze(root, rom_path):
                         anchors[name]=positions
             except ValueError:
                 pass
-        for symbol in module['symbols']:
-            if symbol['section']!='.text' or symbol['kind']!='c' or symbol['size']<2:
-                continue
-            a=symbol['offset'];b=a+symbol['size']
-            try:
-                relocs=[dict(r,offset=r['offset']-a) for r in elf.relocs if a<=r['offset']<b]
-                name=symbol['name']
-                definition=functions.get(name,{})
-                hint=all_bindings.get(name) if definition.get('info',0)>>4 in (1,2) else local_context.get(name)
-                site=choose_site(elf.text[a:b],relocation_mask(elf.text[a:b],relocs),rom,CODE_END,hint)
-                if site is None:
+        while True:
+            before = len(report['candidates'])
+            for symbol in module['symbols']:
+                if symbol['section']!='.text' or symbol['kind']!='c' or symbol['size']<2:
                     continue
-                if any(site<end and site+symbol['size']>start for start,end in occupied):
+                a=symbol['offset'];b=a+symbol['size']
+                try:
+                    relocs=[dict(r,offset=r['offset']-a) for r in elf.relocs if a<=r['offset']<b]
+                    name=symbol['name']
+                    definition=functions.get(name,{})
+                    hint=context_hint(name,definition.get('info',0)>>4 in (1,2),all_bindings,local_context)
+                    site=choose_site(elf.text[a:b],relocation_mask(elf.text[a:b],relocs),rom,CODE_END,hint)
+                    if site is None:
+                        continue
+                    if any(site<end and site+symbol['size']>start for start,end in occupied):
+                        continue
+                    bindings,evidence,sections,bases=prove_module(elf,rom,site-a,(a,b),anchors,noload_sections=noload[module['source']])
+                    if any(name in all_bindings and all_bindings[name]!=value for name,value in bindings.items()):
+                        continue
+                    next_context=dict(local_context)
+                    for relocation in evidence:
+                        if relocation.get('anchored_function'):
+                            previous=next_context.get(relocation['symbol'])
+                            if previous is not None and previous!=relocation['inferred_value']:
+                                raise ValueError('conflicting local callback context')
+                            next_context[relocation['symbol']]=relocation['inferred_value']
+                    local_context=next_context
+                    all_bindings.update(bindings)
+                    occupied.append((site,site+symbol['size']))
+                    span=dict(symbol,offset=0,eu_address=site)
+                    report['candidates'].append(dict(source=module['source'],library_member=module.get('library_member'),object=module['object'],object_sha256=module['sha256'],eu_start=site,size=symbol['size'],object_text_offset=a,unit='function',bindings=bindings,relocations=evidence,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=[span]))
+                except ValueError:
                     continue
-                bindings,evidence,sections,bases=prove_module(elf,rom,site-a,(a,b),anchors,noload_sections=noload[module['source']])
-                if any(name in all_bindings and all_bindings[name]!=value for name,value in bindings.items()):
-                    continue
-                for relocation in evidence:
-                    if relocation.get('anchored_function'):
-                        previous=local_context.get(relocation['symbol'])
-                        if previous is not None and previous!=relocation['inferred_value']:
-                            raise ValueError('conflicting local callback context')
-                        local_context[relocation['symbol']]=relocation['inferred_value']
-                all_bindings.update(bindings)
-                occupied.append((site,site+symbol['size']))
-                span=dict(symbol,offset=0,eu_address=site)
-                report['candidates'].append(dict(source=module['source'],object=module['object'],object_sha256=module['sha256'],eu_start=site,size=symbol['size'],object_text_offset=a,unit='function',bindings=bindings,relocations=evidence,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=[span]))
-            except ValueError:
-                continue
+            if len(report['candidates']) == before:
+                break
     report['external_bindings'] = all_bindings
     definitions={}
     local_definitions={}
@@ -423,6 +527,51 @@ def analyze(root, rom_path):
                 if name in definitions and definitions[name]!=address:
                     raise ValueError('conflicting global definition: '+name)
                 definitions[name]=address
+    mapped_objects = {}
+    for candidate in report['candidates']:
+        elf = Elf(directory/candidate['object'])
+        for mapped in candidate['sections']:
+            index = mapped.get('section_index', elf.names.index(mapped['name']))
+            if index == elf.text_index or mapped.get('kind') == 'ram_noload':
+                continue
+            lo = mapped['object_offset']; hi = lo + mapped['size']
+            key = (candidate['object'], index, lo, hi)
+            address = mapped['address']
+            if key in mapped_objects and mapped_objects[key] != address:
+                raise ValueError('inconsistent local object mapping across units')
+            for other, previous in mapped_objects.items():
+                if other[:2] == key[:2] and other != key and address < previous + other[3] - other[2] and previous < address + hi - lo:
+                    raise ValueError('overlapping local object mappings across units')
+            mapped_objects[key] = address
+            for symbol in elf.symbols:
+                if symbol['section'] != index or symbol['info'] & 15 != 1 or not symbol['size'] or not lo <= symbol['value'] or symbol['value'] + symbol['size'] > hi:
+                    continue
+                name = symbol['name']; value = address + symbol['value'] - lo
+                local_definitions[(candidate['object'], name)] = value
+                if symbol['info'] >> 4 in (1, 2):
+                    if name in definitions and definitions[name] != value:
+                        raise ValueError('conflicting global data definition')
+                    definitions[name] = value
+    # A pending body still has one global linker identity. Do not let a
+    # conflicting context merely suppress its definition while retaining callers.
+    internal_global_targets = {}
+    for candidate in report['candidates']:
+        elf = Elf(directory/candidate['object'])
+        global_functions = {s['name'] for s in elf.symbols
+                            if s['section'] == elf.text_index and s['info'] & 15 == 2
+                            and s['info'] >> 4 in (1, 2)}
+        for relocation in candidate['relocations']:
+            name = relocation['symbol']
+            if relocation['external'] or name not in global_functions:
+                continue
+            value = relocation['inferred_value']
+            if name in all_bindings and all_bindings[name] != value:
+                raise ValueError('internal global target differs from external binding: ' + name)
+            if name in definitions and definitions[name] != value:
+                raise ValueError('internal global target differs from verified definition: ' + name)
+            if name in internal_global_targets and internal_global_targets[name] != value:
+                raise ValueError('conflicting internal global function target: ' + name)
+            internal_global_targets[name] = value
     for name,address in definitions.items():
         if name in all_bindings and all_bindings[name]!=address:
             raise ValueError('external binding differs from verified global definition: '+name)

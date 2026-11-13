@@ -25,6 +25,13 @@ class ExtraInventoryTests(unittest.TestCase):
         self.assertEqual(len(result['groups']),2)
         self.assertNotIn('verified_c',result['totals'])
 
+    def test_european_library_proof_never_promotes_auxiliary_copies(self):
+        result=m.summarize(self.receipt())
+        m.apply_european(result,{'rom_match_verified':True,'c_spans':[{'library_member':'libc.a:memcpy.o','name':'__memcpy'}]})
+        self.assertEqual(result['totals']['verified_c'],1)
+        self.assertEqual(result['groups'][0]['verified_c'],1)
+        self.assertEqual(result['groups'][1]['verified_c'],0)
+
     def test_bad_member_count_cannot_inflate_inventory(self):
         receipt=self.receipt();receipt['main_selected_library_members'][0]['function_count']=2
         with self.assertRaises(ValueError):m.summarize(receipt)

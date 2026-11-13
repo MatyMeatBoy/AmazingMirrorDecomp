@@ -1,0 +1,30 @@
+{
+  "status": "research_structured_data_not_production_receipt",
+  "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "records": [
+    {
+      "symbol": "gUnk_08387D58",
+      "rom_start": "0x8391d04",
+      "size": 48,
+      "format": "6 rows of 4 u16 background indices",
+      "sha256": "ff2a08f143f8d619e2cdad0f9441a461b1799a17dff6cba9a3c244f4f99d3316"
+    },
+    {
+      "symbol": "gEuTitleSpriteInfos",
+      "rom_start": "0x8391d34",
+      "size": 168,
+      "format": "21 records: u16 animId; u8 variant,numTiles,palId,unk5,unk6[2]",
+      "sha256": "de497fd07992a1fa6c4dd79531e881832b69efcaca6ba6557d17c70710433328"
+    },
+    {
+      "symbol": "gEuTitleAuxSpriteInfos",
+      "rom_start": "0x8391ddc",
+      "size": 36,
+      "format": "6 rows of 3 u16 animation ID, variant, palette ID",
+      "sha256": "cd98afd51397f665f561bbd0ed45d09d6e905edd86b8c55cb107e8b9a03de55e"
+    }
+  ],
+  "compiled_full_rodata_size": 252,
+  "compiled_full_rodata_exact": true,
+  "unknown_fields": "unk5 shifts into sprite unk14; unk6 bytes have no observed reads in this consumer and retain their exact values"
+}

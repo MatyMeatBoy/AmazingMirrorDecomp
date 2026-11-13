@@ -12135,8 +12135,15 @@ void sub_080547C4(struct Kirby *kirby, u8 r6)
                 if (r6 == 0x1B)
                     kirby->transitioningAbility |= KIRBY_ABILITY_CHANGE_RANDOM;
             }
-            else if ((r6 & 0x1F) == KIRBY_ABILITY_MASTER)
-                gUnk_0203AD34 = 0;
+            else
+            {
+#ifdef REGION_EU
+                if ((kirby->transitioningAbility & 0x1F) == KIRBY_ABILITY_MASTER)
+                    gUnk_0203AD34 = 0;
+#endif
+                if ((r6 & 0x1F) == KIRBY_ABILITY_MASTER)
+                    gUnk_0203AD34 = 0;
+            }
         }
     }
     if (!kirby->inhaling || !--kirby->inhaling)
