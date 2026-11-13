@@ -76,7 +76,8 @@ def load(root,european):
         validate_manifest(manifest,root)
     except (OSError,ValueError,KeyError) as exc:
         return {'available':False,'issue':'Current compiled source inventory unavailable: '+str(exc)}
-    result=summarize(source_report(manifest),european,root)
+    primary=dict(european,c_spans=[s for s in european['c_spans'] if not s.get('library_member')])
+    result=summarize(source_report(manifest),primary,root)
     from draft_inventory import compile_source, recover
     import subprocess
     proofs={};issues=[]
@@ -95,8 +96,8 @@ def load(root,european):
         if len(matches)==1 and matches[0]['state']=='pending_asm':
             matches[0].update(state='drafts',draft_source=draft['source'],draft_evidence=draft['evidence'],draft_compilation=draft['compilation'])
     result['draft_issues']=issues
-    from extra_inventory import load as extra_inventory
-    result['additional_inventory']=extra_inventory(root)
+    from extra_inventory import load as extra_inventory,apply_european
+    result['additional_inventory']=apply_european(extra_inventory(root),european)
     recount(result)
     extra=result['additional_inventory']
     result['known_source_function_instances']=result['all']['total']+(extra['totals']['functions'] if extra.get('available') else 0)
@@ -123,10 +124,10 @@ def markdown(inventory):
     if extra.get('available'):
         lines += ['## Bibliotecas del compilador y auxiliares','',
                   f"**Total contabilizado: {inventory['known_source_function_instances']:,} funciones**, incluidas las copias de biblioteca de cada programa. No es un total europeo verificado.",'',
-                  '| Programa | Funciones | C disponible | ASM |','|---|---:|---:|---:|']
+                  '| Programa | Funciones | C disponible | C EU verificado | ASM |','|---|---:|---:|---:|---:|']
         for row in extra['groups']:
-            lines.append(f"| {row['program']} | {row['functions']:,} | {row['c_available']:,} | {row['assembly']:,} |")
-        lines += ['','Estos objetos se compilaron para inventariar símbolos; no tienen crédito de coincidencia EU. Los aliases comparten una función. La entrada manual __start del cargador se cuenta una vez; no se cuentan etiquetas internas.','']
+            lines.append(f"| {row['program']} | {row['functions']:,} | {row['c_available']:,} | {row.get('verified_c',0):,} | {row['assembly']:,} |")
+        lines += ['','Solo las instancias del programa principal con prueba regional reciben crédito C EU; las copias auxiliares no heredan esa prueba. Los aliases comparten una función. La entrada manual __start del cargador se cuenta una vez; no se cuentan etiquetas internas.','']
         names=inventory['all']['existing_names']+extra['totals']['existing_names']
         lines += [f"Nombre existente en todo el inventario: **{names:,}**; sin nombre descriptivo: **{inventory['known_source_function_instances']-names:,}**. Las propuestas externas sin revisar no se cuentan como nombres confirmados.",'']
     return '\n'.join(lines)
@@ -154,9 +155,9 @@ def svg(inventory):
     extra=inventory.get('additional_inventory',{})
     text(16,375,'Bibliotecas del compilador y programas auxiliares (contados aparte del principal)',16)
     if extra.get('available'):
-        for x,label in zip([16,650,760,875],['Programa','Funciones','C disponible','ASM']):text(x,405,label,12)
+        for x,label in zip([16,590,690,790,900],['Programa','Funciones','C disponible','C EU verificado','ASM']):text(x,405,label,12)
         for i,row in enumerate(extra['groups']):
-            for x,value in zip([16,650,760,875],[row['program'],row['functions'],row['c_available'],row['assembly']]):text(x,432+26*i,f'{value:,}' if isinstance(value,int) else value,12)
+            for x,value in zip([16,590,690,790,900],[row['program'],row['functions'],row['c_available'],row.get('verified_c',0),row['assembly']]):text(x,432+26*i,f'{value:,}' if isinstance(value,int) else value,12)
         names=total['existing_names']+extra['totals']['existing_names']
         text(16,590,f"Todos los programas: {names:,} nombres existentes / {inventory['known_source_function_instances']-names:,} sin nombre descriptivo.",13)
     else:text(16,410,'Inventario adicional no disponible; total mostrado parcial.',12)

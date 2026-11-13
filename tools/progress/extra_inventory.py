@@ -99,3 +99,21 @@ def load(root):
         return summarize(receipt)
     except (OSError,ValueError,KeyError,TypeError) as exc:
         return {'available':False,'issue':'Additional compiled inventory unavailable: '+str(exc)}
+
+
+def apply_european(inventory,european):
+    """Only main-program library instances receive their own verified EU proof."""
+    if not inventory.get('available'):return inventory
+    for function in inventory['functions']:function['verified_c']=False
+    if european['rom_match_verified']:
+        for span in european['c_spans']:
+            member=span.get('library_member')
+            if not member:continue
+            matches=[f for f in inventory['functions'] if f['program']=='main archives' and f['source']==member
+                     and span['name'] in [f['name'],*f['aliases']] and f['kind']=='library_c']
+            if len(matches)!=1 or matches[0]['verified_c']:raise ValueError('Library C proof has no unique source instance')
+            matches[0]['verified_c']=True
+    for row in [*inventory['groups'],inventory['totals']]:
+        functions=inventory['functions'] if row is inventory['totals'] else [f for f in inventory['functions'] if (f['program']=='main archives' if row['program']=='Principal: libc/libgcc' else f['program']==row['program'])]
+        row['verified_c']=sum(f['verified_c'] for f in functions)
+    return inventory

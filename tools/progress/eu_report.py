@@ -15,7 +15,7 @@ ROM_SIZE = 0x1000000
 CODE_END = 0x15C714
 COMPILER_COMMIT = '59b966ed1b8f371856dcf99f1546c2fe89c678ca'
 CFLAGS = '-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g'
-RECIPES = {'tools/progress/eu_match.py', 'tools/progress/eu_build.py', 'tools/progress/metadata_build.py'}
+RECIPES = {'tools/progress/eu_match.py', 'tools/progress/eu_build.py', 'tools/progress/metadata_build.py','tools/progress/library_metadata.py'}
 
 
 def hash_value(value):
@@ -29,17 +29,23 @@ def safe_path(value):
     return bool(p.parts) and not p.is_absolute() and '..' not in p.parts and p.as_posix() == value
 
 
+def c_source(value):
+    return safe_path(value) and value.endswith('.c') and value.startswith(('src/','tools/agbcc/libc/','tools/agbcc/libgcc/'))
+
+
 def source_data_spans(receipt):
     if 'source_data_spans' in receipt:
         return receipt['source_data_spans']
     spans = []
     for module in receipt.get('modules', []):
         for section in module['sections']:
+            if section.get('kind')=='ram_noload':continue
             name = section['name']
             if name not in ('.rodata','.data') and not name.startswith(('.rodata.','.data.')):
                 continue
             start = section['address']-0x08000000
             spans.append({'source':module['source'],'section':name,'start':start,
+                          'library_member':module.get('library_member'),
                           'end':start+section['size'],'bytes':section['size'],
                           'sha256':section['sha256'],'object_sha256':module['object_sha256']})
     return spans
@@ -78,7 +84,7 @@ def assess(receipt, root):
         issues.append('Required recipe fingerprints missing')
     from eu_build import provenance
     try:
-        current_inputs, current_modes = provenance(root)
+        current_inputs, current_modes = provenance(root,include_libraries=bool(receipt.get('library_profiles')))
         if inputs != current_inputs or modes != current_modes:
             issues.append('Complete source inventory or fingerprints changed')
     except (OSError, ValueError, subprocess.SubprocessError):
@@ -96,6 +102,21 @@ def assess(receipt, root):
             stale.append(name)
     if stale:
         issues.append('Source inputs changed or missing')
+    profiles=receipt.get('library_profiles',{})
+    if profiles:
+        if not hash_value(receipt.get('library_manifest_sha256')):issues.append('Library manifest evidence missing')
+        try:
+            active=json.loads((root/'build/metadata/library_manifest.json').read_text())
+            expected_profiles={r['library_member']:{k:r[k] for k in ('source','cpp_flags','compiler_flags','assembler_flags','source_kind')} for r in active['sources']}
+            if profiles!=expected_profiles:issues.append('Library source profiles changed')
+        except (OSError,ValueError,KeyError,TypeError):
+            issues.append('Current library profiles unavailable')
+        library_compiler=receipt.get('library_compiler',{})
+        if library_compiler.get('commit')!=COMPILER_COMMIT or not hash_value(library_compiler.get('binaries',{}).get('compiler')):
+            issues.append('Pinned library compiler evidence missing')
+        old_hash=next((v for n,v in binaries.items() if n.removesuffix('.exe')=='old_agbcc'),None)
+        if old_hash!=library_compiler.get('binaries',{}).get('compiler'):
+            issues.append('Library compiler differs from recorded old_agbcc')
     spans = receipt.get('c_spans', [])
     if not isinstance(spans, list):
         raise ValueError('C spans must be a list')
@@ -104,8 +125,14 @@ def assess(receipt, root):
         start, end = span['start'], span['end']; source = span['source']
         if type(start) is not int or type(end) is not int or type(span.get('bytes')) is not int or start < previous or start < 0 or end <= start or end > CODE_END or max(start,4) < min(end,192) or span.get('bytes') != end-start:
             raise ValueError('Invalid, overlapping or header-containing C span')
-        if not safe_path(source) or not source.startswith('src/') or not source.endswith('.c'):
+        if not c_source(source):
             raise ValueError('C spans require repository C source paths')
+        member=span.get('library_member')
+        if source.startswith('src/') and member is not None:issues.append('Unexpected archive owner for game C source')
+        if source.startswith('tools/agbcc/'):
+            profile=receipt.get('library_profiles',{}).get(member,{})
+            if profile.get('source')!=source or profile.get('source_kind')!='c':
+                issues.append('Library C source/profile ownership missing')
         if source not in inputs:
             issues.append('C source fingerprint missing: '+source)
         for key in ('object_sha256','linked_span_sha256'):
@@ -114,7 +141,7 @@ def assess(receipt, root):
         name = span.get('name')
         if not isinstance(name, str) or not name or any(ord(c)<32 for c in name):
             raise ValueError('Invalid function name')
-        checked.append({'source': source, 'name': name, 'start': start, 'end': end, 'bytes': end-start,
+        checked.append({'source': source,'library_member':member, 'name': name, 'start': start, 'end': end, 'bytes': end-start,
                         'object_sha256': span.get('object_sha256'), 'linked_span_sha256': span.get('linked_span_sha256')})
         previous = end
     if receipt.get('credited_c_bytes') != sum(s['bytes'] for s in checked):
@@ -127,10 +154,12 @@ def assess(receipt, root):
             raise ValueError('Invalid initialized ROM data extent')
         if not isinstance(section,str) or (section not in ('.rodata','.data') and not section.startswith(('.rodata.','.data.'))):
             raise ValueError('Only initialized non-text sections earn data evidence')
-        if not safe_path(source) or not source.startswith('src/') or not source.endswith('.c'):
+        if not c_source(source):
             raise ValueError('Verified local data requires a repository C owner')
         if source not in inputs or not hash_value(span.get('sha256')) or not hash_value(span.get('object_sha256')):
             issues.append('Local data evidence incomplete')
+        if source.startswith('tools/agbcc/') and profiles.get(span.get('library_member'),{}).get('source')!=source:
+            issues.append('Library data source/profile ownership missing')
         data_ranges.append((a,b))
     from data_inventory import union_bytes
     data_bytes = union_bytes(data_ranges)
@@ -153,7 +182,8 @@ def assess(receipt, root):
             'verification_issues': sorted(set(issues)), 'stale_inputs': stale,
             'source_inputs_sha256': inputs, 'source_hash_modes': modes,
             'compiler': compiler, 'compiler_binary_sha256': binaries, 'compiler_recipe': recipe,
-            'source_manifest_sha256': receipt.get('source_manifest_sha256')}
+            'source_manifest_sha256': receipt.get('source_manifest_sha256'),
+            'library_profiles':receipt.get('library_profiles',{}),'library_compiler':receipt.get('library_compiler',{})}
 
 
 def cells(report):
@@ -249,6 +279,7 @@ def main():
         if not result['rom_match_verified']:
             raise ValueError('Cannot record an unverified receipt')
         fields = {'schema_version','analysis_only','rom_match_verified','full_rom_byte_compare','expected_sha1','rebuilt_sha1','eu_sha1','rom_size','code_end','credited_c_bytes','c_spans','inputs_sha256','source_hash_modes','compiler','compiler_binary_sha256','compiler_recipe','source_manifest_sha256','matcher_sha256','builder_sha256'}
+        fields.update(k for k in ('library_profiles','library_compiler','library_manifest_sha256','library_inputs_sha256') if k in receipt)
         compact = {key:receipt[key] for key in sorted(fields)}
         compact['source_data_spans'] = source_data_spans(receipt)
         compact['c_spans'] = sorted(compact['c_spans'],key=lambda s:(s['start'],s['source']))

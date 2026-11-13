@@ -47,6 +47,7 @@ for archive,member in re.findall(r'\*(lib\w+\.a):(\S+\.o)\(\.text\)',(ROOT/'link
   else:
    source=LIBGCC/('fp-bit-base.c' if stem in {'fp-bit','dp-bit'} else 'libgcc2.c');defines=['-DFLOAT_BIT_ORDER_MISMATCH'] if stem in {'fp-bit','dp-bit'} else ['-DL'+stem]
    if stem=='fp-bit':defines+=['-DFLOAT']
+   if stem=='dp-bit':defines+=['-DFLOAT_WORD_ORDER_MISMATCH']
    cpp=['-E','-undef','-I',ROOT/'tools/agbcc/ginclude','-nostdinc',*defines,source];flags=['-O2'];kind='library_c';asm=run([CC,*flags,'-o','-','-'],run([CPP,*cpp]))
   inputs.add(source);run([AS,'-mcpu=arm7tdmi','-o',obj,'-'],asm+b'\n.text\n.align 2,0\n');functions,e=rows(obj)
   record=dict(member=key,domain=kind,source=source.relative_to(ROOT).as_posix(),source_sha256=lf(source),source_hash_mode='lf',cpp_flags=[portable(a) for a in cpp[:-1]],compiler_flags=flags,assembler_flags=['-mcpu=arm7tdmi'],object_sha256=sha(obj.read_bytes()),text_size=len(e.text),function_count=len(functions),functions=functions)

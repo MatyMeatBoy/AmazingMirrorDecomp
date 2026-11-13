@@ -16,7 +16,7 @@ if (DIRECTORY/'eu_build.py').exists():spec.loader.exec_module(m)
 class EuBuildTests(unittest.TestCase):
     def test_auxiliary_text_provenance_is_portable(self):
         names=['tools/preproc/.gitignore','tools/preproc/LICENSE','tools/preproc/io.cpp']
-        names += ['tools/progress/'+n+'.py' for n in ('eu_match','eu_build','metadata_build')]
+        names += ['tools/progress/'+n+'.py' for n in ('eu_match','eu_build','metadata_build','library_metadata')]
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
             for name in names:

@@ -12,6 +12,11 @@ sys.path.insert(0, str(TOOLS))
 
 
 class EuropeReportTests(unittest.TestCase):
+    def test_library_sources_are_c_only_and_ram_is_never_rom_data(self):
+        self.assertTrue(self.m.c_source('tools/agbcc/libc/string/memcpy.c'))
+        self.assertFalse(self.m.c_source('tools/agbcc/libgcc/lib1thumb.asm'))
+        self.assertFalse(self.m.c_source('tools/agbcc/libc/../../outside.c'))
+        self.assertEqual(self.m.source_data_spans({'modules':[{'sections':[{'name':'.data','kind':'ram_noload'}]}]}),[])
     def setUp(self):
         spec = importlib.util.spec_from_file_location('eu_report', TOOLS/'eu_report.py')
         self.m = importlib.util.module_from_spec(spec)

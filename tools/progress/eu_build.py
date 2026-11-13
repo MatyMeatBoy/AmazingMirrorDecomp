@@ -23,11 +23,11 @@ def source_digest(data,mode):
     return hashlib.sha256(data).hexdigest()
 
 
-def provenance(root):
+def provenance(root,include_libraries=False):
     tracked=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root).decode().split('\0')
     prefixes=('src/','include/','asm/','constants/','graphics/','tools/preproc/','tools/gbagfx/')
     paths={name for name in tracked if name and (name.startswith(prefixes) or name in {'Makefile','GNUmakefile','linker.ld','make_tools.mk','graphics_file_rules.mk','audio_rules.mk'})}
-    paths.update('tools/progress/'+name+'.py' for name in ('eu_match','eu_build','metadata_build'))
+    paths.update('tools/progress/'+name+'.py' for name in ('eu_match','eu_build','metadata_build','library_metadata'))
     hashes,modes={},{}
     for name in sorted(paths):
         path=root/name
@@ -36,6 +36,13 @@ def provenance(root):
         mode='lf' if path.suffix.lower() in TEXT_SUFFIXES or path.name in {'Makefile','GNUmakefile','.gitignore','LICENSE'} else 'raw'
         hashes[name]=source_digest(path.read_bytes(),mode)
         modes[name]=mode
+    if include_libraries:
+        import library_metadata
+        manifest=json.loads((root/'build/metadata/library_manifest.json').read_text())
+        library_metadata.validate(manifest,root)
+        for name,value in manifest['inputs_sha256'].items():
+            if name in hashes and hashes[name]!=value:raise ValueError('Inconsistent library source fingerprint')
+            hashes[name]=value;modes[name]='lf'
     return hashes,modes
 
 
@@ -107,7 +114,7 @@ def build(root,rom_path):
         raise ValueError('original ROM must be outside generated EU directory')
     original=rom_path.read_bytes()
     validate_rom(original)
-    initial_hashes,initial_modes=provenance(root)
+    initial_hashes,initial_modes=provenance(root,include_libraries=True)
     out.mkdir(parents=True,exist_ok=True)
     for name in ('receipt.json','katam_eu.gba'):
         guard_output(out/name,rom_path,out)
@@ -145,7 +152,7 @@ def build(root,rom_path):
             if symbol['kind']=='c' and symbol['size']:
                 start=symbol['eu_address']-BASE
                 span_hash=hashlib.sha256(emitted[symbol['offset']:symbol['offset']+symbol['size']]).hexdigest()
-                c_spans.append(dict(source=module['source'],name=symbol['name'],offset=start,start=start,end=start+symbol['size'],size=symbol['size'],bytes=symbol['size'],sha256=span_hash,linked_span_sha256=span_hash,object_sha256=module['object_sha256']))
+                c_spans.append(dict(source=module['source'],library_member=module.get('library_member'),name=symbol['name'],offset=start,start=start,end=start+symbol['size'],size=symbol['size'],bytes=symbol['size'],sha256=span_hash,linked_span_sha256=span_hash,object_sha256=module['object_sha256']))
     pending=[]
     cursor=0
     for span in sorted(c_spans,key=lambda s:s['offset']):
@@ -159,7 +166,7 @@ def build(root,rom_path):
     if bytes(rebuilt)!=original or hashlib.sha1(rebuilt).hexdigest()!=EU_SHA1:
         raise ValueError('full EU ROM comparison failed')
     receipt.update(analysis_only=False,rom_match_verified=True,full_rom_byte_compare=True,expected_sha1=EU_SHA1,rebuilt_sha1=hashlib.sha1(rebuilt).hexdigest(),rom_size=len(original),credited_c_bytes=sum(s['size'] for s in c_spans),code_bytes=CODE_END-188,c_spans=c_spans,pending_spans=pending,modules=modules,matcher_sha256=digest(root/'tools/progress/eu_match.py'),builder_sha256=digest(Path(__file__)),method='compiled ELF ARM REL relocation; complete local-section proof; owned ROM fallback outside credited spans')
-    receipt['inputs_sha256'],receipt['source_hash_modes']=provenance(root)
+    receipt['inputs_sha256'],receipt['source_hash_modes']=provenance(root,include_libraries=True)
     if receipt['inputs_sha256']!=initial_hashes or receipt['source_hash_modes']!=initial_modes:
         raise ValueError('source inputs changed during EU build')
     from metadata_build import validate_manifest

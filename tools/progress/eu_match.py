@@ -124,6 +124,31 @@ def choose_site(text,mask,rom,end,hint=None):
     return None
 
 
+def context_hint(name,global_symbol,bindings,local_context):
+    local=local_context.get(name)
+    if not global_symbol:return local
+    external=bindings.get(name)
+    if local is not None and external is not None and local!=external:
+        raise ValueError('conflicting global/caller callback context')
+    return external if external is not None else local
+
+
+def library_chain_starts(objects,rom,end):
+    """Bound small runtime members by the unique final object and linker order."""
+    if not objects:raise ValueError('empty runtime object chain')
+    last=objects[-1][1]
+    sites=unique_sites(last.text,relocation_mask(last.text,last.relocs),rom,end)
+    if len(sites)!=1 or sites[0]+len(last.text)!=BASE+end:
+        raise ValueError('runtime chain lacks a unique terminal object at code end')
+    cursor=BASE+end;result={}
+    for member,elf in reversed(objects):
+        if len(elf.text)%4:raise ValueError('runtime input text is not word aligned')
+        cursor-=len(elf.text)
+        if cursor<BASE+0xC0:raise ValueError('runtime chain outside executable code')
+        result[member]=cursor
+    return result
+
+
 def bind_relocations(elf, rom, start):
     bindings, evidence = {}, []
     for r in elf.relocs:
@@ -379,24 +404,33 @@ def analyze(root, rom_path):
     if manifest.get('region')!='eu':raise ValueError('European reconstruction requires EU-profile metadata')
     rom = pathlib.Path(rom_path).read_bytes()
     validate_rom(rom)
+    import library_metadata
+    library_path=directory/'library_manifest.json'
+    libraries=json.loads(library_path.read_text())
+    library_metadata.validate(libraries,root)
+    modules=manifest['sources']+libraries['sources']
+    library_sites=library_chain_starts([(r['library_member'],Elf(directory/r['object'])) for r in libraries['sources']],rom,CODE_END)
     linker=(root/'linker.ld').read_text()
-    noload={module['source']:noload_inputs(linker,str(pathlib.PurePosixPath(module['source']).with_suffix('.o'))) for module in manifest['sources']}
+    noload={module['source']:noload_inputs(linker,str(pathlib.PurePosixPath(module['source']).with_suffix('.o'))) for module in modules}
     report = dict(schema_version=1, analysis_only=True, rom_match_verified=False, eu_sha1=EU_SHA1, code_end=CODE_END, source_manifest_sha256=digest(manifest_path), candidates=[], rejected=[])
-    for module in manifest['sources']:
-        if not module['source'].endswith('.c'):
+    report.update(library_manifest_sha256=digest(library_path),library_compiler=libraries['compiler'],
+                  library_inputs_sha256=libraries['inputs_sha256'],
+                  library_profiles={r['library_member']:{k:r[k] for k in ('source','cpp_flags','compiler_flags','assembler_flags','source_kind')} for r in libraries['sources']})
+    for module in modules:
+        if not module['source'].endswith('.c') and not module.get('library_member'):
             continue
         path = directory/module['object']
         try:
             elf = Elf(path)
             if not elf.text:
                 continue
-            sites = unique_sites(elf.text,relocation_mask(elf.text,elf.relocs),rom,CODE_END)
+            sites = [library_sites[module['library_member']]] if module.get('library_member') else unique_sites(elf.text,relocation_mask(elf.text,elf.relocs),rom,CODE_END)
             if len(sites) != 1:
                 raise ValueError('absent or ambiguous full module match: '+str(len(sites)))
             start = sites[0]
             bindings,relocs,sections,bases = prove_module(elf,rom,start,noload_sections=noload[module['source']])
             symbols = [dict(s,eu_address=start+s['offset']) for s in module['symbols'] if s['section']=='.text']
-            report['candidates'].append(dict(source=module['source'],object=module['object'],object_sha256=module['sha256'],eu_start=start,size=len(elf.text),bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
+            report['candidates'].append(dict(source=module['source'],library_member=module.get('library_member'),object=module['object'],object_sha256=module['sha256'],eu_start=start,size=len(elf.text),bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
         except ValueError as error:
             report['rejected'].append(dict(source=module['source'],reason=str(error)))
     all_bindings = {}
@@ -405,10 +439,10 @@ def analyze(root, rom_path):
             if name in all_bindings and all_bindings[name] != value:
                 raise ValueError('cross-module external binding conflict: '+name)
             all_bindings[name] = value
-    covered={c['source'] for c in report['candidates']}
+    covered={c['object'] for c in report['candidates']}
     occupied=[(c['eu_start'],c['eu_start']+c['size']) for c in report['candidates']]
-    for module in manifest['sources']:
-        if module['source'] in covered or not module['source'].endswith('.c'):
+    for module in modules:
+        if module['object'] in covered or not module['source'].endswith('.c'):
             continue
         elf=Elf(directory/module['object'])
         functions={s['name']:s for s in elf.symbols if s['section']==elf.text_index and s['info']&15==2}
@@ -436,7 +470,7 @@ def analyze(root, rom_path):
                     relocs=[dict(r,offset=r['offset']-a) for r in elf.relocs if a<=r['offset']<b]
                     name=symbol['name']
                     definition=functions.get(name,{})
-                    hint=all_bindings.get(name) if definition.get('info',0)>>4 in (1,2) else local_context.get(name)
+                    hint=context_hint(name,definition.get('info',0)>>4 in (1,2),all_bindings,local_context)
                     site=choose_site(elf.text[a:b],relocation_mask(elf.text[a:b],relocs),rom,CODE_END,hint)
                     if site is None:
                         continue
@@ -445,16 +479,18 @@ def analyze(root, rom_path):
                     bindings,evidence,sections,bases=prove_module(elf,rom,site-a,(a,b),anchors,noload_sections=noload[module['source']])
                     if any(name in all_bindings and all_bindings[name]!=value for name,value in bindings.items()):
                         continue
+                    next_context=dict(local_context)
                     for relocation in evidence:
                         if relocation.get('anchored_function'):
-                            previous=local_context.get(relocation['symbol'])
+                            previous=next_context.get(relocation['symbol'])
                             if previous is not None and previous!=relocation['inferred_value']:
                                 raise ValueError('conflicting local callback context')
-                            local_context[relocation['symbol']]=relocation['inferred_value']
+                            next_context[relocation['symbol']]=relocation['inferred_value']
+                    local_context=next_context
                     all_bindings.update(bindings)
                     occupied.append((site,site+symbol['size']))
                     span=dict(symbol,offset=0,eu_address=site)
-                    report['candidates'].append(dict(source=module['source'],object=module['object'],object_sha256=module['sha256'],eu_start=site,size=symbol['size'],object_text_offset=a,unit='function',bindings=bindings,relocations=evidence,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=[span]))
+                    report['candidates'].append(dict(source=module['source'],library_member=module.get('library_member'),object=module['object'],object_sha256=module['sha256'],eu_start=site,size=symbol['size'],object_text_offset=a,unit='function',bindings=bindings,relocations=evidence,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=[span]))
                 except ValueError:
                     continue
             if len(report['candidates']) == before:
@@ -516,6 +552,26 @@ def analyze(root, rom_path):
                     if name in definitions and definitions[name] != value:
                         raise ValueError('conflicting global data definition')
                     definitions[name] = value
+    # A pending body still has one global linker identity. Do not let a
+    # conflicting context merely suppress its definition while retaining callers.
+    internal_global_targets = {}
+    for candidate in report['candidates']:
+        elf = Elf(directory/candidate['object'])
+        global_functions = {s['name'] for s in elf.symbols
+                            if s['section'] == elf.text_index and s['info'] & 15 == 2
+                            and s['info'] >> 4 in (1, 2)}
+        for relocation in candidate['relocations']:
+            name = relocation['symbol']
+            if relocation['external'] or name not in global_functions:
+                continue
+            value = relocation['inferred_value']
+            if name in all_bindings and all_bindings[name] != value:
+                raise ValueError('internal global target differs from external binding: ' + name)
+            if name in definitions and definitions[name] != value:
+                raise ValueError('internal global target differs from verified definition: ' + name)
+            if name in internal_global_targets and internal_global_targets[name] != value:
+                raise ValueError('conflicting internal global function target: ' + name)
+            internal_global_targets[name] = value
     for name,address in definitions.items():
         if name in all_bindings and all_bindings[name]!=address:
             raise ValueError('external binding differs from verified global definition: '+name)
