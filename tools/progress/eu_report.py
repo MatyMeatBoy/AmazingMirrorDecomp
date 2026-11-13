@@ -172,6 +172,9 @@ def treemap(report, names=False):
     title = 'AmazingMirrorDecomp | Europe B8KP | '+('mapped function names' if names else 'verified compiled C')
     lines = [f"{report['credited_c_bytes']:,} / {report['code_bytes']:,} C bytes ({report['c_percent']:.3f}%) | ROM rebuild: "+('verified locally' if report['rom_match_verified'] else 'unverified'),
              f"Mapped C function spans: {report['verified_c_function_spans']:,}; existing names: {report['existing_names_in_c_spans']:,}. Full function total unknown."]
+    inventory=report.get('function_inventory',{})
+    if inventory.get('available'):
+        lines[1]=f"Main-source functions: {inventory['all']['total']:,} | Game: {inventory['game']['total']:,} | SDK: {inventory['sdk']['total']:,} | Startup: {inventory['startup']['total']:,}"
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc" font-family="Segoe UI,Helvetica,Arial,sans-serif"><title id="title">{escape(title)}</title><desc id="desc">European code byte spans. Pending raw code earns no C or function-name credit.</desc><rect width="1000" height="680" fill="{render.BG}"/>',f'<text x="14" y="27" fill="{render.FG}" font-size="17">{escape(title)}</text>']
     parts += [f'<text x="14" y="{49+20*i}" fill="{render.FG}" font-size="12">{escape(line)}</text>' for i,line in enumerate(lines)]
     for cell,x,y,w,h in render.squarify([(c['bytes'],c) for c in cells(report)], 8, 84, 984, 506):
@@ -187,6 +190,7 @@ def treemap(report, names=False):
 
 def markdown(report):
     language_note = 'All original multilingual bytes, including Spanish, are preserved by a verified full-ROM rebuild.' if report['rom_match_verified'] else 'Current source evidence does not establish a verified multilingual ROM rebuild.'
+    from function_inventory import markdown as function_markdown
     return '\n'.join(['# AmazingMirrorDecomp Europe (B8KP)', '',
         f"Verified C: **{report['c_percent']:.3f}%** ({report['credited_c_bytes']:,} / {report['code_bytes']:,} executable bytes).", '',
         'ROM rebuild: **'+('verified locally against the owned European ROM' if report['rom_match_verified'] else 'unverified; no C credit')+'**.',
@@ -195,7 +199,7 @@ def markdown(report):
         language_note+' Language-specific gameplay testing is separate.', '',
         'Cartridge header: 188 excluded bytes. Data-format recovery is not measured. USA source metrics are a separate reference.', '',
         f"Verified source-backed local data: {report['source_backed_data_bytes']:,} unique bytes. C initializers and included assets remain distinct from audited semantic formats.", '',
-        report['verification_scope'], '', *report['verification_issues'], '']).rstrip()+'\n'
+        report['verification_scope'], '', function_markdown(report.get('function_inventory',{})), '', *report['verification_issues'], '']).rstrip()+'\n'
 
 
 def write(report, out):
@@ -203,12 +207,26 @@ def write(report, out):
     color = render.GREEN if report['rom_match_verified'] else render.GREY
     language_note = 'Original English, French, German, Spanish and Italian bytes preserved by verified rebuild.' if report['rom_match_verified'] else 'Current receipt unverified; multilingual byte preservation not established.'
     data = f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="185" role="img" aria-label="European multilingual data; identification unmeasured"><rect width="1000" height="185" fill="{render.BG}"/><g fill="{render.FG}" font-family="Segoe UI,Helvetica,Arial,sans-serif"><text x="16" y="30" font-size="18">Europe B8KP | multilingual data</text><text x="16" y="64">Asset region: {report["preserved_asset_region_bytes"]:,} bytes. Format-identification progress: not measured.</text><text x="16" y="96">Verified local source-backed data: {report["source_backed_data_bytes"]:,} unique bytes (C initializers / included assets).</text><text x="16" y="128">{language_note}</text><text x="16" y="160">Source-backed bytes and preservation do not automatically identify semantic formats.</text></g></svg>'
-    outputs = {'progress.json':json.dumps(report,indent=2)+'\n', 'progress.md':markdown(report),
+    public_report=dict(report)
+    if 'function_inventory' in public_report:
+        public_report['function_inventory']={k:v for k,v in report['function_inventory'].items() if k!='functions'}
+        if 'additional_inventory' in public_report['function_inventory']:
+            public_report['function_inventory']['additional_inventory']={k:v for k,v in report['function_inventory']['additional_inventory'].items() if k!='functions'}
+    outputs = {'progress.json':json.dumps(public_report,indent=2)+'\n', 'progress.md':markdown(report),
                'treemap.svg':treemap(report), 'names_treemap.svg':treemap(report,True), 'data.svg':data,
                'badge_decompiled.svg':render.badge_svg('EU verified C',f"{report['c_percent']:.3f}%",color),
                'badge_rom.svg':render.badge_svg('EU ROM','verified locally' if report['rom_match_verified'] else 'unverified',color),
                'badge_names.svg':render.badge_svg('EU mapped C names',str(report['existing_names_in_c_spans']),color),
                'badge_data.svg':render.badge_svg('EU source-backed data',f"{report['source_backed_data_bytes']:,} bytes" if report['rom_match_verified'] else 'unverified',color)}
+    from function_inventory import svg as function_svg, treemap as function_treemap
+    inventory=report.get('function_inventory',{'available':False})
+    outputs.update({'functions.json':json.dumps(inventory,indent=2)+'\n',
+                    'functions.svg':function_svg(inventory),'functions_treemap.svg':function_treemap(inventory)})
+    if inventory.get('available'):
+        outputs['badge_functions.svg']=render.badge_svg('catalogued functions',f"{inventory.get('known_source_function_instances',inventory['all']['total']):,}",render.GREEN)
+        outputs['badge_names.svg']=render.badge_svg('existing main-source names',f"{inventory['all']['existing_names']:,}/{inventory['all']['total']:,}",render.GREEN)
+    else:
+        outputs['badge_functions.svg']=render.badge_svg('main-source functions','unavailable',render.GREY)
     for name,text in outputs.items():
         (out/name).write_text(text,encoding='utf-8',newline='\n')
 
@@ -221,6 +239,10 @@ def main():
     args=p.parse_args()
     receipt=json.loads(args.receipt.read_text()) if args.receipt.is_file() else {}
     result=assess(receipt,ROOT)
+    from function_inventory import load as function_inventory
+    result['function_inventory']=function_inventory(ROOT,result)
+    result['catalogued_function_instances']=result['function_inventory'].get('known_source_function_instances')
+    result['main_source_functions']=result['function_inventory'].get('all',{}).get('total')
     if args.record:
         if not result['rom_match_verified']:
             raise ValueError('Cannot record an unverified receipt')

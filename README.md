@@ -8,7 +8,22 @@ This repository is MatyMeatBoy's AmazingMirrorDecomp research and progress base,
 
 ![Compiled C in measured main-object text](docs/progress/badge_decompiled.svg) ![ROM verification](docs/progress/badge_rom.svg) ![Existing names](docs/progress/badge_names.svg) ![Data recovery](docs/progress/badge_data.svg)
 
-![Compiled main-object text inventory](docs/progress/treemap.svg)
+![Total catalogued function instances](docs/progress/badge_functions.svg)
+
+![Function totals by game, SDK and startup](docs/progress/functions.svg)
+
+![Function inventory with C drafts](docs/progress/functions_treemap.svg)
+
+Each cell is one inventoried source function. Green means verified European C; yellow means existing C awaiting European verification or a readable C draft; grey means pending or intentionally retained assembly. Cell areas use source-object sizes, not European positions or regional sizes. Yellow receives no verified C credit. See the [full function inventory](docs/progress/functions.json) and [category/name tables](docs/progress/progress.md).
+
+The visible total also includes separately compiled functions from linker-selected libc/libgcc members and five auxiliary programs. Library copies in different programs count separately; aliases do not. These additional objects have no European matching credit. The [recovered terrain draft](docs/research/drafts/README.md) and existing alternate C bodies are compiled before receiving yellow draft status; stale or failed drafts return to pending ASM.
+
+<details>
+<summary>European byte coverage and exact ROM evidence</summary>
+
+![Verified European executable bytes](docs/progress/treemap.svg)
+
+</details>
 
 <details>
 <summary>Existing function names</summary>
@@ -24,7 +39,7 @@ This repository is MatyMeatBoy's AmazingMirrorDecomp research and progress base,
 
 </details>
 
-The [European report](docs/progress/progress.md) counts only source-compiled C spans verified against the owned EU ROM. Every rebuilt byte, including pending raw code and multilingual data, must match that original. The executable boundary is independently established at `0x15C714`; the 188-byte cartridge header is excluded. Pending raw code earns no C credit. Verified source-backed local data is reported separately and deduplicated by physical range; it includes C initializers and asset inclusions and does not establish semantic format recovery. The complete European function count and data-format recovery percentage are not measured.
+The [European report](docs/progress/progress.md) counts only source-compiled C spans verified against the owned EU ROM. Every rebuilt byte, including pending raw code and multilingual data, must match that original. The executable boundary is independently established at `0x15C714`; the 188-byte cartridge header is excluded. Pending raw code earns no C credit. Verified source-backed local data is reported separately and deduplicated by physical range; it includes C initializers and asset inclusions and does not establish semantic format recovery. The main-source function total is partitioned into game/engine, SDK/libraries and startup. Compiler archives and auxiliary multiboot programs are counted in separate rows; the complete European ROM function count and data-format recovery percentage are not measured.
 
 Existing names in verified C spans are shown separately and do not establish semantic correctness. Address-derived source identifiers retain the original project's names; actual European addresses come from the regional span/binding evidence. Source assets, naming proposals and readable drafts do not automatically increase matching C coverage.
 

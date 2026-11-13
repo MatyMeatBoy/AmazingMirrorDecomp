@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc" font-family="Segoe UI,Helvetica,Arial,sans-serif"><title id="title">AmazingMirrorDecomp | Europe B8KP | verified compiled C</title><desc id="desc">European code byte spans. Pending raw code earns no C or function-name credit.</desc><rect width="1000" height="680" fill="#0d1117"/>
 <text x="14" y="27" fill="#e6edf3" font-size="17">AmazingMirrorDecomp | Europe B8KP | verified compiled C</text>
 <text x="14" y="49" fill="#e6edf3" font-size="12">1,347,220 / 1,427,032 C bytes (94.407%) | ROM rebuild: verified locally</text>
-<text x="14" y="69" fill="#e6edf3" font-size="12">Mapped C function spans: 5,442; existing names: 642. Full function total unknown.</text>
+<text x="14" y="69" fill="#e6edf3" font-size="12">Main-source functions: 5,783 | Game: 5,638 | SDK: 143 | Startup: 2</text>
 <rect x="8.00" y="84.00" width="42.17" height="89.35" fill="#484f58"><title> :: Uncredited code region | 0x08159C28 | 10988 bytes</title></rect>
 <rect x="8.00" y="173.85" width="42.17" height="56.12" fill="#484f58"><title> :: Uncredited code region | 0x0813EF88 | 6924 bytes</title></rect>
 <rect x="8.00" y="230.46" width="42.17" height="40.52" fill="#484f58"><title> :: Uncredited code region | 0x08149DCC | 5016 bytes</title></rect>

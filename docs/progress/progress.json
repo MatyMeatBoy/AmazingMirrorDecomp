@@ -54572,5 +54572,131 @@
     "sha256": "61dfa635a9656485207e370bd9673e7101a0081680933c26d3657f20110bbc90",
     "sizes": "ELF STT_FUNC sizes; zero sizes inferred to next function or section end; gaps unattributed"
   },
-  "source_manifest_sha256": "9f3b02e883fe3ed088f4e9ad9974ab45de7dc6503f17027633d5ccf3f0e556b1"
+  "source_manifest_sha256": "9f3b02e883fe3ed088f4e9ad9974ab45de7dc6503f17027633d5ccf3f0e556b1",
+  "function_inventory": {
+    "available": true,
+    "scope": "Main-source inventory; not the complete European ROM function total.",
+    "excluded": [
+      "Compiler archives (libc/libgcc)",
+      "Auxiliary multiboot programs"
+    ],
+    "draft_scope": "Readable alternate C definitions; compilation and matching are separate checks.",
+    "naming_scope": "Existing descriptive identifiers; semantic correctness not independently audited.",
+    "sdk_sources": [
+      "asm/libagbsyscall.s",
+      "asm/m4a_asm.s",
+      "asm/multi_sio_asm.s",
+      "src/agb_sram.c",
+      "src/m4a.c",
+      "src/multi_boot.c",
+      "src/multi_sio.c",
+      "src/sio32_multi_load.c"
+    ],
+    "game": {
+      "verified_c": 5384,
+      "c_pending_eu": 249,
+      "drafts": 5,
+      "pending_asm": 0,
+      "original_asm": 0,
+      "total": 5638,
+      "existing_names": 627,
+      "unnamed": 5011
+    },
+    "sdk": {
+      "verified_c": 58,
+      "c_pending_eu": 23,
+      "drafts": 0,
+      "pending_asm": 0,
+      "original_asm": 62,
+      "total": 143,
+      "existing_names": 132,
+      "unnamed": 11
+    },
+    "startup": {
+      "verified_c": 0,
+      "c_pending_eu": 0,
+      "drafts": 0,
+      "pending_asm": 0,
+      "original_asm": 2,
+      "total": 2,
+      "existing_names": 2,
+      "unnamed": 0
+    },
+    "all": {
+      "verified_c": 5442,
+      "c_pending_eu": 272,
+      "drafts": 5,
+      "pending_asm": 0,
+      "original_asm": 64,
+      "total": 5783,
+      "existing_names": 761,
+      "unnamed": 5022
+    },
+    "draft_issues": [],
+    "additional_inventory": {
+      "available": true,
+      "scope": "Compiled source function instances in separate programs; no European matching credit.",
+      "groups": [
+        {
+          "program": "Principal: libc/libgcc",
+          "functions": 76,
+          "c_available": 56,
+          "assembly": 20,
+          "existing_names": 76,
+          "unnamed": 0
+        },
+        {
+          "program": "multi_boot/subgame_loaders",
+          "functions": 1,
+          "c_available": 0,
+          "assembly": 1,
+          "existing_names": 1,
+          "unnamed": 0
+        },
+        {
+          "program": "multi_boot/subgame_loaders/payload",
+          "functions": 47,
+          "c_available": 0,
+          "assembly": 47,
+          "existing_names": 32,
+          "unnamed": 15
+        },
+        {
+          "program": "multi_boot/unk_8D94B9C",
+          "functions": 344,
+          "c_available": 1,
+          "assembly": 343,
+          "existing_names": 128,
+          "unnamed": 216
+        },
+        {
+          "program": "multi_boot/unk_8E1FE28",
+          "functions": 345,
+          "c_available": 1,
+          "assembly": 344,
+          "existing_names": 127,
+          "unnamed": 218
+        },
+        {
+          "program": "multi_boot/unk_8E8490C",
+          "functions": 356,
+          "c_available": 1,
+          "assembly": 355,
+          "existing_names": 129,
+          "unnamed": 227
+        }
+      ],
+      "totals": {
+        "program": "Total adicional",
+        "functions": 1169,
+        "c_available": 59,
+        "assembly": 1110,
+        "existing_names": 493,
+        "unnamed": 676
+      }
+    },
+    "known_source_function_instances": 6952
+  },
+  "catalogued_function_instances": 6952,
+  "main_source_functions": 5783
 }
