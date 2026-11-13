@@ -636,7 +636,12 @@ static void sub_0801A618(struct Multi_08019F28 *r5)
         if (r5->unkA9 < r3)
             r5->callback = sub_0801A6BC;
         else
+        {
+#ifdef REGION_EU
+            gDispCnt &= ~DISPCNT_OBJ_ON;
+#endif
             r5->callback = sub_0801A8E8;
+        }
     }
     if (gMultiSioStatusFlags & MULTI_SIO_LD_ENABLE)
         r5->loadRequest = 1;
