@@ -26,7 +26,7 @@ def source_digest(data,mode):
 def provenance(root):
     tracked=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root).decode().split('\0')
     prefixes=('src/','include/','asm/','constants/','graphics/','tools/preproc/','tools/gbagfx/')
-    paths={name for name in tracked if name and (name.startswith(prefixes) or name in {'Makefile','GNUmakefile','make_tools.mk','graphics_file_rules.mk','audio_rules.mk'})}
+    paths={name for name in tracked if name and (name.startswith(prefixes) or name in {'Makefile','GNUmakefile','linker.ld','make_tools.mk','graphics_file_rules.mk','audio_rules.mk'})}
     paths.update('tools/progress/'+name+'.py' for name in ('eu_match','eu_build','metadata_build'))
     hashes,modes={},{}
     for name in sorted(paths):

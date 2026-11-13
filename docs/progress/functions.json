@@ -15922,7 +15922,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "6abf05a1923065b65d96e621efd1fe2ee186c6884819984a0993dcbe03ccbb26",
+        "object_sha256": "3c1433b559ef18027f40efc50c733b03a0355cf24b30b3a15dd664d733595d52",
         "c_functions": [
           "sub_0802E57C",
           "sub_0802E6C4",
@@ -42354,9 +42354,11 @@
         "InputRecorderResetRecordHead"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 12
+      "source_object_bytes": 12,
+      "eu_start": 1411800,
+      "eu_bytes": 12
     },
     {
       "source": "src/input_recorder.c",
@@ -42365,9 +42367,11 @@
         "InputRecorderResetPlaybackHead"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 12
+      "source_object_bytes": 12,
+      "eu_start": 1411812,
+      "eu_bytes": 12
     },
     {
       "source": "src/input_recorder.c",
@@ -42376,9 +42380,11 @@
         "InputRecorderLoadTape"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 84
+      "source_object_bytes": 84,
+      "eu_start": 1411824,
+      "eu_bytes": 84
     },
     {
       "source": "src/input_recorder.c",
@@ -42387,9 +42393,11 @@
         "InputRecorderRead"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 48
+      "source_object_bytes": 48,
+      "eu_start": 1411908,
+      "eu_bytes": 48
     },
     {
       "source": "src/input_recorder.c",
@@ -42398,9 +42406,11 @@
         "InputRecorderWrite"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 48
+      "source_object_bytes": 48,
+      "eu_start": 1411956,
+      "eu_bytes": 48
     },
     {
       "source": "src/input_recorder.c",
@@ -42409,9 +42419,11 @@
         "Task_InputRecorder"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1412004,
+      "eu_bytes": 2
     },
     {
       "source": "src/input_recorder.c",
@@ -42420,9 +42432,11 @@
         "InputRecorderEject"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 32
+      "source_object_bytes": 32,
+      "eu_start": 1412008,
+      "eu_bytes": 32
     },
     {
       "source": "src/intro.c",
@@ -51906,9 +51920,11 @@
         "nullsub_140"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1378708,
+      "eu_bytes": 2
     },
     {
       "source": "src/m4a.c",
@@ -51943,9 +51959,11 @@
         "m4aSoundInit"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 120
+      "source_object_bytes": 120,
+      "eu_start": 1378772,
+      "eu_bytes": 120
     },
     {
       "source": "src/m4a.c",
@@ -52045,9 +52063,11 @@
         "m4aMPlayContinue"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 10
+      "source_object_bytes": 10,
+      "eu_start": 1379256,
+      "eu_bytes": 10
     },
     {
       "source": "src/m4a.c",
@@ -52056,9 +52076,11 @@
         "m4aMPlayAllContinue"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 44
+      "source_object_bytes": 44,
+      "eu_start": 1379268,
+      "eu_bytes": 44
     },
     {
       "source": "src/m4a.c",
@@ -52119,9 +52141,11 @@
         "MPlayExtender"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 280
+      "source_object_bytes": 280,
+      "eu_start": 1379472,
+      "eu_bytes": 280
     },
     {
       "source": "src/m4a.c",
@@ -52130,9 +52154,11 @@
         "MusicPlayerJumpTableCopy"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 4
+      "source_object_bytes": 4,
+      "eu_start": 1379752,
+      "eu_bytes": 4
     },
     {
       "source": "src/m4a.c",
@@ -52141,9 +52167,11 @@
         "ClearChain"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 20
+      "source_object_bytes": 20,
+      "eu_start": 1379756,
+      "eu_bytes": 20
     },
     {
       "source": "src/m4a.c",
@@ -52152,9 +52180,11 @@
         "Clear64byte"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 20
+      "source_object_bytes": 20,
+      "eu_start": 1379776,
+      "eu_bytes": 20
     },
     {
       "source": "src/m4a.c",
@@ -52163,9 +52193,11 @@
         "SoundInit"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 248
+      "source_object_bytes": 248,
+      "eu_start": 1379796,
+      "eu_bytes": 248
     },
     {
       "source": "src/m4a.c",
@@ -52447,9 +52479,11 @@
         "ply_memacc"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 344
+      "source_object_bytes": 344,
+      "eu_start": 1383500,
+      "eu_bytes": 344
     },
     {
       "source": "src/m4a.c",
@@ -52471,9 +52505,11 @@
         "ply_xxx"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 20
+      "source_object_bytes": 20,
+      "eu_start": 1383876,
+      "eu_bytes": 20
     },
     {
       "source": "src/m4a.c",
@@ -52560,9 +52596,11 @@
         "ply_xiecv"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 12
+      "source_object_bytes": 12,
+      "eu_start": 1384068,
+      "eu_bytes": 12
     },
     {
       "source": "src/m4a.c",
@@ -52571,9 +52609,11 @@
         "ply_xiecl"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 12
+      "source_object_bytes": 12,
+      "eu_start": 1384080,
+      "eu_bytes": 12
     },
     {
       "source": "src/m4a.c",
@@ -52608,9 +52648,11 @@
         "nullsub_141"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 2
+      "source_object_bytes": 2,
+      "eu_start": 1384132,
+      "eu_bytes": 2
     },
     {
       "source": "src/main.c",
@@ -57766,9 +57808,11 @@
         "MultiSioInit"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 248
+      "source_object_bytes": 248,
+      "eu_start": 1407820,
+      "eu_bytes": 248
     },
     {
       "source": "src/multi_sio.c",
@@ -57777,9 +57821,11 @@
         "MultiSioMain"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 346
+      "source_object_bytes": 346,
+      "eu_start": 1408068,
+      "eu_bytes": 346
     },
     {
       "source": "src/multi_sio.c",
@@ -57788,9 +57834,11 @@
         "MultiSioSendDataSet"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 208
+      "source_object_bytes": 208,
+      "eu_start": 1408416,
+      "eu_bytes": 208
     },
     {
       "source": "src/multi_sio.c",
@@ -57799,9 +57847,11 @@
         "MultiSioRecvDataCheck"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 362
+      "source_object_bytes": 362,
+      "eu_start": 1408624,
+      "eu_bytes": 362
     },
     {
       "source": "src/multi_sio.c",
@@ -57810,9 +57860,11 @@
         "MultiSioStart"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 28
+      "source_object_bytes": 28,
+      "eu_start": 1408988,
+      "eu_bytes": 28
     },
     {
       "source": "src/multi_sio.c",
@@ -57821,9 +57873,11 @@
         "MultiSioStop"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 80
+      "source_object_bytes": 80,
+      "eu_start": 1409016,
+      "eu_bytes": 80
     },
     {
       "source": "src/multi_sio_util.c",
@@ -64301,7 +64355,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
+        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -64365,7 +64419,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
+        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -64403,7 +64457,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "8f6d2af9fbf4192a771c69946620bc2175aee4dba0375ba0404c0f7eda084f6c",
+        "object_sha256": "b996b9d93893756a2f8484a3d5324f2ab96728d2a4432a316ec53d1b29136bdb",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -64536,9 +64590,11 @@
         "Sio32MultiLoadMain"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 484
+      "source_object_bytes": 484,
+      "eu_start": 1410960,
+      "eu_bytes": 484
     },
     {
       "source": "src/sio32_multi_load.c",
@@ -64547,9 +64603,11 @@
         "Sio32MultiLoadIntr"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 200
+      "source_object_bytes": 200,
+      "eu_start": 1411444,
+      "eu_bytes": 200
     },
     {
       "source": "src/sio32_multi_load.c",
@@ -64558,9 +64616,11 @@
         "Sio32MultiLoadInit"
       ],
       "domain": "sdk",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": true,
-      "source_object_bytes": 156
+      "source_object_bytes": 156,
+      "eu_start": 1411644,
+      "eu_bytes": 156
     },
     {
       "source": "src/sir_kibble.c",
@@ -74682,7 +74742,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "0c056889e8ad82be3f5363bdc2a79ecdf73d3ddd76819a00a3aa1891bd7f0237",
+        "object_sha256": "13aff1afbf2ecfad2db544f9acfa6972e13aec5e602324c49582c63c60d66f89",
         "c_functions": [
           "sub_0800F044"
         ],
@@ -74691,8 +74751,8 @@
     }
   ],
   "game": {
-    "verified_c": 5384,
-    "c_pending_eu": 249,
+    "verified_c": 5391,
+    "c_pending_eu": 242,
     "drafts": 5,
     "pending_asm": 0,
     "original_asm": 0,
@@ -74701,8 +74761,8 @@
     "unnamed": 5011
   },
   "sdk": {
-    "verified_c": 58,
-    "c_pending_eu": 23,
+    "verified_c": 81,
+    "c_pending_eu": 0,
     "drafts": 0,
     "pending_asm": 0,
     "original_asm": 62,
@@ -74721,8 +74781,8 @@
     "unnamed": 0
   },
   "all": {
-    "verified_c": 5442,
-    "c_pending_eu": 272,
+    "verified_c": 5472,
+    "c_pending_eu": 242,
     "drafts": 5,
     "pending_asm": 0,
     "original_asm": 64,
