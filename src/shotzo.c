@@ -308,12 +308,13 @@ NAKED void sub_0811AB74(struct Object *shotzo) {
 #else
 void sub_0811AB74(struct Object *shotzo)
 {
-    s32 dx, dy;
+    s16 dx, dy;
 
     shotzo->kirby3 = FindTargetKirby(&shotzo->base);
-    dx = (shotzo->kirby3->base.x - shotzo->base.x) << 8;
-    dy = (shotzo->kirby3->base.y - shotzo->base.y) << 8;
-    switch (ArcTan2(dx >> 16, dy >> 16) >> 12)
+    // ArcTan2 consumes signed pixel deltas after the coordinate difference wraps to a word.
+    dx = (s16)(((u32)shotzo->kirby3->base.x - (u32)shotzo->base.x) >> 8);
+    dy = (s16)(((u32)shotzo->kirby3->base.y - (u32)shotzo->base.y) >> 8);
+    switch (ArcTan2(dx, dy) >> 12)
     {
     case 7:
     case 8:

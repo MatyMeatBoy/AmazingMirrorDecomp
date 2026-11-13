@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "status": "source_layout_audit_not_complete_c_credit",
+  "allocation": {
+    "state_size": 244,
+    "region_start": 28,
+    "region_size": 32,
+    "next_field": 60,
+    "kirby_pointer": 64,
+    "initializer_rom_entry": "0x0800ECD4",
+    "initializer_complete_text_unique_match_size": 344,
+    "index_stride_instruction_address": "0x0800ECEE",
+    "index_stride": 244
+  },
+  "named_sources_audited": [
+    "src/code_0800ECAC.c",
+    "src/code_0800ECAC_2.c",
+    "src/code_08025650.c",
+    "src/code_0802E16C.c",
+    "src/kirby.c"
+  ],
+  "raw_named_writer": "asm/sub_0800F044.s",
+  "read_accesses": [
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2819,
+      "function": "sub_08014B9C",
+      "legacy_member": "unk26",
+      "index_expression": "3",
+      "sample_index": 13,
+      "state_offset": "0x29"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2821,
+      "function": "sub_08014B9C",
+      "legacy_member": "unk26",
+      "index_expression": "1",
+      "sample_index": 11,
+      "state_offset": "0x27"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2823,
+      "function": "sub_08014B9C",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2825,
+      "function": "sub_08014B9C",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2825,
+      "function": "sub_08014B9C",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2864,
+      "function": "sub_08014DA4",
+      "legacy_member": "unk26",
+      "index_expression": "3",
+      "sample_index": 13,
+      "state_offset": "0x29"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2866,
+      "function": "sub_08014DA4",
+      "legacy_member": "unk26",
+      "index_expression": "1",
+      "sample_index": 11,
+      "state_offset": "0x27"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2868,
+      "function": "sub_08014DA4",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2870,
+      "function": "sub_08014DA4",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2910,
+      "function": "sub_08014FA0",
+      "legacy_member": "unk26",
+      "index_expression": "3",
+      "sample_index": 13,
+      "state_offset": "0x29"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2912,
+      "function": "sub_08014FA0",
+      "legacy_member": "unk26",
+      "index_expression": "1",
+      "sample_index": 11,
+      "state_offset": "0x27"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2914,
+      "function": "sub_08014FA0",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 2916,
+      "function": "sub_08014FA0",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3025,
+      "function": "sub_080152B0",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3025,
+      "function": "sub_080152B0",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3025,
+      "function": "sub_080152B0",
+      "legacy_member": "unk26",
+      "index_expression": "2",
+      "sample_index": 12,
+      "state_offset": "0x28"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3098,
+      "function": "sub_080157B0",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3108,
+      "function": "sub_080157B0",
+      "legacy_member": "unk2B",
+      "index_expression": "r1",
+      "sample_index": null,
+      "state_offset": null
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3108,
+      "function": "sub_080157B0",
+      "legacy_member": "unk26",
+      "index_expression": "a + r1",
+      "sample_index": null,
+      "state_offset": null
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3110,
+      "function": "sub_080157B0",
+      "legacy_member": "unk26",
+      "index_expression": "r1",
+      "sample_index": null,
+      "state_offset": null
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3205,
+      "function": "sub_08015AF0",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3205,
+      "function": "sub_08015AF0",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3369,
+      "function": "sub_08016288",
+      "legacy_member": "unk1C",
+      "index_expression": "2",
+      "sample_index": 2,
+      "state_offset": "0x1e"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3478,
+      "function": "sub_08016428",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3478,
+      "function": "sub_08016428",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3578,
+      "function": "sub_0801694C",
+      "legacy_member": "unk26",
+      "index_expression": "1",
+      "sample_index": 11,
+      "state_offset": "0x27"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3579,
+      "function": "sub_0801694C",
+      "legacy_member": "unk26",
+      "index_expression": "3",
+      "sample_index": 13,
+      "state_offset": "0x29"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3583,
+      "function": "sub_0801694C",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3587,
+      "function": "sub_0801694C",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3602,
+      "function": "sub_0801694C",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3603,
+      "function": "sub_0801694C",
+      "legacy_member": "unk2B",
+      "index_expression": "2",
+      "sample_index": 17,
+      "state_offset": "0x2d"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3607,
+      "function": "sub_0801694C",
+      "legacy_member": "unk26",
+      "index_expression": "1",
+      "sample_index": 11,
+      "state_offset": "0x27"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3611,
+      "function": "sub_0801694C",
+      "legacy_member": "unk26",
+      "index_expression": "3",
+      "sample_index": 13,
+      "state_offset": "0x29"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3650,
+      "function": "sub_08016C24",
+      "legacy_member": "unk2B",
+      "index_expression": "7",
+      "sample_index": 22,
+      "state_offset": "0x32"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 3706,
+      "function": "sub_08016EF0",
+      "legacy_member": "unk26",
+      "index_expression": "2",
+      "sample_index": 12,
+      "state_offset": "0x28"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 4080,
+      "function": "sub_08017950",
+      "legacy_member": "unk1C",
+      "index_expression": "2",
+      "sample_index": 2,
+      "state_offset": "0x1e"
+    },
+    {
+      "source": "src/code_0800ECAC_2.c",
+      "line": 4693,
+      "function": "sub_080189DC",
+      "legacy_member": "unk1C",
+      "index_expression": "7",
+      "sample_index": 7,
+      "state_offset": "0x23"
+    }
+  ],
+  "sample_coordinate_evidence": [
+    {
+      "sample_index": 2,
+      "state_offset": "0x1e",
+      "relative_tile_query_xy": [
+        0,
+        -2
+      ]
+    },
+    {
+      "sample_index": 6,
+      "state_offset": "0x22",
+      "relative_tile_query_xy": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "sample_index": 7,
+      "state_offset": "0x23",
+      "relative_tile_query_xy": [
+        0,
+        -1
+      ]
+    },
+    {
+      "sample_index": 8,
+      "state_offset": "0x24",
+      "relative_tile_query_xy": [
+        1,
+        -1
+      ]
+    },
+    {
+      "sample_index": 10,
+      "state_offset": "0x26",
+      "relative_tile_query_xy": [
+        -2,
+        0
+      ]
+    },
+    {
+      "sample_index": 11,
+      "state_offset": "0x27",
+      "relative_tile_query_xy": [
+        -1,
+        0
+      ]
+    },
+    {
+      "sample_index": 12,
+      "state_offset": "0x28",
+      "relative_tile_query_xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "sample_index": 13,
+      "state_offset": "0x29",
+      "relative_tile_query_xy": [
+        1,
+        0
+      ]
+    },
+    {
+      "sample_index": 14,
+      "state_offset": "0x2a",
+      "relative_tile_query_xy": [
+        2,
+        0
+      ]
+    },
+    {
+      "sample_index": 16,
+      "state_offset": "0x2c",
+      "relative_tile_query_xy": [
+        -1,
+        1
+      ]
+    },
+    {
+      "sample_index": 17,
+      "state_offset": "0x2d",
+      "relative_tile_query_xy": [
+        0,
+        1
+      ]
+    },
+    {
+      "sample_index": 18,
+      "state_offset": "0x2e",
+      "relative_tile_query_xy": [
+        1,
+        1
+      ]
+    },
+    {
+      "sample_index": 22,
+      "state_offset": "0x32",
+      "relative_tile_query_xy": [
+        0,
+        2
+      ]
+    }
+  ],
+  "dynamic_reader": {
+    "function": "sub_080157B0",
+    "a_values": [
+      -1,
+      1
+    ],
+    "r1_values": [
+      1,
+      3
+    ],
+    "legacy_unk2B_r1_sample_indices": [
+      16,
+      18
+    ],
+    "legacy_unk26_a_plus_r1_sample_indices": [
+      10,
+      14
+    ],
+    "legacy_unk26_r1_sample_indices": [
+      11,
+      13
+    ]
+  },
+  "not_proven": [
+    "A 5x5 C array declaration",
+    "Meaning of untouched bytes 23..31",
+    "Original author used this exact union type"
+  ],
+  "preserved_reader_compilation": {
+    "text_bytes": 40552,
+    "text_exact": true,
+    "text_relocations_exact": true,
+    "local_rodata_exact": true
+  }
+}

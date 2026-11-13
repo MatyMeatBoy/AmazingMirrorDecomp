@@ -69,26 +69,40 @@ def thumb_target(data, offset, address):
     return address + 4 + thumb_displacement(data, offset)
 
 
+def thumb_cond_displacement(data,offset=0):
+    instruction=struct.unpack_from('<H',data,offset)[0]
+    if instruction&0xF000!=0xD000 or (instruction>>8)&15>=14:
+        raise ValueError('expected ARMv4T conditional Thumb branch')
+    immediate=instruction&255
+    return (immediate if immediate<128 else immediate-256)*2
+
+
 def relocation_mask(text, relocs):
     mask = bytearray(b'\xff' * len(text))
     claimed=set()
     for r in relocs:
         off, kind = r['offset'], r['type']
-        if off < 0 or off + 4 > len(text):
+        width=2 if kind==103 else 4
+        if off < 0 or off + width > len(text):
             raise ValueError('relocation outside text')
         if kind == 40:  # R_ARM_V4BX is a marker; instruction remains fixed.
             continue
-        if kind not in (2, 10):
+        if kind not in (2, 10, 103):
             raise ValueError('unsupported relocation type %s' % kind)
-        sites=set(range(off,off+4))
+        sites=set(range(off,off+width))
         if sites&claimed:
             raise ValueError('overlapping relocations')
         claimed.update(sites)
-        if kind==10 and off%2:
+        if kind in (10,103) and off%2:
             raise ValueError('unaligned Thumb BL relocation')
         if kind == 10 and thumb_displacement(text, off) != -4:
             raise ValueError('nonstandard Thumb BL object addend')
-        mask[off:off+4] = b'\0' * 4
+        if kind==103:
+            if thumb_cond_displacement(text,off)!=-4:
+                raise ValueError('nonstandard conditional Thumb branch addend')
+            mask[off]=0  # The condition/opcode byte remains fixed evidence.
+        else:
+            mask[off:off+4] = b'\0' * 4
     return mask
 
 
@@ -147,6 +161,19 @@ def library_chain_starts(objects,rom,end):
         if cursor<BASE+0xC0:raise ValueError('runtime chain outside executable code')
         result[member]=cursor
     return result
+
+
+def startup_ranges(elf):
+    """Keep the fixed cartridge entry separate from the 188-byte header."""
+    entry=next((s for s in elf.symbols if s['name']=='__start'),None)
+    if not entry or entry['section']!=elf.text_index or entry['value']!=0 or entry['info']&15!=2 or len(elf.text)<=192:
+        raise ValueError('startup lacks the ARM cartridge entry')
+    instruction=struct.unpack_from('<I',elf.text)[0]
+    immediate=instruction&0xFFFFFF
+    if immediate&0x800000:immediate-=0x1000000
+    if instruction&0xFF000000!=0xEA000000 or 8+immediate*4!=192:
+        raise ValueError('startup entry does not branch past the header')
+    return [(0,4),(192,len(elf.text))]
 
 
 def bind_relocations(elf, rom, start):
@@ -306,8 +333,9 @@ def prove_module(elf, rom, start, text_range=None, function_anchors=None,noload_
             raise ValueError('mapped local object outside ROM')
         all_relocs = section_relocations(elf, index)
         for r in all_relocs:
-            if r['offset'] < stop and r['offset'] + 4 > segment_offset:
-                if r['offset'] < segment_offset or r['offset'] + 4 > stop:
+            width=2 if r['type']==103 else 4
+            if r['offset'] < stop and r['offset'] + width > segment_offset:
+                if r['offset'] < segment_offset or r['offset'] + width > stop:
                     raise ValueError('relocation straddles complete object boundary')
         relocs = [dict(r, offset=r['offset'] - segment_offset) for r in all_relocs
                   if segment_offset <= r['offset'] < stop]
@@ -322,6 +350,15 @@ def prove_module(elf, rom, start, text_range=None, function_anchors=None,noload_
             if kind == 2:
                 addend = struct.unpack_from('<I', data, off)[0]
                 value = (struct.unpack('<I', actual)[0] - addend) & 0xFFFFFFFF
+            elif kind==103:
+                # This short branch is supported only within a complete text
+                # input. Its target is derived from ELF, never a guessed binding.
+                if text_range is not None or index!=elf.text_index or symbol['section']!=elf.text_index or symbol.get('info',0)&15!=2 or not symbol['value']&1 or not 0<symbol['value']<len(elf.text):
+                    raise ValueError('conditional Thumb branch requires a local complete text target')
+                addend=thumb_cond_displacement(data,off)
+                value=(address+off+4+thumb_cond_displacement(actual))|1
+                if value!=start+symbol['value']:
+                    raise ValueError('conditional Thumb branch local target differs')
             else:
                 addend = thumb_displacement(data, off)
                 value = thumb_target(actual, 0, address + off) | 1
@@ -417,12 +454,18 @@ def analyze(root, rom_path):
                   library_inputs_sha256=libraries['inputs_sha256'],
                   library_profiles={r['library_member']:{k:r[k] for k in ('source','cpp_flags','compiler_flags','assembler_flags','source_kind')} for r in libraries['sources']})
     for module in modules:
-        if not module['source'].endswith('.c') and not module.get('library_member'):
-            continue
         path = directory/module['object']
         try:
             elf = Elf(path)
             if not elf.text:
+                continue
+            if module['source']=='asm/crt0.s':
+                startup=[]
+                for a,b in startup_ranges(elf):
+                    bindings,relocs,sections,bases=prove_module(elf,rom,BASE,(a,b),noload_sections=noload[module['source']])
+                    symbols=[dict(s,offset=s['offset']-a,eu_address=BASE+s['offset']) for s in module['symbols'] if s['section']=='.text' and a<=s['offset'] and s['offset']+s['size']<=b]
+                    startup.append(dict(source=module['source'],library_member=None,object=module['object'],object_sha256=module['sha256'],eu_start=BASE+a,size=b-a,object_text_offset=a,unit='startup_code',bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
+                report['candidates'].extend(startup)
                 continue
             sites = [library_sites[module['library_member']]] if module.get('library_member') else unique_sites(elf.text,relocation_mask(elf.text,elf.relocs),rom,CODE_END)
             if len(sites) != 1:
