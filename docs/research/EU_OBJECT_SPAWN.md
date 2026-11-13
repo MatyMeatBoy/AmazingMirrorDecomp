@@ -11,10 +11,10 @@ The 219 dispatch entries were already symbolic source. Their order is now shared
 | `gUnk_0835105C` | `0x08352B3C` |32 bytes /16 halfwords| Existing `const u16[]` declaration; verified readers; adjacent table address |
 | `gSpawnFuncTable1` | `0x08352B5C` |876 bytes /219 pointers| Existing dispatch source; verified reader binding; every function definition and complete function span |
 | `gUnk_083513E8` | `0x08352EC8` |112 bytes /56 halfwords| HUD's existing `u16[56]` declaration |
-| `gUnk_08351458` | `0x08352F38` |216 bytes /27×4 halfwords| HUD's existing `u16[27][4]` declaration |
-| `gUnk_08351530` | `0x08353010` |216 bytes /27×4 halfwords| Existing `s16[][4]`; complete extent and next binding |
-| `gUnk_08351608` | `0x083530E8` |32 bytes /4×4 halfwords| Existing `s16[][4]`; Dark Mind readers and next binding |
-| `gUnk_08351628` | `0x08353108` |32 bytes /4×4 halfwords| HUD's existing `u16[4][4]` declaration |
+| `gUnk_08351458` | `0x08352F38` |216 bytes /27Ã—4 halfwords| HUD's existing `u16[27][4]` declaration |
+| `gUnk_08351530` | `0x08353010` |216 bytes /27Ã—4 halfwords| Existing `s16[][4]`; complete extent and next binding |
+| `gUnk_08351608` | `0x083530E8` |32 bytes /4Ã—4 halfwords| Existing `s16[][4]`; Dark Mind readers and next binding |
+| `gUnk_08351628` | `0x08353108` |32 bytes /4Ã—4 halfwords| HUD's existing `u16[4][4]` declaration |
 | `gSpawnFuncTable2` | `0x082DB074` |16 bytes /4 NULL pointers| Existing native C definition and complete verified local extent |
 
 The end of table1 is `0x08352EC8`, independently bound as the next existing symbol `gUnk_083513E8`. Every entry equals its corresponding verified global function definition; all target pointers retain the Thumb bit. There are 159 distinct function symbols, and every entry has a complete verified C function span. No name, callback identity, argument type, or source boundary was inferred from visual behavior.
@@ -25,7 +25,7 @@ The unknown halfword table is read as room identifiers by existing code, but its
 
 The five adjacent arrays retain the declared signedness and four-column layouts where established. Their boundaries are corroborated by existing raw extents and independently bound neighboring symbols. The complete candidate ends at `gUnk_08351648`, EU `0x08353128`. HUD code uses the unsigned arrays in its existing scaled-health calculation, while boss and Dark Mind code read the signed arrays through existing declarations. These observations do not introduce new semantic names.
 
-HUD already documents that object types `0x53–0x5D` can index beyond the 56-entry scale table. The candidate preserves the exact adjacency and following bytes; it adds no bounds check, table enlargement, or behavioral fix.
+HUD already documents that object types `0x53â€“0x5D` can index beyond the 56-entry scale table. The candidate preserves the exact adjacency and following bytes; it adds no bounds check, table enlargement, or behavioral fix.
 
 ## Assembly and comparison
 
