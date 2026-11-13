@@ -75732,7 +75732,7 @@
     "src/shadow_kirby.c": "56589fcf78a3d9beaa7d465349addeb5081c73bd34a649d7bd2bcd6769e4a57b",
     "src/shard.c": "9a3737e6077be0302110e9db7058f5cc9df9c1c10d17ad8853b64af2a51779ea",
     "src/shooty.c": "b3c63c18c66c6c35a1eccbf98b4986a3a6a3ff6e70ee8595d813a043a08969c2",
-    "src/shotzo.c": "423eb4b3a9de7e05424c0814616ccf13590d3e1fe52bc82cc2cfbf20ba55f3a2",
+    "src/shotzo.c": "3bc926a76d1389b9a536a4e14923c82978ae04047bda7753005639e6d4cfdea7",
     "src/sio32_multi_load.c": "def4447c9b1c9cb997271248dfca16ac4ee5e42adf9c626c7f50a696b6d8b92e",
     "src/sir_kibble.c": "872bce61866a37486130c39cfc22d0372e1e97bd63f88d7325437175a6729e2e",
     "src/snooter.c": "c0b3c18ad5d4927540c51bd69cb51008b6f7ec88de4cf7aa6aa08943bd7fc283",
@@ -83960,5 +83960,5 @@
     "tools/progress/library_metadata.py": "lf",
     "tools/progress/metadata_build.py": "lf"
   },
-  "source_manifest_sha256": "13a0297b1bd39912cbb5ad5e7b91e44bf81cae8d2759a9e03a7f8f5045530813"
+  "source_manifest_sha256": "2c90aafa59a490b999b941500b2a7d96333a1c3ca73731a609714afcffb859cf"
 }

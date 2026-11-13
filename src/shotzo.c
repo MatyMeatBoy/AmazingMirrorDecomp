@@ -300,7 +300,7 @@ void sub_0811AA80(struct Object *shotzo)
     }
 }
 
-// sub_0811AB74: functionally equivalent; remaining diff is register allocation.
+// NONMATCHING: shared-tail CFG and register allocation still differ from the EU target.
 #ifndef NONMATCHING
 NAKED void sub_0811AB74(struct Object *shotzo) {
     asm(".include \"asm/nonmatching/sub_0811AB74.inc\"");

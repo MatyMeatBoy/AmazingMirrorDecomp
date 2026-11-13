@@ -11,7 +11,7 @@
   "credited_c_bytes": 1416104,
   "main_text_fallback_bytes": 0,
   "excludes": "Embedded auxiliary programs and non-text ROM data",
-  "source_manifest_sha256": "13a0297b1bd39912cbb5ad5e7b91e44bf81cae8d2759a9e03a7f8f5045530813",
+  "source_manifest_sha256": "2c90aafa59a490b999b941500b2a7d96333a1c3ca73731a609714afcffb859cf",
   "matcher_sha256": "4f1b341f9fa8aca669d91d06e7f76bad6b9e13162e880e25071d2d62c9566565",
   "builder_sha256": "a7071df86a08d91194f117ed1cd68240380ae4e0c653cf51c645a6ce12737af5",
   "modules": [
