@@ -7,6 +7,14 @@
 
 static void sub_08030898(void);
 
+#ifdef REGION_EU
+#define MULTIBOOT_HANDSHAKE_VALUE 0x56FA
+#define MULTIBOOT_STOP_VALUE 0x56FB
+#else
+#define MULTIBOOT_HANDSHAKE_VALUE 0x8F51
+#define MULTIBOOT_STOP_VALUE 0x8F52
+#endif
+
 #define MULTIBOOT_DATA_RECV_CHILD_P (gMultiBootDataRecv.data + 1)
 #define MULTIBOOT_DATA_RECV_PARENT_P (gMultiBootDataRecv.data)
 #define MULTIBOOT_DATA_RECV_PARENT (*MULTIBOOT_DATA_RECV_PARENT_P)
@@ -55,7 +63,7 @@ static void sub_080302EC(void)
 
             if (r0 == 0x7200)
                 r3 |= 1;
-            if (r0 == 0x8F50)
+            if (r0 == (MULTIBOOT_HANDSHAKE_VALUE & 0xFFF0))
                 r3 |= 2;
         }
         gMultiBootStruct.unk25 = r3;
@@ -276,7 +284,7 @@ static void sub_08030898(void)
     if (gUnk_0300050C == 2 || gUnk_0300050C == 0)
     {
         if (REG_SIOCNT & 4)
-            REG_SIOMLT_SEND = 0x8F51;
+            REG_SIOMLT_SEND = MULTIBOOT_HANDSHAKE_VALUE;
         if (MULTIBOOT_DATA_RECV_CHILD_P[0] == 0xFFFF)
             gMultiBootStruct.unk24 = 0;
         for (i = 0; i < MULTIBOOT_NCHILD; ++i)
@@ -336,12 +344,12 @@ static void sub_08030898(void)
             if (gMultiBootStruct.unk0A > 0x1E)
             {
                 gMultiBootStruct.unk02 = 2;
-                REG_SIOMLT_SEND = 0x70AE;
+                REG_SIOMLT_SEND = (u16)~MULTIBOOT_HANDSHAKE_VALUE;
             }
             else
             {
                 gMultiBootStruct.unk02 = 0;
-                REG_SIOMLT_SEND = 0x8F51;
+                REG_SIOMLT_SEND = MULTIBOOT_HANDSHAKE_VALUE;
             }
         }
         gMultiBootStruct.unk01 = 1;
@@ -354,7 +362,7 @@ static void sub_08030898(void)
                 gMultiBootStruct.unk0E |= 1 << i;
             if (!((r8 >> i) & 1))
             {
-                if (gMultiBootDataRecv.data[i] == 0x70AE)
+                if (gMultiBootDataRecv.data[i] == (u16)~MULTIBOOT_HANDSHAKE_VALUE)
                 {
                     if (gMultiBootDataRecv.data[i - 1] == 0xFFFF)
                     {
@@ -368,7 +376,7 @@ static void sub_08030898(void)
                 }
                 else
                 {
-                    if (gMultiBootDataRecv.data[i] == 0x8F51)
+                    if (gMultiBootDataRecv.data[i] == MULTIBOOT_HANDSHAKE_VALUE)
                     {
                         gMultiBootStruct.unk02 = 1;
                         if (gMultiBootDataRecv.data[i - 1] == 0xFFFF)
@@ -392,7 +400,7 @@ void sub_08030B38(void)
     REG_IME = 0;
     gUnk_0300050C = -1;
     REG_SIOCNT &= 0xBFFF;
-    REG_SIOMLT_SEND = 0x8F52;
+    REG_SIOMLT_SEND = MULTIBOOT_STOP_VALUE;
     gIntrTable[7] = gTimer3IntrBkp;
     gIntrTable[0] = gMultiSioIntrBkp;
     gMultiBootStruct.unk02 = 0;
