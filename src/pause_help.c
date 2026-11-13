@@ -38,9 +38,27 @@ struct HelpMenu {
     /* 0xD4 */ enum PauseMenuId nextMenuId;
 }; /* size = 0xD8 */
 
+#ifdef REGION_EU
+const u32 gHelpMenuButtonTilesBGerman[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/german/tileset_B.4bpp");
+const u32 gHelpMenuButtonTilesSelectGerman[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/german/tileset_SELECT.4bpp");
+const u32 gHelpMenuButtonTilesEmptyGerman[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/german/tileset_empty.4bpp");
+const u32 gHelpMenuButtonTilesBFrench[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/french/tileset_B.4bpp");
+const u32 gHelpMenuButtonTilesSelectFrench[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/french/tileset_SELECT.4bpp");
+const u32 gHelpMenuButtonTilesEmptyFrench[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/french/tileset_empty.4bpp");
+const u32 gHelpMenuButtonTilesBItalian[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_B.4bpp");
+const u32 gHelpMenuButtonTilesSelectItalian[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_SELECT.4bpp");
+const u32 gHelpMenuButtonTilesEmptyItalian[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_empty.4bpp");
+const u32 gHelpMenuButtonTilesBSpanish[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_B.4bpp");
+const u32 gHelpMenuButtonTilesSelectSpanish[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_SELECT.4bpp");
+const u32 gHelpMenuButtonTilesEmptySpanish[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_empty.4bpp");
+const u32 gHelpMenuButtonTilesB[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/english/tileset_B.4bpp");
+const u32 gHelpMenuButtonTilesSelect[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/english/tileset_SELECT.4bpp");
+const u32 gHelpMenuButtonTilesEmpty[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/eu/english/tileset_empty.4bpp");
+#else
 const u32 gHelpMenuButtonTilesB[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/tileset_B.4bpp");
 const u32 gHelpMenuButtonTilesSelect[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/tileset_SELECT.4bpp");
 const u32 gHelpMenuButtonTilesEmpty[] = INCBIN_U32("graphics/pause_menu/helpmenu_buttons/tileset_empty.4bpp");
+#endif
 
 static const struct AnimInfo sHelpMenuButtonAnimInfos[NUM_LANGUAGES][5] = {
     [LANGUAGE_JAPANESE] =
@@ -129,7 +147,11 @@ static const u16 sHelpMenuUnkTiledBGsIndices[NUM_LANGUAGES][0x20] = {
 };
 
 extern const u16 gHelpMenuPalette[0x80];  // Remaining 0x80 Bytes afterwards: Zero-filled padding
+#ifdef REGION_EU
+extern const struct HelpMenuButtonTileAddress gHelpMenuButtonTileAddresses[5][NUM_HELPMENU_BUTTONS];
+#else
 extern const struct HelpMenuButtonTileAddress gHelpMenuButtonTileAddresses[NUM_HELPMENU_BUTTONS];
+#endif
 
 static void HelpMenuMain(void);
 static void HelpMenuToNextMenu(void);
@@ -142,7 +164,12 @@ inline struct Task* CreatePauseMenuTask(void) {
 }
 
 inline void HelpMenuButtonLoadTiles(enum HelpMenuButtonTile button) {
+#ifdef REGION_EU
+    u32 languageIndex = gLanguage - LANGUAGE_ENGLISH;
+    CpuCopy32(gHelpMenuButtonTileAddresses[languageIndex][button].tiles, gHelpMenuButtonTileAddresses[languageIndex][button].tilesVram, 0x400);
+#else
     CpuCopy32(gHelpMenuButtonTileAddresses[button].tiles, gHelpMenuButtonTileAddresses[button].tilesVram, 0x400);  // TODO: Replace with sizeof
+#endif
 }
 
 static void PauseMenuFetchInputs(struct PauseMenu* pauseMenu) {

@@ -21,7 +21,7 @@ def compile_source(root,source,nonmatching=False):
         result=subprocess.run([str(a) for a in args],input=data,cwd=root,env=env,capture_output=True)
         if result.returncode:raise ValueError('Draft compilation failed: '+result.stderr.decode(errors='replace'))
         return result.stdout
-    flags=['-E','-iquote','include','-Wno-trigraphs','-DMODERN=0','-I','tools/agbcc/include','-I','tools/agbcc','-nostdinc','-DREVISION=0','-DENGLISH']
+    flags=['-E','-iquote','include','-Wno-trigraphs','-DMODERN=0','-I','tools/agbcc/include','-I','tools/agbcc','-nostdinc','-DREVISION=0','-DENGLISH','-DREGION_EU']
     if nonmatching:flags.append('-DNONMATCHING')
     text=run([gcc,*flags,source])
     text=run([root/('tools/preproc/preproc'+exe),'-i',source],text)

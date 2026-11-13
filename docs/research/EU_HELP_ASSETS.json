@@ -1,0 +1,156 @@
+{
+  "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "converter": "tools/gbagfx/gbagfx.exe",
+  "records": [
+    {
+      "language": "german",
+      "button": "B",
+      "rom_offset": "0x359a7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "2b9c951a7da3b0dfe13db8242b8fc3b87e24fe128d4174f2a85883f724599af7",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/german/tileset_B.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "german",
+      "button": "SELECT",
+      "rom_offset": "0x359e7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "33ef7ac0060ee64311b2d3ebf8876fb46c34cd01deb4243376a865ffd3d5275a",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/german/tileset_SELECT.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "german",
+      "button": "empty",
+      "rom_offset": "0x35a27c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "b8ee889aff4ce5c2f711c7e6937aab3ebb6a4472a8d66d3f5cf3c323632bea16",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/german/tileset_empty.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "french",
+      "button": "B",
+      "rom_offset": "0x35a67c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "cab54973ecc614e9582b0121f783ac4ef2cbb90bd61425f393f4e70b8b2e5b3e",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/french/tileset_B.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "french",
+      "button": "SELECT",
+      "rom_offset": "0x35aa7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "96236fa2e1e3f52eda5591bcd568c55d91b4a88b8756c17351670a8e2ca96c1e",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/french/tileset_SELECT.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "french",
+      "button": "empty",
+      "rom_offset": "0x35ae7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "b8ee889aff4ce5c2f711c7e6937aab3ebb6a4472a8d66d3f5cf3c323632bea16",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/french/tileset_empty.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "italian",
+      "button": "B",
+      "rom_offset": "0x35b27c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "7472d2ff6e31445716f50e6005eeb363397dc5f37ea43c34aec80b6a67782b0a",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_B.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "italian",
+      "button": "SELECT",
+      "rom_offset": "0x35b67c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "659f2c4900b2fd67aa4524b55e10930a5ebf7fd5fb6be5ed24590e0602c3587c",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_SELECT.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "italian",
+      "button": "empty",
+      "rom_offset": "0x35ba7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "b8ee889aff4ce5c2f711c7e6937aab3ebb6a4472a8d66d3f5cf3c323632bea16",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/italian/tileset_empty.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "spanish",
+      "button": "B",
+      "rom_offset": "0x35be7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "86d44d3a2e7c4d4747314d14688ef0891444bee644e913c63c2f2a8e72729fd1",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_B.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "spanish",
+      "button": "SELECT",
+      "rom_offset": "0x35c27c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "9da9e5b2400f0671f596892d8ce6ba55222260732b47ccd3f8c4e01fd99bcd56",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_SELECT.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "spanish",
+      "button": "empty",
+      "rom_offset": "0x35c67c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "b8ee889aff4ce5c2f711c7e6937aab3ebb6a4472a8d66d3f5cf3c323632bea16",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/spanish/tileset_empty.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "english",
+      "button": "B",
+      "rom_offset": "0x35ca7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "60fef1f6ac2857dfc72385f9eebd24e9a009a35072c63ee5a885381695eefb0b",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/english/tileset_B.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "english",
+      "button": "SELECT",
+      "rom_offset": "0x35ce7c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "c086a0468101bb99eed34eb3cfaddcfc5ebfa8b38ead7d67f2b331ec480e1874",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/english/tileset_SELECT.png",
+      "roundtrip_exact": true
+    },
+    {
+      "language": "english",
+      "button": "empty",
+      "rom_offset": "0x35d27c",
+      "size": 1024,
+      "format": "4bpp tiled, 32x64 pixels",
+      "sha256": "b8ee889aff4ce5c2f711c7e6937aab3ebb6a4472a8d66d3f5cf3c323632bea16",
+      "png": "graphics/pause_menu/helpmenu_buttons/eu/english/tileset_empty.png",
+      "roundtrip_exact": true
+    }
+  ]
+}

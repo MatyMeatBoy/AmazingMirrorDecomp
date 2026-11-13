@@ -622,6 +622,9 @@ void sub_08138B44(void) {
         gBgScrollRegs[i][0] = 0;
         gBgScrollRegs[i][1] = 0;
     }
+#ifdef REGION_EU
+    gBgScrollRegs[1][1] = 0x18;
+#endif
     gBldRegs.bldCnt = BLDCNT_TGT1_ALL | BLDCNT_EFFECT_LIGHTEN;
     gBldRegs.bldAlpha = 0;
     gBldRegs.bldY = 0x10;
@@ -3811,6 +3814,10 @@ static inline void LoadBgPaletteWithTransformation2(const u16 *src, u8 offset, u
 }
 
 static void sub_0813FF6C(struct Unk_08138D64 *a1) {
+#ifdef REGION_EU
+    CpuFill16_2(0, (u16 *)VRAM, 0x4000);
+    CpuFill16_2(0x1FF, (u16 *)(VRAM + 0xF800), 0x800);
+#endif
     CpuCopy16(gUnk_082D7850[gUnk_08385C14[gLanguage][0xF]]->palette + 0x90, (u16 *)0x5000120, 0x20);
     {
         const struct TiledBg_082D7850 *ptr;

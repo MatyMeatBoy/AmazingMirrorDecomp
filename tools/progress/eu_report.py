@@ -64,6 +64,8 @@ def assess(receipt, root):
     recipe = receipt.get('compiler_recipe', {})
     if not isinstance(recipe, dict) or recipe.get('default_cflags') != CFLAGS:
         issues.append('Original compiler flags not established')
+    if recipe.get('region')!='eu' or '-DREGION_EU' not in recipe.get('preprocessor_flags','').split():
+        issues.append('European source preprocessing profile not established')
     for key in ('source_manifest_sha256', 'matcher_sha256', 'builder_sha256'):
         if not hash_value(receipt.get(key)):
             issues.append(f'Invalid or missing {key}')

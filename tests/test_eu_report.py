@@ -35,7 +35,7 @@ class EuropeReportTests(unittest.TestCase):
                   'inputs_sha256': hashes, 'source_hash_modes': modes,
                   'compiler': {'commit': self.m.COMPILER_COMMIT, 'sha256': 'a'*64},
                   'compiler_binary_sha256': {'agbcc': 'a'*64, 'old_agbcc': 'b'*64},
-                  'compiler_recipe': {'default_cflags': self.m.CFLAGS},
+                  'compiler_recipe': {'default_cflags': self.m.CFLAGS,'region':'eu','preprocessor_flags':'-DREGION_EU'},
                   'source_manifest_sha256': 'a'*64, 'matcher_sha256': 'b'*64, 'builder_sha256': 'c'*64,
                   'credited_c_bytes': 20,
                   'c_spans': [{'source': 'src/example.c', 'name': 'ExampleFunction', 'start': 256,
@@ -107,6 +107,10 @@ class EuropeReportTests(unittest.TestCase):
             self.assertFalse(self.m.assess(r, self.root)['rom_match_verified'])
         self.r['source_hash_modes']['src/example.c'] = 'unknown'
         self.assertFalse(self.m.assess(self.r, self.root)['rom_match_verified'])
+
+    def test_usa_source_profile_cannot_claim_european_credit(self):
+        self.r['compiler_recipe']['region']='us'
+        self.assertFalse(self.m.assess(self.r,self.root)['rom_match_verified'])
 
 
 if __name__ == '__main__':

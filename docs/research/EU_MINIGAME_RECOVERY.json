@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "baseline": "c7d295b75effd9a3a7d9f3146a13209e5bf6de99",
+  "eu_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "compiler_commit": "59b966ed1b8f371856dcf99f1546c2fe89c678ca",
+  "assets": [
+    {
+      "source": "graphics/crackity_hack/bg/main_tileset_eu.png",
+      "source_sha256": "a33086a37a70850a744d3572176a542abd68f6009aa4c0b1830d8e6ab29ca4be",
+      "eu_address": "0x0836F600",
+      "eu_compressed_size": 29020,
+      "usa_compressed_size": 29396,
+      "compressed_sha256": "e64d3e480450cd41816934facf2cfb748b69cd58a0b3b1b906a9e9f8b53c55e4",
+      "exact_owned_eu_payload": true
+    },
+    {
+      "source": "graphics/crackity_hack/bg/game_ended/tileset_italian_eu.png",
+      "source_sha256": "ce3236403c5d5d9cd02677d2130cc8a2cc0a790d87932039d4d80c934cf695a1",
+      "eu_address": "0x08376DE4",
+      "eu_compressed_size": 1636,
+      "usa_compressed_size": 1632,
+      "compressed_sha256": "dae25d1ffdf38c1eab7a0c93e36f68b56659c703846c8af706313717ea455cfc",
+      "exact_owned_eu_payload": true
+    },
+    {
+      "source": "graphics/wave_ride/bg/game_ended/tileset_italian_eu.png",
+      "source_sha256": "f852212b65e52e5f54cc10d8bd65d51f833e07b11c2d82fb7dbfee0b83d37fa6",
+      "eu_address": "0x0837E99C",
+      "eu_compressed_size": 960,
+      "usa_compressed_size": 960,
+      "compressed_sha256": "58683abe1399808849c47fdab85b70b242743361de832d31f9850d90048e570f",
+      "exact_owned_eu_payload": true
+    },
+    {
+      "source": "graphics/speed_eaters/bg/main_tileset_eu.png",
+      "source_sha256": "3678d298e80d0df675a386b28343d01c4e70d63af47d515582a8258ca6b443ca",
+      "eu_address": "0x083897D0",
+      "eu_compressed_size": 12468,
+      "usa_compressed_size": 12824,
+      "compressed_sha256": "2f11121108124619888c73c5621a5c7cdd85f457dde62599c35af598c7c4751f",
+      "exact_owned_eu_payload": true
+    },
+    {
+      "source": "graphics/speed_eaters/bg/game_ended/tileset_italian_eu.png",
+      "source_sha256": "c0b5b58e66b603346149f073d630811d6ce45edb7426673edbc14a73e8b3940e",
+      "eu_address": "0x0838CD60",
+      "eu_compressed_size": 1208,
+      "usa_compressed_size": 1204,
+      "compressed_sha256": "75693557d83ec075fcb064b81e3ddd695097bc7dcabecd0f20213a11033dfd2f",
+      "exact_owned_eu_payload": true
+    }
+  ],
+  "validation": {
+    "baseline_c_bytes": 1347220,
+    "menu_behavior_c_bytes": 1366546,
+    "with_regional_assets_c_bytes": 1375236,
+    "code_bytes": 1427032,
+    "full_rom_byte_compare": true,
+    "usa_object_sections_and_text_relocations_unchanged": true,
+    "usa_six_rom_checks": "not run; owned USA ROM unavailable",
+    "profile_limitation": "Full gate used a temporary isolated metadata recipe with -DREGION_EU; recipe restored and not committed. Rebuild with official regional profile before publishing integrated progress."
+  }
+}
