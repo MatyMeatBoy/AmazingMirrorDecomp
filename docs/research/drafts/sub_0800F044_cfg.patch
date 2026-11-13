@@ -1,0 +1,11 @@
+--- a/docs/research/drafts/sub_0800F044_defined.c
++++ b/docs/research/drafts/sub_0800F044_defined.c
+@@ -109,7 +109,7 @@
+             r5[3] = 0;
+         }
+     }
+-    q = r5;
++    q = a1->terrain.legacy.unk26;
+     if ((u16)array[0] >= kirbyCellX + 2 || kirbyCellX + 2 >= (u16)array[2])
+         q[4] = 0xFF;
+     else if (a1->terrain.samples[10 + (3)])

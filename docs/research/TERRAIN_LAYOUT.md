@@ -76,3 +76,24 @@ A real inline axis-containment predicate taking `(const s16 *bounds, point)` was
 Two actual repository `struct S16Vec2` values were also tested for the lower/upper corners:3684bytes for the inline-point candidate,3948bytes for the preserved-draft arithmetic. The compiler combines component stores into wider aggregate operations; the reference's halfword-store sequence is lost. These tests use the real existing type, not an invented packed layout.
 
 Compiling the preserved defined draft immediately before the entire adapted40552-byte reader translation unit leaves its emitted3588-byte function unchanged, including first fixed difference0xE. This excludes a simple following-source/late-inline-emission context effect for that candidate, in addition to the earlier preceding-initializer test. All these objects remain ignored scratch artifacts. Matching credit remains zero.
+
+
+## Real CFG: isolated far-right destination decision
+
+`drafts/terrain_cfg.audit.json` preserves graph edges and per-block ordered loads/stores/calls for the reference, defined3588-byte baseline and one-line destination variant. It is diagnostic evidence, not semantic or matching proof. The parser splits on actual branch targets/fallthroughs/returns and retains memory offsets; register spellings alone are normalized. Function extents exclude compiler alignment padding. The complete reference fixed bytes were independently checked against owned EU at0x0800F06C with only actual relocation sites excluded; this check does not prove relocated address bindings.
+
+The baseline has303 reachable blocks, the reference305. The first ordered-effect difference after the central classification switch is reference+0xA6 versus candidate+0xAC: bounds[0] is loaded before cellX in the reference, with a spill atSP+0x2C; the candidate reorders these effects and spills atSP+0x20. The first different branch/edge region is reference+0x290 (EU0x0800F2FC), candidate+0x29C. The reference takes BEQ to the far-right query and has a distinct STRB[4] fallthrough; the candidate takes BNE to a common STRB join. Following the actual edges shows six path-local byte stores in the reference becoming one shared store in the candidate. This is more than a conditional-branch inversion.
+
+The contextual research patch `drafts/sub_0800F044_cfg.patch` changes **only the first** `q = r5` to `q = a1->terrain.legacy.unk26`. The five-byte subobject starts at0x26; every use of this first q is q[4], within its extent. Before the remaining uses, q is reassigned from r5 after r5 has become the complete32-byte samples view. Those later indices6,8,18,16 are within32 bytes. No pointer advances from a five-byte object into another member.
+
+That single decision emits3602bytes, frame0x40, first fixed divergence0xA. It restores305 reachable blocks and a bijective ordered-edge pairing covering all305 reference blocks, including reconvergence after the far-right query. It does not match instructions, stack effects or the ROM. Merely narrowing q's scope while retaining q=r5 produces identical3588-byte code. As a control, changing the last zero-case store from r5[4] to q[4] on the subobject variant reintroduces the shared-store join. Thus different destination views in that zero case affect this compiler's store merging. This is evidence about emitted code, not evidence of the original source spelling.
+
+A second natural refinement gives that first destination its own query-local lifetime/name; it emits3598bytes and preserves the305-block pairing. The missing12 bounding LDRSH remain in both variants, so recovering the far-right join alone does not fix them. Neither variant replaces the independently compile-checked preserved draft. The one-line patch was reapplied to the actual checked-in draft and freshly compiled; its complete text is identical to the experimental3602-byte object.
+
+Reproduce graph extraction on standalone objects at text offset zero:
+
+```text
+python docs/research/drafts/compare_terrain_cfg.py build/metadata/objects/asm/sub_0800F044.o CANDIDATE.o --out build/research/terrain_cfg.json
+```
+
+Use the existing layout-overlay checker/recipe to compile the checked-in draft; the one-line CFG patch requires the same header overlay. The utility reads objects and owned ROM, writes only the requested JSON, and never compiles, links or grants credit. Full instruction streams and both true/fallthrough edges remain in its output for further review. The committed audit keeps ordered memory effects and graph edges without ROM payload.
