@@ -2164,10 +2164,14 @@ static const struct Unk_08361A7C sUnk_08361A7C[] = {
     {0x9d, 0x1, 0x9, 0x1, 0x88, 0x88},   {0xea, 0x1, 0x9, 0x2, 0xe8, 0xd8},
 };
 
+#ifdef REGION_EU
+static const u16 sMapUIPalette[] = INCBIN_U16("graphics/pause_menu/map_ui/eu/ui.gbapal");
+#else
 static const u16 sMapUIPalette[] = {
     RGB(10, 20, 0), RGB_WHITE, RGB_BLACK, RGB(0, 10, 31), RGB(0, 20, 31), RGB(12, 12, 12), RGB(21, 21, 21), RGB_WHITE,
     RGB_WHITE,      RGB_WHITE, RGB_WHITE, RGB_WHITE,      RGB_WHITE,      RGB_WHITE,       RGB_WHITE,       RGB_WHITE,
 };
+#endif
 static const u32 sAreaMapUITilemap[] = INCBIN_U32("graphics/pause_menu/map_ui/areamap_tilemap.bin.lz");
 static const u32 sWorldMapUITilemap[] = INCBIN_U32("graphics/pause_menu/map_ui/worldmap_tilemap.bin.lz");
 static const u32 sMapUITileset[] = INCBIN_U32("graphics/pause_menu/map_ui/tileset.4bpp.lz");

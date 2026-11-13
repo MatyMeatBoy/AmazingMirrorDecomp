@@ -15,3 +15,11 @@ The complete local data references imply two different .rodata bases, 0x08365BC8
 USA compatibility: independent compilation of HEAD original and modified source without REGION_EU produces identical7556-byte .text, full .rodata and text relocation signatures. This is not the six-output USA ROM gate.
 
 Experiments: simply removing inline from AreaMapEnableUI failed (1644-byte constructor with1197fixed differences). Recovering the common regional helper and typed language tables yielded the unique whole-text match. A local languageIndex variable restores the actual load-before-table address order naturally. The temporary metadata CPP recipe remains uncommitted.
+
+## Editable European UI palette
+
+The complete 16-color sMapUIPalette object maps to EU 0x083668D4–0x083668F4. Its first color is 0x02F1; USA starts with 0x028A. All remaining 30 bytes are equal. Consumers copy these 32 bytes into gBgPalette + 0x70 or use the existing transformation loader, establishing the BGR555 palette format and length.
+
+`graphics/pause_menu/map_ui/eu/ui.pal` is an editable JASC palette converted by the existing gbagfx tool from the owned ROM. Conversion back to .gbapal is exactly equal for all 32 bytes, and the complete compiled C palette object also equals that range. The USA initializer remains unchanged under #else. `EU_MAP_PALETTE.json` records the source range, payload hash and roundtrip result. No extracted binary is committed and no color was drawn or invented.
+
+The isolated worktree gate after this palette change passed full 16 MiB comparison and expected SHA1: 1229 verified units, 1356494 credited C bytes (95.05701343768044%) with the older local matcher. This increased credit by232bytes; current production with object-level local-data proof must independently rebuild and measure its larger potential gain.

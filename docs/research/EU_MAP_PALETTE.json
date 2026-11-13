@@ -1,0 +1,15 @@
+{
+  "status": "research_asset_roundtrip_not_production_receipt",
+  "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "rom_offset": "0x3668d4",
+  "size": 32,
+  "format": "16 little-endian BGR555 palette entries",
+  "consumer": "LoadBgPaletteWithTransformation / DmaCopy16 into gBgPalette + 0x70",
+  "first_eu_color": "0x02f1",
+  "first_usa_color": "0x028a",
+  "payload_sha256": "af25e3a8326a74d089a457e439083d760eb0404ede1f4d31d7ab158972d0c791",
+  "editable_source": "graphics/pause_menu/map_ui/eu/ui.pal",
+  "roundtrip_exact": true,
+  "converter": "tools/gbagfx",
+  "conversion": "gbagfx input.gbapal output.pal; gbagfx output.pal roundtrip.gbapal"
+}
