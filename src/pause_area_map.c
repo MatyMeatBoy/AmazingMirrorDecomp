@@ -2564,8 +2564,16 @@ extern const u32 gAreaMapShardTileset[4][0x40];
 extern const u32 gAreaMapMapRoomTileset[0x100];
 extern const u16 gAreaMapRoomIdsAndShards[NUM_AREA_IDS - 1][3];  // Indices per area: 0 - MapRoom, 1 - BossRoom, 2 - Shardnum
 extern const u8 gAreaMapShardTilesetIndicesAndTimers[0x1c];      // Every pair of entries signifies one state and one timer for this state
+#ifdef REGION_EU
+extern const u16 gMapUITilemapIndices[5][NUM_DISABLE_MAP_UI][4];
+#else
 extern const u16 gMapUITilemapIndices[NUM_DISABLE_MAP_UI][4];
+#endif
+#ifdef REGION_EU
+extern const u32* const gAreaMapUIAreaTitleTilesets[5][NUM_AREA_IDS - 2];
+#else
 extern const u32* const gAreaMapUIAreaTitleTilesets[NUM_AREA_IDS - 2];
+#endif
 
 static void AreaMapChooseUI(s32, enum AreaMapVisibility);
 static void AreaMapInit(void);
@@ -2610,7 +2618,19 @@ static void AreaMapMain(void);
         }                                                                                                                                    \
     })
 
+#ifdef REGION_EU
+extern const u32 gEuMapUITilesGerman[];
+extern const u32 gEuMapUITilesFrench[];
+extern const u32 gEuMapUITilesSpanish[];
+extern const u32 gEuMapUITilesItalian[];
+extern const u32 gEuMapUITilesEnglish[];
+static void AreaMapLoadUI(void);
+#endif
+
 inline void AreaMapEnableUI(enum AreaId areaId, enum AreaMapVisibility visibility) {
+#ifdef REGION_EU
+    AreaMapLoadUI();
+#else
     gDispCnt |= DISPCNT_BG1_ON;
     gBgCntRegs[1] = BGCNT_PRIORITY(0) | BGCNT_CHARBASE(2) | BGCNT_16COLOR | BGCNT_SCREENBASE(23) | BGCNT_TXT256x256;
     gBgScrollRegs[1][0] = 0;
@@ -2624,6 +2644,7 @@ inline void AreaMapEnableUI(enum AreaId areaId, enum AreaMapVisibility visibilit
         gMainFlags |= MAIN_FLAG_BG_PALETTE_SYNC_ENABLE;
     }
     LZ77UnCompVram(sMapUITileset, BG_CHAR_ADDR(2) + 0x1000);
+#endif
     AreaMapChooseUI(areaId, visibility);
 }
 
@@ -2656,6 +2677,21 @@ inline void AreaMapToGame(void) {
     }
 }
 
+#ifdef REGION_EU
+static inline void MapDisableUIElements(enum MapDisableUI element) {
+    u32 entryY, entryX;
+    u32 languageIndex = gLanguage - LANGUAGE_ENGLISH;
+    u16* vramAdr;
+
+    for (entryY = gMapUITilemapIndices[languageIndex][element][1]; entryY <= gMapUITilemapIndices[languageIndex][element][3]; entryY++) {
+        for (entryX = gMapUITilemapIndices[languageIndex][element][0], vramAdr = (u16*)BG_SCREEN_ADDR(23) + 0x20 * entryY + entryX;
+             entryX <= gMapUITilemapIndices[languageIndex][element][2]; vramAdr++, vramAdr++, vramAdr--, entryX++) {
+            *vramAdr = 0x7080;  // override tilemap with empty tile
+        }
+    }
+}
+
+#else
 static inline void MapDisableUIElements(enum MapDisableUI element) {
     u32 entryY, entryX;
     u16* vramAdr;
@@ -2667,6 +2703,8 @@ static inline void MapDisableUIElements(enum MapDisableUI element) {
         }
     }
 }
+
+#endif
 
 inline void UNUSED MapDisableUIElementsThunk(enum MapDisableUI element) {
     MapDisableUIElements(element);
@@ -2825,10 +2863,18 @@ static void AreaMapDrawTextLabels(struct AreaMap* areamap) {
 }
 
 static void AreaMapChooseUI(s32 areaId, enum AreaMapVisibility visibility) {
+#ifdef REGION_EU
+    u32 languageIndex;
+#endif
     if (areaId < AREA_RAINBOW_ROUTE) return;
     if (areaId > AREA_CANDY_CONSTELLATION) return;
 
+#ifdef REGION_EU
+    languageIndex = gLanguage - LANGUAGE_ENGLISH;
+    LZ77UnCompVram(gAreaMapUIAreaTitleTilesets[languageIndex][areaId - 1], BG_CHAR_ADDR(2) + 0x2800);
+#else
     LZ77UnCompVram(gAreaMapUIAreaTitleTilesets[areaId - 1], BG_CHAR_ADDR(2) + 0x2800);
+#endif
     LZ77UnCompVram(sAreaMapUITilemap, BG_SCREEN_ADDR(23));
 
     if (visibility != AREAMAP_FOUND_MAP) {
@@ -2845,7 +2891,46 @@ static void AreaMapChooseUI(s32 areaId, enum AreaMapVisibility visibility) {
     }
 }
 
+#ifdef REGION_EU
+static void AreaMapLoadUI(void) {
+    gDispCnt |= DISPCNT_BG1_ON;
+    gBgCntRegs[1] = BGCNT_PRIORITY(0) | BGCNT_CHARBASE(2) | BGCNT_16COLOR | BGCNT_SCREENBASE(23) | BGCNT_TXT256x256;
+    gBgScrollRegs[1][0] = 0;
+    gBgScrollRegs[1][1] = 0;
+
+    if (gMainFlags & MAIN_FLAG_BG_PALETTE_TRANSFORMATION_ENABLE) {
+        LoadBgPaletteWithTransformation(sMapUIPalette, 0x70, ARRAY_COUNT(sMapUIPalette));
+    }
+    else {
+        DmaCopy16(3, sMapUIPalette, gBgPalette + 0x70, sizeof(sMapUIPalette));
+        gMainFlags |= MAIN_FLAG_BG_PALETTE_SYNC_ENABLE;
+    }
+    switch (gLanguage) {
+    case LANGUAGE_GERMAN:
+        LZ77UnCompVram(gEuMapUITilesGerman, BG_CHAR_ADDR(2) + 0x1000);
+        break;
+    case LANGUAGE_FRENCH:
+        LZ77UnCompVram(gEuMapUITilesFrench, BG_CHAR_ADDR(2) + 0x1000);
+        break;
+    case LANGUAGE_SPANISH:
+        LZ77UnCompVram(gEuMapUITilesSpanish, BG_CHAR_ADDR(2) + 0x1000);
+        break;
+    case LANGUAGE_ITALIAN:
+        LZ77UnCompVram(gEuMapUITilesItalian, BG_CHAR_ADDR(2) + 0x1000);
+        break;
+    case LANGUAGE_JAPANESE:
+    case LANGUAGE_ENGLISH:
+    default:
+        LZ77UnCompVram(gEuMapUITilesEnglish, BG_CHAR_ADDR(2) + 0x1000);
+        break;
+    }
+}
+#endif
+
 void WorldMapPauseEnableUI(void) {
+#ifdef REGION_EU
+    AreaMapLoadUI();
+#else
     gDispCnt |= DISPCNT_BG1_ON;
     gBgCntRegs[1] = BGCNT_PRIORITY(0) | BGCNT_CHARBASE(2) | BGCNT_16COLOR | BGCNT_SCREENBASE(23) | BGCNT_TXT256x256;
     gBgScrollRegs[1][0] = 0;
@@ -2859,6 +2944,7 @@ void WorldMapPauseEnableUI(void) {
         gMainFlags |= MAIN_FLAG_BG_PALETTE_SYNC_ENABLE;
     }
     LZ77UnCompVram(sMapUITileset, BG_CHAR_ADDR(2) + 0x1000);
+#endif
     LZ77UnCompVram(sWorldMapUITilemap, BG_SCREEN_ADDR(23));
 
     if (gUnk_0203AD50 != gLocalPlayerId) {
