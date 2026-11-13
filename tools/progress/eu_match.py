@@ -6,6 +6,7 @@ import json
 import pathlib
 import re
 import struct
+from fnmatch import fnmatchcase
 
 EU_SHA1 = '6f478a455383a2a12378f292581dfd7300300700'
 BASE = 0x08000000
@@ -191,7 +192,33 @@ def validate_nobits(elf,index,address):
     return dict(name=elf.names[index],address=address,object_offset=0,size=size,kind='ram_noload')
 
 
-def prove_module(elf, rom, start, text_range=None, function_anchors=None):
+def noload_inputs(linker,object_name):
+    """Only explicit source-object selectors inside a NOLOAD RAM output qualify."""
+    linker=re.sub(r'/\*.*?\*/','',linker,flags=re.S)
+    result={}
+    for block in re.finditer(r'\b\w+\s*\(NOLOAD\)\s*:\s*(?:ALIGN\([^)]*\)\s*)?\{(.*?)\}\s*>\s*(iwram|ewram)\b',linker,re.S):
+        for obj,selectors in re.findall(r'(?<![\w:*])([\w/.-]+\.o)\(([^)]+)\)',block[1]):
+            if obj==object_name:
+                for selector in selectors.split():
+                    if selector in result and result[selector]!=block[2]:raise ValueError('Conflicting NOLOAD ownership')
+                    result[selector]=block[2]
+    return result
+
+
+def validate_noload(elf,index,address,region):
+    section=elf.sections[index]
+    if region not in ('iwram','ewram') or section[1] not in (1,8) or section[2]&3!=3:
+        raise ValueError('NOLOAD input must be allocated writable data')
+    if section[1]==1 and (any(elf.data(section)) or section_relocations(elf,index)):
+        raise ValueError('NOLOAD PROGBITS requires zero initializer and no relocations')
+    result=validate_nobits(elf,index,address)
+    lo,hi={'iwram':(0x03000000,0x03008000),'ewram':(0x02000000,0x02040000)}[region]
+    if not lo<=address or address+section[5]>hi:raise ValueError('NOLOAD input outside declared RAM region')
+    result['linker_region']=region
+    return result
+
+
+def prove_module(elf, rom, start, text_range=None, function_anchors=None,noload_sections=None):
     """Prove whole mapped sections, including every internal data reference."""
     bases = {elf.text_index: start}
     initial=text_range or (0,len(elf.text))
@@ -205,6 +232,10 @@ def prove_module(elf, rom, start, text_range=None, function_anchors=None):
             continue
         processed.add(scope)
         section = elf.sections[index]
+        region=next((region for pattern,region in (noload_sections or {}).items() if fnmatchcase(elf.names[index],pattern)),None)
+        if region:
+            verified[scope]=validate_noload(elf,index,bases[index],region)
+            continue
         if section[1]==8:
             verified[scope]=validate_nobits(elf,index,bases[index])
             continue
@@ -283,6 +314,8 @@ def analyze(root, rom_path):
     validate_manifest(manifest,root)
     rom = pathlib.Path(rom_path).read_bytes()
     validate_rom(rom)
+    linker=(root/'linker.ld').read_text()
+    noload={module['source']:noload_inputs(linker,str(pathlib.PurePosixPath(module['source']).with_suffix('.o'))) for module in manifest['sources']}
     report = dict(schema_version=1, analysis_only=True, rom_match_verified=False, eu_sha1=EU_SHA1, code_end=CODE_END, source_manifest_sha256=digest(manifest_path), candidates=[], rejected=[])
     for module in manifest['sources']:
         if not module['source'].endswith('.c'):
@@ -296,7 +329,7 @@ def analyze(root, rom_path):
             if len(sites) != 1:
                 raise ValueError('absent or ambiguous full module match: '+str(len(sites)))
             start = sites[0]
-            bindings,relocs,sections,bases = prove_module(elf,rom,start)
+            bindings,relocs,sections,bases = prove_module(elf,rom,start,noload_sections=noload[module['source']])
             symbols = [dict(s,eu_address=start+s['offset']) for s in module['symbols'] if s['section']=='.text']
             report['candidates'].append(dict(source=module['source'],object=module['object'],object_sha256=module['sha256'],eu_start=start,size=len(elf.text),bindings=bindings,relocations=relocs,sections=sections,section_bases={str(k):v for k,v in bases.items()},symbols=symbols))
         except ValueError as error:
@@ -342,7 +375,7 @@ def analyze(root, rom_path):
                     continue
                 if any(site<end and site+symbol['size']>start for start,end in occupied):
                     continue
-                bindings,evidence,sections,bases=prove_module(elf,rom,site-a,(a,b),anchors)
+                bindings,evidence,sections,bases=prove_module(elf,rom,site-a,(a,b),anchors,noload_sections=noload[module['source']])
                 if any(name in all_bindings and all_bindings[name]!=value for name,value in bindings.items()):
                     continue
                 for relocation in evidence:
@@ -363,16 +396,17 @@ def analyze(root, rom_path):
     ram_bases={}
     for candidate in report['candidates']:
         elf=Elf(directory/candidate['object'])
+        ram_indices={elf.names.index(s['name']) for s in candidate['sections'] if s.get('kind')=='ram_noload'}
         for index,base in candidate['section_bases'].items():
             index=int(index)
-            if elf.sections[index][1]==8:
+            if elf.sections[index][1]==8 or index in ram_indices:
                 key=(candidate['object'],index)
                 if key in ram_bases and ram_bases[key]!=base:
                     raise ValueError('inconsistent NOBITS mapping across units')
                 ram_bases[key]=base
         a=candidate.get('object_text_offset',0)
         for symbol in elf.symbols:
-            if symbol['section']<len(elf.sections) and elf.sections[symbol['section']][1]==8 and str(symbol['section']) in candidate['section_bases'] and symbol['name'] and symbol['info']&15==1:
+            if symbol['section']<len(elf.sections) and (elf.sections[symbol['section']][1]==8 or symbol['section'] in ram_indices) and str(symbol['section']) in candidate['section_bases'] and symbol['name'] and symbol['info']&15==1:
                 address=candidate['section_bases'][str(symbol['section'])]+symbol['value']
                 local_definitions[(candidate['object'],symbol['name'])]=address
                 if symbol['info']>>4 in (1,2):

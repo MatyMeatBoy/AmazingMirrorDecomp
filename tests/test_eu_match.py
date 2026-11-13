@@ -11,6 +11,37 @@ m=importlib.util.module_from_spec(spec)
 if PATH.exists(): spec.loader.exec_module(m)
 
 class EuMatchTests(unittest.TestCase):
+    def test_progbits_noload_requires_linker_ownership_zero_bytes_and_no_relocations(self):
+        section=(0,1,3,0,0,16,0,0,4,0)
+        elf=SimpleNamespace(sections=[section],names=['common_data'],symbols=[],data=lambda s:bytes(16))
+        with patch.object(m,'section_relocations',return_value=[]):
+            self.assertEqual(m.validate_noload(elf,0,0x03000560,'iwram')['kind'],'ram_noload')
+            for address in (0x02000560,0x03007FFC,0x03000561):
+                with self.assertRaises(ValueError):m.validate_noload(elf,0,address,'iwram')
+            elf.data=lambda s:b'\x01'+bytes(15)
+            with self.assertRaises(ValueError):m.validate_noload(elf,0,0x03000560,'iwram')
+        elf.data=lambda s:bytes(16)
+        with patch.object(m,'section_relocations',return_value=[{'offset':0}]):
+            with self.assertRaises(ValueError):m.validate_noload(elf,0,0x03000560,'iwram')
+
+    def test_noload_ownership_is_specific_to_output_region_object_and_input_pattern(self):
+        linker='''iwram (NOLOAD) : ALIGN(4) { src/m4a.o(common_data .bss*); } >iwram
+        .rodata : { src/other.o(common_data); } >rom'''
+        self.assertEqual(m.noload_inputs(linker,'src/m4a.o'),{'common_data':'iwram','.bss*':'iwram'})
+        self.assertEqual(m.noload_inputs(linker,'src/other.o'),{})
+
+    def test_runtime_progbits_cannot_be_treated_as_noload_without_policy(self):
+        text=bytes(range(16))+bytes(4)
+        sections=[(0,0,0,0,0,0,0,0,0,0),(0,1,6,0,0,20,0,0,4,0),(0,1,3,0,0,16,0,0,4,0)]
+        symbol={'name':'Work','section':2,'value':0,'size':16,'info':1}
+        elf=SimpleNamespace(text_index=1,text=text,sections=sections,names=['','.text','common_data'],symbols=[symbol])
+        elf.data=lambda section:text if section is sections[1] else bytes(16)
+        reloc={'offset':16,'type':2,'symbol':symbol}
+        rom=bytearray(0x100);rom[0xC0:0xD4]=text;struct.pack_into('<I',rom,0xD0,0x03000560)
+        with patch.object(m,'section_relocations',lambda e,i:[reloc] if i==1 else []):
+            with self.assertRaises(ValueError):m.prove_module(elf,rom,0x080000C0)
+            _,_,proof,_=m.prove_module(elf,rom,0x080000C0,noload_sections={'common_data':'iwram'})
+            self.assertEqual(sum(p['size'] for p in proof if p.get('kind')=='ram_noload'),16)
     def test_short_function_needs_proven_context_and_all_fixed_bytes(self):
         rom=bytes(192)+b'\x70\x47'+bytes(10)
         self.assertIsNone(m.choose_site(b'\x70\x47',b'\xff\xff',rom,len(rom)))
