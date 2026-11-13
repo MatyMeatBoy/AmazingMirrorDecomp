@@ -13,3 +13,11 @@ Commands: python tools/progress/metadata_build.py --jobs 4; python tools/progres
 USA compatibility check: independently compile HEAD's original pause_help.c and this source without REGION_EU using the same pinned compiler; compare .text, full .rodata and relocation signatures. All equal (.text 3916 bytes). This does not claim the original six-output USA ROM gate.
 
 Asset follow-up: the 15 European tile blocks differ from all three USA payloads. Their 1024-byte consumer transfers and matching sprite animation metadata establish the 4bpp tile format; reconstruction as editable PNG and exact conversion roundtrip is a separate cohort.
+
+## Editable European button tiles
+
+Fifteen PNGs under graphics/pause_menu/helpmenu_buttons/eu preserve the original indexed pixels. Each is 32x64 pixels (32 tiles, 1024 bytes in tiled 4bpp). Consumers transfer exactly 0x400 bytes to OBJ VRAM, use the same verified sprite animation metadata and existing 4bpp rendering path. No palette colors or artwork were invented; converter grayscale displays indices only.
+
+ROM order is German, French, Italian, Spanish, English, each B/SELECT/empty, at offsets 0x359A7C through 0x35D67C exclusive. Language identification comes from the five-row address table indexed by the existing language enum, not the physical order alone. EU_HELP_ASSETS.json records exact offsets, lengths and hashes. Conversion command: tools/gbagfx/gbagfx input.4bpp output.png -width 4; inverse: tools/gbagfx/gbagfx output.png roundtrip.4bpp. All 15 inverse conversions are byte exact. Intermediate extracted 4bpp files remain ignored under build/research, not committed.
+
+With the EU declarations in original physical order, strict prove_module verifies the complete 4008-byte text and all referenced local data (44 bindings), including the formerly mismatching graphics. The USA declarations and assets remain unchanged. This is original game artwork reconstruction, with copyright retained by its original owners.
