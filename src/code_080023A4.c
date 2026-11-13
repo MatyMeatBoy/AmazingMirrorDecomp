@@ -1789,7 +1789,11 @@ void sub_08002EC4(u8 playerId, bool32 arg1)
 
             levelInfo->unk0 = (levelInfo->roomHeight - 160) * 0x100;
 
+#ifdef REGION_EU
+            CpuCopy16(gRoomTiledBGs[35], levelInfo->unk180 + 1, sizeof(struct RoomTiledBG));
+#else
             CpuCopy16(gRoomTiledBGs[34], levelInfo->unk180 + 1, sizeof(struct RoomTiledBG));
+#endif
 
             if (arg1)
                 gBgCntRegs[0] &= 0xFFFC;
