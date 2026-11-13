@@ -2,6 +2,7 @@
 #include "treasures.h"
 #include "functions.h"
 #include "agb_sram.h"
+#include "constants/languages.h"
 
 extern u16 gUnused_03000464;
 
@@ -10,7 +11,11 @@ static void sbWorldPropsClear(void);
 static const struct SaveBuffer *GetSaveBuffer(enum SaveBufferType);
 
 const struct SaveBuffer gSaveFileInfo[] = {
+#ifdef REGION_EU
+    { (void *)&gLanguage,           sizeof(gLanguage) },
+#else
     { (void *)&gUnused_03000464,    sizeof(gUnused_03000464)},
+#endif
     { (void *)&gSaveID,             sizeof(gSaveID) },
     { (void *)-1u,                  -1u },
 };
@@ -31,7 +36,11 @@ void (*const sbClearFunctions[])(void) = {
     sbSaveFileInfoClear, sbWorldPropsClear
 };
 
-static void nullsub_4(void) {}
+static void nullsub_4(void) {
+#ifdef REGION_EU
+    gLanguage = LANGUAGE_ENGLISH;
+#endif
+}
 
 s16 WriteSaveSectionByID(enum SaveBufferType sbufferType, u16 saveID) {
     s16 a = saveID * NUM_SAVE_TYPES;
