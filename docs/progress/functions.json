@@ -64683,7 +64683,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "a66c2275cb0c1268c305b9c3194c04d4ea899f85e3d1fc48930f0bccb49b0b44",
+        "object_sha256": "85dbe156cc8cff481598f437953757e0ec262ca38a7585dee1ae1c184f79db38",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",
@@ -71004,9 +71004,11 @@
         "sub_0814A62C"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 584
+      "source_object_bytes": 584,
+      "eu_start": 1353260,
+      "eu_bytes": 584
     },
     {
       "source": "src/title_screen.c",
@@ -71067,9 +71069,11 @@
         "sub_0814AB68"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 40
+      "source_object_bytes": 40,
+      "eu_start": 1354600,
+      "eu_bytes": 40
     },
     {
       "source": "src/title_screen.c",
@@ -71078,9 +71082,11 @@
         "sub_0814AB90"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 52
+      "source_object_bytes": 52,
+      "eu_start": 1354640,
+      "eu_bytes": 52
     },
     {
       "source": "src/title_screen.c",
@@ -71310,9 +71316,11 @@
         "sub_0814AFE4"
       ],
       "domain": "game",
-      "state": "c_pending_eu",
+      "state": "verified_c",
       "existing_name": false,
-      "source_object_bytes": 92
+      "source_object_bytes": 92,
+      "eu_start": 1355748,
+      "eu_bytes": 92
     },
     {
       "source": "src/title_screen.c",
@@ -75195,7 +75203,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "0c056889e8ad82be3f5363bdc2a79ecdf73d3ddd76819a00a3aa1891bd7f0237",
+        "object_sha256": "13aff1afbf2ecfad2db544f9acfa6972e13aec5e602324c49582c63c60d66f89",
         "c_functions": [
           "sub_0800F044"
         ],
@@ -75204,8 +75212,8 @@
     }
   ],
   "game": {
-    "verified_c": 5640,
-    "c_pending_eu": 4,
+    "verified_c": 5644,
+    "c_pending_eu": 0,
     "drafts": 2,
     "pending_asm": 0,
     "original_asm": 0,
@@ -75234,8 +75242,8 @@
     "unnamed": 0
   },
   "all": {
-    "verified_c": 5721,
-    "c_pending_eu": 4,
+    "verified_c": 5725,
+    "c_pending_eu": 0,
     "drafts": 2,
     "pending_asm": 0,
     "original_asm": 64,
