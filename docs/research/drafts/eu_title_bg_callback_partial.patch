@@ -3,7 +3,7 @@
 @@ -389,6 +389,20 @@
      LoadBgPaletteWithTransformation(a1, a2, a3);
  }
- 
+
 +/* TODO: Matching experiment only. This local callback copy with initialized
 + * r0/r1 operands removes eight BG register differences, but BG still differs
 + * at +0x1CF/+0x1D0. Keep standalone ABC4 unchanged. Remove this duplication and
