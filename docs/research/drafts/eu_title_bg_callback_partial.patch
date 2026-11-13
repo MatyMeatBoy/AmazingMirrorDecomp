@@ -1,0 +1,32 @@
+--- a/src/title_screen_eu.inc
++++ b/src/title_screen_eu.inc
+@@ -389,6 +389,20 @@
+     LoadBgPaletteWithTransformation(a1, a2, a3);
+ }
+ 
++/* TODO: Matching experiment only. This local callback copy with initialized
++ * r0/r1 operands removes eight BG register differences, but BG still differs
++ * at +0x1CF/+0x1D0. Keep standalone ABC4 unchanged. Remove this duplication and
++ * steering once a natural reconstruction passes the complete title/ROM proof.
++ */
++static inline void EuTitleLocalCallback(struct EuTitle *title) {
++    sub_0814F3C4(&title->unk35C, *gUnk_08D626F0[gLanguage][1]);
++    {
++        register void (*fn)(struct EuTitle *) asm("r0") = sub_0814AC00;
++        register void (**slot)(struct EuTitle *) asm("r1") = &title->unk368;
++        asm("" : "+r"(fn), "+r"(slot));
++        *slot = fn;
++    }
++}
+ u32 sub_0814A62C(struct EuTitle *title) {
+     u8 i;
+     u16 bg;
+@@ -407,7 +421,7 @@
+     }
+     title->unk36D = 0;
+     title->flags |= 0x50;
+-    sub_0814ABC4(title);
++    EuTitleLocalCallback(title);
+     sub_0814A134(title);
+     title->unk358 = 0;
+     title->unk354 = sub_0814A874;

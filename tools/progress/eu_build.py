@@ -1,7 +1,8 @@
 """Reproduce owned EU ROM using verified compiled sections and explicit raw gaps.
 
-The small ARM REL relocator supports only ABS32, ARMv4T Thumb BL and V4BX
-markers. It never copies relocation-site bytes from the ROM into C sections.
+The small ARM REL relocator supports ABS32, ARMv4T Thumb BL, checked local
+conditional Thumb branches and V4BX markers. It never copies relocation-site
+bytes from the ROM into compiled sections.
 """
 import argparse
 import hashlib
@@ -52,7 +53,8 @@ def relocate(data,relocs,address,bases,bindings,symbol_addresses=None,object_map
         off,kind,symbol=reloc['offset'],reloc['type'],reloc['symbol']
         if kind==40:
             continue
-        if off<0 or off+4>len(data):
+        width=2 if kind==103 else 4
+        if off<0 or off+width>len(data):
             raise ValueError('relocation outside section')
         section=symbol['section']
         if symbol_addresses and section not in (0,0xFFF1) and symbol['name'] in symbol_addresses:
@@ -77,6 +79,14 @@ def relocate(data,relocs,address,bases,bindings,symbol_addresses=None,object_map
         if kind==2:
             addend=struct.unpack_from('<I',data,off)[0]
             struct.pack_into('<I',output,off,(value+addend)&0xFFFFFFFF)
+        elif kind==103:
+            from eu_match import thumb_cond_displacement
+            addend=thumb_cond_displacement(data,off)
+            displacement=(value&~1)+addend-(address+off)
+            if displacement%2 or not -256<=displacement<=254:
+                raise ValueError('conditional Thumb branch target outside range')
+            instruction=struct.unpack_from('<H',data,off)[0]
+            struct.pack_into('<H',output,off,(instruction&0xFF00)|((displacement>>1)&255))
         elif kind==10:
             addend=thumb_displacement(data,off)
             displacement=(value&~1)+addend-(address+off)
@@ -89,10 +99,11 @@ def relocate(data,relocs,address,bases,bindings,symbol_addresses=None,object_map
 
 
 def check_layout(modules):
-    end=0xC0
+    end=0
     for module in sorted(modules,key=lambda m:m['eu_start']):
         start=module['eu_start']-BASE
-        if start<end or module['size']<=0 or start+module['size']>CODE_END:
+        stop=start+module['size']
+        if start<end or module['size']<=0 or stop>CODE_END or max(start,4)<min(stop,192):
             raise ValueError('module outside code or overlapping')
         end=start+module['size']
 

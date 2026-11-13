@@ -64683,7 +64683,7 @@
         "compiled": true,
         "assembled": true,
         "compiler_flags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
-        "object_sha256": "cae8c49fd6767951b285fd0c782c30ce5f2c65d96dc5172bc53eeac76297aeb9",
+        "object_sha256": "85dbe156cc8cff481598f437953757e0ec262ca38a7585dee1ae1c184f79db38",
         "c_functions": [
           "CreateShotzo",
           "CreateShotzoBullet",

@@ -1,0 +1,945 @@
+{
+  "status": "owner_local_assembly_proof_no_additional_c_credit",
+  "rom_sha1": "6f478a455383a2a12378f292581dfd7300300700",
+  "full_rom_byte_compare": true,
+  "credited_c_bytes": 1415336,
+  "header_excluded_range": [
+    4,
+    192
+  ],
+  "modules": [
+    {
+      "source": "asm/crt0.s",
+      "eu_start": 134217728,
+      "size": 4,
+      "object_sha256": "bd1bd5ab9a748447a54feaf80160cff846546fd53631703a478b8202f8ff0112",
+      "emitted_text_sha256": "e3de0a6864e3119f5ccb28524e580cd769e44efefd06ba6c0bf7c2807bfd3a16",
+      "relocations": [],
+      "bindings": {},
+      "source_sha256_lf": "f9e70e5f318c1472739ee2d0520120a0896d4a7e5f4c7162cef4e31c256fe504"
+    },
+    {
+      "source": "asm/crt0.s",
+      "eu_start": 134217920,
+      "size": 268,
+      "object_sha256": "bd1bd5ab9a748447a54feaf80160cff846546fd53631703a478b8202f8ff0112",
+      "emitted_text_sha256": "374434e9b38a98c80b9847e4b3cf7bcb0314ac6ebebfcfe6226e0024f8eec1ec",
+      "relocations": [
+        {
+          "section": ".text",
+          "offset": 260,
+          "object_offset": 192,
+          "type": 2,
+          "symbol": "AgbMain",
+          "addend": 0,
+          "inferred_value": 135607105,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 264,
+          "object_offset": 192,
+          "type": 2,
+          "symbol": "gIntrTable",
+          "addend": 0,
+          "inferred_value": 50337712,
+          "external": true,
+          "anchored_function": false
+        }
+      ],
+      "bindings": {
+        "AgbMain": 135607105,
+        "gIntrTable": 50337712
+      },
+      "source_sha256_lf": "f9e70e5f318c1472739ee2d0520120a0896d4a7e5f4c7162cef4e31c256fe504"
+    },
+    {
+      "source": "asm/libagbsyscall.s",
+      "eu_start": 135633960,
+      "size": 100,
+      "object_sha256": "fde10bdb62bd5612c5037198867388c0a04fceb79d821567420cd9af900e4625",
+      "emitted_text_sha256": "c26c8a96a7fadd1ffbdbd55be55e721915c273400b326b2d21c56217fbbddf80",
+      "relocations": [],
+      "bindings": {},
+      "source_sha256_lf": "4e0a5148f11e4a4bdb0d33d4291a8ecadbc59c6d69c5e82e6c6d86abe76a3f56"
+    },
+    {
+      "source": "asm/m4a_asm.s",
+      "eu_start": 135593236,
+      "size": 3100,
+      "object_sha256": "702b5ead40f4e54dd077d50a7833fa153b035273f5f28a6bb85d9a4214c90797",
+      "emitted_text_sha256": "ce40b9db7f5b21ac1b0fd13bcc2ca52e8f45f0d4c4b88d77f377ec3b64319051",
+      "relocations": [
+        {
+          "section": ".text",
+          "offset": 76,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F80A",
+          "addend": -4,
+          "inferred_value": 135594311,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 84,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F80A",
+          "addend": -4,
+          "inferred_value": 135594311,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 132,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "SoundMainRAM_Buffer",
+          "addend": 1,
+          "inferred_value": 50331744,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 152,
+          "object_offset": 0,
+          "type": 103,
+          "symbol": "SoundMainRAM_NoReverb",
+          "addend": -4,
+          "inferred_value": 135593481,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1162,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "RealClearChain",
+          "addend": -4,
+          "inferred_value": 135594341,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1232,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gMPlayJumpTableTemplate",
+          "addend": 0,
+          "inferred_value": 146155764,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1268,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F890",
+          "addend": -4,
+          "inferred_value": 135594445,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1352,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1378,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1390,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1410,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1478,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1498,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1518,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1538,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1558,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1570,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1594,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AC",
+          "addend": -4,
+          "inferred_value": 135594473,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1624,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814F8AE",
+          "addend": -4,
+          "inferred_value": 135594475,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1736,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1772,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "FadeOutBody",
+          "addend": -4,
+          "inferred_value": 135598769,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1852,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "ClearChain",
+          "addend": -4,
+          "inferred_value": 135597485,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1872,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "Clear64byte",
+          "addend": -4,
+          "inferred_value": 135597505,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1938,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1966,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2152,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "TrkVolPitSet",
+          "addend": -4,
+          "inferred_value": 135598969,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2172,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "ClearChain",
+          "addend": -4,
+          "inferred_value": 135597485,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2192,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "ChnVolSetAsm",
+          "addend": -4,
+          "inferred_value": 135595633,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2242,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2264,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "MidiKeyToFreq",
+          "addend": -4,
+          "inferred_value": 135596337,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2316,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gClockTable",
+          "addend": 0,
+          "inferred_value": 146156392,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2368,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2766,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "ClearChain",
+          "addend": -4,
+          "inferred_value": 135597485,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2798,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "clear_modM",
+          "addend": -4,
+          "inferred_value": 135596257,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2806,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "TrkVolPitSet",
+          "addend": -4,
+          "inferred_value": 135598969,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2844,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "ChnVolSetAsm",
+          "addend": -4,
+          "inferred_value": 135595633,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2900,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FCE0",
+          "addend": -4,
+          "inferred_value": 135595549,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2912,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "MidiKeyToFreq",
+          "addend": -4,
+          "inferred_value": 135596337,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2952,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gClockTable",
+          "addend": 0,
+          "inferred_value": 146156392,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 3062,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FFC0",
+          "addend": -4,
+          "inferred_value": 135596285,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 3072,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "clear_modM",
+          "addend": -4,
+          "inferred_value": 135596257,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 3082,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_0814FFC0",
+          "addend": -4,
+          "inferred_value": 135596285,
+          "external": false,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 3092,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "clear_modM",
+          "addend": -4,
+          "inferred_value": 135596257,
+          "external": false,
+          "anchored_function": false
+        }
+      ],
+      "bindings": {
+        "SoundMainRAM_Buffer": 50331744,
+        "gMPlayJumpTableTemplate": 146155764,
+        "FadeOutBody": 135598769,
+        "ClearChain": 135597485,
+        "Clear64byte": 135597505,
+        "TrkVolPitSet": 135598969,
+        "MidiKeyToFreq": 135596337,
+        "gClockTable": 146156392
+      },
+      "source_sha256_lf": "7d0aa6ebb978c70dc06ed807af1827a62f865405a3ffbc2f8227a82a782f44c0"
+    },
+    {
+      "source": "asm/multi_sio_asm.s",
+      "eu_start": 135632976,
+      "size": 352,
+      "object_sha256": "142da193bdfc62653703dddfa80fd7188f1bc33fb4968ed7b135b096c1f32c24",
+      "emitted_text_sha256": "f06a2c4bf5e7b56af270418b6463132dcd77f4f09f1cad30cf4af6e38deab711",
+      "relocations": [
+        {
+          "section": ".text",
+          "offset": 60,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gMultiSioArea",
+          "addend": 0,
+          "inferred_value": 50358880,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 344,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gMultiSioArea",
+          "addend": 0,
+          "inferred_value": 50358880,
+          "external": true,
+          "anchored_function": false
+        }
+      ],
+      "bindings": {
+        "gMultiSioArea": 50358880
+      },
+      "source_sha256_lf": "40af4f14ee9f66786dc469899619e9406918155772f041cd974170874c86b7fd"
+    },
+    {
+      "source": "asm/sub_0800F044.s",
+      "eu_start": 134279276,
+      "size": 3596,
+      "object_sha256": "fa8827fcad8c6b35262b196dab8fda7b5ed1db8aed27064818f4fc46a57894d6",
+      "emitted_text_sha256": "6e26ff81f7a92423692413d53d12d2005cdc46fca9562abadabf2df3cdb98451",
+      "relocations": [
+        {
+          "section": ".text",
+          "offset": 66,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "memcpy",
+          "addend": -4,
+          "inferred_value": 135644769,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 102,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 144,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 222,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 248,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 378,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 404,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 526,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 552,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 680,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 708,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 840,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 868,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 992,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1020,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1140,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1168,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1284,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1312,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1460,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1488,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1636,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1664,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1804,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1832,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 1976,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "sub_080024F0",
+          "addend": -4,
+          "inferred_value": 134227217,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2004,
+          "object_offset": 0,
+          "type": 2,
+          "symbol": "gCollisionAttributes",
+          "addend": 0,
+          "inferred_value": 137209688,
+          "external": true,
+          "anchored_function": false
+        },
+        {
+          "section": ".text",
+          "offset": 2076,
+          "object_offset": 0,
+          "type": 10,
+          "symbol": "GetRoomSolidCollisionList",
+          "addend": -4,
+          "inferred_value": 134452485,
+          "external": true,
+          "anchored_function": false
+        }
+      ],
+      "bindings": {
+        "memcpy": 135644769,
+        "sub_080024F0": 134227217,
+        "gCollisionAttributes": 137209688,
+        "GetRoomSolidCollisionList": 134452485
+      },
+      "source_sha256_lf": "c4ef0fce531bace843032f4e34e8792750aec6234d5bf208d0fc43aa46759b4b"
+    }
+  ],
+  "compiler": {
+    "commit": "59b966ed1b8f371856dcf99f1546c2fe89c678ca",
+    "branch": "new_newlib_pret",
+    "sha256": "846715d8bae7326bab569bb97e1c747de9a73732d0fd505e642f372018a96583"
+  },
+  "compiler_recipe": {
+    "sha256": "4f40595716848e96708cc5b17ca4deac7b71b0ae7c646e2299d53d3230f35e19",
+    "default_cflags": "-mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -f2003-patch -ffix-debug-line -g",
+    "exceptions": {
+      "src/task.c": "omit -Werror",
+      "src/agb_sram.c": "old_agbcc -O1, omit -f2003-patch",
+      "src/m4a.c": "old_agbcc"
+    },
+    "excluded": [
+      "src/data/**/*.c (data-only)",
+      "multi_boot/**",
+      "linked libraries"
+    ],
+    "sizes": "ELF STT_FUNC sizes; zero sizes inferred to next function or section end; gaps unattributed",
+    "region": "eu",
+    "preprocessor_flags": "-E -iquote include -Wno-trigraphs -DMODERN=0 -I tools/agbcc/include -I tools/agbcc -nostdinc -iquote include -DREVISION=0 -DENGLISH -DREGION_EU"
+  },
+  "source_manifest_sha256": "44f1a53244dadfa0a08025575d0ff16bd38ce419afd66dbcccafe67c95aeaa07",
+  "matcher_sha256": "4f1b341f9fa8aca669d91d06e7f76bad6b9e13162e880e25071d2d62c9566565",
+  "builder_sha256": "a7071df86a08d91194f117ed1cd68240380ae4e0c653cf51c645a6ce12737af5"
+}
