@@ -135,16 +135,16 @@ void sub_0811A8D4(struct Object *shotzo)
     }
 }
 
-// sub_0811A934: functionally equivalent; remaining diff is register allocation.
-#ifndef NONMATCHING
-NAKED void sub_0811A934(struct Object *shotzo) {
-    asm(".include \"asm/nonmatching/sub_0811A934.inc\"");
-}
-#else
 void sub_0811A934(struct Object *shotzo)
 {
-    u8 *framePtr = &shotzo->unk9E;
-    u32 frameShifted = *framePtr << 24;
+    u8 *framePtr;
+    u32 frameShifted;
+
+    // TODO(match): Keep the object out of r2 so it does not swap registers with the table pointer.
+    asm("" : : : "r2");
+    framePtr = &shotzo->unk9E;
+    // TODO(match): A plain u8 frame removes the target's initial shift pair.
+    frameShifted = (u32)*framePtr << 24;
 
     if (frameShifted >> 24 <= 7)
     {
@@ -165,7 +165,12 @@ void sub_0811A934(struct Object *shotzo)
             goto skip;
         }
         shotzo->base.objBase54 = offsetTable[(frameShifted >> 25) * 2] >> 8;
-        shotzo->base.objBase55 = offsetTable[*framePtr | 1] >> 8;
+        {
+            u32 yOffset = offsetTable[*framePtr | 1] >> 8;
+            // TODO(match): Keep the Y offset address in r1 instead of reusing the table pointer in r2.
+            register s8 *yOffsetPtr asm("r1") = &shotzo->base.objBase55;
+            *yOffsetPtr = yOffset;
+        }
     skip:
         shotzo->unk9E++;
         if (shotzo->base.flags & 1)
@@ -174,7 +179,6 @@ void sub_0811A934(struct Object *shotzo)
     if (!--shotzo->base.counter)
         sub_0811A874(shotzo);
 }
-#endif
 
 void sub_0811A9D4(struct Object *shotzo)
 {
@@ -225,16 +229,16 @@ void sub_0811AA2C(struct Object *shotzo)
     sub_0811AEDC(shotzo);
 }
 
-// sub_0811AA80: functionally equivalent; remaining diff is register allocation.
-#ifndef NONMATCHING
-NAKED void sub_0811AA80(struct Object *shotzo) {
-    asm(".include \"asm/nonmatching/sub_0811AA80.inc\"");
-}
-#else
 void sub_0811AA80(struct Object *shotzo)
 {
-    u8 *framePtr = &shotzo->unk9E;
-    u32 frameShifted = *framePtr << 24;
+    u8 *framePtr;
+    u32 frameShifted;
+
+    // TODO(match): Keep the object out of r2 so it does not swap registers with the table pointer.
+    asm("" : : : "r2");
+    framePtr = &shotzo->unk9E;
+    // TODO(match): A plain u8 frame removes the target's initial shift pair.
+    frameShifted = (u32)*framePtr << 24;
 
     if (frameShifted >> 24 <= 7)
     {
@@ -255,7 +259,12 @@ void sub_0811AA80(struct Object *shotzo)
             goto skip;
         }
         shotzo->base.objBase54 = offsetTable[(frameShifted >> 25) * 2] >> 8;
-        shotzo->base.objBase55 = offsetTable[*framePtr | 1] >> 8;
+        {
+            u32 yOffset = offsetTable[*framePtr | 1] >> 8;
+            // TODO(match): Keep the Y offset address in r1 instead of reusing the table pointer in r2.
+            register s8 *yOffsetPtr asm("r1") = &shotzo->base.objBase55;
+            *yOffsetPtr = yOffset;
+        }
     skip:
         shotzo->unk9E++;
         if (shotzo->base.flags & 1)
@@ -290,7 +299,6 @@ void sub_0811AA80(struct Object *shotzo)
         }
     }
 }
-#endif
 
 // sub_0811AB74: functionally equivalent; remaining diff is register allocation.
 #ifndef NONMATCHING
