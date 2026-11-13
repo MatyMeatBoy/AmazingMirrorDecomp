@@ -11,15 +11,15 @@
 <text x="850" y="121" font-size="12">ASM conservado</text>
 <text x="16" y="151" font-size="14">Juego y motor</text>
 <text x="230" y="151" font-size="14">5,646</text>
-<text x="325" y="151" font-size="14">5,640</text>
-<text x="465" y="151" font-size="14">4</text>
+<text x="325" y="151" font-size="14">0</text>
+<text x="465" y="151" font-size="14">5,644</text>
 <text x="595" y="151" font-size="14">2</text>
 <text x="720" y="151" font-size="14">0</text>
 <text x="850" y="151" font-size="14">0</text>
 <text x="16" y="182" font-size="14">SDK / bibliotecas</text>
 <text x="230" y="182" font-size="14">143</text>
-<text x="325" y="182" font-size="14">81</text>
-<text x="465" y="182" font-size="14">0</text>
+<text x="325" y="182" font-size="14">0</text>
+<text x="465" y="182" font-size="14">81</text>
 <text x="595" y="182" font-size="14">0</text>
 <text x="720" y="182" font-size="14">0</text>
 <text x="850" y="182" font-size="14">62</text>
@@ -32,8 +32,8 @@
 <text x="850" y="213" font-size="14">2</text>
 <text x="16" y="244" font-size="14">Total</text>
 <text x="230" y="244" font-size="14">5,791</text>
-<text x="325" y="244" font-size="14">5,721</text>
-<text x="465" y="244" font-size="14">4</text>
+<text x="325" y="244" font-size="14">0</text>
+<text x="465" y="244" font-size="14">5,725</text>
 <text x="595" y="244" font-size="14">2</text>
 <text x="720" y="244" font-size="14">0</text>
 <text x="850" y="244" font-size="14">64</text>
@@ -51,7 +51,7 @@
 <text x="16" y="432" font-size="12">Principal: libc/libgcc</text>
 <text x="590" y="432" font-size="12">76</text>
 <text x="690" y="432" font-size="12">56</text>
-<text x="790" y="432" font-size="12">56</text>
+<text x="790" y="432" font-size="12">0</text>
 <text x="900" y="432" font-size="12">20</text>
 <text x="16" y="458" font-size="12">multi_boot/subgame_loaders</text>
 <text x="590" y="458" font-size="12">1</text>
